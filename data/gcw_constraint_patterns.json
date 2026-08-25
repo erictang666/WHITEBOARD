@@ -1,0 +1,49 @@
+{
+  "schema": "benchmark",
+  "global_forbidden_terms": [
+    "magic",
+    "magical",
+    "miracle",
+    "prophecy",
+    "teleport",
+    "time travel",
+    "dragon",
+    "ghost",
+    "angel",
+    "demon",
+    "wizard",
+    "spell",
+    "superpower",
+    "mind reading",
+    "weather control",
+    "cure all",
+    "infinite energy",
+    "perpetual motion",
+    "secret twin",
+    "spaceship",
+    "alien"
+  ],
+  "hard_contradiction_patterns": [
+    "rings loudly",
+    "rang loudly",
+    "summoned a ship",
+    "summons a ship",
+    "controls the weather",
+    "stops the storm",
+    "starts the engine",
+    "reads the map perfectly",
+    "teleports",
+    "comes back from the dead",
+    "becomes invisible",
+    "turns into gold"
+  ],
+  "unsupported_major_entity_markers": [
+    "new mayor",
+    "secret sister",
+    "secret brother",
+    "hidden prince",
+    "new detective",
+    "foreign army",
+    "spaceship crew"
+  ]
+}

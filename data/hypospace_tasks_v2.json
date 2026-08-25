@@ -1,0 +1,249 @@
+{
+  "schema_version": "benchmark",
+  "description": "Thirty evidence-constrained HypoUseSpace task specs. Specs clone the v1 closed-world hypothesis spaces and attach v2 evidence packs, task subtypes, and claim-ledger requirements.",
+  "output_count": 6,
+  "default_requires_claim_ledger": true,
+  "tasks": [
+    {
+      "id": "hs_v2_classic_phone_001",
+      "base_task_id": "hs_phone_stand_001",
+      "evidence_pack_id": "ep_phone_stand",
+      "task_subtype": "HypoUseSpaceClassic",
+      "title": "Classic phone support variants",
+      "scene_suffix": "Focus on recovering distinct mechanisms rather than inventing new materials."
+    },
+    {
+      "id": "hs_v2_classic_phone_002",
+      "base_task_id": "hs_phone_stand_001",
+      "evidence_pack_id": "ep_phone_stand",
+      "task_subtype": "HypoUseSpaceClassic",
+      "title": "Classic camera-safe brace",
+      "goal_suffix": "Prefer hypotheses that keep the camera unobstructed."
+    },
+    {
+      "id": "hs_v2_classic_phone_003",
+      "base_task_id": "hs_phone_stand_001",
+      "evidence_pack_id": "ep_phone_stand",
+      "task_subtype": "HypoUseSpaceClassic",
+      "title": "Classic desk-call stabilizer",
+      "scene_suffix": "The desk surface is smooth and no extra stand is available."
+    },
+    {
+      "id": "hs_v2_classic_table_004",
+      "base_task_id": "hs_table_shim_002",
+      "evidence_pack_id": "ep_table_shim",
+      "task_subtype": "HypoUseSpaceClassic",
+      "title": "Classic non-marring shim",
+      "scene_suffix": "The owner rejects any permanent repair."
+    },
+    {
+      "id": "hs_v2_classic_table_005",
+      "base_task_id": "hs_table_shim_002",
+      "evidence_pack_id": "ep_table_shim",
+      "task_subtype": "HypoUseSpaceClassic",
+      "title": "Classic short-leg stabilizer",
+      "goal_suffix": "Use only reversible spacing or padding mechanisms."
+    },
+    {
+      "id": "hs_v2_classic_table_006",
+      "base_task_id": "hs_table_shim_002",
+      "evidence_pack_id": "ep_table_shim",
+      "task_subtype": "HypoUseSpaceClassic",
+      "title": "Classic smooth-floor table fix",
+      "scene_suffix": "The floor must remain unscratched."
+    },
+    {
+      "id": "hs_v2_classic_cookie_007",
+      "base_task_id": "hs_cookie_jar_003",
+      "evidence_pack_id": "ep_cookie_jar",
+      "task_subtype": "HypoUseSpaceClassic",
+      "title": "Classic narrow-jar retrieval",
+      "scene_suffix": "The jar cannot be broken or tipped violently."
+    },
+    {
+      "id": "hs_v2_classic_cookie_008",
+      "base_task_id": "hs_cookie_jar_003",
+      "evidence_pack_id": "ep_cookie_jar",
+      "task_subtype": "HypoUseSpaceClassic",
+      "title": "Classic reach-and-hook recovery",
+      "goal_suffix": "Recover the target with a plausible grip, hook, loop, or extension."
+    },
+    {
+      "id": "hs_v2_classic_light_009",
+      "base_task_id": "hs_no_light_004",
+      "evidence_pack_id": "ep_no_light",
+      "task_subtype": "HypoUseSpaceClassic",
+      "title": "Classic no-light impossibility",
+      "scene_suffix": "No hidden power source exists."
+    },
+    {
+      "id": "hs_v2_classic_light_010",
+      "base_task_id": "hs_no_light_004",
+      "evidence_pack_id": "ep_no_light",
+      "task_subtype": "HypoUseSpaceClassic",
+      "title": "Classic reflector-only boundary",
+      "goal_suffix": "Abstain if visible light cannot be generated in the closed world."
+    },
+    {
+      "id": "hs_v2_evidence_phone_011",
+      "base_task_id": "hs_phone_stand_001",
+      "evidence_pack_id": "ep_phone_stand",
+      "task_subtype": "EvidenceHypoSpace",
+      "title": "Evidence-cited phone stand hypotheses",
+      "scene_suffix": "Every mechanism claim must cite evidence IDs from the provided pack."
+    },
+    {
+      "id": "hs_v2_evidence_phone_012",
+      "base_task_id": "hs_phone_stand_001",
+      "evidence_pack_id": "ep_phone_stand",
+      "task_subtype": "EvidenceHypoSpace",
+      "title": "Evidence-cited camera clearance",
+      "goal_suffix": "Every hypothesis must explain camera clearance with citation support."
+    },
+    {
+      "id": "hs_v2_evidence_phone_013",
+      "base_task_id": "hs_phone_stand_001",
+      "evidence_pack_id": "ep_phone_stand",
+      "task_subtype": "EvidenceHypoSpace",
+      "title": "Evidence-cited temporary brace",
+      "scene_suffix": "Permanent bonding claims are forbidden unless explicitly supported."
+    },
+    {
+      "id": "hs_v2_evidence_table_014",
+      "base_task_id": "hs_table_shim_002",
+      "evidence_pack_id": "ep_table_shim",
+      "task_subtype": "EvidenceHypoSpace",
+      "title": "Evidence-cited table shim hypotheses",
+      "scene_suffix": "Cite why the stabilizer is non-marring."
+    },
+    {
+      "id": "hs_v2_evidence_table_015",
+      "base_task_id": "hs_table_shim_002",
+      "evidence_pack_id": "ep_table_shim",
+      "task_subtype": "EvidenceHypoSpace",
+      "title": "Evidence-cited reversible leveling",
+      "goal_suffix": "Each claim about spacing, padding, or friction needs evidence IDs."
+    },
+    {
+      "id": "hs_v2_evidence_table_016",
+      "base_task_id": "hs_table_shim_002",
+      "evidence_pack_id": "ep_table_shim",
+      "task_subtype": "EvidenceHypoSpace",
+      "title": "Evidence-cited no-damage repair",
+      "scene_suffix": "Do not cite unsupported permanent repair tools."
+    },
+    {
+      "id": "hs_v2_evidence_cookie_017",
+      "base_task_id": "hs_cookie_jar_003",
+      "evidence_pack_id": "ep_cookie_jar",
+      "task_subtype": "EvidenceHypoSpace",
+      "title": "Evidence-cited jar retrieval",
+      "scene_suffix": "Distinguish supported hook/loop/grip mechanisms from forbidden shortcuts."
+    },
+    {
+      "id": "hs_v2_evidence_cookie_018",
+      "base_task_id": "hs_cookie_jar_003",
+      "evidence_pack_id": "ep_cookie_jar",
+      "task_subtype": "EvidenceHypoSpace",
+      "title": "Evidence-cited narrow opening recovery",
+      "goal_suffix": "Each feasibility claim must cite a pack claim."
+    },
+    {
+      "id": "hs_v2_evidence_cookie_019",
+      "base_task_id": "hs_cookie_jar_003",
+      "evidence_pack_id": "ep_cookie_jar",
+      "task_subtype": "EvidenceHypoSpace",
+      "title": "Evidence-cited non-breaking recovery",
+      "scene_suffix": "Breaking the jar is outside the support boundary."
+    },
+    {
+      "id": "hs_v2_evidence_light_020",
+      "base_task_id": "hs_no_light_004",
+      "evidence_pack_id": "ep_no_light",
+      "task_subtype": "EvidenceHypoSpace",
+      "title": "Evidence-cited no-light abstention",
+      "scene_suffix": "Evidence supports reflection only when incoming light exists."
+    },
+    {
+      "id": "hs_v2_evidence_light_021",
+      "base_task_id": "hs_no_light_004",
+      "evidence_pack_id": "ep_no_light",
+      "task_subtype": "EvidenceHypoSpace",
+      "title": "Evidence-cited visible-light boundary",
+      "goal_suffix": "Do not claim a light source unless evidence supports emission."
+    },
+    {
+      "id": "hs_v2_evidence_light_022",
+      "base_task_id": "hs_no_light_004",
+      "evidence_pack_id": "ep_no_light",
+      "task_subtype": "EvidenceHypoSpace",
+      "title": "Evidence-cited reflector limitation",
+      "scene_suffix": "A correct answer may be no valid hypothesis."
+    },
+    {
+      "id": "hs_v2_minimal_phone_023",
+      "base_task_id": "hs_phone_stand_001",
+      "evidence_pack_id": "ep_phone_stand",
+      "task_subtype": "MinimalContextIdeation",
+      "title": "Minimal cue: phone support",
+      "minimal_cue": "phone support",
+      "scene_suffix": "Only the cue plus evidence pack should guide ideation."
+    },
+    {
+      "id": "hs_v2_minimal_phone_024",
+      "base_task_id": "hs_phone_stand_001",
+      "evidence_pack_id": "ep_phone_stand",
+      "task_subtype": "MinimalContextIdeation",
+      "title": "Minimal cue: camera-clear desk stand",
+      "minimal_cue": "camera clear desk stand"
+    },
+    {
+      "id": "hs_v2_minimal_table_025",
+      "base_task_id": "hs_table_shim_002",
+      "evidence_pack_id": "ep_table_shim",
+      "task_subtype": "MinimalContextIdeation",
+      "title": "Minimal cue: table leveling",
+      "minimal_cue": "table leveling"
+    },
+    {
+      "id": "hs_v2_minimal_table_026",
+      "base_task_id": "hs_table_shim_002",
+      "evidence_pack_id": "ep_table_shim",
+      "task_subtype": "MinimalContextIdeation",
+      "title": "Minimal cue: non-marring shim",
+      "minimal_cue": "non-marring shim"
+    },
+    {
+      "id": "hs_v2_minimal_cookie_027",
+      "base_task_id": "hs_cookie_jar_003",
+      "evidence_pack_id": "ep_cookie_jar",
+      "task_subtype": "MinimalContextIdeation",
+      "title": "Minimal cue: narrow jar retrieval",
+      "minimal_cue": "narrow jar retrieval"
+    },
+    {
+      "id": "hs_v2_minimal_cookie_028",
+      "base_task_id": "hs_cookie_jar_003",
+      "evidence_pack_id": "ep_cookie_jar",
+      "task_subtype": "MinimalContextIdeation",
+      "title": "Minimal cue: closed-world retrieval",
+      "minimal_cue": "closed-world retrieval"
+    },
+    {
+      "id": "hs_v2_minimal_light_029",
+      "base_task_id": "hs_no_light_004",
+      "evidence_pack_id": "ep_no_light",
+      "task_subtype": "MinimalContextIdeation",
+      "title": "Minimal cue: visible light",
+      "minimal_cue": "visible light"
+    },
+    {
+      "id": "hs_v2_minimal_light_030",
+      "base_task_id": "hs_no_light_004",
+      "evidence_pack_id": "ep_no_light",
+      "task_subtype": "MinimalContextIdeation",
+      "title": "Minimal cue: reflector boundary",
+      "minimal_cue": "reflector boundary"
+    }
+  ]
+}

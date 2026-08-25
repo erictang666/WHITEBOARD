@@ -1,0 +1,605 @@
+{
+  "schema": "benchmark",
+  "version": "benchmark",
+  "description": "Curated T3-v3 common consequence overlay for the preliminary five-task CJST main profile. Hard-zero families are direct anchors or very common consequences; broad-common families are template responses capped at low rarity; supported-rare families are grounded mechanisms that should not be mistaken for unsupported weirdness.",
+  "tasks": {
+    "cjst_10": {
+      "hard_zero_consequence_families": [
+        {
+          "id": "security_replay_mirrors",
+          "phrases": [
+            "security mirrors become short replay screens",
+            "mirrors as replay screens",
+            "shoplifting replay"
+          ],
+          "keywords": [
+            "security",
+            "mirror",
+            "replay",
+            "shoplifting",
+            "hallway"
+          ]
+        },
+        {
+          "id": "grooming_delay",
+          "phrases": [
+            "grooming becomes slower",
+            "hair salons schedule mirror checks",
+            "makeup is harder"
+          ],
+          "keywords": [
+            "grooming",
+            "hair",
+            "salon",
+            "makeup",
+            "ten minute"
+          ]
+        },
+        {
+          "id": "delayed_reflection_privacy",
+          "phrases": [
+            "privacy rules cover delayed reflections",
+            "privacy concerns about delayed mirrors"
+          ],
+          "keywords": [
+            "privacy",
+            "delayed",
+            "reflection",
+            "rules",
+            "record"
+          ]
+        }
+      ],
+      "broad_common_consequence_families": [
+        {
+          "id": "police_catch_crimes",
+          "keywords": [
+            "police",
+            "crime",
+            "criminal",
+            "evidence",
+            "catch"
+          ]
+        },
+        {
+          "id": "people_avoid_mirrors",
+          "keywords": [
+            "avoid",
+            "mirror",
+            "cover",
+            "remove",
+            "home"
+          ]
+        },
+        {
+          "id": "camera_apps_replace_mirrors",
+          "keywords": [
+            "camera",
+            "phone",
+            "app",
+            "real time",
+            "replace"
+          ]
+        },
+        {
+          "id": "generic_laws",
+          "keywords": [
+            "law",
+            "regulation",
+            "policy",
+            "legal",
+            "insurance"
+          ]
+        }
+      ],
+      "supported_rare_mechanism_families": [
+        {
+          "id": "chain_of_custody_delay",
+          "keywords": [
+            "chain",
+            "custody",
+            "timestamp",
+            "evidence",
+            "delay"
+          ]
+        },
+        {
+          "id": "calibrated_mirror_clocks",
+          "keywords": [
+            "calibrate",
+            "clock",
+            "synchronize",
+            "ten",
+            "minutes"
+          ]
+        },
+        {
+          "id": "transport_blindspot_protocols",
+          "keywords": [
+            "blind",
+            "spot",
+            "vehicle",
+            "traffic",
+            "protocol"
+          ]
+        }
+      ]
+    },
+    "cjst_18": {
+      "hard_zero_consequence_families": [
+        {
+          "id": "open_windows_stop_snow",
+          "phrases": [
+            "people crack windows to stop snow buildup",
+            "open windows stop indoor snow"
+          ],
+          "keywords": [
+            "open",
+            "window",
+            "stop",
+            "snow",
+            "buildup"
+          ]
+        },
+        {
+          "id": "indoor_snow_insurance",
+          "phrases": [
+            "insurers price indoor snow damage",
+            "insurance covers indoor snow"
+          ],
+          "keywords": [
+            "insurance",
+            "insurer",
+            "damage",
+            "snow",
+            "claim"
+          ]
+        },
+        {
+          "id": "snow_gyms",
+          "phrases": [
+            "gyms offer closed-window snow rooms",
+            "indoor snow gyms"
+          ],
+          "keywords": [
+            "gym",
+            "closed",
+            "window",
+            "snow",
+            "room"
+          ]
+        }
+      ],
+      "broad_common_consequence_families": [
+        {
+          "id": "school_closure",
+          "keywords": [
+            "school",
+            "class",
+            "closure",
+            "children",
+            "cancel"
+          ]
+        },
+        {
+          "id": "cleaning_industry",
+          "keywords": [
+            "cleaning",
+            "janitor",
+            "maintenance",
+            "mop",
+            "remove"
+          ]
+        },
+        {
+          "id": "building_code_boilerplate",
+          "keywords": [
+            "building",
+            "code",
+            "regulation",
+            "ventilation",
+            "design"
+          ]
+        },
+        {
+          "id": "weather_business",
+          "keywords": [
+            "business",
+            "market",
+            "snow",
+            "tourism",
+            "service"
+          ]
+        }
+      ],
+      "supported_rare_mechanism_families": [
+        {
+          "id": "humidity_sensor_window_logic",
+          "keywords": [
+            "humidity",
+            "sensor",
+            "window",
+            "closed",
+            "ventilation"
+          ]
+        },
+        {
+          "id": "water_damage_flow_paths",
+          "keywords": [
+            "melt",
+            "water",
+            "floor",
+            "drain",
+            "damage"
+          ]
+        },
+        {
+          "id": "cold_chain_testing_rooms",
+          "keywords": [
+            "test",
+            "cold",
+            "room",
+            "closed",
+            "snow"
+          ]
+        }
+      ]
+    },
+    "cjst_21": {
+      "hard_zero_consequence_families": [
+        {
+          "id": "courtroom_interview_detection",
+          "phrases": [
+            "courtrooms monitor glass during testimony",
+            "interview rooms avoid windows"
+          ],
+          "keywords": [
+            "court",
+            "testimony",
+            "interview",
+            "window",
+            "opaque"
+          ]
+        },
+        {
+          "id": "private_talks_away_from_windows",
+          "phrases": [
+            "people hold private talks away from storefronts",
+            "talk away from windows"
+          ],
+          "keywords": [
+            "private",
+            "talk",
+            "away",
+            "window",
+            "storefront"
+          ]
+        },
+        {
+          "id": "visible_lie_signal",
+          "keywords": [
+            "lie",
+            "liar",
+            "opaque",
+            "glass",
+            "signal"
+          ]
+        }
+      ],
+      "broad_common_consequence_families": [
+        {
+          "id": "politicians_exposed",
+          "keywords": [
+            "politician",
+            "debate",
+            "speech",
+            "campaign",
+            "exposed"
+          ]
+        },
+        {
+          "id": "relationship_drama",
+          "keywords": [
+            "relationship",
+            "date",
+            "partner",
+            "marriage",
+            "trust"
+          ]
+        },
+        {
+          "id": "generic_privacy_laws",
+          "keywords": [
+            "privacy",
+            "law",
+            "policy",
+            "regulation",
+            "surveillance"
+          ]
+        },
+        {
+          "id": "business_meeting_cliche",
+          "keywords": [
+            "meeting",
+            "office",
+            "conference",
+            "business",
+            "glass"
+          ]
+        }
+      ],
+      "supported_rare_mechanism_families": [
+        {
+          "id": "windowless_contract_rooms",
+          "keywords": [
+            "contract",
+            "room",
+            "windowless",
+            "negotiation",
+            "audit"
+          ]
+        },
+        {
+          "id": "false_positive_crowd_design",
+          "keywords": [
+            "crowd",
+            "nearby",
+            "false",
+            "positive",
+            "distance"
+          ]
+        },
+        {
+          "id": "architectural_lie_buffers",
+          "keywords": [
+            "architecture",
+            "buffer",
+            "frosted",
+            "glass",
+            "distance"
+          ]
+        }
+      ]
+    },
+    "cjst_24": {
+      "hard_zero_consequence_families": [
+        {
+          "id": "photograph_before_reading",
+          "phrases": [
+            "students photograph notes before reading",
+            "take pictures before reading"
+          ],
+          "keywords": [
+            "photograph",
+            "photo",
+            "camera",
+            "before",
+            "read"
+          ]
+        },
+        {
+          "id": "avoid_handwritten_contracts",
+          "phrases": [
+            "lawyers avoid handwritten contracts",
+            "avoid handwritten notes"
+          ],
+          "keywords": [
+            "lawyer",
+            "contract",
+            "handwritten",
+            "avoid",
+            "legal"
+          ]
+        },
+        {
+          "id": "self_destruct_secret_notes",
+          "phrases": [
+            "secret messages become easier to destroy",
+            "self destructing notes"
+          ],
+          "keywords": [
+            "secret",
+            "message",
+            "destroy",
+            "erase",
+            "read"
+          ]
+        }
+      ],
+      "broad_common_consequence_families": [
+        {
+          "id": "digital_notes_replace_paper",
+          "keywords": [
+            "digital",
+            "app",
+            "tablet",
+            "phone",
+            "replace"
+          ]
+        },
+        {
+          "id": "teachers_ban_notes",
+          "keywords": [
+            "teacher",
+            "student",
+            "school",
+            "ban",
+            "notes"
+          ]
+        },
+        {
+          "id": "paper_industry_changes",
+          "keywords": [
+            "paper",
+            "industry",
+            "stationery",
+            "market",
+            "sales"
+          ]
+        },
+        {
+          "id": "generic_security_policy",
+          "keywords": [
+            "security",
+            "policy",
+            "privacy",
+            "regulation",
+            "company"
+          ]
+        }
+      ],
+      "supported_rare_mechanism_families": [
+        {
+          "id": "read_order_watermarking",
+          "keywords": [
+            "watermark",
+            "read",
+            "order",
+            "copy",
+            "audit"
+          ]
+        },
+        {
+          "id": "blind_review_protocols",
+          "keywords": [
+            "blind",
+            "review",
+            "read",
+            "once",
+            "protocol"
+          ]
+        },
+        {
+          "id": "ink_trace_forensics",
+          "keywords": [
+            "ink",
+            "trace",
+            "forensic",
+            "residue",
+            "erase"
+          ]
+        }
+      ]
+    },
+    "cjst_25": {
+      "hard_zero_consequence_families": [
+        {
+          "id": "stairs_ramps_vertical_replacement",
+          "phrases": [
+            "tall buildings rely more on stairs and ramps",
+            "stairs replace elevators"
+          ],
+          "keywords": [
+            "stairs",
+            "ramps",
+            "vertical",
+            "replace",
+            "tall"
+          ]
+        },
+        {
+          "id": "horizontal_elevator_corridors",
+          "phrases": [
+            "office towers connect through horizontal elevator corridors",
+            "horizontal elevator corridors"
+          ],
+          "keywords": [
+            "horizontal",
+            "corridor",
+            "building",
+            "connect",
+            "elevator"
+          ]
+        },
+        {
+          "id": "fire_code_vertical_alternatives",
+          "phrases": [
+            "fire codes require new vertical alternatives",
+            "vertical alternatives"
+          ],
+          "keywords": [
+            "fire",
+            "code",
+            "vertical",
+            "alternative",
+            "safety"
+          ]
+        }
+      ],
+      "broad_common_consequence_families": [
+        {
+          "id": "elevator_companies_redesign",
+          "keywords": [
+            "elevator",
+            "company",
+            "redesign",
+            "manufacturer",
+            "market"
+          ]
+        },
+        {
+          "id": "urban_planning_changes",
+          "keywords": [
+            "urban",
+            "planning",
+            "city",
+            "zoning",
+            "building"
+          ]
+        },
+        {
+          "id": "skyscraper_value_changes",
+          "keywords": [
+            "skyscraper",
+            "property",
+            "real estate",
+            "value",
+            "rent"
+          ]
+        },
+        {
+          "id": "generic_accessibility_issue",
+          "keywords": [
+            "accessibility",
+            "disabled",
+            "elderly",
+            "mobility",
+            "access"
+          ]
+        }
+      ],
+      "supported_rare_mechanism_families": [
+        {
+          "id": "floor_plate_bridge_networks",
+          "keywords": [
+            "floor",
+            "plate",
+            "bridge",
+            "network",
+            "sideways"
+          ]
+        },
+        {
+          "id": "service_core_relocation",
+          "keywords": [
+            "service",
+            "core",
+            "shaft",
+            "relocate",
+            "horizontal"
+          ]
+        },
+        {
+          "id": "evacuation_refuge_stack",
+          "keywords": [
+            "evacuation",
+            "refuge",
+            "stack",
+            "landing",
+            "route"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,527 @@
+{
+  "schema": "benchmark",
+  "version": "benchmark",
+  "description": "Task-specific common and supported-rare story-turn reference bank.",
+  "tasks": {
+    "gcw_007": {
+      "hard_zero_plot_families": [
+        {
+          "id": "map_becomes_clear",
+          "phrases": [
+            "map becomes clear",
+            "map clears",
+            "map dries and is readable",
+            "blurred map is fixed",
+            "map redraws itself"
+          ],
+          "keywords": [
+            "map",
+            "clear",
+            "readable"
+          ]
+        },
+        {
+          "id": "gps_or_phone_navigation",
+          "phrases": [
+            "uses gps",
+            "phone app",
+            "mobile map",
+            "calls a ride",
+            "Pavel calls the delivery driver"
+          ],
+          "keywords": [
+            "gps",
+            "phone",
+            "app"
+          ]
+        },
+        {
+          "id": "pavel_direct_rescue",
+          "phrases": [
+            "Pavel simply guides",
+            "Pavel calls the cart",
+            "Pavel sends someone"
+          ],
+          "keywords": [
+            "Pavel",
+            "calls",
+            "driver"
+          ]
+        }
+      ],
+      "broad_common_plot_families": [
+        {
+          "id": "smell_cafe_directly",
+          "phrases": [
+            "Ro smells the cafe",
+            "follow the cafe smell",
+            "smells coffee and goes there"
+          ],
+          "keywords": [
+            "smell",
+            "cafe"
+          ]
+        },
+        {
+          "id": "ordinary_salt_route",
+          "phrases": [
+            "uses salt as markers",
+            "sprinkles salt on the road",
+            "salt trail leads to cafe"
+          ],
+          "keywords": [
+            "salt",
+            "trail"
+          ]
+        },
+        {
+          "id": "generic_teamwork",
+          "phrases": [
+            "they work together",
+            "someone has an idea",
+            "follow clues"
+          ],
+          "keywords": [
+            "work together",
+            "idea"
+          ]
+        }
+      ],
+      "supported_rare_turn_families": [
+        {
+          "id": "scent_branch_encoding",
+          "phrases": [
+            "salt sugar tea scent code",
+            "jars become a branching smell code",
+            "smell-coded forks"
+          ],
+          "keywords": [
+            "salt",
+            "sugar",
+            "tea",
+            "smell",
+            "branch",
+            "code"
+          ]
+        },
+        {
+          "id": "fog_tactile_scent_correction",
+          "phrases": [
+            "fog makes touch and smell rhythm",
+            "tactile scent rhythm corrects turns",
+            "cart follows scent pulses"
+          ],
+          "keywords": [
+            "fog",
+            "touch",
+            "smell",
+            "rhythm",
+            "cart"
+          ]
+        }
+      ]
+    },
+    "gcw_021": {
+      "hard_zero_plot_families": [
+        {
+          "id": "fuse_repairs_lights",
+          "phrases": [
+            "fuse fits",
+            "wrong fuse works",
+            "lights restored",
+            "repairs the lights with the fuse"
+          ],
+          "keywords": [
+            "fuse",
+            "lights",
+            "restored"
+          ]
+        },
+        {
+          "id": "cole_sings_song",
+          "phrases": [
+            "Cole sings a song",
+            "full melody",
+            "sings to guide everyone"
+          ],
+          "keywords": [
+            "Cole",
+            "sings",
+            "song"
+          ]
+        },
+        {
+          "id": "flashlight_phone_light",
+          "phrases": [
+            "uses a flashlight",
+            "phone light",
+            "mobile torch"
+          ],
+          "keywords": [
+            "flashlight",
+            "phone",
+            "light"
+          ]
+        }
+      ],
+      "broad_common_plot_families": [
+        {
+          "id": "mirror_exit_sign_direct",
+          "phrases": [
+            "holds up the mirror to show the exit sign",
+            "reflects exit sign directly",
+            "mirror points to exit"
+          ],
+          "keywords": [
+            "mirror",
+            "exit sign"
+          ]
+        },
+        {
+          "id": "audience_waits_orderly",
+          "phrases": [
+            "audience stays calm",
+            "ushers guide people",
+            "everyone waits quietly"
+          ],
+          "keywords": [
+            "audience",
+            "calm"
+          ]
+        }
+      ],
+      "supported_rare_turn_families": [
+        {
+          "id": "mirror_whistle_segment_protocol",
+          "phrases": [
+            "mirror reflection and one whistle note make a segmented protocol",
+            "hand mirror plus single note marks aisle segments",
+            "one note times reflected exit sign"
+          ],
+          "keywords": [
+            "hand mirror",
+            "exit sign",
+            "one note",
+            "aisles",
+            "protocol"
+          ]
+        },
+        {
+          "id": "dim_audience_calibrated_reflection",
+          "phrases": [
+            "dim audience uses mirror flashes and whistle pulses",
+            "reflection pulse marks safe aisle sections"
+          ],
+          "keywords": [
+            "dim light",
+            "audience",
+            "mirror",
+            "whistle",
+            "aisles"
+          ]
+        }
+      ]
+    },
+    "gcw_024": {
+      "hard_zero_plot_families": [
+        {
+          "id": "new_or_found_sign",
+          "phrases": [
+            "finds a wet floor sign",
+            "new wet floor sign",
+            "printed sign appears",
+            "spare sign"
+          ],
+          "keywords": [
+            "wet floor sign",
+            "new",
+            "spare"
+          ]
+        },
+        {
+          "id": "hana_runs",
+          "phrases": [
+            "Hana runs",
+            "Hana sprints",
+            "Hana races indoors"
+          ],
+          "keywords": [
+            "Hana",
+            "runs"
+          ]
+        },
+        {
+          "id": "umbrella_becomes_whole",
+          "phrases": [
+            "umbrella repairs itself",
+            "untorn umbrella",
+            "umbrella becomes whole"
+          ],
+          "keywords": [
+            "umbrella",
+            "whole",
+            "repair"
+          ]
+        }
+      ],
+      "broad_common_plot_families": [
+        {
+          "id": "umbrella_as_simple_sign",
+          "phrases": [
+            "uses the umbrella as a sign",
+            "holds umbrella near slippery patch",
+            "umbrella becomes a warning"
+          ],
+          "keywords": [
+            "umbrella",
+            "warning"
+          ]
+        },
+        {
+          "id": "generic_verbal_warning",
+          "phrases": [
+            "warns the visitors",
+            "tells everyone to be careful",
+            "people cooperate"
+          ],
+          "keywords": [
+            "warns",
+            "visitors"
+          ]
+        }
+      ],
+      "supported_rare_turn_families": [
+        {
+          "id": "transparent_rain_reflection_boundary",
+          "phrases": [
+            "transparent torn umbrella makes a visible drip boundary",
+            "rainwater on the clear torn rib catches reflections",
+            "umbrella edge reveals slippery patch"
+          ],
+          "keywords": [
+            "transparent",
+            "torn rib",
+            "rainwater",
+            "marble stairs",
+            "visitors"
+          ]
+        },
+        {
+          "id": "cloakroom_slow_signal",
+          "phrases": [
+            "cloakroom handoff turns drips into a slow signal",
+            "Hana walks while Lio angles the torn umbrella"
+          ],
+          "keywords": [
+            "cloakroom",
+            "Hana",
+            "Lio",
+            "umbrella",
+            "slippery patch"
+          ]
+        }
+      ]
+    },
+    "gcw_028": {
+      "hard_zero_plot_families": [
+        {
+          "id": "tape_repairs_drum",
+          "phrases": [
+            "paper tape repairs the drum",
+            "fully repairs the drum",
+            "new drum skin",
+            "drum is fixed"
+          ],
+          "keywords": [
+            "paper tape",
+            "repair",
+            "drum"
+          ]
+        },
+        {
+          "id": "recorded_music",
+          "phrases": [
+            "speaker plays music",
+            "recorded music",
+            "plays a track"
+          ],
+          "keywords": [
+            "speaker",
+            "recorded music"
+          ]
+        },
+        {
+          "id": "deep_drum_restored",
+          "phrases": [
+            "deep drum sound returns",
+            "thunderous drum",
+            "drum sounds deep"
+          ],
+          "keywords": [
+            "deep",
+            "drum"
+          ]
+        }
+      ],
+      "broad_common_plot_families": [
+        {
+          "id": "ordinary_footstep_count",
+          "phrases": [
+            "everyone stomps a beat",
+            "simple footstep count",
+            "claps and counts"
+          ],
+          "keywords": [
+            "footsteps",
+            "count"
+          ]
+        },
+        {
+          "id": "generic_group_rhythm",
+          "phrases": [
+            "the dancers work together",
+            "Inez counts aloud",
+            "Saul keeps rhythm"
+          ],
+          "keywords": [
+            "dancers",
+            "rhythm"
+          ]
+        }
+      ],
+      "supported_rare_turn_families": [
+        {
+          "id": "shoulder_floor_tape_visual_meter",
+          "phrases": [
+            "Saul reads shoulders while floor echoes and paper tape makes a visual beat",
+            "paper tape becomes a light visual meter for echoing footsteps"
+          ],
+          "keywords": [
+            "shoulders",
+            "hall floor",
+            "echoes footsteps",
+            "paper tape",
+            "steady count"
+          ]
+        },
+        {
+          "id": "split_drum_as_silent_count_surface",
+          "phrases": [
+            "split drum becomes a silent counting surface",
+            "tape marks on drum skin cue dancers without deep sound"
+          ],
+          "keywords": [
+            "split",
+            "drum skin",
+            "paper tape",
+            "dancers",
+            "count"
+          ]
+        }
+      ]
+    },
+    "gcw_030": {
+      "hard_zero_plot_families": [
+        {
+          "id": "wind_or_sails_turn",
+          "phrases": [
+            "wind arrives",
+            "sails turn",
+            "mill starts turning",
+            "windmill works again"
+          ],
+          "keywords": [
+            "wind",
+            "sails",
+            "turn"
+          ]
+        },
+        {
+          "id": "electric_sorter_machine",
+          "phrases": [
+            "electric sorter",
+            "new machine",
+            "mechanical sorter",
+            "installs a machine"
+          ],
+          "keywords": [
+            "electric",
+            "sorter",
+            "machine"
+          ]
+        },
+        {
+          "id": "talking_magic_scale",
+          "phrases": [
+            "scale speaks",
+            "magic scale",
+            "scale tells them"
+          ],
+          "keywords": [
+            "scale",
+            "speaks"
+          ]
+        }
+      ],
+      "broad_common_plot_families": [
+        {
+          "id": "simple_bag_weighing",
+          "phrases": [
+            "weighs each sack",
+            "uses the scale to sort sacks",
+            "separates light sacks from damp ones by weighing"
+          ],
+          "keywords": [
+            "scale",
+            "sacks",
+            "weigh"
+          ]
+        },
+        {
+          "id": "generic_records_sorting",
+          "phrases": [
+            "Nell checks records",
+            "they sort before rain",
+            "Casper helps by hand"
+          ],
+          "keywords": [
+            "records",
+            "sort"
+          ]
+        }
+      ],
+      "supported_rare_turn_families": [
+        {
+          "id": "scale_calibrates_hand_judgment",
+          "phrases": [
+            "hanging scale calibrates Casper's hand judgment",
+            "Nell records scale thresholds so Casper can separate light and damp sacks by touch",
+            "scale trains Casper's feel"
+          ],
+          "keywords": [
+            "sack scale",
+            "Casper",
+            "judge weight",
+            "records",
+            "light sacks",
+            "damp ones"
+          ]
+        },
+        {
+          "id": "beam_scale_record_loop",
+          "phrases": [
+            "beam and scale create a record loop for hand sorting",
+            "old mill records convert scale readings into touch categories"
+          ],
+          "keywords": [
+            "beam",
+            "sack scale",
+            "records",
+            "grain sacks",
+            "rain"
+          ]
+        }
+      ]
+    }
+  }
+}

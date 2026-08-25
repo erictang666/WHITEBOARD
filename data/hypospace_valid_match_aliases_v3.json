@@ -1,0 +1,468 @@
+{
+  "schema": "benchmark",
+  "version": "benchmark",
+  "description": "Frozen soft-valid alias overlay for T5-v3. These aliases expand canonical closed-world tags; they do not add new entities, operations, mechanisms, or effects.",
+  "global": {
+    "entities": {
+      "binder_clip": [
+        "binder clip",
+        "paper clip clamp",
+        "clip",
+        "paper clamp"
+      ],
+      "index_cards": [
+        "index card",
+        "cards",
+        "folded cards",
+        "card stack"
+      ],
+      "mug": [
+        "coffee mug",
+        "ceramic mug",
+        "cup",
+        "heavy cup"
+      ],
+      "tape": [
+        "masking tape",
+        "removable tape",
+        "sticky tape",
+        "adhesive strip"
+      ],
+      "rubber_band": [
+        "elastic band",
+        "band",
+        "elastic loop"
+      ],
+      "coins": [
+        "coin",
+        "quarters",
+        "coin stack",
+        "stacked coins"
+      ],
+      "folded_paper": [
+        "folded paper",
+        "paper wedge",
+        "folded note",
+        "paper shim"
+      ],
+      "cork_coaster": [
+        "cork coaster",
+        "coaster",
+        "cork pad"
+      ],
+      "chopsticks": [
+        "chopsticks",
+        "chopstick",
+        "sticks",
+        "rigid sticks"
+      ],
+      "string": [
+        "string",
+        "thread",
+        "twine",
+        "cord"
+      ],
+      "straw": [
+        "straw",
+        "drinking straw",
+        "plastic straw"
+      ],
+      "magnet": [
+        "small magnet",
+        "magnet"
+      ]
+    },
+    "operations": {
+      "clamp": [
+        "clip",
+        "grip edge",
+        "pinch edge"
+      ],
+      "prop": [
+        "stand",
+        "support",
+        "prop up"
+      ],
+      "wedge": [
+        "shim",
+        "fold wedge",
+        "angle brace"
+      ],
+      "backstop": [
+        "brace",
+        "lean",
+        "rear support",
+        "back stop"
+      ],
+      "fold": [
+        "crease",
+        "make triangle",
+        "fold into support"
+      ],
+      "temporary_fastener": [
+        "temporary tape",
+        "removable fastener",
+        "removable tape",
+        "attach temporarily",
+        "adhesive hold"
+      ],
+      "tie": [
+        "wrap",
+        "loop",
+        "bind",
+        "cinch"
+      ],
+      "counterweight": [
+        "weight",
+        "counter weight",
+        "stabilizing weight"
+      ],
+      "spacer": [
+        "gap filler",
+        "height spacer",
+        "shim spacer"
+      ],
+      "stack": [
+        "pile",
+        "stack up",
+        "layer"
+      ],
+      "pad": [
+        "cushion",
+        "soft pad",
+        "non scratching pad"
+      ],
+      "pinch": [
+        "grip",
+        "squeeze",
+        "pinch grip"
+      ],
+      "extend": [
+        "reach",
+        "extension",
+        "reach into"
+      ],
+      "sticky_lift": [
+        "adhesive lift",
+        "sticky pick up",
+        "tape lift",
+        "adhesive pickup"
+      ],
+      "loop": [
+        "lasso",
+        "snare",
+        "cinch loop",
+        "slip loop"
+      ]
+    },
+    "mechanisms": {
+      "clamp": [
+        "clip clamp",
+        "spring clamp",
+        "edge grip"
+      ],
+      "folding_handles": [
+        "wire handles",
+        "folding handle legs",
+        "fold out arms"
+      ],
+      "heavy_backstop": [
+        "heavy brace",
+        "weighted backstop",
+        "mug weight",
+        "mass brace"
+      ],
+      "foldable_support": [
+        "folded support",
+        "card triangle",
+        "paper triangle",
+        "folded wedge"
+      ],
+      "removable_fastener": [
+        "removable adhesion",
+        "temporary adhesive",
+        "masking tape hold"
+      ],
+      "elastic_tension": [
+        "elastic tension",
+        "rubber band tension",
+        "stretch tension",
+        "wrap tension"
+      ],
+      "thin_spacer": [
+        "thin shim",
+        "small spacer",
+        "height shim"
+      ],
+      "foldable_wedge": [
+        "folded wedge",
+        "paper wedge",
+        "paper shim"
+      ],
+      "compressible_pad": [
+        "compressible pad",
+        "soft pad",
+        "cork pad",
+        "cushioning pad"
+      ],
+      "friction_grip": [
+        "friction grip",
+        "non slip",
+        "grippy surface",
+        "friction pad"
+      ],
+      "rigid_stack": [
+        "rigid stack",
+        "coin stack",
+        "stack height"
+      ],
+      "rigid_reach": [
+        "rigid reach",
+        "long rigid extension",
+        "stick reach"
+      ],
+      "pinch_grip": [
+        "pinch grip",
+        "tongs grip",
+        "squeeze grip"
+      ],
+      "sticky_tip": [
+        "adhesive tip",
+        "sticky end",
+        "tape tip",
+        "sticky pickup"
+      ],
+      "flexible_loop": [
+        "flexible loop",
+        "string loop",
+        "lasso loop",
+        "snare loop"
+      ],
+      "elastic_loop": [
+        "elastic loop",
+        "rubber band loop",
+        "cinch loop"
+      ],
+      "light_extension": [
+        "light extension",
+        "straw extension",
+        "long light reach"
+      ]
+    },
+    "effects": {
+      "upright_support": [
+        "upright",
+        "stands upright",
+        "phone upright",
+        "vertical support"
+      ],
+      "stable_base": [
+        "stable",
+        "stable base",
+        "does not tip",
+        "steady"
+      ],
+      "camera_clear": [
+        "camera clear",
+        "lens unobstructed",
+        "camera unobstructed",
+        "does not block camera"
+      ],
+      "level_surface": [
+        "level",
+        "level surface",
+        "balanced table",
+        "table stops wobbling"
+      ],
+      "non_marring": [
+        "non marring",
+        "non scratching",
+        "no damage",
+        "floor remains unscratched"
+      ],
+      "retrieve_cookie": [
+        "retrieve cookie",
+        "lift cookie",
+        "recover cookie",
+        "pull cookie out"
+      ],
+      "intact_cookie": [
+        "intact cookie",
+        "not broken",
+        "without crushing cookie"
+      ],
+      "no_hand_inside": [
+        "no hand inside",
+        "hand stays outside",
+        "without reaching hand into jar"
+      ]
+    },
+    "evidence_keywords": {
+      "EP_PHONE_C1": [
+        "binder clip",
+        "clip",
+        "clamp",
+        "folding handles",
+        "wire handles",
+        "legs"
+      ],
+      "EP_PHONE_C2": [
+        "index cards",
+        "cards",
+        "folded",
+        "wedge",
+        "spacer",
+        "angle"
+      ],
+      "EP_PHONE_C3": [
+        "mug",
+        "heavy",
+        "backstop",
+        "camera clear",
+        "mass"
+      ],
+      "EP_PHONE_C4": [
+        "removable tape",
+        "tape",
+        "temporary",
+        "hold",
+        "not permanent",
+        "adhesive"
+      ],
+      "EP_PHONE_C5": [
+        "rubber band",
+        "elastic",
+        "tension",
+        "wrap",
+        "loop"
+      ],
+      "EP_TABLE_C1": [
+        "coins",
+        "coin",
+        "stack",
+        "rigid",
+        "spacer",
+        "short leg"
+      ],
+      "EP_TABLE_C2": [
+        "folded paper",
+        "paper",
+        "wedge",
+        "pad",
+        "non marring",
+        "non scratching"
+      ],
+      "EP_TABLE_C3": [
+        "cork coaster",
+        "cork",
+        "coaster",
+        "friction",
+        "compress",
+        "table leg"
+      ],
+      "EP_TABLE_C4": [
+        "tape",
+        "removable",
+        "temporary",
+        "hold shim",
+        "not permanent"
+      ],
+      "EP_TABLE_C5": [
+        "rubber band",
+        "tie",
+        "wrap",
+        "tension",
+        "not rigid spacer"
+      ],
+      "EP_COOKIE_C1": [
+        "chopsticks",
+        "chopstick",
+        "tongs",
+        "extend",
+        "pinch",
+        "jar opening",
+        "rigid reach"
+      ],
+      "EP_COOKIE_C2": [
+        "string",
+        "flexible loop",
+        "thread",
+        "twine",
+        "not rigid"
+      ],
+      "EP_COOKIE_C3": [
+        "bend",
+        "hook",
+        "pull",
+        "hooking motion"
+      ],
+      "EP_COOKIE_C4": [
+        "magnet",
+        "ferromagnetic",
+        "not cookie",
+        "does not attract cookie"
+      ],
+      "EP_COOKIE_C5": [
+        "rubber band",
+        "tension",
+        "loop",
+        "hook",
+        "cinch"
+      ],
+      "EP_LIGHT_C1": [
+        "spoon",
+        "reflect",
+        "cannot emit",
+        "mirror",
+        "foil"
+      ],
+      "EP_LIGHT_C2": [
+        "external light",
+        "bright marker",
+        "white card",
+        "reflect only"
+      ],
+      "EP_LIGHT_C3": [
+        "string",
+        "hang",
+        "align",
+        "not create light"
+      ],
+      "EP_LIGHT_C4": [
+        "no battery",
+        "no flame",
+        "no glow stick",
+        "no lamp"
+      ]
+    }
+  },
+  "tasks": {
+    "hs_v2_evidence_phone_012": {
+      "base_space": "hs_phone_stand_001"
+    },
+    "hs_v2_evidence_table_016": {
+      "base_space": "hs_table_shim_002"
+    },
+    "hs_v2_evidence_cookie_019": {
+      "base_space": "hs_cookie_jar_003"
+    },
+    "hs_v2_minimal_phone_024": {
+      "base_space": "hs_phone_stand_001"
+    },
+    "hs_v2_minimal_cookie_028": {
+      "base_space": "hs_cookie_jar_003"
+    },
+    "hs_v2_classic_light_009": {
+      "base_space": "hs_no_light_004"
+    },
+    "hs_v2_evidence_light_020": {
+      "base_space": "hs_no_light_004"
+    },
+    "hs_v2_minimal_light_029": {
+      "base_space": "hs_no_light_004"
+    },
+    "hs_v2_minimal_light_030": {
+      "base_space": "hs_no_light_004"
+    }
+  }
+}

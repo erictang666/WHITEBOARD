@@ -1,0 +1,131 @@
+{
+  "counterfactual": {
+    "DEFAULT_CJST_V3_PARAMS": {
+      "rarity_gamma": 1.35,
+      "grounding_gamma": 1.25,
+      "hard_zero_threshold": 0.42,
+      "broad_common_threshold": 0.38,
+      "broad_common_floor": 0.25,
+      "supported_rare_floor": 0.82,
+      "min_intervention_for_uncapped": 0.55,
+      "min_causal_edge_for_uncapped": 0.45,
+      "task_weights": {
+        "quality_mass_top6": 0.35,
+        "elite_tail_top3": 0.3,
+        "tier_balanced_depth": 0.15,
+        "second_order_chain_score": 0.2
+      },
+      "top_quality_n": 6,
+      "elite_tail_n": 3
+    }
+  },
+  "macgyver": {
+    "COMMON_UNAVAILABLE_TOOL_MARKERS": [
+      "battery",
+      "drill",
+      "glue",
+      "hammer",
+      "heat gun",
+      "jack",
+      "knife",
+      "lighter",
+      "match",
+      "matches",
+      "motor",
+      "nail",
+      "plastic sheet",
+      "rope",
+      "saw",
+      "scissors",
+      "screw",
+      "screwdriver",
+      "string",
+      "superglue",
+      "torch",
+      "water",
+      "wire",
+      "wrench"
+    ]
+  },
+  "neocoder": {
+    "DANGEROUS_IMPORTS": [
+      "builtins",
+      "ctypes",
+      "importlib",
+      "multiprocessing",
+      "os",
+      "pathlib",
+      "pickle",
+      "requests",
+      "shutil",
+      "signal",
+      "socket",
+      "subprocess",
+      "sys",
+      "threading",
+      "urllib"
+    ],
+    "DANGEROUS_CALLS": [
+      "__import__",
+      "breakpoint",
+      "compile",
+      "eval",
+      "exec",
+      "exit",
+      "globals",
+      "input",
+      "locals",
+      "open",
+      "quit",
+      "vars"
+    ]
+  },
+  "propconj": {
+    "FANTASY_OR_IMPOSSIBLE_MARKERS": [
+      "alien",
+      "dragon",
+      "fictional",
+      "imaginary",
+      "made up",
+      "magic",
+      "magical",
+      "micro sun",
+      "miniature sun",
+      "mythical",
+      "personal star",
+      "pocket sun",
+      "teleport",
+      "tiny sun",
+      "unicorn"
+    ],
+    "fantasy_marker_sigmoid": {
+      "midpoint": 0.5,
+      "temperature": 0.22,
+      "exact_hit_score": 0.95,
+      "token_hit_score": 0.82,
+      "substring_hit_score": 0.7,
+      "cap": 1.0
+    }
+  },
+  "ttct_zero_originality": {
+    "hard_zero_family_source": "ttct_zero_originality.ZERO_ORIGINALITY_STATIC_BANK[*].hard_zero_families",
+    "static_family_match_sigmoid": {
+      "midpoint": 0.5,
+      "temperature": 0.2,
+      "static_threshold": 0.5,
+      "exact": 1.0,
+      "token_exact": 0.92,
+      "alias_token_subset": 0.84,
+      "core_token_subset": 0.78,
+      "substring": 0.68
+    }
+  },
+  "t1_assoc_v3": {
+    "common_answer_distance_transform": {
+      "lo": 0.05,
+      "hi": 0.95,
+      "shape": "sigmoid_tail_preserving",
+      "slope": 6.0
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "schema": "benchmark",
+  "anchors": {
+    "cjst_01": [
+      "Pilots avoid tangled sky corridors.",
+      "Farmers pull rain clouds toward dry fields.",
+      "Cities regulate cloud-string anchors."
+    ],
+    "cjst_02": [
+      "Shoes become the main identity signal.",
+      "Sidewalk signs move to foot level.",
+      "People recognize friends by gait."
+    ],
+    "cjst_03": [
+      "Airports redesign queues around moving luggage.",
+      "Sidewalks add lanes for trailing bags.",
+      "Privacy rules cover suitcase location data."
+    ],
+    "cjst_04": [
+      "Workers need height limits for safety.",
+      "Abandoned ladders block rooms and streets.",
+      "Rescue teams reach roofs faster."
+    ],
+    "cjst_05": [
+      "Lost-and-found desks matter less.",
+      "Pickpockets become easier to identify.",
+      "People send cash by walking wallet."
+    ],
+    "cjst_06": [
+      "Police use doors as witnesses.",
+      "People soundproof entrances.",
+      "Privacy around rooms becomes fragile."
+    ],
+    "cjst_07": [
+      "Libraries redesign shelves and desks.",
+      "Students slide notes beneath books.",
+      "Spills damage fewer pages."
+    ],
+    "cjst_08": [
+      "Emotions become visible in public.",
+      "Doctors screen stress by shadow color.",
+      "People carry lamps to hide feelings."
+    ],
+    "cjst_09": [
+      "Umbrellas protect faces from below.",
+      "Cities redesign drains and gutters.",
+      "Cyclists avoid afternoon water jets."
+    ],
+    "cjst_10": [
+      "Security mirrors become short replay screens.",
+      "Grooming becomes slower.",
+      "Privacy rules cover delayed reflections."
+    ],
+    "cjst_11": [
+      "Drivers learn melodies for stop and go.",
+      "Cities regulate intersection noise.",
+      "Blind pedestrians use musical crossing cues."
+    ],
+    "cjst_12": [
+      "Navigation apps show rush-hour distance changes.",
+      "Delivery windows widen.",
+      "Bus schedules add stretch buffers."
+    ],
+    "cjst_13": [
+      "Gift buyers hide receipts more carefully.",
+      "Stores create silent receipt sleeves.",
+      "Blind customers verify purchases by touch."
+    ],
+    "cjst_14": [
+      "Curtain sales spike.",
+      "Museums schedule transparent-wall tours.",
+      "Security teams move valuables before the hour."
+    ],
+    "cjst_15": [
+      "Comedy clubs secure decorations more tightly.",
+      "Party games measure laughter by balloon weight.",
+      "Children avoid holding balloons during jokes."
+    ],
+    "cjst_16": [
+      "Cafes sort cups by previous drink.",
+      "Allergy warnings become easier.",
+      "Investigators test cup memories after spills."
+    ],
+    "cjst_17": [
+      "People avoid handshakes before speeches.",
+      "Voice authentication bans recent handshakes.",
+      "Comedians choreograph handshake voice swaps."
+    ],
+    "cjst_18": [
+      "People crack windows to stop snow buildup.",
+      "Insurers price indoor snow damage.",
+      "Gyms offer closed-window snow rooms."
+    ],
+    "cjst_19": [
+      "Street cleaners collect curbside metal debris.",
+      "Cyclists secure metal accessories.",
+      "Lost keys slide toward curbs."
+    ],
+    "cjst_20": [
+      "Schools start after noon or use bells by sunlight.",
+      "Morning appointments use hourglasses.",
+      "Workers rely on radio announcements."
+    ],
+    "cjst_21": [
+      "Interview rooms avoid windows.",
+      "Courtrooms monitor glass during testimony.",
+      "People hold private talks away from storefronts."
+    ],
+    "cjst_22": [
+      "Classrooms become easier for deaf students.",
+      "Crowded rooms fill with caption clutter.",
+      "Secret conversations happen behind visual screens."
+    ],
+    "cjst_23": [
+      "People find lost keys by warmth.",
+      "Airlines warn about forgotten metal in bags.",
+      "Toy makers avoid small metal parts."
+    ],
+    "cjst_24": [
+      "Students photograph notes before reading.",
+      "Lawyers avoid handwritten contracts.",
+      "Secret messages become easier to destroy."
+    ],
+    "cjst_25": [
+      "Tall buildings rely more on stairs and ramps.",
+      "Office towers connect through horizontal elevator corridors.",
+      "Fire codes require new vertical alternatives."
+    ],
+    "cjst_26": [
+      "Emergency drills teach people to follow shadows.",
+      "Buildings maintain lighting for shadow exits.",
+      "Maze attractions become less confusing."
+    ],
+    "cjst_27": [
+      "Gardeners shape vines with speakers.",
+      "Restaurants keep speakers away from planters.",
+      "Greenhouses monitor recorded music exposure."
+    ],
+    "cjst_28": [
+      "Cashiers wait for coins to detach from goods.",
+      "Markets use stuck coins as return proof.",
+      "People prefer cards for private purchases."
+    ],
+    "cjst_29": [
+      "Coaches keep water glasses near athletes.",
+      "Restaurants warn customers about hydration privacy.",
+      "Clinics use water cups as rough screening tools."
+    ],
+    "cjst_30": [
+      "Rescuers follow recent glowing tracks.",
+      "Dancers choreograph temporary light trails.",
+      "Offices redesign floors for movement privacy."
+    ]
+  }
+}

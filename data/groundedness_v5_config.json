@@ -1,0 +1,52 @@
+{
+  "task_weights": {
+    "Instances": {
+      "path": 0.371,
+      "feat": 0.02,
+      "mech": 0.074,
+      "anti": 0.394,
+      "drift": 0.141
+    },
+    "UUT": {
+      "path": 0.063936,
+      "feat": 0.084915,
+      "mech": 0.010989,
+      "anti": 0.736264,
+      "drift": 0.103896
+    },
+    "JST": {
+      "path": 0.144855,
+      "feat": 0.074925,
+      "mech": 0.14985,
+      "anti": 0.194805,
+      "drift": 0.435564
+    }
+  },
+  "task_params": {
+    "Instances": {
+      "tau_abs_floor": 0.250889,
+      "lambda": 0.815465
+    },
+    "UUT": {
+      "tau_abs_floor": 0.250889,
+      "lambda": 0.132382
+    },
+    "JST": {
+      "tau_abs_floor": 0.250889,
+      "lambda": 0.023944
+    }
+  },
+  "anti_cliche_effective": {
+    "formula": "clip(raw_anti + feature_rescue*g_feat_v2 - drift_suppression*drift)",
+    "feature_rescue": 0.08,
+    "drift_suppression": 1.14
+  },
+  "penalty": {
+    "scale": 0.85,
+    "deficit_shape_exp": 1.697794,
+    "novelty_scale_lo": 0.668236,
+    "novelty_scale_hi": 1.294717,
+    "low_confidence_cutoff": 0.3,
+    "low_confidence_multiplier": 0.5
+  }
+}

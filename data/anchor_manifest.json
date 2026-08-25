@@ -1,0 +1,112 @@
+{
+  "schema": "benchmark_anchor",
+  "prompt_count": 80,
+  "families": [
+    "UUT",
+    "PropConj",
+    "MacGyver",
+    "CJST",
+    "GCW",
+    "HypoUseSpace",
+    "NeoCoder",
+    "AnalogyTransfer"
+  ],
+  "task_ids_by_component": {
+    "UUT": [
+      "uut_043",
+      "uut_062",
+      "uut_077",
+      "uut_063",
+      "uut_032",
+      "uut_070",
+      "uut_16",
+      "uut_028",
+      "uut_065",
+      "uut_10",
+      "uut_072",
+      "uut_047"
+    ],
+    "PropConj": [
+      "pc_013",
+      "pc_055",
+      "pc_060",
+      "pc_011",
+      "pc_028",
+      "pc_065",
+      "pc_361",
+      "pc_025",
+      "pc_080",
+      "pc_358",
+      "pc_052",
+      "pc_057"
+    ],
+    "MacGyver": [
+      "mg_005",
+      "mg_043",
+      "mg_015",
+      "mg_014",
+      "mg_019",
+      "mg_025",
+      "mg_032",
+      "mg_078",
+      "mg_070",
+      "mg_059",
+      "mg_080",
+      "mg_045"
+    ],
+    "CJST": [
+      "cjst_17",
+      "cjst_047",
+      "cjst_137",
+      "cjst_077",
+      "cjst_107",
+      "cjst_20"
+    ],
+    "GCW": [
+      "gcw_001",
+      "gcw_031",
+      "gcw_121",
+      "gcw_061",
+      "gcw_091",
+      "gcw_003",
+      "gcw_032",
+      "gcw_122",
+      "gcw_062",
+      "gcw_092",
+      "gcw_002",
+      "gcw_033"
+    ],
+    "HypoUseSpace": [
+      "hs_v2_evidence_table_014",
+      "hs_v2_evidence_phone_013",
+      "hs_v2_evidence_cookie_017",
+      "hs_v2_evidence_light_022",
+      "hs_aug_044",
+      "hs_aug_043",
+      "hs_aug_049",
+      "hs_aug_052",
+      "hs_aug_134",
+      "hs_aug_131",
+      "hs_aug_137",
+      "hs_aug_142"
+    ],
+    "NeoCoder": [
+      "neo_aug_070",
+      "neo_aug_035",
+      "neo_aug_072",
+      "neo_flatten_once_s0",
+      "neo_flatten_once_s1",
+      "neo_aug_069"
+    ],
+    "AnalogyTransfer": [
+      "analogy_ant_transit_probe",
+      "analogy_ant_transit_limits",
+      "analogy_ant_transit_structural",
+      "analogy_immune_firewall_probe",
+      "analogy_aug_080",
+      "analogy_aug_079",
+      "analogy_library_seedbank_probe",
+      "analogy_library_seedbank_limits"
+    ]
+  }
+}

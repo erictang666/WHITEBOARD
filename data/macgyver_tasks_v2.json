@@ -1,0 +1,1122 @@
+{
+  "schema": "benchmark",
+  "extends": "macgyver_tasks.json",
+  "plan_count": 5,
+  "default_expected_response_mode": "solvable",
+  "task_overlays": {
+    "mg_001": {
+      "task_subtype": "MacGyverSolvable",
+      "expected_response_mode": "solvable",
+      "clarification_fields": [],
+      "boundary_expectation": {
+        "reason": "tools are sufficient for a non-damaging table shim"
+      }
+    },
+    "mg_002": {
+      "task_subtype": "MacGyverSolvable",
+      "expected_response_mode": "solvable",
+      "clarification_fields": [],
+      "boundary_expectation": {
+        "reason": "available cylindrical and barrier tools can roll dough"
+      }
+    },
+    "mg_003": {
+      "task_subtype": "MacGyverSolvable",
+      "expected_response_mode": "solvable",
+      "clarification_fields": [],
+      "boundary_expectation": {
+        "reason": "available reach and adhesion tools can retrieve a cookie"
+      }
+    },
+    "mg_004": {
+      "task_subtype": "MacGyverSolvable",
+      "expected_response_mode": "solvable",
+      "clarification_fields": [],
+      "boundary_expectation": {
+        "reason": "available wedge and weight tools can hold a door"
+      }
+    },
+    "mg_005": {
+      "task_subtype": "MacGyverSolvable",
+      "expected_response_mode": "solvable",
+      "clarification_fields": [],
+      "boundary_expectation": {
+        "reason": "available insulation and grip tools can handle a hot pot"
+      }
+    },
+    "mg_006": {
+      "task_subtype": "MacGyverSolvable",
+      "expected_response_mode": "solvable",
+      "clarification_fields": [],
+      "boundary_expectation": {
+        "reason": "available reach and adhesion tools can retrieve a key"
+      }
+    },
+    "mg_007": {
+      "task_subtype": "MacGyverSolvable",
+      "expected_response_mode": "solvable",
+      "clarification_fields": [],
+      "boundary_expectation": {
+        "reason": "available absorbent and sealing tools can temporarily slow a leak"
+      }
+    },
+    "mg_008": {
+      "task_subtype": "MacGyverSolvable",
+      "expected_response_mode": "solvable",
+      "clarification_fields": [],
+      "boundary_expectation": {
+        "reason": "available support objects can make a phone stand"
+      }
+    },
+    "mg_009": {
+      "task_subtype": "MacGyverUnsolvable",
+      "expected_response_mode": "unsolvable",
+      "clarification_fields": [],
+      "boundary_expectation": {
+        "reason": "no listed tool can lift the car, loosen lug nuts, or replace the missing spare",
+        "supported_reason_keywords": [
+          "lift",
+          "lug nuts",
+          "spare",
+          "strong lever",
+          "jack"
+        ]
+      }
+    },
+    "mg_010": {
+      "task_subtype": "MacGyverUnsolvable",
+      "expected_response_mode": "unsolvable",
+      "clarification_fields": [],
+      "boundary_expectation": {
+        "reason": "no listed tool provides an energy source or stored light",
+        "supported_reason_keywords": [
+          "energy",
+          "light",
+          "battery",
+          "flame",
+          "power"
+        ]
+      }
+    }
+  },
+  "additional_tasks": [
+    {
+      "id": "mg_011",
+      "title": "Pump a flat bicycle tire with no air source",
+      "task_subtype": "MacGyverUnsolvable",
+      "expected_response_mode": "unsolvable",
+      "scene": "A bicycle tire is completely flat beside a park bench. You have no pump, compressor, cartridge, or access to a nearby shop.",
+      "goal": "Inflate the tire enough to ride safely.",
+      "unsolvable": true,
+      "clarification_fields": [],
+      "boundary_expectation": {
+        "reason": "no listed item can add pressurized air to the tube",
+        "supported_reason_keywords": [
+          "pressurized air",
+          "pump",
+          "compressor",
+          "inflate",
+          "air source"
+        ]
+      },
+      "tools": [
+        {
+          "id": "cloth",
+          "name": "cotton cloth",
+          "aliases": [
+            "cloth",
+            "rag"
+          ],
+          "affordances": {
+            "padding": {
+              "keywords": [
+                "pad",
+                "wrap",
+                "protect"
+              ],
+              "strength": 0.6
+            }
+          },
+          "negative_affordances": {
+            "pressurized_air": {
+              "keywords": [
+                "inflate",
+                "pump",
+                "air pressure"
+              ],
+              "strength": 1.0
+            }
+          }
+        },
+        {
+          "id": "coin",
+          "name": "coin",
+          "aliases": [
+            "coin"
+          ],
+          "affordances": {
+            "small_rigid_edge": {
+              "keywords": [
+                "press",
+                "scrape",
+                "edge"
+              ],
+              "strength": 0.45
+            }
+          },
+          "negative_affordances": {
+            "air_source": {
+              "keywords": [
+                "pump",
+                "inflate",
+                "compress"
+              ],
+              "strength": 1.0
+            }
+          }
+        },
+        {
+          "id": "rubber_band",
+          "name": "rubber band",
+          "aliases": [
+            "rubber band"
+          ],
+          "affordances": {
+            "elastic_tie": {
+              "keywords": [
+                "tie",
+                "hold",
+                "bundle"
+              ],
+              "strength": 0.65
+            }
+          },
+          "negative_affordances": {
+            "pressure_vessel": {
+              "keywords": [
+                "inflate tire",
+                "pressurized"
+              ],
+              "strength": 1.0
+            }
+          }
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "add_air_pressure",
+          "description": "Add pressurized air to the tire.",
+          "keywords": [
+            "inflate",
+            "air",
+            "pressure",
+            "pump"
+          ]
+        },
+        {
+          "id": "ride_safely",
+          "description": "Make the bike safe to ride.",
+          "keywords": [
+            "safe",
+            "ride",
+            "firm tire"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "closed_tools",
+          "description": "Only the listed items may be used.",
+          "forbidden_tool_keywords": [
+            "pump",
+            "compressor",
+            "co2 cartridge",
+            "shop",
+            "air hose"
+          ]
+        },
+        {
+          "id": "no_fake_pressure",
+          "description": "Do not claim cloth, coins, or rubber bands can create tire pressure.",
+          "forbidden_keywords": [
+            "creates air",
+            "makes pressure",
+            "inflates by itself"
+          ]
+        }
+      ],
+      "reference_plans": []
+    },
+    {
+      "id": "mg_012",
+      "title": "Open an electronic safe with no code or power",
+      "task_subtype": "MacGyverUnsolvable",
+      "expected_response_mode": "unsolvable",
+      "scene": "A small electronic safe is locked. Its keypad battery is dead, the override key is missing, and the code is unknown.",
+      "goal": "Open the safe without damaging it.",
+      "unsolvable": true,
+      "clarification_fields": [],
+      "boundary_expectation": {
+        "reason": "no listed item supplies the code, override key, or safe-compatible power",
+        "supported_reason_keywords": [
+          "code",
+          "key",
+          "battery",
+          "power",
+          "override"
+        ]
+      },
+      "tools": [
+        {
+          "id": "sticky_note",
+          "name": "blank sticky note",
+          "aliases": [
+            "sticky note",
+            "note"
+          ],
+          "affordances": {
+            "label": {
+              "keywords": [
+                "label",
+                "write",
+                "mark"
+              ],
+              "strength": 0.5
+            }
+          },
+          "negative_affordances": {
+            "credential": {
+              "keywords": [
+                "code",
+                "password",
+                "unlock"
+              ],
+              "strength": 1.0
+            }
+          }
+        },
+        {
+          "id": "paperclip",
+          "name": "paper clip",
+          "aliases": [
+            "paper clip",
+            "clip"
+          ],
+          "affordances": {
+            "small_probe": {
+              "keywords": [
+                "probe",
+                "press"
+              ],
+              "strength": 0.45
+            }
+          },
+          "negative_affordances": {
+            "safe_key": {
+              "keywords": [
+                "override key",
+                "unlock safe"
+              ],
+              "strength": 1.0
+            }
+          }
+        },
+        {
+          "id": "cloth",
+          "name": "microfiber cloth",
+          "aliases": [
+            "cloth"
+          ],
+          "affordances": {
+            "clean_surface": {
+              "keywords": [
+                "clean",
+                "wipe"
+              ],
+              "strength": 0.55
+            }
+          },
+          "negative_affordances": {
+            "power_source": {
+              "keywords": [
+                "battery",
+                "power"
+              ],
+              "strength": 1.0
+            }
+          }
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "unlock_safe",
+          "description": "Unlock the safe using valid access.",
+          "keywords": [
+            "unlock",
+            "open",
+            "code",
+            "key"
+          ]
+        },
+        {
+          "id": "avoid_damage",
+          "description": "Avoid damaging the safe.",
+          "keywords": [
+            "without damaging",
+            "no damage"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "closed_tools",
+          "description": "Only the listed items may be used.",
+          "forbidden_tool_keywords": [
+            "battery",
+            "key",
+            "drill",
+            "locksmith",
+            "power supply"
+          ]
+        },
+        {
+          "id": "no_force",
+          "description": "Do not pry, drill, smash, or bypass the lock.",
+          "forbidden_keywords": [
+            "pry",
+            "drill",
+            "smash",
+            "bypass"
+          ]
+        }
+      ],
+      "reference_plans": []
+    },
+    {
+      "id": "mg_013",
+      "title": "Patch an unspecified pipe leak",
+      "task_subtype": "MacGyverNeedClarification",
+      "expected_response_mode": "needs_clarification",
+      "scene": "A pipe under a sink is leaking, but the pipe material, leak size, water pressure, and whether the shutoff valve works are not specified.",
+      "goal": "Give the safest next step before proposing a repair.",
+      "unsolvable": false,
+      "clarification_fields": [
+        "pipe material",
+        "leak size",
+        "water pressure",
+        "shutoff valve"
+      ],
+      "boundary_expectation": {
+        "reason": "repair feasibility depends on missing pipe and shutoff details",
+        "required_clarification_keywords": [
+          "pipe material",
+          "leak size",
+          "water pressure",
+          "shutoff valve"
+        ],
+        "supported_reason_keywords": [
+          "material",
+          "leak",
+          "pressure",
+          "shutoff"
+        ]
+      },
+      "tools": [
+        {
+          "id": "towel",
+          "name": "towel",
+          "aliases": [
+            "towel"
+          ],
+          "affordances": {
+            "absorbent": {
+              "keywords": [
+                "absorb",
+                "catch water",
+                "wrap"
+              ],
+              "strength": 0.8
+            }
+          },
+          "negative_affordances": {
+            "pressure_seal": {
+              "keywords": [
+                "seal high pressure",
+                "permanent patch"
+              ],
+              "strength": 0.8
+            }
+          }
+        },
+        {
+          "id": "tape",
+          "name": "waterproof tape",
+          "aliases": [
+            "tape",
+            "waterproof tape"
+          ],
+          "affordances": {
+            "temporary_seal": {
+              "keywords": [
+                "wrap",
+                "temporary",
+                "seal"
+              ],
+              "strength": 0.65
+            }
+          },
+          "negative_affordances": {
+            "unknown_pressure_fix": {
+              "keywords": [
+                "guaranteed",
+                "permanent",
+                "high pressure"
+              ],
+              "strength": 0.85
+            }
+          }
+        },
+        {
+          "id": "bucket",
+          "name": "bucket",
+          "aliases": [
+            "bucket"
+          ],
+          "affordances": {
+            "catch_water": {
+              "keywords": [
+                "catch",
+                "collect",
+                "under leak"
+              ],
+              "strength": 0.85
+            }
+          },
+          "negative_affordances": {}
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "request_missing_conditions",
+          "description": "Ask for missing pipe/leak/shutoff details.",
+          "keywords": [
+            "pipe material",
+            "leak size",
+            "water pressure",
+            "shutoff"
+          ]
+        },
+        {
+          "id": "avoid_unsafe_repair",
+          "description": "Avoid claiming a guaranteed repair without the missing details.",
+          "keywords": [
+            "safe",
+            "temporary",
+            "avoid"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "no_guaranteed_repair",
+          "description": "Do not claim a permanent repair without the missing details.",
+          "forbidden_keywords": [
+            "permanent fix",
+            "guaranteed repair",
+            "works for any pipe"
+          ]
+        },
+        {
+          "id": "closed_tools",
+          "description": "Only the listed tools may be used.",
+          "forbidden_tool_keywords": [
+            "pipe clamp",
+            "epoxy",
+            "plumber",
+            "wrench"
+          ]
+        }
+      ],
+      "reference_plans": []
+    },
+    {
+      "id": "mg_014",
+      "title": "Clean an unknown chemical spill",
+      "task_subtype": "MacGyverNeedClarification",
+      "expected_response_mode": "needs_clarification",
+      "scene": "A clear liquid has spilled on a workshop floor, but the substance, amount, ventilation, and whether it is corrosive or flammable are unknown.",
+      "goal": "Give the safest next step before proposing cleanup.",
+      "unsolvable": false,
+      "clarification_fields": [
+        "substance identity",
+        "spill amount",
+        "ventilation",
+        "corrosive or flammable"
+      ],
+      "boundary_expectation": {
+        "reason": "cleanup depends on missing hazard information",
+        "required_clarification_keywords": [
+          "substance",
+          "amount",
+          "ventilation",
+          "corrosive",
+          "flammable"
+        ],
+        "supported_reason_keywords": [
+          "unknown",
+          "hazard",
+          "ventilation",
+          "corrosive",
+          "flammable"
+        ]
+      },
+      "tools": [
+        {
+          "id": "paper_towels",
+          "name": "paper towels",
+          "aliases": [
+            "paper towels",
+            "towels"
+          ],
+          "affordances": {
+            "absorbent": {
+              "keywords": [
+                "absorb",
+                "wipe"
+              ],
+              "strength": 0.65
+            }
+          },
+          "negative_affordances": {
+            "hazard_safe": {
+              "keywords": [
+                "acid",
+                "solvent",
+                "flammable"
+              ],
+              "strength": 0.9
+            }
+          }
+        },
+        {
+          "id": "broom",
+          "name": "broom",
+          "aliases": [
+            "broom"
+          ],
+          "affordances": {
+            "push_debris": {
+              "keywords": [
+                "push",
+                "sweep"
+              ],
+              "strength": 0.45
+            }
+          },
+          "negative_affordances": {
+            "liquid_cleanup": {
+              "keywords": [
+                "absorb liquid",
+                "neutralize"
+              ],
+              "strength": 0.8
+            }
+          }
+        },
+        {
+          "id": "cardboard",
+          "name": "cardboard sign",
+          "aliases": [
+            "cardboard",
+            "sign"
+          ],
+          "affordances": {
+            "warning_sign": {
+              "keywords": [
+                "warn",
+                "mark",
+                "block off"
+              ],
+              "strength": 0.75
+            }
+          },
+          "negative_affordances": {}
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "request_hazard_info",
+          "description": "Ask what the substance and hazard conditions are.",
+          "keywords": [
+            "substance",
+            "amount",
+            "ventilation",
+            "corrosive",
+            "flammable"
+          ]
+        },
+        {
+          "id": "isolate_area",
+          "description": "Keep people away while information is missing.",
+          "keywords": [
+            "warn",
+            "block",
+            "avoid contact"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "no_unknown_contact",
+          "description": "Do not touch or wipe an unknown hazardous liquid.",
+          "forbidden_keywords": [
+            "wipe it up",
+            "touch",
+            "smell it"
+          ]
+        },
+        {
+          "id": "closed_tools",
+          "description": "Only the listed tools may be used.",
+          "forbidden_tool_keywords": [
+            "neutralizer",
+            "gloves",
+            "respirator",
+            "water hose"
+          ]
+        }
+      ],
+      "reference_plans": []
+    },
+    {
+      "id": "mg_015",
+      "title": "Hang a temporary warning sign without punctures",
+      "task_subtype": "MacGyverDistractor",
+      "expected_response_mode": "solvable",
+      "scene": "A wet hallway needs a temporary warning sign on a painted wall. The wall and floor must not be punctured or scratched.",
+      "goal": "Mount the sign visibly for one hour without damage.",
+      "unsolvable": false,
+      "clarification_fields": [],
+      "boundary_expectation": {
+        "reason": "adhesive and light sign materials are enough; puncturing distractor tools violate constraints"
+      },
+      "tools": [
+        {
+          "id": "paper_sign",
+          "name": "laminated paper sign",
+          "aliases": [
+            "paper sign",
+            "sign"
+          ],
+          "affordances": {
+            "visible_surface": {
+              "keywords": [
+                "sign",
+                "visible",
+                "warning"
+              ],
+              "strength": 0.9
+            }
+          },
+          "negative_affordances": {}
+        },
+        {
+          "id": "masking_tape",
+          "name": "masking tape",
+          "aliases": [
+            "masking tape",
+            "tape"
+          ],
+          "affordances": {
+            "removable_adhesion": {
+              "keywords": [
+                "tape",
+                "stick",
+                "removable",
+                "hold"
+              ],
+              "strength": 0.9
+            }
+          },
+          "negative_affordances": {}
+        },
+        {
+          "id": "string",
+          "name": "string",
+          "aliases": [
+            "string"
+          ],
+          "affordances": {
+            "tie": {
+              "keywords": [
+                "tie",
+                "hang",
+                "loop"
+              ],
+              "strength": 0.55
+            }
+          },
+          "negative_affordances": {}
+        },
+        {
+          "id": "hammer",
+          "name": "hammer",
+          "aliases": [
+            "hammer"
+          ],
+          "role": "distractor",
+          "affordances": {
+            "impact": {
+              "keywords": [
+                "hammer",
+                "hit"
+              ],
+              "strength": 0.8
+            }
+          },
+          "negative_affordances": {
+            "puncture": {
+              "keywords": [
+                "nail",
+                "puncture",
+                "hole"
+              ],
+              "strength": 1.0
+            }
+          }
+        },
+        {
+          "id": "nails",
+          "name": "nails",
+          "aliases": [
+            "nail",
+            "nails"
+          ],
+          "role": "distractor",
+          "affordances": {
+            "fastener": {
+              "keywords": [
+                "nail",
+                "fasten"
+              ],
+              "strength": 0.8
+            }
+          },
+          "negative_affordances": {
+            "puncture": {
+              "keywords": [
+                "puncture",
+                "hole",
+                "scratch"
+              ],
+              "strength": 1.0
+            }
+          }
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "visible_warning",
+          "description": "Keep the warning sign visible.",
+          "keywords": [
+            "visible",
+            "warning",
+            "sign"
+          ]
+        },
+        {
+          "id": "temporary_mount",
+          "description": "Mount it temporarily.",
+          "keywords": [
+            "temporary",
+            "removable",
+            "one hour",
+            "tape"
+          ]
+        },
+        {
+          "id": "no_damage",
+          "description": "Avoid punctures and scratches.",
+          "keywords": [
+            "without damage",
+            "no puncture",
+            "no scratch",
+            "removable"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "no_puncture",
+          "description": "Do not puncture, nail, screw, hammer, staple, or scratch the wall or floor.",
+          "forbidden_keywords": [
+            "puncture",
+            "nail",
+            "hammer",
+            "screw",
+            "staple",
+            "scratch"
+          ]
+        },
+        {
+          "id": "closed_tools",
+          "description": "Only the listed tools may be used.",
+          "forbidden_tool_keywords": [
+            "glue",
+            "drill",
+            "tack"
+          ]
+        }
+      ],
+      "reference_plans": [
+        {
+          "id": "ref_tape_sign",
+          "used_tools": [
+            "paper_sign",
+            "masking_tape"
+          ],
+          "action_sequence": [
+            "tape sign to wall",
+            "remove tape after one hour"
+          ],
+          "mechanism_tags": [
+            "visible_surface",
+            "removable_adhesion"
+          ]
+        },
+        {
+          "id": "ref_string_tape",
+          "used_tools": [
+            "paper_sign",
+            "string",
+            "masking_tape"
+          ],
+          "action_sequence": [
+            "make string loop",
+            "tape loop ends to wall"
+          ],
+          "mechanism_tags": [
+            "tie",
+            "removable_adhesion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mg_016",
+      "title": "Keep a cabinet door closed during transport",
+      "task_subtype": "MacGyverDistractor",
+      "expected_response_mode": "solvable",
+      "scene": "A small cabinet door keeps swinging open while the cabinet is carried across a room. The finish must not be damaged.",
+      "goal": "Keep the door closed temporarily without marking the finish.",
+      "unsolvable": false,
+      "clarification_fields": [],
+      "boundary_expectation": {
+        "reason": "soft wrap and removable tie tools solve the task; cutting or drilling distractors violate the boundary"
+      },
+      "tools": [
+        {
+          "id": "soft_towel",
+          "name": "soft towel",
+          "aliases": [
+            "towel",
+            "soft towel"
+          ],
+          "affordances": {
+            "scratch_protection": {
+              "keywords": [
+                "wrap",
+                "protect",
+                "soft",
+                "cushion"
+              ],
+              "strength": 0.85
+            }
+          },
+          "negative_affordances": {}
+        },
+        {
+          "id": "rubber_band",
+          "name": "large rubber band",
+          "aliases": [
+            "rubber band",
+            "band"
+          ],
+          "affordances": {
+            "elastic_hold": {
+              "keywords": [
+                "hold",
+                "stretch",
+                "band",
+                "keep closed"
+              ],
+              "strength": 0.85
+            }
+          },
+          "negative_affordances": {}
+        },
+        {
+          "id": "masking_tape",
+          "name": "low-tack masking tape",
+          "aliases": [
+            "masking tape",
+            "tape"
+          ],
+          "affordances": {
+            "removable_adhesion": {
+              "keywords": [
+                "temporary",
+                "removable",
+                "tape",
+                "hold"
+              ],
+              "strength": 0.75
+            }
+          },
+          "negative_affordances": {}
+        },
+        {
+          "id": "drill",
+          "name": "cordless drill",
+          "aliases": [
+            "drill"
+          ],
+          "role": "distractor",
+          "affordances": {
+            "make_hole": {
+              "keywords": [
+                "drill",
+                "hole"
+              ],
+              "strength": 0.8
+            }
+          },
+          "negative_affordances": {
+            "finish_damage": {
+              "keywords": [
+                "hole",
+                "screw",
+                "damage"
+              ],
+              "strength": 1.0
+            }
+          }
+        },
+        {
+          "id": "screws",
+          "name": "wood screws",
+          "aliases": [
+            "screw",
+            "screws"
+          ],
+          "role": "distractor",
+          "affordances": {
+            "permanent_fastener": {
+              "keywords": [
+                "screw",
+                "fasten"
+              ],
+              "strength": 0.8
+            }
+          },
+          "negative_affordances": {
+            "finish_damage": {
+              "keywords": [
+                "hole",
+                "damage",
+                "permanent"
+              ],
+              "strength": 1.0
+            }
+          }
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "door_stays_closed",
+          "description": "Keep the door closed during movement.",
+          "keywords": [
+            "closed",
+            "hold",
+            "keep closed",
+            "transport"
+          ]
+        },
+        {
+          "id": "temporary_solution",
+          "description": "Use a removable temporary method.",
+          "keywords": [
+            "temporary",
+            "removable",
+            "remove"
+          ]
+        },
+        {
+          "id": "protect_finish",
+          "description": "Avoid marks or damage.",
+          "keywords": [
+            "protect",
+            "no damage",
+            "no mark",
+            "soft"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "no_finish_damage",
+          "description": "Do not drill, screw, nail, scratch, or permanently glue the cabinet.",
+          "forbidden_keywords": [
+            "drill",
+            "screw",
+            "nail",
+            "scratch",
+            "permanent glue",
+            "hole"
+          ]
+        },
+        {
+          "id": "closed_tools",
+          "description": "Only the listed tools may be used.",
+          "forbidden_tool_keywords": [
+            "strap",
+            "clamp",
+            "lock"
+          ]
+        }
+      ],
+      "reference_plans": [
+        {
+          "id": "ref_band_towel",
+          "used_tools": [
+            "soft_towel",
+            "rubber_band"
+          ],
+          "action_sequence": [
+            "wrap towel over contact points",
+            "stretch rubber band around door"
+          ],
+          "mechanism_tags": [
+            "scratch_protection",
+            "elastic_hold"
+          ]
+        },
+        {
+          "id": "ref_low_tack",
+          "used_tools": [
+            "masking_tape",
+            "soft_towel"
+          ],
+          "action_sequence": [
+            "pad finish with towel",
+            "use low tack tape as temporary hold"
+          ],
+          "mechanism_tags": [
+            "removable_adhesion",
+            "scratch_protection"
+          ]
+        }
+      ]
+    }
+  ]
+}

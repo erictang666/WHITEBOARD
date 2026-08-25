@@ -1,0 +1,467 @@
+{
+  "schema": "benchmark",
+  "version": "benchmark",
+  "description": "Task-specific code-family bank for T6-v3 rarity. It is used as a frozen output-only scorer resource, not as model-tier information.",
+  "tasks": {
+    "neo_stable_unique_s2": {
+      "hard_zero_code_families": [
+        {
+          "id": "denied_set_or_for",
+          "keywords": [
+            "set(",
+            " set",
+            "for ",
+            "comprehension"
+          ],
+          "techniques": [
+            "set_usage",
+            "for_loop",
+            "list_comprehension",
+            "generator_expression"
+          ]
+        },
+        {
+          "id": "hardcoded_public_examples",
+          "keywords": [
+            "[1, 2, 3]",
+            "['a', 'b', 'c']",
+            "[\"a\", \"b\", \"c\"]"
+          ]
+        },
+        {
+          "id": "unsafe_or_io",
+          "keywords": [
+            "open(",
+            "input(",
+            "eval(",
+            "exec("
+          ]
+        },
+        {
+          "id": "input_mutation",
+          "keywords": [
+            "items.pop",
+            "items.remove",
+            "items.clear",
+            "del items"
+          ]
+        }
+      ],
+      "broad_common_code_families": [
+        {
+          "id": "while_membership_scan",
+          "keywords": [
+            "while",
+            "not in",
+            "append"
+          ],
+          "techniques": [
+            "while_loop",
+            "if_statement"
+          ]
+        },
+        {
+          "id": "slice_or_copy_scan",
+          "keywords": [
+            "while",
+            "items[:",
+            "append"
+          ]
+        }
+      ],
+      "supported_rare_strategy_families": [
+        {
+          "id": "recursive_cursor_accumulator",
+          "keywords": [
+            "def helper",
+            "return helper",
+            "idx"
+          ],
+          "techniques": [
+            "recursion",
+            "helper_function"
+          ]
+        },
+        {
+          "id": "explicit_state_machine",
+          "keywords": [
+            "cursor",
+            "probe",
+            "state machine"
+          ],
+          "techniques": [
+            "while_loop"
+          ]
+        }
+      ]
+    },
+    "neo_rle_s2": {
+      "hard_zero_code_families": [
+        {
+          "id": "denied_for_or_groupby",
+          "keywords": [
+            "for ",
+            "groupby",
+            "itertools"
+          ],
+          "techniques": [
+            "for_loop",
+            "list_comprehension",
+            "generator_expression",
+            "itertools_groupby"
+          ]
+        },
+        {
+          "id": "hardcoded_public_examples",
+          "keywords": [
+            "aaabbc",
+            "[['a', 3]",
+            "[[\"a\", 3]"
+          ]
+        },
+        {
+          "id": "unsafe_or_io",
+          "keywords": [
+            "open(",
+            "input(",
+            "eval(",
+            "exec("
+          ]
+        }
+      ],
+      "broad_common_code_families": [
+        {
+          "id": "single_while_run_scanner",
+          "keywords": [
+            "while",
+            "count",
+            "append"
+          ],
+          "techniques": [
+            "while_loop",
+            "if_statement"
+          ]
+        }
+      ],
+      "supported_rare_strategy_families": [
+        {
+          "id": "recursive_run_boundary",
+          "keywords": [
+            "def helper",
+            "start",
+            "run"
+          ],
+          "techniques": [
+            "recursion",
+            "helper_function"
+          ]
+        },
+        {
+          "id": "two_cursor_state_machine",
+          "keywords": [
+            "while",
+            "left",
+            "right",
+            "count"
+          ],
+          "techniques": [
+            "while_loop"
+          ]
+        }
+      ]
+    },
+    "neo_pair_sum_s2": {
+      "hard_zero_code_families": [
+        {
+          "id": "denied_dict_or_for",
+          "keywords": [
+            "dict(",
+            "{}",
+            "for ",
+            "enumerate"
+          ],
+          "techniques": [
+            "dict_usage",
+            "for_loop",
+            "list_comprehension",
+            "generator_expression"
+          ]
+        },
+        {
+          "id": "hardcoded_public_examples",
+          "keywords": [
+            "[0, 1]",
+            "[1, 2]",
+            "2, 7, 11, 15",
+            "3, 2, 4"
+          ]
+        },
+        {
+          "id": "unsafe_or_io",
+          "keywords": [
+            "open(",
+            "input(",
+            "eval(",
+            "exec("
+          ]
+        },
+        {
+          "id": "input_mutation",
+          "keywords": [
+            "nums.pop",
+            "nums.sort",
+            "nums.remove",
+            "del nums"
+          ]
+        }
+      ],
+      "broad_common_code_families": [
+        {
+          "id": "nested_while_bruteforce",
+          "keywords": [
+            "while",
+            "i",
+            "j",
+            "target"
+          ],
+          "techniques": [
+            "while_loop",
+            "nested_loop"
+          ]
+        },
+        {
+          "id": "recursive_pair_scan",
+          "keywords": [
+            "def helper",
+            "i",
+            "j"
+          ],
+          "techniques": [
+            "recursion",
+            "helper_function"
+          ]
+        }
+      ],
+      "supported_rare_strategy_families": [
+        {
+          "id": "diagonal_pair_state_machine",
+          "keywords": [
+            "while",
+            "offset",
+            "i",
+            "j"
+          ],
+          "techniques": [
+            "while_loop"
+          ]
+        },
+        {
+          "id": "recursive_two_index_cursor",
+          "keywords": [
+            "return search",
+            "i",
+            "j"
+          ],
+          "techniques": [
+            "recursion",
+            "helper_function"
+          ]
+        }
+      ]
+    },
+    "neo_merge_intervals_s2": {
+      "hard_zero_code_families": [
+        {
+          "id": "denied_sort_or_for",
+          "keywords": [
+            "sorted(",
+            ".sort(",
+            "for "
+          ],
+          "techniques": [
+            "sort_call",
+            "sorted_call",
+            "list_sort",
+            "for_loop",
+            "list_comprehension"
+          ]
+        },
+        {
+          "id": "hardcoded_public_examples",
+          "keywords": [
+            "[1, 6]",
+            "[8, 10]",
+            "[15, 18]",
+            "[1, 5]"
+          ]
+        },
+        {
+          "id": "unsafe_or_io",
+          "keywords": [
+            "open(",
+            "input(",
+            "eval(",
+            "exec("
+          ]
+        },
+        {
+          "id": "input_mutation",
+          "keywords": [
+            "intervals.sort",
+            "intervals.pop",
+            "intervals.remove",
+            "del intervals"
+          ]
+        }
+      ],
+      "broad_common_code_families": [
+        {
+          "id": "manual_insertion_then_merge",
+          "keywords": [
+            "while",
+            "insert",
+            "merge"
+          ],
+          "techniques": [
+            "while_loop"
+          ]
+        },
+        {
+          "id": "selection_min_loop",
+          "keywords": [
+            "while",
+            "min",
+            "append"
+          ],
+          "techniques": [
+            "while_loop"
+          ]
+        }
+      ],
+      "supported_rare_strategy_families": [
+        {
+          "id": "sortless_insertion_buffer",
+          "keywords": [
+            "while",
+            "insert",
+            "position",
+            "merged"
+          ],
+          "techniques": [
+            "while_loop"
+          ]
+        },
+        {
+          "id": "recursive_placement_merge",
+          "keywords": [
+            "def helper",
+            "place",
+            "merged"
+          ],
+          "techniques": [
+            "recursion",
+            "helper_function"
+          ]
+        }
+      ]
+    },
+    "neo_count_islands_s2": {
+      "hard_zero_code_families": [
+        {
+          "id": "denied_recursion_or_set",
+          "keywords": [
+            "set(",
+            "visited = set",
+            "def dfs",
+            "return dfs"
+          ],
+          "techniques": [
+            "set_usage",
+            "recursion",
+            "set_comprehension"
+          ]
+        },
+        {
+          "id": "hardcoded_public_examples",
+          "keywords": [
+            "return 3",
+            "return 0",
+            "[[1, 1, 0], [0, 1, 0]"
+          ]
+        },
+        {
+          "id": "unsafe_or_io",
+          "keywords": [
+            "open(",
+            "input(",
+            "eval(",
+            "exec("
+          ]
+        },
+        {
+          "id": "input_mutation_without_restore",
+          "keywords": [
+            "grid[r][c] = 0",
+            "grid[row][col] = 0",
+            "grid[i][j] = 0"
+          ]
+        }
+      ],
+      "broad_common_code_families": [
+        {
+          "id": "queue_with_for_neighbors",
+          "keywords": [
+            "while",
+            "stack",
+            "for "
+          ],
+          "techniques": [
+            "while_loop",
+            "queue",
+            "for_loop"
+          ]
+        },
+        {
+          "id": "mutating_grid_bfs",
+          "keywords": [
+            "while",
+            "grid",
+            "= 0"
+          ],
+          "techniques": [
+            "while_loop",
+            "queue"
+          ]
+        }
+      ],
+      "supported_rare_strategy_families": [
+        {
+          "id": "while_stack_with_restoration",
+          "keywords": [
+            "stack",
+            "while",
+            "restore",
+            "changed"
+          ],
+          "techniques": [
+            "while_loop",
+            "queue"
+          ]
+        },
+        {
+          "id": "parallel_seen_grid_no_set",
+          "keywords": [
+            "seen",
+            "while",
+            "append",
+            "grid"
+          ],
+          "techniques": [
+            "while_loop",
+            "queue"
+          ]
+        }
+      ]
+    }
+  }
+}

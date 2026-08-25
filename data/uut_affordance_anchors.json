@@ -1,0 +1,306 @@
+{
+  "schema": "benchmark",
+  "__affordance_anchors__": {
+    "container": [
+      "The object can hold or store small items.",
+      "The object works as a container for carrying materials.",
+      "The hollow space can collect and organize loose things.",
+      "The object can keep contents together while being moved.",
+      "The object can become a bin, tray, planter, or storage holder."
+    ],
+    "flat_surface": [
+      "The broad surface can act as a flat platform.",
+      "The object can be laid flat as a sign or board.",
+      "A flat side can support labels, maps, targets, or displays.",
+      "The object can provide a stable surface for arranging items.",
+      "The surface can become a small stage, tray, or tabletop."
+    ],
+    "writable_surface": [
+      "The surface can accept ink, pencil, paint, or marker.",
+      "The object can be labeled or drawn on.",
+      "The material can become a note, sign, poster, or scorecard.",
+      "Writing on the object can communicate information.",
+      "The object can hold visible marks without losing its main form."
+    ],
+    "shapeable_surface": [
+      "The material can be folded, cut, molded, or embossed.",
+      "The object can be reshaped into a new structure.",
+      "The surface can be textured or sculpted to create function.",
+      "The material can bend enough to make a custom form.",
+      "The object can be modified without needing complex tools."
+    ],
+    "acoustic_cavity": [
+      "The hollow body can resonate or amplify sound.",
+      "The object can become a drum, speaker chamber, or megaphone.",
+      "Air inside the object can make echoes louder.",
+      "The object can direct sound through an opening.",
+      "The cavity can turn tapping or vibration into audible signals."
+    ],
+    "lightweight": [
+      "The object is light enough to hang, lift, or wear.",
+      "The material can become a kite, costume, shade, or decoration.",
+      "The object can be moved without much force.",
+      "The light weight makes it suitable for temporary structures.",
+      "The object can be carried or suspended easily."
+    ],
+    "hangable": [
+      "The object can be suspended from a hook, string, or handle.",
+      "The object can hang as a mobile, chime, shade, or display.",
+      "A handle, rim, hole, or loop can support hanging.",
+      "The object can dangle without needing a large base.",
+      "The object can be mounted overhead or against a wall."
+    ],
+    "rigid_shell": [
+      "The object has a rigid body that can protect or frame something.",
+      "The shell can become a casing, shield, helmet, or structure.",
+      "The stiff material can hold its shape under light force.",
+      "The object can separate inside contents from outside impact.",
+      "The rigid form can act as a protective cover."
+    ],
+    "water_resistant": [
+      "The material can resist water long enough for wet uses.",
+      "The object can float, catch rain, or protect contents from splashes.",
+      "A water resistant body can become a small boat or rain shield.",
+      "The object can work in damp environments.",
+      "The surface can keep liquid away from something vulnerable."
+    ],
+    "pressure_resistant": [
+      "The object can resist squeezing or pressure.",
+      "The sturdy body can protect contents under load.",
+      "The object can work as a casing in compressed conditions.",
+      "The material can hold shape when pressed.",
+      "The structure can survive moderate force."
+    ],
+    "load_bearing": [
+      "The object can support weight as a platform or brace.",
+      "The structure can hold a person or heavy item after reinforcement.",
+      "The object can become a step, chair, bridge, or support.",
+      "The material can distribute weight over a surface.",
+      "The object can prop something up."
+    ],
+    "metal_conductive": [
+      "The metal can conduct electricity or radio signals.",
+      "The object can become an antenna, contact, wire, or electrode.",
+      "The conductive surface can complete a circuit.",
+      "The material can transfer electrical charge.",
+      "The metal body can carry signal or current."
+    ],
+    "reflective": [
+      "The shiny surface can reflect light.",
+      "The object can become a mirror, signal, reflector, or flash marker.",
+      "Reflected light can make the object visible at a distance.",
+      "The surface can redirect sunlight or lamp light.",
+      "The object can help with signaling or visibility."
+    ],
+    "sharp_edge": [
+      "The edge can cut, scrape, slice, or punch.",
+      "The object can be used as a simple blade or scraper.",
+      "A sharp rim can open, mark, or score softer material.",
+      "The edge can apply focused pressure.",
+      "The object can separate material along a line."
+    ],
+    "heat_resistant": [
+      "The material can tolerate heat for cooking or fire uses.",
+      "The object can shield a surface from hot objects.",
+      "The heat resistant body can become a burner, pan, or stove part.",
+      "The material can hold hot contents briefly.",
+      "The object can work near flame or high temperature."
+    ]
+  },
+  "uut_01": {
+    "target": "Carton",
+    "affordances": [
+      "container",
+      "flat_surface",
+      "writable_surface",
+      "shapeable_surface",
+      "acoustic_cavity",
+      "lightweight",
+      "hangable"
+    ]
+  },
+  "uut_02": {
+    "target": "Tin can",
+    "affordances": [
+      "container",
+      "rigid_shell",
+      "water_resistant",
+      "metal_conductive",
+      "reflective",
+      "sharp_edge",
+      "acoustic_cavity"
+    ]
+  },
+  "uut_03": {
+    "target": "Suitcase",
+    "affordances": [
+      "container",
+      "rigid_shell",
+      "hangable",
+      "load_bearing",
+      "acoustic_cavity",
+      "flat_surface"
+    ]
+  },
+  "uut_04": {
+    "target": "Wallet",
+    "affordances": [
+      "container",
+      "flat_surface",
+      "writable_surface",
+      "lightweight",
+      "foldable"
+    ]
+  },
+  "uut_05": {
+    "target": "Ladder",
+    "affordances": [
+      "load_bearing",
+      "rigid_shell",
+      "hangable",
+      "flat_surface"
+    ]
+  },
+  "uut_06": {
+    "target": "Umbrella",
+    "affordances": [
+      "water_resistant",
+      "hangable",
+      "rigid_shell",
+      "lightweight",
+      "reflective"
+    ]
+  },
+  "uut_07": {
+    "target": "Newspaper",
+    "affordances": [
+      "flat_surface",
+      "writable_surface",
+      "shapeable_surface",
+      "lightweight",
+      "container"
+    ]
+  },
+  "uut_08": {
+    "target": "Spoon",
+    "affordances": [
+      "container",
+      "reflective",
+      "metal_conductive",
+      "rigid_shell",
+      "sharp_edge"
+    ]
+  },
+  "uut_09": {
+    "target": "Rope",
+    "affordances": [
+      "hangable",
+      "load_bearing",
+      "shapeable_surface"
+    ]
+  },
+  "uut_10": {
+    "target": "Brick",
+    "affordances": [
+      "load_bearing",
+      "rigid_shell",
+      "heat_resistant",
+      "flat_surface"
+    ]
+  },
+  "uut_11": {
+    "target": "Sock",
+    "affordances": [
+      "container",
+      "shapeable_surface",
+      "soft",
+      "hangable",
+      "lightweight"
+    ]
+  },
+  "uut_12": {
+    "target": "Plastic bottle",
+    "affordances": [
+      "container",
+      "water_resistant",
+      "lightweight",
+      "acoustic_cavity",
+      "hangable"
+    ]
+  },
+  "uut_13": {
+    "target": "Towel",
+    "affordances": [
+      "absorbent",
+      "shapeable_surface",
+      "hangable",
+      "soft",
+      "lightweight"
+    ]
+  },
+  "uut_14": {
+    "target": "Key",
+    "affordances": [
+      "metal_conductive",
+      "rigid_shell",
+      "sharp_edge",
+      "hangable"
+    ]
+  },
+  "uut_15": {
+    "target": "Plate",
+    "affordances": [
+      "flat_surface",
+      "container",
+      "rigid_shell",
+      "reflective"
+    ]
+  },
+  "uut_16": {
+    "target": "Book",
+    "affordances": [
+      "flat_surface",
+      "writable_surface",
+      "container",
+      "rigid_shell",
+      "load_bearing"
+    ]
+  },
+  "uut_17": {
+    "target": "Chair",
+    "affordances": [
+      "load_bearing",
+      "flat_surface",
+      "rigid_shell",
+      "hangable"
+    ]
+  },
+  "uut_18": {
+    "target": "Toothbrush",
+    "affordances": [
+      "shapeable_surface",
+      "sharp_edge",
+      "lightweight",
+      "cleaning"
+    ]
+  },
+  "uut_19": {
+    "target": "Shoe",
+    "affordances": [
+      "container",
+      "rigid_shell",
+      "water_resistant",
+      "load_bearing"
+    ]
+  },
+  "uut_20": {
+    "target": "Paper clip",
+    "affordances": [
+      "metal_conductive",
+      "shapeable_surface",
+      "hangable",
+      "sharp_edge",
+      "lightweight"
+    ]
+  }
+}

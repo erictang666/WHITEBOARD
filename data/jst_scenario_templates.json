@@ -1,0 +1,860 @@
+{
+  "jst_01": {
+    "anchors": [
+      "cloud",
+      "string",
+      "attach",
+      "earth",
+      "sky"
+    ],
+    "impact_channels": {
+      "physical_interaction": [
+        "pull",
+        "tie",
+        "climb",
+        "swing",
+        "grab",
+        "anchor"
+      ],
+      "hazard_transport": [
+        "airplane",
+        "bird",
+        "tangle",
+        "crash",
+        "traffic",
+        "helicopter"
+      ],
+      "weather_control": [
+        "rain",
+        "drag",
+        "shade",
+        "storm",
+        "drought",
+        "move cloud"
+      ],
+      "culture_economy": [
+        "weave",
+        "tourism",
+        "harvest",
+        "decoration",
+        "festival",
+        "industry"
+      ]
+    }
+  },
+  "jst_02": {
+    "anchors": [
+      "see",
+      "people",
+      "feet",
+      "shoe",
+      "step"
+    ],
+    "impact_channels": {
+      "identity_signaling": [
+        "shoe",
+        "sock",
+        "recognize",
+        "identity",
+        "fashion",
+        "pedicure"
+      ],
+      "navigation_hazard": [
+        "trip",
+        "crash",
+        "accident",
+        "bump",
+        "traffic",
+        "step on toes"
+      ],
+      "social_behavior": [
+        "greet",
+        "avoid eye contact",
+        "embarrass",
+        "posture",
+        "dance"
+      ],
+      "economy_industry": [
+        "shoe company",
+        "sock",
+        "pedicure",
+        "footwear",
+        "advertising"
+      ]
+    }
+  },
+  "jst_03": {
+    "anchors": [
+      "suitcase",
+      "owner",
+      "airport",
+      "street",
+      "memory"
+    ],
+    "impact_channels": {
+      "travel_logistics": [
+        "airport",
+        "queue",
+        "luggage",
+        "delay",
+        "crowd",
+        "security"
+      ],
+      "theft_privacy": [
+        "owner",
+        "steal",
+        "tracking",
+        "privacy",
+        "identity",
+        "smuggling"
+      ],
+      "urban_behavior": [
+        "street",
+        "traffic",
+        "sidewalk",
+        "pet",
+        "collision",
+        "tourist"
+      ],
+      "economy_culture": [
+        "hotel",
+        "brand",
+        "travel industry",
+        "advertising",
+        "tourism",
+        "service"
+      ]
+    }
+  },
+  "jst_04": {
+    "anchors": [
+      "ladder",
+      "climb",
+      "floor",
+      "room",
+      "city"
+    ],
+    "impact_channels": {
+      "architecture_access": [
+        "building",
+        "roof",
+        "window",
+        "tower",
+        "repair",
+        "escape"
+      ],
+      "safety_hazard": [
+        "fall",
+        "injury",
+        "crash",
+        "collapse",
+        "trap",
+        "insurance"
+      ],
+      "social_play": [
+        "game",
+        "competition",
+        "sport",
+        "challenge",
+        "adventure",
+        "kids"
+      ],
+      "economy_labor": [
+        "construction",
+        "worker",
+        "firefighter",
+        "maintenance",
+        "factory",
+        "industry"
+      ]
+    }
+  },
+  "jst_05": {
+    "anchors": [
+      "wallet",
+      "owner",
+      "money",
+      "identity",
+      "street"
+    ],
+    "impact_channels": {
+      "theft_security": [
+        "steal",
+        "police",
+        "crime",
+        "tracking",
+        "pickpocket",
+        "return"
+      ],
+      "economy_payments": [
+        "cash",
+        "bank",
+        "payment",
+        "shop",
+        "sale",
+        "tip"
+      ],
+      "social_behavior": [
+        "trust",
+        "honest",
+        "friend",
+        "gift",
+        "reputation",
+        "embarrass"
+      ],
+      "urban_behavior": [
+        "street",
+        "crowd",
+        "tourist",
+        "sidewalk",
+        "lost and found",
+        "traffic"
+      ]
+    }
+  },
+  "jst_06": {
+    "anchors": [
+      "door",
+      "whisper",
+      "open",
+      "memory",
+      "room"
+    ],
+    "impact_channels": {
+      "privacy_security": [
+        "secret",
+        "surveillance",
+        "burglary",
+        "confession",
+        "eavesdrop",
+        "evidence"
+      ],
+      "architecture_noise": [
+        "hinge",
+        "hallway",
+        "lock",
+        "entrance",
+        "maintenance",
+        "noise"
+      ],
+      "social_behavior": [
+        "apology",
+        "gossip",
+        "trust",
+        "embarrass",
+        "neighbor",
+        "habit"
+      ],
+      "legal_economy": [
+        "court",
+        "insurance",
+        "real estate",
+        "landlord",
+        "inspection",
+        "witness"
+      ]
+    }
+  },
+  "jst_07": {
+    "anchors": [
+      "book",
+      "float",
+      "table",
+      "library",
+      "page"
+    ],
+    "impact_channels": {
+      "reading_storage": [
+        "shelf",
+        "stack",
+        "library",
+        "bookmark",
+        "desk",
+        "page"
+      ],
+      "physics_safety": [
+        "drift",
+        "fall",
+        "wind",
+        "weight",
+        "collision",
+        "anchor"
+      ],
+      "education": [
+        "classroom",
+        "exam",
+        "note",
+        "teacher",
+        "study",
+        "access"
+      ],
+      "culture_economy": [
+        "display",
+        "publishing",
+        "bookstore",
+        "art",
+        "collector",
+        "theft"
+      ]
+    }
+  },
+  "jst_08": {
+    "anchors": [
+      "shadow",
+      "color",
+      "mood",
+      "light",
+      "body"
+    ],
+    "impact_channels": {
+      "privacy_social": [
+        "emotion",
+        "privacy",
+        "dating",
+        "argument",
+        "lying",
+        "embarrass"
+      ],
+      "health_therapy": [
+        "diagnosis",
+        "stress",
+        "anxiety",
+        "therapy",
+        "doctor",
+        "wellbeing"
+      ],
+      "work_school": [
+        "interview",
+        "classroom",
+        "exam",
+        "manager",
+        "team",
+        "performance"
+      ],
+      "art_fashion": [
+        "clothing",
+        "stage",
+        "painting",
+        "festival",
+        "lighting",
+        "trend"
+      ]
+    }
+  },
+  "jst_09": {
+    "anchors": [
+      "rain",
+      "puddle",
+      "cloud",
+      "afternoon",
+      "water"
+    ],
+    "impact_channels": {
+      "weather_agriculture": [
+        "drought",
+        "farm",
+        "crop",
+        "irrigation",
+        "soil",
+        "forecast"
+      ],
+      "transport_safety": [
+        "slip",
+        "road",
+        "traffic",
+        "umbrella",
+        "drain",
+        "visibility"
+      ],
+      "infrastructure": [
+        "gutter",
+        "reservoir",
+        "roof",
+        "sewer",
+        "flood",
+        "pump"
+      ],
+      "culture_economy": [
+        "festival",
+        "tourism",
+        "weather market",
+        "schedule",
+        "insurance",
+        "ritual"
+      ]
+    }
+  },
+  "jst_10": {
+    "anchors": [
+      "mirror",
+      "reflection",
+      "ten minutes",
+      "face",
+      "glass"
+    ],
+    "impact_channels": {
+      "grooming_identity": [
+        "makeup",
+        "haircut",
+        "face",
+        "identity",
+        "appearance",
+        "delay"
+      ],
+      "security_evidence": [
+        "crime",
+        "witness",
+        "camera",
+        "alibi",
+        "shoplifting",
+        "forensic"
+      ],
+      "social_behavior": [
+        "conversation",
+        "trust",
+        "dating",
+        "embarrass",
+        "memory",
+        "secret"
+      ],
+      "art_science": [
+        "performance",
+        "installation",
+        "experiment",
+        "time",
+        "museum",
+        "photography"
+      ]
+    }
+  },
+  "jst_11": {
+    "anchors": [
+      "traffic light",
+      "song",
+      "signal",
+      "road",
+      "crossing"
+    ],
+    "impact_channels": {
+      "traffic_behavior": [
+        "driver",
+        "crosswalk",
+        "intersection",
+        "brake",
+        "jam",
+        "signal"
+      ],
+      "noise_public_health": [
+        "noise",
+        "sleep",
+        "stress",
+        "hearing",
+        "complaint",
+        "quiet zone"
+      ],
+      "music_culture": [
+        "melody",
+        "composer",
+        "festival",
+        "radio",
+        "dance",
+        "tourism"
+      ],
+      "accessibility_safety": [
+        "blind",
+        "pedestrian",
+        "warning",
+        "school",
+        "emergency",
+        "attention"
+      ]
+    }
+  },
+  "jst_12": {
+    "anchors": [
+      "road",
+      "stretch",
+      "rush hour",
+      "traffic",
+      "commute"
+    ],
+    "impact_channels": {
+      "transport": [
+        "commute",
+        "traffic",
+        "bus",
+        "route",
+        "delay",
+        "fuel"
+      ],
+      "urban_planning": [
+        "city",
+        "map",
+        "zoning",
+        "bridge",
+        "maintenance",
+        "navigation"
+      ],
+      "economy_labor": [
+        "delivery",
+        "work",
+        "shop",
+        "logistics",
+        "rent",
+        "schedule"
+      ],
+      "safety_environment": [
+        "accident",
+        "ambulance",
+        "pollution",
+        "walking",
+        "cycling",
+        "fatigue"
+      ]
+    }
+  },
+  "jst_13": {
+    "anchors": [
+      "receipt",
+      "purchase",
+      "touch",
+      "shop",
+      "voice"
+    ],
+    "impact_channels": {
+      "privacy": [
+        "expense",
+        "secret",
+        "embarrass",
+        "gift",
+        "medical",
+        "audit"
+      ],
+      "retail_accounting": [
+        "cashier",
+        "refund",
+        "tax",
+        "budget",
+        "inventory",
+        "warranty"
+      ],
+      "accessibility": [
+        "blind",
+        "elderly",
+        "reading",
+        "language",
+        "hearing",
+        "assistance"
+      ],
+      "social_behavior": [
+        "argument",
+        "trust",
+        "sharing",
+        "tip",
+        "dating",
+        "family"
+      ]
+    }
+  },
+  "jst_14": {
+    "anchors": [
+      "wall",
+      "transparent",
+      "building",
+      "hour",
+      "room"
+    ],
+    "impact_channels": {
+      "privacy_social": [
+        "privacy",
+        "curtain",
+        "embarrass",
+        "home",
+        "office",
+        "neighbor"
+      ],
+      "architecture_design": [
+        "glass",
+        "lighting",
+        "floor plan",
+        "construction",
+        "ventilation",
+        "layout"
+      ],
+      "security_law": [
+        "theft",
+        "police",
+        "inspection",
+        "evidence",
+        "surveillance",
+        "court"
+      ],
+      "culture_economy": [
+        "tourism",
+        "museum",
+        "restaurant",
+        "real estate",
+        "fashion",
+        "advertising"
+      ]
+    }
+  },
+  "jst_15": {
+    "anchors": [
+      "balloon",
+      "heavy",
+      "laugh",
+      "party",
+      "air"
+    ],
+    "impact_channels": {
+      "party_behavior": [
+        "birthday",
+        "joke",
+        "laughter",
+        "decoration",
+        "game",
+        "performance"
+      ],
+      "safety_physics": [
+        "fall",
+        "weight",
+        "ceiling",
+        "helium",
+        "string",
+        "injury"
+      ],
+      "emotion_management": [
+        "silence",
+        "comedy",
+        "mood",
+        "school",
+        "meeting",
+        "discipline"
+      ],
+      "commerce": [
+        "balloon shop",
+        "event planning",
+        "insurance",
+        "shipping",
+        "toy",
+        "advertising"
+      ]
+    }
+  },
+  "jst_16": {
+    "anchors": [
+      "cup",
+      "remember",
+      "drink",
+      "pour",
+      "taste"
+    ],
+    "impact_channels": {
+      "food_safety": [
+        "allergy",
+        "poison",
+        "contamination",
+        "cleaning",
+        "restaurant",
+        "hygiene"
+      ],
+      "memory_social": [
+        "diary",
+        "secret",
+        "gift",
+        "argument",
+        "nostalgia",
+        "story"
+      ],
+      "commerce_service": [
+        "cafe",
+        "bar",
+        "menu",
+        "brand",
+        "customer",
+        "refund"
+      ],
+      "science_design": [
+        "sensor",
+        "lab",
+        "material",
+        "temperature",
+        "experiment",
+        "taste"
+      ]
+    }
+  },
+  "jst_17": {
+    "anchors": [
+      "voice",
+      "swap",
+      "handshake",
+      "person",
+      "speak"
+    ],
+    "impact_channels": {
+      "identity_security": [
+        "identity",
+        "fraud",
+        "password",
+        "phone",
+        "police",
+        "authentication"
+      ],
+      "social_behavior": [
+        "greeting",
+        "awkward",
+        "trust",
+        "joke",
+        "dating",
+        "argument"
+      ],
+      "work_media": [
+        "meeting",
+        "actor",
+        "singer",
+        "interview",
+        "broadcast",
+        "contract"
+      ],
+      "health_language": [
+        "speech",
+        "therapy",
+        "accent",
+        "translation",
+        "teacher",
+        "doctor"
+      ]
+    }
+  },
+  "jst_18": {
+    "anchors": [
+      "snow",
+      "room",
+      "window",
+      "indoor",
+      "cold"
+    ],
+    "impact_channels": {
+      "housing_infrastructure": [
+        "roof",
+        "mold",
+        "floor",
+        "heating",
+        "window",
+        "plumber"
+      ],
+      "play_culture": [
+        "snowman",
+        "school",
+        "holiday",
+        "ski",
+        "festival",
+        "game"
+      ],
+      "health_safety": [
+        "hypothermia",
+        "slip",
+        "allergy",
+        "child",
+        "hospital",
+        "elderly"
+      ],
+      "economy_services": [
+        "cleaning",
+        "insurance",
+        "hotel",
+        "refrigeration",
+        "snow removal",
+        "repair"
+      ]
+    }
+  },
+  "jst_19": {
+    "anchors": [
+      "sidewalk",
+      "magnet",
+      "metal",
+      "curb",
+      "street"
+    ],
+    "impact_channels": {
+      "safety": [
+        "keys",
+        "phone",
+        "bicycle",
+        "wheelchair",
+        "injury",
+        "trip"
+      ],
+      "transport": [
+        "pedestrian",
+        "traffic",
+        "bus stop",
+        "delivery",
+        "parking",
+        "crosswalk"
+      ],
+      "commerce_law": [
+        "shop",
+        "theft",
+        "liability",
+        "insurance",
+        "maintenance",
+        "lawsuit"
+      ],
+      "urban_design": [
+        "curb",
+        "drain",
+        "bench",
+        "rail",
+        "construction",
+        "sign"
+      ]
+    }
+  },
+  "jst_20": {
+    "anchors": [
+      "clock",
+      "morning",
+      "noon",
+      "time",
+      "schedule"
+    ],
+    "impact_channels": {
+      "work_school": [
+        "late",
+        "class",
+        "meeting",
+        "attendance",
+        "alarm",
+        "deadline"
+      ],
+      "transport": [
+        "train",
+        "bus",
+        "flight",
+        "traffic",
+        "station",
+        "delay"
+      ],
+      "health_body": [
+        "sleep",
+        "meal",
+        "medicine",
+        "stress",
+        "routine",
+        "exercise"
+      ],
+      "economy_social": [
+        "opening hours",
+        "market",
+        "appointment",
+        "broadcast",
+        "contract",
+        "family"
+      ]
+    }
+  }
+}

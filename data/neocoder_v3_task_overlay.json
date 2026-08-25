@@ -1,0 +1,771 @@
+{
+  "schema": "benchmark",
+  "version": "benchmark",
+  "test_visibility_policy": "public_examples_hidden_scoring_tests",
+  "description": "Public examples are shown in NeoCoder prompts. Hidden, metamorphic, and mutation checks are used only by the scorer.",
+  "tasks": {
+    "neo_stable_unique_s2": {
+      "public_examples": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              1,
+              3,
+              2
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              "a",
+              "b",
+              "a",
+              "c",
+              "b"
+            ]
+          ],
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ]
+        }
+      ],
+      "hidden_unit_tests": [
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "expected": [
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              null,
+              "x",
+              null,
+              2,
+              "x"
+            ]
+          ],
+          "expected": [
+            null,
+            "x",
+            2
+          ]
+        },
+        {
+          "args": [
+            [
+              3,
+              2,
+              3,
+              1,
+              2,
+              1,
+              4
+            ]
+          ],
+          "expected": [
+            3,
+            2,
+            1,
+            4
+          ]
+        }
+      ],
+      "metamorphic_tests": [
+        {
+          "args": [
+            [
+              "p",
+              "q",
+              "p",
+              "r",
+              "q",
+              "s"
+            ]
+          ],
+          "expected": [
+            "p",
+            "q",
+            "r",
+            "s"
+          ],
+          "relation": "duplicate insertion keeps first-occurrence order"
+        }
+      ],
+      "input_mutation_checks": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              1,
+              3,
+              2
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              null,
+              "x",
+              null
+            ]
+          ],
+          "expected": [
+            null,
+            "x"
+          ]
+        }
+      ]
+    },
+    "neo_rle_s2": {
+      "public_examples": [
+        {
+          "args": [
+            "aaabbc"
+          ],
+          "expected": [
+            [
+              "a",
+              3
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              1
+            ]
+          ]
+        },
+        {
+          "args": [
+            ""
+          ],
+          "expected": []
+        }
+      ],
+      "hidden_unit_tests": [
+        {
+          "args": [
+            "z"
+          ],
+          "expected": [
+            [
+              "z",
+              1
+            ]
+          ]
+        },
+        {
+          "args": [
+            "abbaaa"
+          ],
+          "expected": [
+            [
+              "a",
+              1
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "a",
+              3
+            ]
+          ]
+        },
+        {
+          "args": [
+            "1112221"
+          ],
+          "expected": [
+            [
+              "1",
+              3
+            ],
+            [
+              "2",
+              3
+            ],
+            [
+              "1",
+              1
+            ]
+          ]
+        },
+        {
+          "args": [
+            "aabbbaa"
+          ],
+          "expected": [
+            [
+              "a",
+              2
+            ],
+            [
+              "b",
+              3
+            ],
+            [
+              "a",
+              2
+            ]
+          ]
+        }
+      ],
+      "metamorphic_tests": [
+        {
+          "args": [
+            "xxxyzz"
+          ],
+          "expected": [
+            [
+              "x",
+              3
+            ],
+            [
+              "y",
+              1
+            ],
+            [
+              "z",
+              2
+            ]
+          ],
+          "relation": "adjacent identical symbols merge into one run"
+        }
+      ],
+      "input_mutation_checks": []
+    },
+    "neo_pair_sum_s2": {
+      "public_examples": [
+        {
+          "args": [
+            [
+              2,
+              7,
+              11,
+              15
+            ],
+            9
+          ],
+          "expected": [
+            0,
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              3,
+              2,
+              4
+            ],
+            6
+          ],
+          "expected": [
+            1,
+            2
+          ]
+        }
+      ],
+      "hidden_unit_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ],
+            7
+          ],
+          "expected": null
+        },
+        {
+          "args": [
+            [
+              1,
+              5,
+              1,
+              5
+            ],
+            6
+          ],
+          "expected": [
+            0,
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              -3,
+              4,
+              7,
+              1
+            ],
+            4
+          ],
+          "expected": [
+            0,
+            2
+          ]
+        },
+        {
+          "args": [
+            [
+              0,
+              0,
+              3
+            ],
+            0
+          ],
+          "expected": [
+            0,
+            1
+          ]
+        }
+      ],
+      "metamorphic_tests": [
+        {
+          "args": [
+            [
+              9,
+              -1,
+              5,
+              4,
+              2
+            ],
+            3
+          ],
+          "expected": [
+            1,
+            3
+          ],
+          "relation": "negative complement pair should be detected"
+        }
+      ],
+      "input_mutation_checks": [
+        {
+          "args": [
+            [
+              1,
+              5,
+              1,
+              5
+            ],
+            6
+          ],
+          "expected": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "neo_merge_intervals_s2": {
+      "public_examples": [
+        {
+          "args": [
+            [
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                8,
+                10
+              ],
+              [
+                15,
+                18
+              ]
+            ]
+          ],
+          "expected": [
+            [
+              1,
+              6
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              15,
+              18
+            ]
+          ]
+        },
+        {
+          "args": [
+            [
+              [
+                1,
+                4
+              ],
+              [
+                4,
+                5
+              ]
+            ]
+          ],
+          "expected": [
+            [
+              1,
+              5
+            ]
+          ]
+        }
+      ],
+      "hidden_unit_tests": [
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              [
+                5,
+                7
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                4
+              ]
+            ]
+          ],
+          "expected": [
+            [
+              1,
+              4
+            ],
+            [
+              5,
+              7
+            ]
+          ]
+        },
+        {
+          "args": [
+            [
+              [
+                -3,
+                -1
+              ],
+              [
+                -2,
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ]
+          ],
+          "expected": [
+            [
+              -3,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        {
+          "args": [
+            [
+              [
+                2,
+                2
+              ]
+            ]
+          ],
+          "expected": [
+            [
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "metamorphic_tests": [
+        {
+          "args": [
+            [
+              [
+                10,
+                12
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                5,
+                5
+              ]
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              2
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              10,
+              12
+            ]
+          ],
+          "relation": "permuted input still yields sorted merged output"
+        }
+      ],
+      "input_mutation_checks": [
+        {
+          "args": [
+            [
+              [
+                5,
+                7
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                4
+              ]
+            ]
+          ],
+          "expected": [
+            [
+              1,
+              4
+            ],
+            [
+              5,
+              7
+            ]
+          ]
+        }
+      ]
+    },
+    "neo_count_islands_s2": {
+      "public_examples": [
+        {
+          "args": [
+            [
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                1
+              ]
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "expected": 0
+        }
+      ],
+      "hidden_unit_tests": [
+        {
+          "args": [
+            []
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              [
+                1
+              ]
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            [
+              [
+                1,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                1
+              ]
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                0,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ]
+          ],
+          "expected": 1
+        }
+      ],
+      "metamorphic_tests": [
+        {
+          "args": [
+            [
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ]
+            ]
+          ],
+          "expected": 3,
+          "relation": "separated components remain separate under 4-neighbor connectivity"
+        }
+      ],
+      "input_mutation_checks": [
+        {
+          "args": [
+            [
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ]
+          ],
+          "expected": 1
+        }
+      ]
+    }
+  }
+}

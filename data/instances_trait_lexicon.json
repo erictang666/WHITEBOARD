@@ -1,0 +1,1260 @@
+{
+  "ins_01": {
+    "trait_text": "round and hard",
+    "prompt_cues": [
+      "round",
+      "hard"
+    ],
+    "trait_groups": [
+      {
+        "name": "shape_round",
+        "weight": 1.0,
+        "positive_predicates": [
+          "shape:round"
+        ],
+        "negative_predicates": [
+          "shape:flat",
+          "attr:square",
+          "attr:rectangular",
+          "attr:triangular"
+        ]
+      },
+      {
+        "name": "texture_hard",
+        "weight": 1.0,
+        "positive_predicates": [
+          "texture:hard"
+        ],
+        "negative_predicates": [
+          "texture:soft",
+          "attr:fragile",
+          "attr:flexible"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "bowling ball",
+          "billiard ball",
+          "golf ball",
+          "baseball",
+          "marble",
+          "steel ball",
+          "cannonball"
+        ],
+        "predicate_strengths": {
+          "shape:round": 0.95,
+          "texture:hard": 0.88
+        }
+      },
+      {
+        "keywords": [
+          "rock",
+          "stone",
+          "pebble",
+          "meteorite"
+        ],
+        "predicate_strengths": {
+          "shape:round": 0.65,
+          "texture:hard": 0.92
+        }
+      },
+      {
+        "keywords": [
+          "egg"
+        ],
+        "predicate_strengths": {
+          "shape:round": 0.6,
+          "texture:hard": 0.2
+        }
+      },
+      {
+        "keywords": [
+          "balloon",
+          "foam"
+        ],
+        "predicate_strengths": {
+          "shape:round": 0.7,
+          "texture:hard": 0.0
+        }
+      }
+    ]
+  },
+  "ins_02": {
+    "trait_text": "make a loud noise",
+    "prompt_cues": [
+      "loud",
+      "noise",
+      "sound"
+    ],
+    "trait_groups": [
+      {
+        "name": "sound_noise",
+        "weight": 0.8,
+        "positive_predicates": [
+          "sound:noise"
+        ],
+        "negative_predicates": []
+      },
+      {
+        "name": "sound_loud",
+        "weight": 1.2,
+        "positive_predicates": [
+          "sound:loud"
+        ],
+        "negative_predicates": [
+          "attr:quiet",
+          "attr:silent",
+          "attr:soft"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "siren",
+          "alarm",
+          "explosion",
+          "gunshot",
+          "thunder",
+          "fireworks",
+          "jet engine",
+          "speaker",
+          "drum",
+          "car horn",
+          "bomb"
+        ],
+        "predicate_strengths": {
+          "sound:noise": 0.9,
+          "sound:loud": 0.95
+        }
+      },
+      {
+        "keywords": [
+          "whisper",
+          "mouse",
+          "feather"
+        ],
+        "predicate_strengths": {
+          "sound:noise": 0.1,
+          "sound:loud": 0.0
+        }
+      }
+    ]
+  },
+  "ins_03": {
+    "trait_text": "red and edible",
+    "prompt_cues": [
+      "red",
+      "edible",
+      "food"
+    ],
+    "trait_groups": [
+      {
+        "name": "color_red",
+        "weight": 1.0,
+        "positive_predicates": [
+          "color:red"
+        ],
+        "negative_predicates": []
+      },
+      {
+        "name": "edible_true",
+        "weight": 1.1,
+        "positive_predicates": [
+          "edible:true"
+        ],
+        "negative_predicates": [
+          "material:metal"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "apple",
+          "cherry",
+          "strawberry",
+          "tomato",
+          "watermelon",
+          "raspberry",
+          "pomegranate",
+          "red pepper"
+        ],
+        "predicate_strengths": {
+          "color:red": 0.95,
+          "edible:true": 0.95
+        }
+      },
+      {
+        "keywords": [
+          "brick",
+          "fire truck",
+          "stop sign",
+          "ruby"
+        ],
+        "predicate_strengths": {
+          "color:red": 0.9,
+          "edible:true": 0.0
+        }
+      }
+    ]
+  },
+  "ins_04": {
+    "trait_text": "made of metal and hard",
+    "prompt_cues": [
+      "metal",
+      "hard",
+      "steel"
+    ],
+    "trait_groups": [
+      {
+        "name": "material_metal",
+        "weight": 1.0,
+        "positive_predicates": [
+          "material:metal"
+        ],
+        "negative_predicates": [
+          "material:paper"
+        ]
+      },
+      {
+        "name": "texture_hard",
+        "weight": 1.0,
+        "positive_predicates": [
+          "texture:hard",
+          "strength:load_bearing"
+        ],
+        "negative_predicates": [
+          "texture:soft"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "wrench",
+          "crowbar",
+          "coin",
+          "anvil",
+          "hammer",
+          "screwdriver",
+          "chain",
+          "frying pan"
+        ],
+        "predicate_strengths": {
+          "material:metal": 0.95,
+          "texture:hard": 0.95,
+          "strength:load_bearing": 0.8
+        }
+      },
+      {
+        "keywords": [
+          "sponge",
+          "pillow",
+          "cardboard"
+        ],
+        "predicate_strengths": {
+          "material:metal": 0.0,
+          "texture:hard": 0.0
+        }
+      }
+    ]
+  },
+  "ins_05": {
+    "trait_text": "made of paper or cardboard and writable",
+    "prompt_cues": [
+      "paper",
+      "cardboard",
+      "writable",
+      "write"
+    ],
+    "trait_groups": [
+      {
+        "name": "material_paper",
+        "weight": 0.9,
+        "positive_predicates": [
+          "material:paper"
+        ],
+        "negative_predicates": [
+          "material:metal"
+        ]
+      },
+      {
+        "name": "surface_writable",
+        "weight": 1.1,
+        "positive_predicates": [
+          "surface:writable"
+        ],
+        "negative_predicates": []
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "notebook",
+          "index card",
+          "postcard",
+          "paper sign",
+          "cardboard sign",
+          "paper map",
+          "ticket",
+          "label"
+        ],
+        "predicate_strengths": {
+          "material:paper": 0.95,
+          "surface:writable": 0.9
+        }
+      },
+      {
+        "keywords": [
+          "tin can",
+          "glass bottle",
+          "rock"
+        ],
+        "predicate_strengths": {
+          "material:paper": 0.0,
+          "surface:writable": 0.0
+        }
+      }
+    ]
+  },
+  "ins_06": {
+    "trait_text": "transparent and flexible",
+    "prompt_cues": [
+      "transparent",
+      "flexible",
+      "clear",
+      "bend"
+    ],
+    "trait_groups": [
+      {
+        "name": "surface_transparent",
+        "weight": 1.0,
+        "positive_predicates": [
+          "surface:transparent",
+          "attr:transparent"
+        ],
+        "negative_predicates": [
+          "surface:opaque"
+        ]
+      },
+      {
+        "name": "form_flexible",
+        "weight": 1.0,
+        "positive_predicates": [
+          "attr:flexible",
+          "form:foldable"
+        ],
+        "negative_predicates": [
+          "texture:hard",
+          "rigid:true"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "plastic wrap",
+          "cling film",
+          "clear tape",
+          "transparent film",
+          "gel sheet",
+          "cellophane",
+          "clear raincoat"
+        ],
+        "predicate_strengths": {
+          "surface:transparent": 0.95,
+          "attr:transparent": 0.95,
+          "attr:flexible": 0.9,
+          "form:foldable": 0.82
+        }
+      },
+      {
+        "keywords": [
+          "glass window",
+          "diamond",
+          "fish tank"
+        ],
+        "predicate_strengths": {
+          "surface:transparent": 0.9,
+          "attr:flexible": 0.0
+        }
+      }
+    ]
+  },
+  "ins_07": {
+    "trait_text": "soft and waterproof",
+    "prompt_cues": [
+      "soft",
+      "waterproof",
+      "water",
+      "cushion"
+    ],
+    "trait_groups": [
+      {
+        "name": "texture_soft",
+        "weight": 1.0,
+        "positive_predicates": [
+          "texture:soft",
+          "attr:soft"
+        ],
+        "negative_predicates": [
+          "texture:hard"
+        ]
+      },
+      {
+        "name": "resistance_water",
+        "weight": 1.0,
+        "positive_predicates": [
+          "resistance:water",
+          "attr:waterproof"
+        ],
+        "negative_predicates": [
+          "material:paper"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "rubber duck",
+          "wetsuit",
+          "silicone sponge",
+          "foam pool noodle",
+          "waterproof pillow",
+          "rain boot liner",
+          "neoprene sleeve"
+        ],
+        "predicate_strengths": {
+          "texture:soft": 0.85,
+          "attr:soft": 0.85,
+          "resistance:water": 0.92,
+          "attr:waterproof": 0.92
+        }
+      },
+      {
+        "keywords": [
+          "tissue",
+          "paper towel",
+          "stone"
+        ],
+        "predicate_strengths": {
+          "texture:soft": 0.55,
+          "resistance:water": 0.0
+        }
+      }
+    ]
+  },
+  "ins_08": {
+    "trait_text": "tiny and valuable",
+    "prompt_cues": [
+      "tiny",
+      "small",
+      "valuable",
+      "precious"
+    ],
+    "trait_groups": [
+      {
+        "name": "size_tiny",
+        "weight": 1.0,
+        "positive_predicates": [
+          "size:small",
+          "size:tiny"
+        ],
+        "negative_predicates": [
+          "size:large"
+        ]
+      },
+      {
+        "name": "value_high",
+        "weight": 1.0,
+        "positive_predicates": [
+          "value:valuable",
+          "attr:precious"
+        ],
+        "negative_predicates": [
+          "value:cheap"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "diamond",
+          "ruby",
+          "microchip",
+          "gold ring",
+          "pearl",
+          "stamp",
+          "rare coin",
+          "hearing aid"
+        ],
+        "predicate_strengths": {
+          "size:small": 0.92,
+          "size:tiny": 0.88,
+          "value:valuable": 0.92,
+          "attr:precious": 0.88
+        }
+      },
+      {
+        "keywords": [
+          "grain of sand",
+          "crumb",
+          "button"
+        ],
+        "predicate_strengths": {
+          "size:small": 0.9,
+          "value:valuable": 0.1
+        }
+      }
+    ]
+  },
+  "ins_09": {
+    "trait_text": "hollow and lightweight",
+    "prompt_cues": [
+      "hollow",
+      "lightweight",
+      "empty",
+      "shell"
+    ],
+    "trait_groups": [
+      {
+        "name": "shape_hollow",
+        "weight": 1.0,
+        "positive_predicates": [
+          "shape:hollow"
+        ],
+        "negative_predicates": [
+          "shape:solid"
+        ]
+      },
+      {
+        "name": "weight_light",
+        "weight": 1.0,
+        "positive_predicates": [
+          "weight:light"
+        ],
+        "negative_predicates": [
+          "weight:heavy"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "plastic straw",
+          "paper tube",
+          "eggshell",
+          "ping pong ball",
+          "balloon",
+          "hollow reed",
+          "empty bottle"
+        ],
+        "predicate_strengths": {
+          "shape:hollow": 0.9,
+          "weight:light": 0.9
+        }
+      },
+      {
+        "keywords": [
+          "pipe",
+          "cannon",
+          "brick"
+        ],
+        "predicate_strengths": {
+          "shape:hollow": 0.75,
+          "weight:light": 0.0
+        }
+      }
+    ]
+  },
+  "ins_10": {
+    "trait_text": "sticky and useful",
+    "prompt_cues": [
+      "sticky",
+      "useful",
+      "adhesive",
+      "attach"
+    ],
+    "trait_groups": [
+      {
+        "name": "texture_sticky",
+        "weight": 1.0,
+        "positive_predicates": [
+          "texture:sticky",
+          "attr:adhesive"
+        ],
+        "negative_predicates": [
+          "texture:smooth"
+        ]
+      },
+      {
+        "name": "function_useful",
+        "weight": 0.8,
+        "positive_predicates": [
+          "function:useful",
+          "utility:high"
+        ],
+        "negative_predicates": [
+          "function:decorative_only"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "duct tape",
+          "post-it note",
+          "bandage",
+          "glue stick",
+          "label",
+          "double-sided tape",
+          "lint roller"
+        ],
+        "predicate_strengths": {
+          "texture:sticky": 0.94,
+          "attr:adhesive": 0.94,
+          "function:useful": 0.82,
+          "utility:high": 0.82
+        }
+      },
+      {
+        "keywords": [
+          "chewing gum",
+          "syrup",
+          "honey"
+        ],
+        "predicate_strengths": {
+          "texture:sticky": 0.9,
+          "function:useful": 0.25
+        }
+      }
+    ]
+  },
+  "ins_11": {
+    "trait_text": "cold and edible",
+    "prompt_cues": [
+      "cold",
+      "edible",
+      "food",
+      "frozen"
+    ],
+    "trait_groups": [
+      {
+        "name": "temperature_cold",
+        "weight": 1.0,
+        "positive_predicates": [
+          "temperature:cold",
+          "state:frozen"
+        ],
+        "negative_predicates": [
+          "temperature:hot"
+        ]
+      },
+      {
+        "name": "edible_true",
+        "weight": 1.0,
+        "positive_predicates": [
+          "edible:true"
+        ],
+        "negative_predicates": [
+          "material:metal"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "ice cream",
+          "popsicle",
+          "frozen yogurt",
+          "sorbet",
+          "sushi",
+          "gelato",
+          "frozen berries"
+        ],
+        "predicate_strengths": {
+          "temperature:cold": 0.92,
+          "state:frozen": 0.82,
+          "edible:true": 0.95
+        }
+      },
+      {
+        "keywords": [
+          "ice cube",
+          "snowball",
+          "freezer pack"
+        ],
+        "predicate_strengths": {
+          "temperature:cold": 0.95,
+          "edible:true": 0.2
+        }
+      }
+    ]
+  },
+  "ins_12": {
+    "trait_text": "sharp and portable",
+    "prompt_cues": [
+      "sharp",
+      "portable",
+      "carry",
+      "edge"
+    ],
+    "trait_groups": [
+      {
+        "name": "edge_sharp",
+        "weight": 1.0,
+        "positive_predicates": [
+          "edge:sharp"
+        ],
+        "negative_predicates": [
+          "edge:blunt"
+        ]
+      },
+      {
+        "name": "portable_small",
+        "weight": 0.9,
+        "positive_predicates": [
+          "affordance:portable",
+          "size:small"
+        ],
+        "negative_predicates": [
+          "weight:heavy"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "pocket knife",
+          "razor blade",
+          "scalpel",
+          "box cutter",
+          "sewing needle",
+          "fish hook",
+          "safety pin"
+        ],
+        "predicate_strengths": {
+          "edge:sharp": 0.95,
+          "affordance:portable": 0.92,
+          "size:small": 0.85
+        }
+      },
+      {
+        "keywords": [
+          "sword",
+          "axe",
+          "saw blade"
+        ],
+        "predicate_strengths": {
+          "edge:sharp": 0.9,
+          "affordance:portable": 0.35
+        }
+      }
+    ]
+  },
+  "ins_13": {
+    "trait_text": "bright and fragile",
+    "prompt_cues": [
+      "bright",
+      "fragile",
+      "light",
+      "break"
+    ],
+    "trait_groups": [
+      {
+        "name": "brightness_high",
+        "weight": 1.0,
+        "positive_predicates": [
+          "brightness:bright",
+          "light:emits"
+        ],
+        "negative_predicates": [
+          "brightness:dark"
+        ]
+      },
+      {
+        "name": "fragility_high",
+        "weight": 1.0,
+        "positive_predicates": [
+          "attr:fragile",
+          "breakable:true"
+        ],
+        "negative_predicates": [
+          "texture:hard"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "light bulb",
+          "neon tube",
+          "glass ornament",
+          "glow stick",
+          "thin lantern",
+          "led filament",
+          "christmas light"
+        ],
+        "predicate_strengths": {
+          "brightness:bright": 0.9,
+          "light:emits": 0.82,
+          "attr:fragile": 0.85,
+          "breakable:true": 0.85
+        }
+      },
+      {
+        "keywords": [
+          "flashlight",
+          "sun",
+          "steel lamp"
+        ],
+        "predicate_strengths": {
+          "brightness:bright": 0.9,
+          "attr:fragile": 0.25
+        }
+      }
+    ]
+  },
+  "ins_14": {
+    "trait_text": "heavy and movable",
+    "prompt_cues": [
+      "heavy",
+      "movable",
+      "move",
+      "roll"
+    ],
+    "trait_groups": [
+      {
+        "name": "weight_heavy",
+        "weight": 1.0,
+        "positive_predicates": [
+          "weight:heavy"
+        ],
+        "negative_predicates": [
+          "weight:light"
+        ]
+      },
+      {
+        "name": "movable_true",
+        "weight": 0.9,
+        "positive_predicates": [
+          "affordance:movable",
+          "motion:rollable"
+        ],
+        "negative_predicates": [
+          "affordance:fixed"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "piano",
+          "sofa",
+          "safe",
+          "washing machine",
+          "toolbox",
+          "barbell",
+          "suitcase"
+        ],
+        "predicate_strengths": {
+          "weight:heavy": 0.92,
+          "affordance:movable": 0.75
+        }
+      },
+      {
+        "keywords": [
+          "boulder",
+          "building",
+          "mountain"
+        ],
+        "predicate_strengths": {
+          "weight:heavy": 0.95,
+          "affordance:movable": 0.05
+        }
+      }
+    ]
+  },
+  "ins_15": {
+    "trait_text": "natural and patterned",
+    "prompt_cues": [
+      "natural",
+      "patterned",
+      "stripe",
+      "spot"
+    ],
+    "trait_groups": [
+      {
+        "name": "origin_natural",
+        "weight": 1.0,
+        "positive_predicates": [
+          "origin:natural",
+          "nature:true"
+        ],
+        "negative_predicates": [
+          "origin:manufactured"
+        ]
+      },
+      {
+        "name": "surface_patterned",
+        "weight": 1.0,
+        "positive_predicates": [
+          "surface:patterned",
+          "pattern:stripe",
+          "pattern:spot"
+        ],
+        "negative_predicates": [
+          "surface:plain"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "zebra shell",
+          "leopard skin",
+          "pine cone",
+          "butterfly wing",
+          "leaf vein",
+          "tiger stripe",
+          "snake skin",
+          "seashell"
+        ],
+        "predicate_strengths": {
+          "origin:natural": 0.92,
+          "nature:true": 0.92,
+          "surface:patterned": 0.92,
+          "pattern:stripe": 0.75,
+          "pattern:spot": 0.65
+        }
+      },
+      {
+        "keywords": [
+          "printed shirt",
+          "wallpaper",
+          "barcode"
+        ],
+        "predicate_strengths": {
+          "origin:natural": 0.0,
+          "surface:patterned": 0.88
+        }
+      }
+    ]
+  },
+  "ins_16": {
+    "trait_text": "flat and reflective",
+    "prompt_cues": [
+      "flat",
+      "reflective",
+      "mirror",
+      "shine"
+    ],
+    "trait_groups": [
+      {
+        "name": "shape_flat",
+        "weight": 1.0,
+        "positive_predicates": [
+          "shape:flat",
+          "surface:flat"
+        ],
+        "negative_predicates": [
+          "shape:round"
+        ]
+      },
+      {
+        "name": "surface_reflective",
+        "weight": 1.0,
+        "positive_predicates": [
+          "surface:reflective"
+        ],
+        "negative_predicates": [
+          "surface:matte"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "mirror",
+          "foil sheet",
+          "polished tray",
+          "compact disc",
+          "steel plate",
+          "glass pane",
+          "phone screen"
+        ],
+        "predicate_strengths": {
+          "shape:flat": 0.9,
+          "surface:flat": 0.9,
+          "surface:reflective": 0.9
+        }
+      },
+      {
+        "keywords": [
+          "silver ball",
+          "spoon",
+          "chrome pipe"
+        ],
+        "predicate_strengths": {
+          "shape:flat": 0.15,
+          "surface:reflective": 0.85
+        }
+      }
+    ]
+  },
+  "ins_17": {
+    "trait_text": "elastic and colorful",
+    "prompt_cues": [
+      "elastic",
+      "colorful",
+      "stretch",
+      "bright"
+    ],
+    "trait_groups": [
+      {
+        "name": "elastic_true",
+        "weight": 1.0,
+        "positive_predicates": [
+          "attr:elastic",
+          "attr:flexible"
+        ],
+        "negative_predicates": [
+          "texture:hard"
+        ]
+      },
+      {
+        "name": "colorful_true",
+        "weight": 0.9,
+        "positive_predicates": [
+          "color:colorful",
+          "brightness:bright"
+        ],
+        "negative_predicates": [
+          "color:plain"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "rubber band",
+          "balloon",
+          "hair tie",
+          "bungee cord",
+          "stretch bracelet",
+          "elastic ribbon",
+          "party streamer"
+        ],
+        "predicate_strengths": {
+          "attr:elastic": 0.92,
+          "attr:flexible": 0.88,
+          "color:colorful": 0.82,
+          "brightness:bright": 0.72
+        }
+      },
+      {
+        "keywords": [
+          "black rubber band",
+          "plain spring",
+          "paint chip"
+        ],
+        "predicate_strengths": {
+          "attr:elastic": 0.75,
+          "color:colorful": 0.15
+        }
+      }
+    ]
+  },
+  "ins_18": {
+    "trait_text": "scented and disposable",
+    "prompt_cues": [
+      "scented",
+      "disposable",
+      "smell",
+      "throwaway"
+    ],
+    "trait_groups": [
+      {
+        "name": "smell_scented",
+        "weight": 1.0,
+        "positive_predicates": [
+          "smell:scented",
+          "scent:pleasant"
+        ],
+        "negative_predicates": [
+          "smell:none"
+        ]
+      },
+      {
+        "name": "use_disposable",
+        "weight": 0.9,
+        "positive_predicates": [
+          "use:disposable",
+          "use:single_use"
+        ],
+        "negative_predicates": [
+          "use:durable"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "scented tissue",
+          "wet wipe",
+          "air freshener card",
+          "perfume strip",
+          "dryer sheet",
+          "scented trash bag",
+          "soap wrapper"
+        ],
+        "predicate_strengths": {
+          "smell:scented": 0.9,
+          "scent:pleasant": 0.8,
+          "use:disposable": 0.9,
+          "use:single_use": 0.82
+        }
+      },
+      {
+        "keywords": [
+          "perfume bottle",
+          "candle",
+          "flower"
+        ],
+        "predicate_strengths": {
+          "smell:scented": 0.9,
+          "use:disposable": 0.15
+        }
+      }
+    ]
+  },
+  "ins_19": {
+    "trait_text": "mechanical and small",
+    "prompt_cues": [
+      "mechanical",
+      "small",
+      "gear",
+      "device"
+    ],
+    "trait_groups": [
+      {
+        "name": "function_mechanical",
+        "weight": 1.0,
+        "positive_predicates": [
+          "function:mechanical",
+          "part:gear"
+        ],
+        "negative_predicates": [
+          "origin:natural"
+        ]
+      },
+      {
+        "name": "size_small",
+        "weight": 1.0,
+        "positive_predicates": [
+          "size:small",
+          "size:tiny"
+        ],
+        "negative_predicates": [
+          "size:large"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "watch",
+          "music box",
+          "wind-up toy",
+          "pocket fan",
+          "gear motor",
+          "camera shutter",
+          "mechanical pencil"
+        ],
+        "predicate_strengths": {
+          "function:mechanical": 0.9,
+          "part:gear": 0.75,
+          "size:small": 0.85
+        }
+      },
+      {
+        "keywords": [
+          "car engine",
+          "factory machine",
+          "clock tower"
+        ],
+        "predicate_strengths": {
+          "function:mechanical": 0.9,
+          "size:small": 0.05
+        }
+      }
+    ]
+  },
+  "ins_20": {
+    "trait_text": "silent and protective",
+    "prompt_cues": [
+      "silent",
+      "protective",
+      "quiet",
+      "shield"
+    ],
+    "trait_groups": [
+      {
+        "name": "sound_silent",
+        "weight": 0.9,
+        "positive_predicates": [
+          "attr:silent",
+          "sound:quiet"
+        ],
+        "negative_predicates": [
+          "sound:loud"
+        ]
+      },
+      {
+        "name": "function_protective",
+        "weight": 1.1,
+        "positive_predicates": [
+          "function:protective",
+          "affordance:shield"
+        ],
+        "negative_predicates": [
+          "edge:sharp"
+        ]
+      }
+    ],
+    "fallback_concept_rules": [
+      {
+        "keywords": [
+          "helmet",
+          "earplug",
+          "mouthguard",
+          "phone case",
+          "bubble wrap",
+          "knee pad",
+          "screen protector",
+          "sunscreen"
+        ],
+        "predicate_strengths": {
+          "attr:silent": 0.75,
+          "sound:quiet": 0.75,
+          "function:protective": 0.9,
+          "affordance:shield": 0.82
+        }
+      },
+      {
+        "keywords": [
+          "alarm",
+          "whistle",
+          "siren"
+        ],
+        "predicate_strengths": {
+          "attr:silent": 0.0,
+          "function:protective": 0.5
+        }
+      }
+    ]
+  }
+}

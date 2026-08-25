@@ -1,0 +1,62 @@
+{
+  "schema": "benchmark",
+  "global": {
+    "extra_magic": {
+      "severity": 1.0,
+      "terms": [
+        "magic",
+        "magical",
+        "spell",
+        "wizard",
+        "curse",
+        "miracle",
+        "supernatural",
+        "psychic"
+      ]
+    },
+    "time_travel_or_prophecy": {
+      "severity": 0.95,
+      "terms": [
+        "time travel",
+        "travel back",
+        "travel forward",
+        "predict the future",
+        "tomorrow's",
+        "next week's",
+        "prophecy",
+        "precognition"
+      ]
+    },
+    "impossible_energy": {
+      "severity": 0.95,
+      "terms": [
+        "infinite energy",
+        "unlimited electricity",
+        "perpetual motion",
+        "free energy",
+        "powers the city forever"
+      ]
+    },
+    "cosmic_sentience": {
+      "severity": 0.85,
+      "terms": [
+        "sentient planet",
+        "moon learns",
+        "sun decides",
+        "stars vote",
+        "clouds become conscious"
+      ]
+    },
+    "unrelated_worldbuilding": {
+      "severity": 0.55,
+      "terms": [
+        "alien empire",
+        "dragon",
+        "portal",
+        "parallel universe",
+        "zombie",
+        "vampire"
+      ]
+    }
+  }
+}

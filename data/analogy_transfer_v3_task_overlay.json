@@ -1,0 +1,287 @@
+{
+  "schema": "benchmark",
+  "version": "benchmark",
+  "test_visibility_policy": "hidden_gold_mappings",
+  "description": "Hidden structural mappings, licensed inference targets, forbidden probes, and evidence aliases for the T8-v3 preliminary main profile.",
+  "tasks": {
+    "analogy_library_seedbank_structural": {
+      "hidden_gold_mapping_ids": [
+        "LS_M1",
+        "LS_M2",
+        "LS_M3"
+      ],
+      "licensed_inference_targets": [
+        {
+          "id": "LS_I1",
+          "target_evidence_ids": [
+            "LS_T1",
+            "LS_T2"
+          ],
+          "keywords": [
+            "catalog",
+            "species",
+            "origin",
+            "future planting"
+          ]
+        },
+        {
+          "id": "LS_I2",
+          "target_evidence_ids": [
+            "LS_T2",
+            "LS_T3"
+          ],
+          "keywords": [
+            "controlled",
+            "cold",
+            "dry",
+            "future use"
+          ]
+        }
+      ],
+      "near_miss_distractor_mappings": [
+        {
+          "id": "LS_D1",
+          "text": "Seed samples can be borrowed like books."
+        },
+        {
+          "id": "LS_D2",
+          "text": "Seed banks have reading rooms for seeds."
+        }
+      ],
+      "forbidden_transfer_probes": [
+        "LS_FT1",
+        "LS_FT2"
+      ],
+      "evidence_aliases": {
+        "library catalog": "LS_S1",
+        "library preserves records": "LS_S2",
+        "seed species catalog": "LS_T1",
+        "future planting": "LS_T2",
+        "cold dry storage": "LS_T3"
+      }
+    },
+    "analogy_immune_firewall_probe": {
+      "hidden_gold_mapping_ids": [
+        "IF_M1",
+        "IF_M2",
+        "IF_M3"
+      ],
+      "licensed_inference_targets": [
+        {
+          "id": "IF_I1",
+          "target_evidence_ids": [
+            "IF_T1",
+            "IF_T2"
+          ],
+          "keywords": [
+            "rules",
+            "detect",
+            "block",
+            "traffic"
+          ]
+        },
+        {
+          "id": "IF_I2",
+          "target_evidence_ids": [
+            "IF_T1",
+            "IF_T3"
+          ],
+          "keywords": [
+            "signatures",
+            "updated",
+            "new attacks"
+          ]
+        }
+      ],
+      "near_miss_distractor_mappings": [
+        {
+          "id": "IF_D1",
+          "text": "The firewall produces antibodies."
+        },
+        {
+          "id": "IF_D2",
+          "text": "Packets infect cells in the network."
+        }
+      ],
+      "forbidden_transfer_probes": [
+        "IF_FT1",
+        "IF_FT2"
+      ],
+      "evidence_aliases": {
+        "pathogen patterns": "IF_S1",
+        "antibodies neutralize": "IF_S2",
+        "immune memory": "IF_S3",
+        "traffic rules": "IF_T1",
+        "deny rule": "IF_T2",
+        "updated signatures": "IF_T3"
+      }
+    },
+    "analogy_ant_transit_limits": {
+      "hidden_gold_mapping_ids": [
+        "AT_M1",
+        "AT_M2",
+        "AT_M3"
+      ],
+      "licensed_inference_targets": [
+        {
+          "id": "AT_I1",
+          "target_evidence_ids": [
+            "AT_T1",
+            "AT_T2"
+          ],
+          "keywords": [
+            "demand signals",
+            "vehicles",
+            "routes"
+          ]
+        },
+        {
+          "id": "AT_I2",
+          "target_evidence_ids": [
+            "AT_T2",
+            "AT_T3"
+          ],
+          "keywords": [
+            "rerouted",
+            "congestion",
+            "less useful"
+          ]
+        }
+      ],
+      "near_miss_distractor_mappings": [
+        {
+          "id": "AT_D1",
+          "text": "Buses follow pheromone trails."
+        },
+        {
+          "id": "AT_D2",
+          "text": "Ants buy tickets for transit routes."
+        }
+      ],
+      "forbidden_transfer_probes": [
+        "AT_FT1",
+        "AT_FT2"
+      ],
+      "evidence_aliases": {
+        "pheromone food signal": "AT_S1",
+        "stronger pheromone": "AT_S2",
+        "fading trail": "AT_S3",
+        "passenger demand": "AT_T1",
+        "more vehicles assigned": "AT_T2",
+        "congestion reroute": "AT_T3"
+      }
+    },
+    "analogy_trial_peerreview_probe": {
+      "hidden_gold_mapping_ids": [
+        "TP_M1",
+        "TP_M2",
+        "TP_M3"
+      ],
+      "licensed_inference_targets": [
+        {
+          "id": "TP_I1",
+          "target_evidence_ids": [
+            "TP_T1",
+            "TP_T2"
+          ],
+          "keywords": [
+            "evidence",
+            "methods",
+            "criticize"
+          ]
+        },
+        {
+          "id": "TP_I2",
+          "target_evidence_ids": [
+            "TP_T2",
+            "TP_T3"
+          ],
+          "keywords": [
+            "reviewers",
+            "editor",
+            "accepted",
+            "revised",
+            "rejected"
+          ]
+        }
+      ],
+      "near_miss_distractor_mappings": [
+        {
+          "id": "TP_D1",
+          "text": "Reviewers sentence authors to prison."
+        },
+        {
+          "id": "TP_D2",
+          "text": "The editor declares legal guilt."
+        }
+      ],
+      "forbidden_transfer_probes": [
+        "TP_FT1",
+        "TP_FT2"
+      ],
+      "evidence_aliases": {
+        "trial evidence": "TP_S1",
+        "cross examination": "TP_S2",
+        "verdict": "TP_S3",
+        "review evidence": "TP_T1",
+        "reviewer critique": "TP_T2",
+        "editor decision": "TP_T3"
+      }
+    },
+    "analogy_rehearsal_simulation_structural": {
+      "hidden_gold_mapping_ids": [
+        "RS_M1",
+        "RS_M2",
+        "RS_M3"
+      ],
+      "licensed_inference_targets": [
+        {
+          "id": "RS_I1",
+          "target_evidence_ids": [
+            "RS_T1",
+            "RS_T2"
+          ],
+          "keywords": [
+            "simulation",
+            "checklist",
+            "ordered plan"
+          ]
+        },
+        {
+          "id": "RS_I2",
+          "target_evidence_ids": [
+            "RS_T2",
+            "RS_T3"
+          ],
+          "keywords": [
+            "pause",
+            "procedure problem",
+            "fix"
+          ]
+        }
+      ],
+      "near_miss_distractor_mappings": [
+        {
+          "id": "RS_D1",
+          "text": "Astronauts rehearse for applause from an audience."
+        },
+        {
+          "id": "RS_D2",
+          "text": "Mission simulation uses costumes as scripted entertainment."
+        }
+      ],
+      "forbidden_transfer_probes": [
+        "RS_FT1",
+        "RS_FT2"
+      ],
+      "evidence_aliases": {
+        "actors rehearse": "RS_S1",
+        "script ordered plan": "RS_S2",
+        "stage manager pause": "RS_S3",
+        "mission simulation": "RS_T1",
+        "procedure checklist": "RS_T2",
+        "flight director pause": "RS_T3"
+      }
+    }
+  }
+}

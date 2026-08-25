@@ -1,0 +1,1486 @@
+{
+  "schema_version": "benchmark",
+  "description": "Small Python-only executable code creativity tasks with NeoCoder-style denial states. Each task asks for one function and is scored by deterministic static checks plus unit tests.",
+  "output_count": 1,
+  "tasks": [
+    {
+      "id": "neo_stable_unique_s0",
+      "base_task_id": "stable_unique",
+      "denial_state": 0,
+      "title": "Stable unique values",
+      "function_name": "stable_unique",
+      "signature": "def stable_unique(items):",
+      "problem_statement": "Return a list containing the first occurrence of each value in items while preserving original order.",
+      "input_contract": "items is a finite list of hashable JSON values.",
+      "output_contract": "Return a list. Do not mutate the input list.",
+      "denied_techniques": [],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              1,
+              3,
+              2
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              "a",
+              "b",
+              "a",
+              "c",
+              "b"
+            ]
+          ],
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        }
+      ],
+      "technique_weights": {
+        "for_loop": 0.35,
+        "if_statement": 0.3,
+        "set_usage": 0.35,
+        "while_loop": 0.65,
+        "recursion": 0.75,
+        "helper_function": 0.55
+      },
+      "common_techniques": [
+        "for_loop",
+        "if_statement",
+        "set_usage"
+      ],
+      "accepted_complexity_claims": [
+        "O(n)",
+        "linear time"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    },
+    {
+      "id": "neo_stable_unique_s1",
+      "base_task_id": "stable_unique",
+      "denial_state": 1,
+      "title": "Stable unique values without set usage",
+      "function_name": "stable_unique",
+      "signature": "def stable_unique(items):",
+      "problem_statement": "Return the first occurrence of each value in items while preserving original order.",
+      "input_contract": "items is a finite list of hashable JSON values.",
+      "output_contract": "Return a list. Do not mutate the input list.",
+      "denied_techniques": [
+        "set_usage"
+      ],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              1,
+              3,
+              2
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              "a",
+              "b",
+              "a",
+              "c",
+              "b"
+            ]
+          ],
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        }
+      ],
+      "technique_weights": {
+        "for_loop": 0.45,
+        "if_statement": 0.35,
+        "set_usage": 0.05,
+        "while_loop": 0.7,
+        "recursion": 0.8,
+        "helper_function": 0.6
+      },
+      "common_techniques": [
+        "for_loop",
+        "if_statement",
+        "set_usage"
+      ],
+      "accepted_complexity_claims": [
+        "O(n^2)",
+        "quadratic time",
+        "O(n)"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    },
+    {
+      "id": "neo_stable_unique_s2",
+      "base_task_id": "stable_unique",
+      "denial_state": 2,
+      "title": "Stable unique values without set or for loop",
+      "function_name": "stable_unique",
+      "signature": "def stable_unique(items):",
+      "problem_statement": "Return the first occurrence of each value in items while preserving original order.",
+      "input_contract": "items is a finite list of hashable JSON values.",
+      "output_contract": "Return a list. Do not mutate the input list.",
+      "denied_techniques": [
+        "set_usage",
+        "for_loop"
+      ],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              1,
+              3,
+              2
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              "a",
+              "b",
+              "a",
+              "c",
+              "b"
+            ]
+          ],
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        }
+      ],
+      "technique_weights": {
+        "for_loop": 0.05,
+        "if_statement": 0.45,
+        "set_usage": 0.05,
+        "while_loop": 0.85,
+        "recursion": 0.9,
+        "helper_function": 0.7
+      },
+      "common_techniques": [
+        "for_loop",
+        "if_statement",
+        "set_usage"
+      ],
+      "accepted_complexity_claims": [
+        "O(n^2)",
+        "quadratic time"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    },
+    {
+      "id": "neo_rle_s0",
+      "base_task_id": "run_length_encode",
+      "denial_state": 0,
+      "title": "Run length encoding",
+      "function_name": "run_length_encode",
+      "signature": "def run_length_encode(text):",
+      "problem_statement": "Return consecutive character runs as [character, count] pairs.",
+      "input_contract": "text is a string.",
+      "output_contract": "Return a list of two-item lists. The empty string returns [].",
+      "denied_techniques": [],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            "aaabbc"
+          ],
+          "expected": [
+            [
+              "a",
+              3
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              1
+            ]
+          ]
+        },
+        {
+          "args": [
+            ""
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            "z"
+          ],
+          "expected": [
+            [
+              "z",
+              1
+            ]
+          ]
+        }
+      ],
+      "technique_weights": {
+        "for_loop": 0.35,
+        "while_loop": 0.6,
+        "if_statement": 0.3,
+        "slicing": 0.45,
+        "itertools_groupby": 0.55,
+        "recursion": 0.8
+      },
+      "common_techniques": [
+        "for_loop",
+        "if_statement"
+      ],
+      "accepted_complexity_claims": [
+        "O(n)",
+        "linear time"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    },
+    {
+      "id": "neo_rle_s1",
+      "base_task_id": "run_length_encode",
+      "denial_state": 1,
+      "title": "Run length encoding without for loop",
+      "function_name": "run_length_encode",
+      "signature": "def run_length_encode(text):",
+      "problem_statement": "Return consecutive character runs as [character, count] pairs.",
+      "input_contract": "text is a string.",
+      "output_contract": "Return a list of two-item lists. The empty string returns [].",
+      "denied_techniques": [
+        "for_loop"
+      ],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            "aaabbc"
+          ],
+          "expected": [
+            [
+              "a",
+              3
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              1
+            ]
+          ]
+        },
+        {
+          "args": [
+            ""
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            "z"
+          ],
+          "expected": [
+            [
+              "z",
+              1
+            ]
+          ]
+        }
+      ],
+      "technique_weights": {
+        "for_loop": 0.05,
+        "while_loop": 0.75,
+        "if_statement": 0.35,
+        "slicing": 0.5,
+        "itertools_groupby": 0.2,
+        "recursion": 0.85
+      },
+      "common_techniques": [
+        "for_loop",
+        "if_statement"
+      ],
+      "accepted_complexity_claims": [
+        "O(n)",
+        "linear time"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    },
+    {
+      "id": "neo_rle_s2",
+      "base_task_id": "run_length_encode",
+      "denial_state": 2,
+      "title": "Run length encoding without for loop or itertools",
+      "function_name": "run_length_encode",
+      "signature": "def run_length_encode(text):",
+      "problem_statement": "Return consecutive character runs as [character, count] pairs.",
+      "input_contract": "text is a string.",
+      "output_contract": "Return a list of two-item lists. The empty string returns [].",
+      "denied_techniques": [
+        "for_loop",
+        "itertools_groupby"
+      ],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            "aaabbc"
+          ],
+          "expected": [
+            [
+              "a",
+              3
+            ],
+            [
+              "b",
+              2
+            ],
+            [
+              "c",
+              1
+            ]
+          ]
+        },
+        {
+          "args": [
+            ""
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            "z"
+          ],
+          "expected": [
+            [
+              "z",
+              1
+            ]
+          ]
+        }
+      ],
+      "technique_weights": {
+        "for_loop": 0.05,
+        "while_loop": 0.85,
+        "if_statement": 0.4,
+        "slicing": 0.55,
+        "itertools_groupby": 0.05,
+        "recursion": 0.9
+      },
+      "common_techniques": [
+        "for_loop",
+        "if_statement",
+        "itertools_groupby"
+      ],
+      "accepted_complexity_claims": [
+        "O(n)",
+        "linear time"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    },
+    {
+      "id": "neo_pair_sum_s0",
+      "base_task_id": "pair_sum_indices",
+      "denial_state": 0,
+      "title": "Pair sum indices",
+      "function_name": "pair_sum_indices",
+      "signature": "def pair_sum_indices(nums, target):",
+      "problem_statement": "Return indices [i, j] of the first pair whose values sum to target, or None if no pair exists.",
+      "input_contract": "nums is a list of integers; target is an integer.",
+      "output_contract": "Return a two-index list with i < j, or None.",
+      "denied_techniques": [],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            [
+              2,
+              7,
+              11,
+              15
+            ],
+            9
+          ],
+          "expected": [
+            0,
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              3,
+              2,
+              4
+            ],
+            6
+          ],
+          "expected": [
+            1,
+            2
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ],
+            7
+          ],
+          "expected": null
+        }
+      ],
+      "technique_weights": {
+        "dict_usage": 0.35,
+        "for_loop": 0.35,
+        "nested_loop": 0.45,
+        "while_loop": 0.65,
+        "recursion": 0.85
+      },
+      "common_techniques": [
+        "dict_usage",
+        "for_loop",
+        "if_statement"
+      ],
+      "accepted_complexity_claims": [
+        "O(n)",
+        "linear time",
+        "O(n^2)",
+        "quadratic time"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    },
+    {
+      "id": "neo_pair_sum_s1",
+      "base_task_id": "pair_sum_indices",
+      "denial_state": 1,
+      "title": "Pair sum indices without dictionary",
+      "function_name": "pair_sum_indices",
+      "signature": "def pair_sum_indices(nums, target):",
+      "problem_statement": "Return indices [i, j] of the first pair whose values sum to target, or None if no pair exists.",
+      "input_contract": "nums is a list of integers; target is an integer.",
+      "output_contract": "Return a two-index list with i < j, or None.",
+      "denied_techniques": [
+        "dict_usage"
+      ],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            [
+              2,
+              7,
+              11,
+              15
+            ],
+            9
+          ],
+          "expected": [
+            0,
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              3,
+              2,
+              4
+            ],
+            6
+          ],
+          "expected": [
+            1,
+            2
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ],
+            7
+          ],
+          "expected": null
+        }
+      ],
+      "technique_weights": {
+        "dict_usage": 0.05,
+        "for_loop": 0.45,
+        "nested_loop": 0.65,
+        "while_loop": 0.75,
+        "recursion": 0.85
+      },
+      "common_techniques": [
+        "dict_usage",
+        "for_loop",
+        "if_statement"
+      ],
+      "accepted_complexity_claims": [
+        "O(n^2)",
+        "quadratic time"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    },
+    {
+      "id": "neo_pair_sum_s2",
+      "base_task_id": "pair_sum_indices",
+      "denial_state": 2,
+      "title": "Pair sum indices without dictionary or for loop",
+      "function_name": "pair_sum_indices",
+      "signature": "def pair_sum_indices(nums, target):",
+      "problem_statement": "Return indices [i, j] of the first pair whose values sum to target, or None if no pair exists.",
+      "input_contract": "nums is a list of integers; target is an integer.",
+      "output_contract": "Return a two-index list with i < j, or None.",
+      "denied_techniques": [
+        "dict_usage",
+        "for_loop"
+      ],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            [
+              2,
+              7,
+              11,
+              15
+            ],
+            9
+          ],
+          "expected": [
+            0,
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              3,
+              2,
+              4
+            ],
+            6
+          ],
+          "expected": [
+            1,
+            2
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ],
+            7
+          ],
+          "expected": null
+        }
+      ],
+      "technique_weights": {
+        "dict_usage": 0.05,
+        "for_loop": 0.05,
+        "nested_loop": 0.75,
+        "while_loop": 0.85,
+        "recursion": 0.9
+      },
+      "common_techniques": [
+        "dict_usage",
+        "for_loop",
+        "if_statement"
+      ],
+      "accepted_complexity_claims": [
+        "O(n^2)",
+        "quadratic time"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    },
+    {
+      "id": "neo_merge_intervals_s0",
+      "base_task_id": "merge_intervals",
+      "denial_state": 0,
+      "title": "Merge intervals",
+      "function_name": "merge_intervals",
+      "signature": "def merge_intervals(intervals):",
+      "problem_statement": "Merge overlapping closed intervals and return sorted non-overlapping intervals.",
+      "input_contract": "intervals is a list of [start, end] integer pairs.",
+      "output_contract": "Return a list of [start, end] pairs sorted by start.",
+      "denied_techniques": [],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            [
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                8,
+                10
+              ],
+              [
+                15,
+                18
+              ]
+            ]
+          ],
+          "expected": [
+            [
+              1,
+              6
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              15,
+              18
+            ]
+          ]
+        },
+        {
+          "args": [
+            [
+              [
+                1,
+                4
+              ],
+              [
+                4,
+                5
+              ]
+            ]
+          ],
+          "expected": [
+            [
+              1,
+              5
+            ]
+          ]
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        }
+      ],
+      "technique_weights": {
+        "sort_call": 0.35,
+        "for_loop": 0.35,
+        "while_loop": 0.65,
+        "recursion": 0.85,
+        "helper_function": 0.6
+      },
+      "common_techniques": [
+        "sort_call",
+        "for_loop",
+        "if_statement"
+      ],
+      "accepted_complexity_claims": [
+        "O(n log n)",
+        "n log n",
+        "O(n^2)",
+        "quadratic time"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    },
+    {
+      "id": "neo_merge_intervals_s1",
+      "base_task_id": "merge_intervals",
+      "denial_state": 1,
+      "title": "Merge intervals without sort call",
+      "function_name": "merge_intervals",
+      "signature": "def merge_intervals(intervals):",
+      "problem_statement": "Merge overlapping closed intervals and return sorted non-overlapping intervals.",
+      "input_contract": "intervals is a list of [start, end] integer pairs.",
+      "output_contract": "Return a list of [start, end] pairs sorted by start.",
+      "denied_techniques": [
+        "sort_call"
+      ],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            [
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                8,
+                10
+              ],
+              [
+                15,
+                18
+              ]
+            ]
+          ],
+          "expected": [
+            [
+              1,
+              6
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              15,
+              18
+            ]
+          ]
+        },
+        {
+          "args": [
+            [
+              [
+                1,
+                4
+              ],
+              [
+                4,
+                5
+              ]
+            ]
+          ],
+          "expected": [
+            [
+              1,
+              5
+            ]
+          ]
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        }
+      ],
+      "technique_weights": {
+        "sort_call": 0.05,
+        "for_loop": 0.45,
+        "while_loop": 0.75,
+        "recursion": 0.85,
+        "helper_function": 0.7
+      },
+      "common_techniques": [
+        "sort_call",
+        "for_loop",
+        "if_statement"
+      ],
+      "accepted_complexity_claims": [
+        "O(n^2)",
+        "quadratic time"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    },
+    {
+      "id": "neo_merge_intervals_s2",
+      "base_task_id": "merge_intervals",
+      "denial_state": 2,
+      "title": "Merge intervals without sort call or for loop",
+      "function_name": "merge_intervals",
+      "signature": "def merge_intervals(intervals):",
+      "problem_statement": "Merge overlapping closed intervals and return sorted non-overlapping intervals.",
+      "input_contract": "intervals is a list of [start, end] integer pairs.",
+      "output_contract": "Return a list of [start, end] pairs sorted by start.",
+      "denied_techniques": [
+        "sort_call",
+        "for_loop"
+      ],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            [
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                8,
+                10
+              ],
+              [
+                15,
+                18
+              ]
+            ]
+          ],
+          "expected": [
+            [
+              1,
+              6
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              15,
+              18
+            ]
+          ]
+        },
+        {
+          "args": [
+            [
+              [
+                1,
+                4
+              ],
+              [
+                4,
+                5
+              ]
+            ]
+          ],
+          "expected": [
+            [
+              1,
+              5
+            ]
+          ]
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        }
+      ],
+      "technique_weights": {
+        "sort_call": 0.05,
+        "for_loop": 0.05,
+        "while_loop": 0.85,
+        "recursion": 0.9,
+        "helper_function": 0.75
+      },
+      "common_techniques": [
+        "sort_call",
+        "for_loop",
+        "if_statement"
+      ],
+      "accepted_complexity_claims": [
+        "O(n^2)",
+        "quadratic time"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    },
+    {
+      "id": "neo_flatten_once_s0",
+      "base_task_id": "flatten_once",
+      "denial_state": 0,
+      "title": "Flatten one level",
+      "function_name": "flatten_once",
+      "signature": "def flatten_once(values):",
+      "problem_statement": "Flatten exactly one level of nested lists while preserving order.",
+      "input_contract": "values is a list whose elements may be scalars or lists.",
+      "output_contract": "Return a list. Deeper nested lists remain nested.",
+      "denied_techniques": [],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            [
+              1,
+              [
+                2,
+                3
+              ],
+              [
+                4
+              ],
+              5
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "args": [
+            [
+              "ab",
+              [
+                "c",
+                "d"
+              ],
+              []
+            ]
+          ],
+          "expected": [
+            "ab",
+            "c",
+            "d"
+          ]
+        },
+        {
+          "args": [
+            [
+              [
+                [
+                  "x"
+                ],
+                "y"
+              ],
+              "z"
+            ]
+          ],
+          "expected": [
+            [
+              "x"
+            ],
+            "y",
+            "z"
+          ]
+        }
+      ],
+      "technique_weights": {
+        "list_comprehension": 0.35,
+        "for_loop": 0.35,
+        "nested_loop": 0.45,
+        "while_loop": 0.7,
+        "recursion": 0.85
+      },
+      "common_techniques": [
+        "list_comprehension",
+        "for_loop",
+        "if_statement"
+      ],
+      "accepted_complexity_claims": [
+        "O(n)",
+        "linear time",
+        "O(total elements)"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    },
+    {
+      "id": "neo_flatten_once_s1",
+      "base_task_id": "flatten_once",
+      "denial_state": 1,
+      "title": "Flatten one level without comprehension",
+      "function_name": "flatten_once",
+      "signature": "def flatten_once(values):",
+      "problem_statement": "Flatten exactly one level of nested lists while preserving order.",
+      "input_contract": "values is a list whose elements may be scalars or lists.",
+      "output_contract": "Return a list. Deeper nested lists remain nested.",
+      "denied_techniques": [
+        "list_comprehension"
+      ],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            [
+              1,
+              [
+                2,
+                3
+              ],
+              [
+                4
+              ],
+              5
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "args": [
+            [
+              "ab",
+              [
+                "c",
+                "d"
+              ],
+              []
+            ]
+          ],
+          "expected": [
+            "ab",
+            "c",
+            "d"
+          ]
+        },
+        {
+          "args": [
+            [
+              [
+                [
+                  "x"
+                ],
+                "y"
+              ],
+              "z"
+            ]
+          ],
+          "expected": [
+            [
+              "x"
+            ],
+            "y",
+            "z"
+          ]
+        }
+      ],
+      "technique_weights": {
+        "list_comprehension": 0.05,
+        "for_loop": 0.45,
+        "nested_loop": 0.55,
+        "while_loop": 0.75,
+        "recursion": 0.85
+      },
+      "common_techniques": [
+        "list_comprehension",
+        "for_loop",
+        "if_statement"
+      ],
+      "accepted_complexity_claims": [
+        "O(n)",
+        "linear time",
+        "O(total elements)"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    },
+    {
+      "id": "neo_flatten_once_s2",
+      "base_task_id": "flatten_once",
+      "denial_state": 2,
+      "title": "Flatten one level without comprehension or for loop",
+      "function_name": "flatten_once",
+      "signature": "def flatten_once(values):",
+      "problem_statement": "Flatten exactly one level of nested lists while preserving order.",
+      "input_contract": "values is a list whose elements may be scalars or lists.",
+      "output_contract": "Return a list. Deeper nested lists remain nested.",
+      "denied_techniques": [
+        "list_comprehension",
+        "for_loop"
+      ],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            [
+              1,
+              [
+                2,
+                3
+              ],
+              [
+                4
+              ],
+              5
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "args": [
+            [
+              "ab",
+              [
+                "c",
+                "d"
+              ],
+              []
+            ]
+          ],
+          "expected": [
+            "ab",
+            "c",
+            "d"
+          ]
+        },
+        {
+          "args": [
+            [
+              [
+                [
+                  "x"
+                ],
+                "y"
+              ],
+              "z"
+            ]
+          ],
+          "expected": [
+            [
+              "x"
+            ],
+            "y",
+            "z"
+          ]
+        }
+      ],
+      "technique_weights": {
+        "list_comprehension": 0.05,
+        "for_loop": 0.05,
+        "nested_loop": 0.6,
+        "while_loop": 0.85,
+        "recursion": 0.9
+      },
+      "common_techniques": [
+        "list_comprehension",
+        "for_loop",
+        "if_statement"
+      ],
+      "accepted_complexity_claims": [
+        "O(n)",
+        "linear time",
+        "O(total elements)"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    },
+    {
+      "id": "neo_count_islands_s0",
+      "base_task_id": "count_islands",
+      "denial_state": 0,
+      "title": "Count islands",
+      "function_name": "count_islands",
+      "signature": "def count_islands(grid):",
+      "problem_statement": "Count 4-neighbor connected groups of 1 values in a 0/1 grid.",
+      "input_contract": "grid is a rectangular list of lists containing 0 or 1.",
+      "output_contract": "Return an integer. Do not mutate the input grid.",
+      "denied_techniques": [],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            [
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                1
+              ]
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": 0
+        }
+      ],
+      "technique_weights": {
+        "recursion": 0.35,
+        "set_usage": 0.35,
+        "while_loop": 0.6,
+        "for_loop": 0.35,
+        "nested_loop": 0.4,
+        "queue": 0.75
+      },
+      "common_techniques": [
+        "recursion",
+        "set_usage",
+        "for_loop",
+        "if_statement"
+      ],
+      "accepted_complexity_claims": [
+        "O(rows*cols)",
+        "O(m*n)",
+        "linear in cells"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    },
+    {
+      "id": "neo_count_islands_s1",
+      "base_task_id": "count_islands",
+      "denial_state": 1,
+      "title": "Count islands without recursion",
+      "function_name": "count_islands",
+      "signature": "def count_islands(grid):",
+      "problem_statement": "Count 4-neighbor connected groups of 1 values in a 0/1 grid.",
+      "input_contract": "grid is a rectangular list of lists containing 0 or 1.",
+      "output_contract": "Return an integer. Do not mutate the input grid.",
+      "denied_techniques": [
+        "recursion"
+      ],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            [
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                1
+              ]
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": 0
+        }
+      ],
+      "technique_weights": {
+        "recursion": 0.05,
+        "set_usage": 0.45,
+        "while_loop": 0.75,
+        "for_loop": 0.4,
+        "nested_loop": 0.45,
+        "queue": 0.8
+      },
+      "common_techniques": [
+        "recursion",
+        "set_usage",
+        "for_loop",
+        "if_statement"
+      ],
+      "accepted_complexity_claims": [
+        "O(rows*cols)",
+        "O(m*n)",
+        "linear in cells"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    },
+    {
+      "id": "neo_count_islands_s2",
+      "base_task_id": "count_islands",
+      "denial_state": 2,
+      "title": "Count islands without recursion or set",
+      "function_name": "count_islands",
+      "signature": "def count_islands(grid):",
+      "problem_statement": "Count 4-neighbor connected groups of 1 values in a 0/1 grid.",
+      "input_contract": "grid is a rectangular list of lists containing 0 or 1.",
+      "output_contract": "Return an integer. Do not mutate the input grid.",
+      "denied_techniques": [
+        "recursion",
+        "set_usage"
+      ],
+      "allowed_imports": [],
+      "unit_tests": [
+        {
+          "args": [
+            [
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                1
+              ]
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": 0
+        }
+      ],
+      "technique_weights": {
+        "recursion": 0.05,
+        "set_usage": 0.05,
+        "while_loop": 0.85,
+        "for_loop": 0.45,
+        "nested_loop": 0.5,
+        "queue": 0.9
+      },
+      "common_techniques": [
+        "recursion",
+        "set_usage",
+        "for_loop",
+        "if_statement"
+      ],
+      "accepted_complexity_claims": [
+        "O(rows*cols)",
+        "O(m*n)",
+        "linear in cells"
+      ],
+      "time_limit_s": 1.0,
+      "memory_limit_mb": 128
+    }
+  ]
+}

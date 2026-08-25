@@ -1,0 +1,1871 @@
+{
+  "schema_version": "benchmark",
+  "output_count": 6,
+  "tasks": [
+    {
+      "id": "hs_phone_stand_001",
+      "title": "Camera-safe phone stand",
+      "scene": "A phone must stand upright on a desk for a video call.",
+      "goal": "Create a stable upright phone support without blocking the camera.",
+      "difficulty": "medium",
+      "available_entities": [
+        {
+          "id": "binder_clip",
+          "name": "binder clip",
+          "aliases": [
+            "binder clip",
+            "clip",
+            "paper clamp"
+          ],
+          "family": "clamp",
+          "affordances": {
+            "clamp": {
+              "keywords": [
+                "clamp",
+                "clip",
+                "grip"
+              ],
+              "strength": 0.9
+            },
+            "folding_handles": {
+              "keywords": [
+                "handle",
+                "handles",
+                "folding handle",
+                "wire arms",
+                "leg"
+              ],
+              "strength": 0.85
+            },
+            "spring_tension": {
+              "keywords": [
+                "spring",
+                "tension"
+              ],
+              "strength": 0.75
+            }
+          },
+          "negative_affordances": {
+            "magnetic_grip": {
+              "keywords": [
+                "magnet",
+                "magnetic",
+                "magnetize"
+              ],
+              "strength": 0.9
+            },
+            "permanent_bond": {
+              "keywords": [
+                "permanent glue",
+                "superglue"
+              ],
+              "strength": 0.9
+            }
+          }
+        },
+        {
+          "id": "index_cards",
+          "name": "index cards",
+          "aliases": [
+            "index card",
+            "cards",
+            "card"
+          ],
+          "family": "paper",
+          "affordances": {
+            "foldable_support": {
+              "keywords": [
+                "fold",
+                "folded",
+                "crease",
+                "wedge",
+                "triangle"
+              ],
+              "strength": 0.85
+            },
+            "thin_spacer": {
+              "keywords": [
+                "spacer",
+                "shim",
+                "angle"
+              ],
+              "strength": 0.75
+            }
+          },
+          "negative_affordances": {
+            "heavy_mass": {
+              "keywords": [
+                "heavy",
+                "weight",
+                "counterweight"
+              ],
+              "strength": 0.7
+            }
+          }
+        },
+        {
+          "id": "mug",
+          "name": "mug",
+          "aliases": [
+            "cup",
+            "coffee mug",
+            "ceramic mug"
+          ],
+          "family": "container_weight",
+          "affordances": {
+            "heavy_backstop": {
+              "keywords": [
+                "heavy",
+                "weight",
+                "backstop",
+                "lean against",
+                "mass"
+              ],
+              "strength": 0.9
+            },
+            "stable_wall": {
+              "keywords": [
+                "wall",
+                "side",
+                "vertical side"
+              ],
+              "strength": 0.75
+            }
+          },
+          "negative_affordances": {
+            "magnetic_grip": {
+              "keywords": [
+                "magnet",
+                "magnetic",
+                "magnetize"
+              ],
+              "strength": 0.95
+            }
+          }
+        },
+        {
+          "id": "tape",
+          "name": "tape",
+          "aliases": [
+            "masking tape",
+            "removable tape"
+          ],
+          "family": "fastener",
+          "affordances": {
+            "removable_fastener": {
+              "keywords": [
+                "tape",
+                "temporary",
+                "removable",
+                "hold"
+              ],
+              "strength": 0.8
+            }
+          },
+          "negative_affordances": {
+            "camera_blocker": {
+              "keywords": [
+                "cover camera",
+                "block camera",
+                "tape over camera"
+              ],
+              "strength": 0.95
+            },
+            "permanent_bond": {
+              "keywords": [
+                "permanent",
+                "superglue"
+              ],
+              "strength": 0.8
+            }
+          }
+        },
+        {
+          "id": "rubber_band",
+          "name": "rubber band",
+          "aliases": [
+            "elastic band",
+            "band"
+          ],
+          "family": "elastic",
+          "affordances": {
+            "elastic_tension": {
+              "keywords": [
+                "elastic",
+                "tension",
+                "wrap",
+                "tie",
+                "loop"
+              ],
+              "strength": 0.85
+            }
+          },
+          "negative_affordances": {
+            "rigid_support": {
+              "keywords": [
+                "rigid leg",
+                "hard leg"
+              ],
+              "strength": 0.7
+            }
+          }
+        }
+      ],
+      "allowed_operations": [
+        {
+          "id": "clamp",
+          "name": "clamp",
+          "aliases": [
+            "clip"
+          ],
+          "family": "hold"
+        },
+        {
+          "id": "prop",
+          "name": "prop",
+          "aliases": [
+            "stand",
+            "support"
+          ],
+          "family": "support"
+        },
+        {
+          "id": "wedge",
+          "name": "wedge",
+          "aliases": [
+            "shim"
+          ],
+          "family": "angle"
+        },
+        {
+          "id": "backstop",
+          "name": "backstop",
+          "aliases": [
+            "brace",
+            "lean"
+          ],
+          "family": "support"
+        },
+        {
+          "id": "fold",
+          "name": "fold",
+          "aliases": [
+            "crease"
+          ],
+          "family": "shape"
+        },
+        {
+          "id": "temporary_fastener",
+          "name": "temporary fastener",
+          "aliases": [
+            "tape",
+            "temporary tape"
+          ],
+          "family": "hold"
+        },
+        {
+          "id": "tie",
+          "name": "tie",
+          "aliases": [
+            "wrap",
+            "loop"
+          ],
+          "family": "hold"
+        },
+        {
+          "id": "counterweight",
+          "name": "counterweight",
+          "aliases": [
+            "weight"
+          ],
+          "family": "stability"
+        },
+        {
+          "id": "spacer",
+          "name": "spacer",
+          "aliases": [
+            "gap filler"
+          ],
+          "family": "angle"
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "upright_support",
+          "keywords": [
+            "upright",
+            "stand",
+            "support",
+            "prop"
+          ]
+        },
+        {
+          "id": "stable_base",
+          "keywords": [
+            "stable",
+            "base",
+            "not fall",
+            "balance"
+          ]
+        },
+        {
+          "id": "camera_clear",
+          "keywords": [
+            "camera clear",
+            "not block camera",
+            "unobstructed camera",
+            "camera unobstructed"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "camera_clear",
+          "description": "The camera lens must not be covered or blocked.",
+          "forbidden_keywords": [
+            "cover camera",
+            "block camera",
+            "tape over camera",
+            "obstruct camera",
+            "cover lens",
+            "block lens"
+          ]
+        },
+        {
+          "id": "closed_entities",
+          "description": "No tripod, phone stand, glue, knife, or extra tools.",
+          "forbidden_entity_keywords": [
+            "tripod",
+            "phone stand",
+            "glue",
+            "superglue",
+            "knife",
+            "scissors",
+            "3d printed holder"
+          ]
+        },
+        {
+          "id": "temporary_only",
+          "description": "Do not permanently attach anything to the phone.",
+          "forbidden_keywords": [
+            "permanently attach",
+            "permanent glue",
+            "superglue"
+          ]
+        }
+      ],
+      "forbidden_foils": [
+        "tripod",
+        "phone stand",
+        "magnetic mug",
+        "magnet cup",
+        "mug magnet",
+        "superglue",
+        "3d printed holder"
+      ],
+      "valid_hypotheses": [
+        {
+          "id": "hs001_clip_handles",
+          "entities": [
+            "binder_clip"
+          ],
+          "operation_tags": [
+            "clamp",
+            "prop"
+          ],
+          "mechanism_tags": [
+            "clamp",
+            "folding_handles"
+          ],
+          "expected_effects": [
+            "upright_support",
+            "stable_base",
+            "camera_clear"
+          ],
+          "rarity": 0.75,
+          "families": {
+            "entity": "clamp",
+            "operation": "hold_support",
+            "effect": "upright"
+          },
+          "evidence_keywords": [
+            "clip",
+            "clamp",
+            "handle",
+            "upright",
+            "stable"
+          ]
+        },
+        {
+          "id": "hs001_mug_cards",
+          "entities": [
+            "mug",
+            "index_cards"
+          ],
+          "operation_tags": [
+            "backstop",
+            "wedge"
+          ],
+          "mechanism_tags": [
+            "heavy_backstop",
+            "foldable_support"
+          ],
+          "expected_effects": [
+            "upright_support",
+            "stable_base",
+            "camera_clear"
+          ],
+          "rarity": 0.8,
+          "families": {
+            "entity": "weight_paper",
+            "operation": "brace_angle",
+            "effect": "upright"
+          },
+          "evidence_keywords": [
+            "mug",
+            "heavy",
+            "backstop",
+            "folded",
+            "wedge",
+            "angle"
+          ]
+        },
+        {
+          "id": "hs001_cards_tape_triangle",
+          "entities": [
+            "index_cards",
+            "tape"
+          ],
+          "operation_tags": [
+            "fold",
+            "temporary_fastener"
+          ],
+          "mechanism_tags": [
+            "foldable_support",
+            "removable_fastener"
+          ],
+          "expected_effects": [
+            "upright_support",
+            "stable_base",
+            "camera_clear"
+          ],
+          "rarity": 0.55,
+          "families": {
+            "entity": "paper_fastener",
+            "operation": "shape_hold",
+            "effect": "upright"
+          },
+          "evidence_keywords": [
+            "fold",
+            "triangle",
+            "tape",
+            "temporary",
+            "base"
+          ]
+        },
+        {
+          "id": "hs001_band_mug",
+          "entities": [
+            "rubber_band",
+            "mug"
+          ],
+          "operation_tags": [
+            "tie",
+            "backstop"
+          ],
+          "mechanism_tags": [
+            "elastic_tension",
+            "heavy_backstop"
+          ],
+          "expected_effects": [
+            "upright_support",
+            "stable_base",
+            "camera_clear"
+          ],
+          "rarity": 0.7,
+          "families": {
+            "entity": "elastic_weight",
+            "operation": "brace_tension",
+            "effect": "upright"
+          },
+          "evidence_keywords": [
+            "rubber",
+            "elastic",
+            "wrap",
+            "mug",
+            "backstop",
+            "stable"
+          ]
+        },
+        {
+          "id": "hs001_clip_mug_counterweight",
+          "entities": [
+            "binder_clip",
+            "mug"
+          ],
+          "operation_tags": [
+            "clamp",
+            "counterweight"
+          ],
+          "mechanism_tags": [
+            "clamp",
+            "heavy_backstop"
+          ],
+          "expected_effects": [
+            "upright_support",
+            "stable_base",
+            "camera_clear"
+          ],
+          "rarity": 0.65,
+          "families": {
+            "entity": "clamp_weight",
+            "operation": "hold_stability",
+            "effect": "upright"
+          },
+          "evidence_keywords": [
+            "clip",
+            "clamp",
+            "mug",
+            "weight",
+            "counterweight"
+          ]
+        },
+        {
+          "id": "hs001_cards_band_triangle",
+          "entities": [
+            "index_cards",
+            "rubber_band"
+          ],
+          "operation_tags": [
+            "fold",
+            "tie"
+          ],
+          "mechanism_tags": [
+            "foldable_support",
+            "elastic_tension"
+          ],
+          "expected_effects": [
+            "upright_support",
+            "stable_base",
+            "camera_clear"
+          ],
+          "rarity": 0.62,
+          "families": {
+            "entity": "paper_elastic",
+            "operation": "shape_tension",
+            "effect": "upright"
+          },
+          "evidence_keywords": [
+            "fold",
+            "triangle",
+            "rubber",
+            "band",
+            "tension"
+          ]
+        },
+        {
+          "id": "hs001_tape_mug",
+          "entities": [
+            "tape",
+            "mug"
+          ],
+          "operation_tags": [
+            "temporary_fastener",
+            "backstop"
+          ],
+          "mechanism_tags": [
+            "removable_fastener",
+            "heavy_backstop"
+          ],
+          "expected_effects": [
+            "upright_support",
+            "stable_base",
+            "camera_clear"
+          ],
+          "rarity": 0.45,
+          "families": {
+            "entity": "fastener_weight",
+            "operation": "brace_hold",
+            "effect": "upright"
+          },
+          "evidence_keywords": [
+            "temporary",
+            "tape",
+            "mug",
+            "heavy",
+            "backstop"
+          ]
+        },
+        {
+          "id": "hs001_clip_cards_spacer",
+          "entities": [
+            "binder_clip",
+            "index_cards"
+          ],
+          "operation_tags": [
+            "clamp",
+            "spacer"
+          ],
+          "mechanism_tags": [
+            "clamp",
+            "thin_spacer"
+          ],
+          "expected_effects": [
+            "upright_support",
+            "stable_base",
+            "camera_clear"
+          ],
+          "rarity": 0.68,
+          "families": {
+            "entity": "clamp_paper",
+            "operation": "hold_angle",
+            "effect": "upright"
+          },
+          "evidence_keywords": [
+            "clip",
+            "clamp",
+            "card",
+            "spacer",
+            "angle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hs_table_shim_002",
+      "title": "Non-marring table shim",
+      "scene": "A small table rocks because one leg is slightly short on a smooth floor.",
+      "goal": "Make the tabletop level and stable without damaging the floor or table.",
+      "difficulty": "easy",
+      "available_entities": [
+        {
+          "id": "coins",
+          "name": "coins",
+          "aliases": [
+            "coin",
+            "quarters",
+            "stacked coins"
+          ],
+          "family": "rigid_spacer",
+          "affordances": {
+            "thin_spacer": {
+              "keywords": [
+                "coin",
+                "coins",
+                "spacer",
+                "shim",
+                "stack"
+              ],
+              "strength": 0.85
+            },
+            "rigid_stack": {
+              "keywords": [
+                "stack",
+                "rigid",
+                "height"
+              ],
+              "strength": 0.8
+            }
+          },
+          "negative_affordances": {
+            "adhesive": {
+              "keywords": [
+                "sticky",
+                "adhesive"
+              ],
+              "strength": 0.7
+            }
+          }
+        },
+        {
+          "id": "folded_paper",
+          "name": "folded paper",
+          "aliases": [
+            "paper",
+            "paper sheet",
+            "folded note"
+          ],
+          "family": "paper_wedge",
+          "affordances": {
+            "foldable_wedge": {
+              "keywords": [
+                "fold",
+                "folded",
+                "wedge",
+                "shim"
+              ],
+              "strength": 0.85
+            },
+            "compressible_pad": {
+              "keywords": [
+                "compress",
+                "pad",
+                "soft"
+              ],
+              "strength": 0.65
+            }
+          },
+          "negative_affordances": {
+            "heavy_mass": {
+              "keywords": [
+                "heavy",
+                "weight"
+              ],
+              "strength": 0.7
+            }
+          }
+        },
+        {
+          "id": "cork_coaster",
+          "name": "cork coaster",
+          "aliases": [
+            "coaster",
+            "cork"
+          ],
+          "family": "soft_pad",
+          "affordances": {
+            "compressible_pad": {
+              "keywords": [
+                "cork",
+                "coaster",
+                "pad",
+                "compress"
+              ],
+              "strength": 0.85
+            },
+            "friction_grip": {
+              "keywords": [
+                "grip",
+                "friction",
+                "non slip"
+              ],
+              "strength": 0.75
+            }
+          },
+          "negative_affordances": {}
+        },
+        {
+          "id": "tape",
+          "name": "removable tape",
+          "aliases": [
+            "tape",
+            "masking tape"
+          ],
+          "family": "fastener",
+          "affordances": {
+            "removable_fastener": {
+              "keywords": [
+                "tape",
+                "temporary",
+                "removable",
+                "hold"
+              ],
+              "strength": 0.8
+            }
+          },
+          "negative_affordances": {
+            "permanent_bond": {
+              "keywords": [
+                "permanent",
+                "superglue"
+              ],
+              "strength": 0.8
+            }
+          }
+        },
+        {
+          "id": "rubber_band",
+          "name": "rubber band",
+          "aliases": [
+            "elastic band",
+            "band"
+          ],
+          "family": "elastic",
+          "affordances": {
+            "elastic_tension": {
+              "keywords": [
+                "rubber",
+                "elastic",
+                "wrap",
+                "tie"
+              ],
+              "strength": 0.8
+            }
+          },
+          "negative_affordances": {
+            "thin_spacer": {
+              "keywords": [
+                "hard spacer",
+                "rigid spacer"
+              ],
+              "strength": 0.7
+            }
+          }
+        }
+      ],
+      "allowed_operations": [
+        {
+          "id": "spacer",
+          "name": "spacer",
+          "aliases": [
+            "shim"
+          ],
+          "family": "height"
+        },
+        {
+          "id": "wedge",
+          "name": "wedge",
+          "aliases": [
+            "fold wedge"
+          ],
+          "family": "height"
+        },
+        {
+          "id": "stack",
+          "name": "stack",
+          "aliases": [
+            "pile"
+          ],
+          "family": "height"
+        },
+        {
+          "id": "pad",
+          "name": "pad",
+          "aliases": [
+            "cushion"
+          ],
+          "family": "friction"
+        },
+        {
+          "id": "temporary_fastener",
+          "name": "temporary fastener",
+          "aliases": [
+            "temporary tape"
+          ],
+          "family": "hold"
+        },
+        {
+          "id": "tie",
+          "name": "tie",
+          "aliases": [
+            "wrap"
+          ],
+          "family": "hold"
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "level_surface",
+          "keywords": [
+            "level",
+            "even",
+            "flat tabletop"
+          ]
+        },
+        {
+          "id": "stable_base",
+          "keywords": [
+            "stable",
+            "not rock",
+            "stop rocking"
+          ]
+        },
+        {
+          "id": "non_marring",
+          "keywords": [
+            "no damage",
+            "non marring",
+            "not scratch"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "no_damage",
+          "description": "No cutting, sanding, drilling, or scratching.",
+          "forbidden_keywords": [
+            "cut leg",
+            "saw",
+            "sand",
+            "drill",
+            "scratch floor"
+          ]
+        },
+        {
+          "id": "closed_entities",
+          "description": "Use only listed objects.",
+          "forbidden_entity_keywords": [
+            "wood shim",
+            "book",
+            "cardboard",
+            "glue",
+            "screwdriver",
+            "saw"
+          ]
+        },
+        {
+          "id": "temporary_only",
+          "description": "No permanent glue.",
+          "forbidden_keywords": [
+            "permanent glue",
+            "superglue"
+          ]
+        }
+      ],
+      "forbidden_foils": [
+        "saw",
+        "sandpaper",
+        "wood shim",
+        "book",
+        "superglue",
+        "cut the leg"
+      ],
+      "valid_hypotheses": [
+        {
+          "id": "hs002_coins_stack",
+          "entities": [
+            "coins"
+          ],
+          "operation_tags": [
+            "stack",
+            "spacer"
+          ],
+          "mechanism_tags": [
+            "rigid_stack",
+            "thin_spacer"
+          ],
+          "expected_effects": [
+            "level_surface",
+            "stable_base",
+            "non_marring"
+          ],
+          "rarity": 0.55,
+          "families": {
+            "entity": "rigid_spacer",
+            "operation": "height_stack",
+            "effect": "level"
+          },
+          "evidence_keywords": [
+            "coin",
+            "stack",
+            "spacer",
+            "level",
+            "stable"
+          ]
+        },
+        {
+          "id": "hs002_paper_wedge",
+          "entities": [
+            "folded_paper"
+          ],
+          "operation_tags": [
+            "wedge"
+          ],
+          "mechanism_tags": [
+            "foldable_wedge"
+          ],
+          "expected_effects": [
+            "level_surface",
+            "stable_base",
+            "non_marring"
+          ],
+          "rarity": 0.5,
+          "families": {
+            "entity": "paper_wedge",
+            "operation": "height_wedge",
+            "effect": "level"
+          },
+          "evidence_keywords": [
+            "folded",
+            "paper",
+            "wedge",
+            "shim"
+          ]
+        },
+        {
+          "id": "hs002_cork_pad",
+          "entities": [
+            "cork_coaster"
+          ],
+          "operation_tags": [
+            "pad"
+          ],
+          "mechanism_tags": [
+            "compressible_pad",
+            "friction_grip"
+          ],
+          "expected_effects": [
+            "level_surface",
+            "stable_base",
+            "non_marring"
+          ],
+          "rarity": 0.58,
+          "families": {
+            "entity": "soft_pad",
+            "operation": "pad_friction",
+            "effect": "level"
+          },
+          "evidence_keywords": [
+            "cork",
+            "coaster",
+            "pad",
+            "friction",
+            "stable"
+          ]
+        },
+        {
+          "id": "hs002_coins_tape",
+          "entities": [
+            "coins",
+            "tape"
+          ],
+          "operation_tags": [
+            "stack",
+            "temporary_fastener"
+          ],
+          "mechanism_tags": [
+            "rigid_stack",
+            "removable_fastener"
+          ],
+          "expected_effects": [
+            "level_surface",
+            "stable_base",
+            "non_marring"
+          ],
+          "rarity": 0.65,
+          "families": {
+            "entity": "rigid_fastener",
+            "operation": "height_hold",
+            "effect": "level"
+          },
+          "evidence_keywords": [
+            "coin",
+            "stack",
+            "tape",
+            "temporary",
+            "hold"
+          ]
+        },
+        {
+          "id": "hs002_paper_tape",
+          "entities": [
+            "folded_paper",
+            "tape"
+          ],
+          "operation_tags": [
+            "wedge",
+            "temporary_fastener"
+          ],
+          "mechanism_tags": [
+            "foldable_wedge",
+            "removable_fastener"
+          ],
+          "expected_effects": [
+            "level_surface",
+            "stable_base",
+            "non_marring"
+          ],
+          "rarity": 0.62,
+          "families": {
+            "entity": "paper_fastener",
+            "operation": "wedge_hold",
+            "effect": "level"
+          },
+          "evidence_keywords": [
+            "folded",
+            "paper",
+            "wedge",
+            "tape",
+            "temporary"
+          ]
+        },
+        {
+          "id": "hs002_coaster_band",
+          "entities": [
+            "cork_coaster",
+            "rubber_band"
+          ],
+          "operation_tags": [
+            "pad",
+            "tie"
+          ],
+          "mechanism_tags": [
+            "compressible_pad",
+            "elastic_tension"
+          ],
+          "expected_effects": [
+            "level_surface",
+            "stable_base",
+            "non_marring"
+          ],
+          "rarity": 0.72,
+          "families": {
+            "entity": "pad_elastic",
+            "operation": "pad_tension",
+            "effect": "level"
+          },
+          "evidence_keywords": [
+            "cork",
+            "coaster",
+            "pad",
+            "rubber",
+            "band",
+            "tie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hs_cookie_jar_003",
+      "title": "Cookie retrieval from a narrow jar",
+      "scene": "A cookie has slipped to the bottom of a tall narrow jar. A hand cannot fit inside.",
+      "goal": "Retrieve the cookie mostly intact without putting a hand inside the jar.",
+      "difficulty": "hard",
+      "available_entities": [
+        {
+          "id": "chopsticks",
+          "name": "chopsticks",
+          "aliases": [
+            "chopstick",
+            "sticks"
+          ],
+          "family": "rigid_reach",
+          "affordances": {
+            "rigid_reach": {
+              "keywords": [
+                "reach",
+                "long",
+                "rigid",
+                "stick"
+              ],
+              "strength": 0.85
+            },
+            "pinch_grip": {
+              "keywords": [
+                "pinch",
+                "grip",
+                "tongs"
+              ],
+              "strength": 0.85
+            }
+          },
+          "negative_affordances": {}
+        },
+        {
+          "id": "tape",
+          "name": "tape",
+          "aliases": [
+            "sticky tape",
+            "masking tape"
+          ],
+          "family": "adhesive",
+          "affordances": {
+            "sticky_tip": {
+              "keywords": [
+                "sticky",
+                "adhesive",
+                "tape",
+                "pick up"
+              ],
+              "strength": 0.8
+            },
+            "removable_fastener": {
+              "keywords": [
+                "attach",
+                "temporary",
+                "hold"
+              ],
+              "strength": 0.75
+            }
+          },
+          "negative_affordances": {}
+        },
+        {
+          "id": "rubber_band",
+          "name": "rubber band",
+          "aliases": [
+            "elastic band",
+            "band"
+          ],
+          "family": "elastic",
+          "affordances": {
+            "elastic_loop": {
+              "keywords": [
+                "loop",
+                "elastic",
+                "lasso",
+                "cinch"
+              ],
+              "strength": 0.75
+            },
+            "elastic_tension": {
+              "keywords": [
+                "tension",
+                "wrap",
+                "tighten"
+              ],
+              "strength": 0.75
+            }
+          },
+          "negative_affordances": {}
+        },
+        {
+          "id": "string",
+          "name": "string",
+          "aliases": [
+            "thread",
+            "twine"
+          ],
+          "family": "flexible_loop",
+          "affordances": {
+            "flexible_loop": {
+              "keywords": [
+                "loop",
+                "lasso",
+                "snare",
+                "string"
+              ],
+              "strength": 0.7
+            },
+            "tie": {
+              "keywords": [
+                "tie",
+                "knot"
+              ],
+              "strength": 0.65
+            }
+          },
+          "negative_affordances": {
+            "rigid_reach": {
+              "keywords": [
+                "rigid",
+                "stiff rod"
+              ],
+              "strength": 0.8
+            }
+          }
+        },
+        {
+          "id": "straw",
+          "name": "straw",
+          "aliases": [
+            "drinking straw"
+          ],
+          "family": "light_extension",
+          "affordances": {
+            "light_extension": {
+              "keywords": [
+                "extend",
+                "extension",
+                "long",
+                "straw"
+              ],
+              "strength": 0.7
+            },
+            "air_channel": {
+              "keywords": [
+                "air",
+                "channel"
+              ],
+              "strength": 0.55
+            }
+          },
+          "negative_affordances": {
+            "strong_suction": {
+              "keywords": [
+                "vacuum",
+                "suction lifts cookie"
+              ],
+              "strength": 0.9
+            }
+          }
+        },
+        {
+          "id": "magnet",
+          "name": "magnet",
+          "aliases": [
+            "small magnet"
+          ],
+          "family": "magnet",
+          "affordances": {
+            "magnetic_pull": {
+              "keywords": [
+                "magnet",
+                "magnetic",
+                "metal"
+              ],
+              "strength": 0.8
+            }
+          },
+          "negative_affordances": {
+            "cookie_magnetism": {
+              "keywords": [
+                "magnet lifts cookie",
+                "magnetic cookie",
+                "cookie is magnetic"
+              ],
+              "strength": 0.95
+            }
+          }
+        }
+      ],
+      "allowed_operations": [
+        {
+          "id": "pinch",
+          "name": "pinch",
+          "aliases": [
+            "grip"
+          ],
+          "family": "grasp"
+        },
+        {
+          "id": "extend",
+          "name": "extend",
+          "aliases": [
+            "reach"
+          ],
+          "family": "reach"
+        },
+        {
+          "id": "sticky_lift",
+          "name": "sticky lift",
+          "aliases": [
+            "adhesive lift"
+          ],
+          "family": "grasp"
+        },
+        {
+          "id": "loop",
+          "name": "loop",
+          "aliases": [
+            "lasso",
+            "snare"
+          ],
+          "family": "grasp"
+        },
+        {
+          "id": "tie",
+          "name": "tie",
+          "aliases": [
+            "wrap"
+          ],
+          "family": "hold"
+        },
+        {
+          "id": "temporary_fastener",
+          "name": "temporary fastener",
+          "aliases": [
+            "attach"
+          ],
+          "family": "hold"
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "retrieve_cookie",
+          "keywords": [
+            "retrieve",
+            "remove",
+            "lift cookie"
+          ]
+        },
+        {
+          "id": "intact_cookie",
+          "keywords": [
+            "intact",
+            "mostly intact",
+            "not crumble"
+          ]
+        },
+        {
+          "id": "no_hand_inside",
+          "keywords": [
+            "hand cannot fit",
+            "no hand inside",
+            "outside the jar"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "closed_entities",
+          "description": "Use only listed objects.",
+          "forbidden_entity_keywords": [
+            "grabber",
+            "vacuum cleaner",
+            "spoon",
+            "tongs",
+            "wire hook",
+            "glue"
+          ]
+        },
+        {
+          "id": "no_hand_inside",
+          "description": "A hand cannot be inserted into the jar.",
+          "forbidden_keywords": [
+            "put hand inside",
+            "reach hand into jar",
+            "insert hand"
+          ]
+        },
+        {
+          "id": "food_intact",
+          "description": "Avoid crushing, dissolving, or soaking the cookie.",
+          "forbidden_keywords": [
+            "crush cookie",
+            "pour water",
+            "dissolve",
+            "break it apart"
+          ]
+        }
+      ],
+      "forbidden_foils": [
+        "vacuum cleaner",
+        "grabber tool",
+        "wire hook",
+        "magnet lifts cookie",
+        "magnetic cookie",
+        "pour water"
+      ],
+      "valid_hypotheses": [
+        {
+          "id": "hs003_chopsticks_pinch",
+          "entities": [
+            "chopsticks"
+          ],
+          "operation_tags": [
+            "extend",
+            "pinch"
+          ],
+          "mechanism_tags": [
+            "rigid_reach",
+            "pinch_grip"
+          ],
+          "expected_effects": [
+            "retrieve_cookie",
+            "intact_cookie",
+            "no_hand_inside"
+          ],
+          "rarity": 0.5,
+          "families": {
+            "entity": "rigid_reach",
+            "operation": "pinch_reach",
+            "effect": "retrieve"
+          },
+          "evidence_keywords": [
+            "chopstick",
+            "reach",
+            "pinch",
+            "grip",
+            "intact"
+          ]
+        },
+        {
+          "id": "hs003_tape_chopsticks",
+          "entities": [
+            "tape",
+            "chopsticks"
+          ],
+          "operation_tags": [
+            "temporary_fastener",
+            "sticky_lift"
+          ],
+          "mechanism_tags": [
+            "sticky_tip",
+            "rigid_reach"
+          ],
+          "expected_effects": [
+            "retrieve_cookie",
+            "intact_cookie",
+            "no_hand_inside"
+          ],
+          "rarity": 0.62,
+          "families": {
+            "entity": "adhesive_rigid",
+            "operation": "sticky_reach",
+            "effect": "retrieve"
+          },
+          "evidence_keywords": [
+            "tape",
+            "sticky",
+            "chopstick",
+            "reach",
+            "lift"
+          ]
+        },
+        {
+          "id": "hs003_band_chopsticks",
+          "entities": [
+            "rubber_band",
+            "chopsticks"
+          ],
+          "operation_tags": [
+            "tie",
+            "pinch"
+          ],
+          "mechanism_tags": [
+            "elastic_tension",
+            "pinch_grip"
+          ],
+          "expected_effects": [
+            "retrieve_cookie",
+            "intact_cookie",
+            "no_hand_inside"
+          ],
+          "rarity": 0.72,
+          "families": {
+            "entity": "elastic_rigid",
+            "operation": "tension_grip",
+            "effect": "retrieve"
+          },
+          "evidence_keywords": [
+            "rubber",
+            "band",
+            "tension",
+            "pinch",
+            "grip"
+          ]
+        },
+        {
+          "id": "hs003_string_tape_loop",
+          "entities": [
+            "string",
+            "tape"
+          ],
+          "operation_tags": [
+            "loop",
+            "temporary_fastener"
+          ],
+          "mechanism_tags": [
+            "flexible_loop",
+            "sticky_tip"
+          ],
+          "expected_effects": [
+            "retrieve_cookie",
+            "intact_cookie",
+            "no_hand_inside"
+          ],
+          "rarity": 0.78,
+          "families": {
+            "entity": "loop_adhesive",
+            "operation": "loop_lift",
+            "effect": "retrieve"
+          },
+          "evidence_keywords": [
+            "string",
+            "loop",
+            "tape",
+            "sticky",
+            "lift"
+          ]
+        },
+        {
+          "id": "hs003_straw_tape_extension",
+          "entities": [
+            "straw",
+            "tape"
+          ],
+          "operation_tags": [
+            "extend",
+            "sticky_lift"
+          ],
+          "mechanism_tags": [
+            "light_extension",
+            "sticky_tip"
+          ],
+          "expected_effects": [
+            "retrieve_cookie",
+            "intact_cookie",
+            "no_hand_inside"
+          ],
+          "rarity": 0.68,
+          "families": {
+            "entity": "extension_adhesive",
+            "operation": "sticky_reach",
+            "effect": "retrieve"
+          },
+          "evidence_keywords": [
+            "straw",
+            "extension",
+            "tape",
+            "sticky",
+            "lift"
+          ]
+        },
+        {
+          "id": "hs003_band_string_loop",
+          "entities": [
+            "rubber_band",
+            "string"
+          ],
+          "operation_tags": [
+            "loop",
+            "tie"
+          ],
+          "mechanism_tags": [
+            "elastic_loop",
+            "flexible_loop"
+          ],
+          "expected_effects": [
+            "retrieve_cookie",
+            "intact_cookie",
+            "no_hand_inside"
+          ],
+          "rarity": 0.82,
+          "families": {
+            "entity": "double_loop",
+            "operation": "cinch_loop",
+            "effect": "retrieve"
+          },
+          "evidence_keywords": [
+            "rubber",
+            "string",
+            "loop",
+            "cinch",
+            "retrieve"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hs_no_light_004",
+      "title": "No-source dark-room light",
+      "scene": "A sealed dark room has no power, no fire source, no batteries, and no sunlight.",
+      "goal": "Create visible light for ten minutes using only the listed objects.",
+      "difficulty": "impossible",
+      "no_valid_hypothesis": true,
+      "available_entities": [
+        {
+          "id": "glass_cup",
+          "name": "glass cup",
+          "aliases": [
+            "cup",
+            "glass"
+          ],
+          "family": "transparent_container",
+          "affordances": {
+            "reflective_surface": {
+              "keywords": [
+                "reflect",
+                "transparent",
+                "glass"
+              ],
+              "strength": 0.45
+            }
+          },
+          "negative_affordances": {
+            "light_source": {
+              "keywords": [
+                "emit light",
+                "glow",
+                "generate light",
+                "make light"
+              ],
+              "strength": 0.95
+            }
+          }
+        },
+        {
+          "id": "spoon",
+          "name": "metal spoon",
+          "aliases": [
+            "spoon"
+          ],
+          "family": "reflector",
+          "affordances": {
+            "reflective_surface": {
+              "keywords": [
+                "reflect",
+                "mirror",
+                "shiny"
+              ],
+              "strength": 0.5
+            }
+          },
+          "negative_affordances": {
+            "light_source": {
+              "keywords": [
+                "emit light",
+                "glow",
+                "generate light",
+                "make light"
+              ],
+              "strength": 0.95
+            }
+          }
+        },
+        {
+          "id": "cotton_string",
+          "name": "cotton string",
+          "aliases": [
+            "string",
+            "cotton thread"
+          ],
+          "family": "fiber",
+          "affordances": {
+            "tie": {
+              "keywords": [
+                "tie",
+                "wrap"
+              ],
+              "strength": 0.6
+            }
+          },
+          "negative_affordances": {
+            "light_source": {
+              "keywords": [
+                "glow",
+                "generate light"
+              ],
+              "strength": 0.95
+            },
+            "combustion": {
+              "keywords": [
+                "burn",
+                "flame",
+                "ignite"
+              ],
+              "strength": 0.95
+            }
+          }
+        },
+        {
+          "id": "paperback_book",
+          "name": "paperback book",
+          "aliases": [
+            "book",
+            "paperback"
+          ],
+          "family": "paper_stack",
+          "affordances": {
+            "opaque_block": {
+              "keywords": [
+                "block",
+                "cover"
+              ],
+              "strength": 0.5
+            }
+          },
+          "negative_affordances": {
+            "light_source": {
+              "keywords": [
+                "emit light",
+                "glow",
+                "generate light",
+                "make light"
+              ],
+              "strength": 0.95
+            },
+            "combustion": {
+              "keywords": [
+                "burn",
+                "flame",
+                "ignite"
+              ],
+              "strength": 0.95
+            }
+          }
+        }
+      ],
+      "allowed_operations": [
+        {
+          "id": "reflect",
+          "name": "reflect",
+          "aliases": [
+            "mirror"
+          ],
+          "family": "optics"
+        },
+        {
+          "id": "tie",
+          "name": "tie",
+          "aliases": [
+            "wrap"
+          ],
+          "family": "hold"
+        },
+        {
+          "id": "cover",
+          "name": "cover",
+          "aliases": [
+            "block"
+          ],
+          "family": "occlusion"
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "visible_light",
+          "keywords": [
+            "visible light",
+            "light",
+            "illumination"
+          ]
+        },
+        {
+          "id": "ten_minutes",
+          "keywords": [
+            "ten minutes",
+            "10 minutes"
+          ]
+        },
+        {
+          "id": "closed_world",
+          "keywords": [
+            "only listed objects",
+            "no external source"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "no_power_or_fire",
+          "description": "No power, batteries, sunlight, flame, or chemical light source exists.",
+          "forbidden_keywords": [
+            "battery",
+            "power",
+            "sunlight",
+            "flame",
+            "fire",
+            "burn",
+            "ignite",
+            "chemical glow"
+          ]
+        },
+        {
+          "id": "closed_entities",
+          "description": "Use only listed objects.",
+          "forbidden_entity_keywords": [
+            "flashlight",
+            "candle",
+            "matches",
+            "lighter",
+            "glow stick",
+            "phone",
+            "battery"
+          ]
+        },
+        {
+          "id": "must_create_light",
+          "description": "Reflection alone cannot create light without a source.",
+          "forbidden_keywords": [
+            "reflect existing light",
+            "amplify darkness into light"
+          ]
+        }
+      ],
+      "forbidden_foils": [
+        "flashlight",
+        "candle",
+        "lighter",
+        "matches",
+        "glow stick",
+        "battery",
+        "spoon emits light",
+        "book glows",
+        "friction light"
+      ],
+      "valid_hypotheses": []
+    }
+  ]
+}

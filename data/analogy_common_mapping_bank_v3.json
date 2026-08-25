@@ -1,0 +1,283 @@
+{
+  "schema": "benchmark",
+  "version": "benchmark",
+  "description": "Task-specific mapping family bank for T8-v3 rarity. It penalizes literal/source-only transfers and generic surface analogies while protecting grounded structural abstractions.",
+  "tasks": {
+    "analogy_library_seedbank_structural": {
+      "hard_zero_mapping_families": [
+        {
+          "id": "borrow_books_literal_transfer",
+          "keywords": [
+            "borrowed like library books",
+            "reading rooms",
+            "book circulation"
+          ]
+        },
+        {
+          "id": "seed_reads_or_studies",
+          "keywords": [
+            "seeds read",
+            "human reading to seed samples"
+          ]
+        },
+        {
+          "id": "unknown_evidence_or_invented_fact",
+          "keywords": [
+            "outside knowledge",
+            "internet",
+            "according to common knowledge"
+          ]
+        }
+      ],
+      "broad_common_mapping_families": [
+        {
+          "id": "both_store_things",
+          "keywords": [
+            "both store",
+            "both preserve",
+            "containers of information"
+          ]
+        },
+        {
+          "id": "generic_archive",
+          "keywords": [
+            "archive",
+            "collection",
+            "keeps things safe"
+          ]
+        }
+      ],
+      "supported_rare_abstraction_families": [
+        {
+          "id": "indexed_recoverable_resource",
+          "keywords": [
+            "indexed retrieval",
+            "descriptive metadata",
+            "recoverable resource"
+          ]
+        },
+        {
+          "id": "controlled_storage_future_restoration",
+          "keywords": [
+            "controlled storage",
+            "future planting",
+            "future use"
+          ]
+        }
+      ]
+    },
+    "analogy_immune_firewall_probe": {
+      "hard_zero_mapping_families": [
+        {
+          "id": "literal_antibody_firewall",
+          "keywords": [
+            "firewall produces antibodies",
+            "antibodies inside the network"
+          ]
+        },
+        {
+          "id": "infection_cells_literal",
+          "keywords": [
+            "packets infect cells",
+            "biological cells inside the network"
+          ]
+        }
+      ],
+      "broad_common_mapping_families": [
+        {
+          "id": "both_protect",
+          "keywords": [
+            "both protect",
+            "defense system",
+            "guards against bad things"
+          ]
+        },
+        {
+          "id": "generic_security_metaphor",
+          "keywords": [
+            "immune system of the computer",
+            "cyber immune"
+          ]
+        }
+      ],
+      "supported_rare_abstraction_families": [
+        {
+          "id": "recognize_harmful_pattern",
+          "keywords": [
+            "recognize harmful pattern",
+            "traffic patterns",
+            "rules"
+          ]
+        },
+        {
+          "id": "adaptive_signature_memory",
+          "keywords": [
+            "adapt after exposure",
+            "updated signatures",
+            "new attacks"
+          ]
+        }
+      ]
+    },
+    "analogy_ant_transit_limits": {
+      "hard_zero_mapping_families": [
+        {
+          "id": "literal_pheromone_bus",
+          "keywords": [
+            "buses follow pheromone",
+            "pheromone trails in transit"
+          ]
+        },
+        {
+          "id": "ant_ticket_transfer",
+          "keywords": [
+            "ants buy tickets",
+            "insect passengers"
+          ]
+        }
+      ],
+      "broad_common_mapping_families": [
+        {
+          "id": "both_route_agents",
+          "keywords": [
+            "both route",
+            "move agents",
+            "transport system"
+          ]
+        },
+        {
+          "id": "swarm_city_generic",
+          "keywords": [
+            "city is like an ant colony",
+            "swarm intelligence"
+          ]
+        }
+      ],
+      "supported_rare_abstraction_families": [
+        {
+          "id": "local_signal_marks_demand",
+          "keywords": [
+            "local signal marks demand",
+            "passenger demand signals"
+          ]
+        },
+        {
+          "id": "stale_signal_priority_decay",
+          "keywords": [
+            "stale signal",
+            "routing priority",
+            "congestion makes a route less useful"
+          ]
+        }
+      ]
+    },
+    "analogy_trial_peerreview_probe": {
+      "hard_zero_mapping_families": [
+        {
+          "id": "prison_or_guilt_transfer",
+          "keywords": [
+            "sentence authors to prison",
+            "declares legal guilt",
+            "jury"
+          ]
+        },
+        {
+          "id": "legal_penalty_peer_review",
+          "keywords": [
+            "legal penalties",
+            "imprisonment",
+            "conviction"
+          ]
+        }
+      ],
+      "broad_common_mapping_families": [
+        {
+          "id": "both_judge_claims",
+          "keywords": [
+            "both judge",
+            "both evaluate",
+            "both decide"
+          ]
+        },
+        {
+          "id": "generic_review_trial",
+          "keywords": [
+            "peer review is a trial",
+            "scientists are on trial"
+          ]
+        }
+      ],
+      "supported_rare_abstraction_families": [
+        {
+          "id": "claim_evaluated_by_evidence",
+          "keywords": [
+            "claim evaluated by evidence",
+            "research claim",
+            "legal claim"
+          ]
+        },
+        {
+          "id": "adversarial_scrutiny_to_critical_review",
+          "keywords": [
+            "claims challenged by an evaluator",
+            "methods and interpretations",
+            "critical scrutiny"
+          ]
+        }
+      ]
+    },
+    "analogy_rehearsal_simulation_structural": {
+      "hard_zero_mapping_families": [
+        {
+          "id": "applause_costume_transfer",
+          "keywords": [
+            "applause from an audience",
+            "costumes",
+            "scripted entertainment"
+          ]
+        },
+        {
+          "id": "mission_as_public_show",
+          "keywords": [
+            "public performance in space",
+            "entertainment goals"
+          ]
+        }
+      ],
+      "broad_common_mapping_families": [
+        {
+          "id": "both_practice",
+          "keywords": [
+            "both practice",
+            "both rehearse",
+            "prepare beforehand"
+          ]
+        },
+        {
+          "id": "generic_simulation_rehearsal",
+          "keywords": [
+            "simulation is rehearsal",
+            "training run"
+          ]
+        }
+      ],
+      "supported_rare_abstraction_families": [
+        {
+          "id": "safe_rehearsal_before_execution",
+          "keywords": [
+            "safe rehearsal before high stakes execution",
+            "before spacecraft operations"
+          ]
+        },
+        {
+          "id": "controlled_practice_reveals_failures",
+          "keywords": [
+            "controlled practice reveals fixable failures",
+            "pause",
+            "procedure problem"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "schema": "benchmark",
+  "__extends__": "uut_affordance_profiles.json",
+  "__shared__": {
+    "minor_helper_whitelist": [
+      "tape",
+      "glue",
+      "string",
+      "rope",
+      "cord",
+      "paint",
+      "marker",
+      "pen",
+      "pencil",
+      "paper",
+      "clip",
+      "scissors",
+      "knife",
+      "rubber band",
+      "strap",
+      "hook",
+      "nail",
+      "screw",
+      "zip tie",
+      "cloth",
+      "foil",
+      "wax",
+      "sealant",
+      "reflective tape",
+      "label",
+      "sticker",
+      "water",
+      "sand",
+      "soil",
+      "thread",
+      "needle"
+    ],
+    "support_boundary": "The object remains the primary functional item; minor helpers can attach, label, bind, or seal but cannot replace the object's main affordance."
+  },
+  "profiles": {
+    "uut_01": {
+      "object": "Carton",
+      "object_category": "container",
+      "difficulty": "household_container"
+    },
+    "uut_02": {
+      "object": "Tin can",
+      "object_category": "container",
+      "difficulty": "rigid_container"
+    },
+    "uut_03": {
+      "object": "Suitcase",
+      "object_category": "container",
+      "difficulty": "tool_like_container"
+    },
+    "uut_04": {
+      "object": "Wallet",
+      "object_category": "small_object",
+      "difficulty": "soft_container"
+    },
+    "uut_05": {
+      "object": "Ladder",
+      "object_category": "tool_like",
+      "difficulty": "load_bearing_tool"
+    },
+    "uut_06": {
+      "object": "Umbrella",
+      "object_category": "tool_like",
+      "difficulty": "foldable_weather_tool"
+    },
+    "uut_07": {
+      "object": "Newspaper",
+      "object_category": "flat_object",
+      "difficulty": "paper_flat_object"
+    },
+    "uut_08": {
+      "object": "Spoon",
+      "object_category": "tool_like",
+      "difficulty": "small_rigid_tool"
+    },
+    "uut_09": {
+      "object": "Rope",
+      "object_category": "soft_material",
+      "difficulty": "flexible_tension_material"
+    },
+    "uut_10": {
+      "object": "Brick",
+      "object_category": "rigid_material",
+      "difficulty": "heavy_load_bearing"
+    },
+    "uut_11": {
+      "object": "Sock",
+      "object_category": "soft_material",
+      "difficulty": "textile_soft_material"
+    },
+    "uut_12": {
+      "object": "Plastic bottle",
+      "object_category": "container",
+      "difficulty": "lightweight_waterproof_container"
+    },
+    "uut_13": {
+      "object": "Towel",
+      "object_category": "soft_material",
+      "difficulty": "absorbent_textile"
+    },
+    "uut_14": {
+      "object": "Key",
+      "object_category": "small_object",
+      "difficulty": "small_metal_object"
+    },
+    "uut_15": {
+      "object": "Plate",
+      "object_category": "flat_object",
+      "difficulty": "rigid_flat_object"
+    },
+    "uut_16": {
+      "object": "Book",
+      "object_category": "flat_object",
+      "difficulty": "paper_block_object"
+    },
+    "uut_17": {
+      "object": "Chair",
+      "object_category": "tool_like",
+      "difficulty": "load_bearing_furniture"
+    },
+    "uut_18": {
+      "object": "Toothbrush",
+      "object_category": "tool_like",
+      "difficulty": "small_bristle_tool"
+    },
+    "uut_19": {
+      "object": "Shoe",
+      "object_category": "soft_material",
+      "difficulty": "wearable_container_like"
+    },
+    "uut_20": {
+      "object": "Paper clip",
+      "object_category": "small_object",
+      "difficulty": "small_shapeable_metal"
+    }
+  }
+}

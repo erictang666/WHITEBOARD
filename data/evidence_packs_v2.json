@@ -1,0 +1,436 @@
+{
+  "schema": "benchmark",
+  "description": "Closed evidence packs for HypoUseSpace v2 evidence-constrained ideation. Claims are deterministic support units; no retrieval or external judge is used.",
+  "packs": {
+    "ep_phone_stand": {
+      "doc_id": "EP_PHONE_STAND",
+      "topic": "Desk phone support using listed office objects",
+      "allowed_entities": [
+        "binder_clip",
+        "index_cards",
+        "mug",
+        "tape",
+        "rubber_band"
+      ],
+      "allowed_operations": [
+        "clamp",
+        "prop",
+        "wedge",
+        "backstop",
+        "fold",
+        "temporary_fastener",
+        "tie",
+        "counterweight",
+        "spacer"
+      ],
+      "allowed_mechanisms": [
+        "clamp",
+        "folding_handles",
+        "spring_tension",
+        "foldable_support",
+        "thin_spacer",
+        "heavy_backstop",
+        "stable_wall",
+        "removable_fastener",
+        "elastic_tension"
+      ],
+      "claims": [
+        {
+          "claim_id": "EP_PHONE_C1",
+          "text": "A binder clip can clamp a phone edge and its folding handles can act as small legs.",
+          "keywords": [
+            "binder clip",
+            "clamp",
+            "folding handles",
+            "legs"
+          ]
+        },
+        {
+          "claim_id": "EP_PHONE_C2",
+          "text": "Folded index cards can create a wedge or thin spacer that changes viewing angle.",
+          "keywords": [
+            "index cards",
+            "folded",
+            "wedge",
+            "spacer",
+            "angle"
+          ]
+        },
+        {
+          "claim_id": "EP_PHONE_C3",
+          "text": "A mug can serve as a heavy backstop while leaving the phone camera clear.",
+          "keywords": [
+            "mug",
+            "heavy",
+            "backstop",
+            "camera clear"
+          ]
+        },
+        {
+          "claim_id": "EP_PHONE_C4",
+          "text": "Removable tape can temporarily hold light paper supports without permanently bonding the phone.",
+          "keywords": [
+            "removable tape",
+            "temporary",
+            "hold",
+            "not permanent"
+          ]
+        },
+        {
+          "claim_id": "EP_PHONE_C5",
+          "text": "A rubber band can add elastic tension around a mug or folded card support.",
+          "keywords": [
+            "rubber band",
+            "elastic",
+            "tension",
+            "wrap"
+          ]
+        }
+      ],
+      "forbidden_claims": [
+        {
+          "claim_id": "EP_PHONE_F1",
+          "text": "A tripod, phone stand, glue, knife, or 3D printed holder is available.",
+          "keywords": [
+            "tripod",
+            "phone stand",
+            "glue",
+            "knife",
+            "3d printed holder"
+          ]
+        },
+        {
+          "claim_id": "EP_PHONE_F2",
+          "text": "Tape may cover or block the camera lens.",
+          "keywords": [
+            "cover camera",
+            "block camera",
+            "cover lens",
+            "block lens"
+          ]
+        },
+        {
+          "claim_id": "EP_PHONE_F3",
+          "text": "The mug supplies magnetic grip.",
+          "keywords": [
+            "magnetic mug",
+            "mug magnet",
+            "magnetize"
+          ]
+        }
+      ]
+    },
+    "ep_table_shim": {
+      "doc_id": "EP_TABLE_SHIM",
+      "topic": "Non-marring stabilizers for a short table leg",
+      "allowed_entities": [
+        "coins",
+        "folded_paper",
+        "cork_coaster",
+        "tape",
+        "rubber_band"
+      ],
+      "allowed_operations": [
+        "spacer",
+        "wedge",
+        "stack",
+        "pad",
+        "temporary_fastener",
+        "tie"
+      ],
+      "allowed_mechanisms": [
+        "thin_spacer",
+        "rigid_stack",
+        "foldable_wedge",
+        "compressible_pad",
+        "friction_grip",
+        "removable_fastener",
+        "elastic_tension"
+      ],
+      "claims": [
+        {
+          "claim_id": "EP_TABLE_C1",
+          "text": "Stacked coins can act as a rigid thin spacer under a short table leg.",
+          "keywords": [
+            "coins",
+            "stack",
+            "rigid",
+            "spacer",
+            "short leg"
+          ]
+        },
+        {
+          "claim_id": "EP_TABLE_C2",
+          "text": "Folded paper can form a wedge or compressible pad without scratching the floor.",
+          "keywords": [
+            "folded paper",
+            "wedge",
+            "pad",
+            "non marring"
+          ]
+        },
+        {
+          "claim_id": "EP_TABLE_C3",
+          "text": "A cork coaster can add friction and compress slightly under a table leg.",
+          "keywords": [
+            "cork coaster",
+            "friction",
+            "compress",
+            "table leg"
+          ]
+        },
+        {
+          "claim_id": "EP_TABLE_C4",
+          "text": "Removable tape can hold a shim in place temporarily.",
+          "keywords": [
+            "tape",
+            "removable",
+            "temporary",
+            "hold shim"
+          ]
+        },
+        {
+          "claim_id": "EP_TABLE_C5",
+          "text": "A rubber band can tie loose shim pieces together but is not a rigid spacer by itself.",
+          "keywords": [
+            "rubber band",
+            "tie",
+            "not rigid spacer"
+          ]
+        }
+      ],
+      "forbidden_claims": [
+        {
+          "claim_id": "EP_TABLE_F1",
+          "text": "Wood shims, glue, saws, or hammers are available.",
+          "keywords": [
+            "wood shim",
+            "glue",
+            "saw",
+            "hammer"
+          ]
+        },
+        {
+          "claim_id": "EP_TABLE_F2",
+          "text": "The floor or table may be drilled, nailed, or permanently altered.",
+          "keywords": [
+            "drill",
+            "nail",
+            "permanent",
+            "damage floor"
+          ]
+        },
+        {
+          "claim_id": "EP_TABLE_F3",
+          "text": "A rubber band alone is a rigid hard spacer.",
+          "keywords": [
+            "rubber band rigid spacer",
+            "hard rubber spacer"
+          ]
+        }
+      ]
+    },
+    "ep_cookie_jar": {
+      "doc_id": "EP_COOKIE_JAR",
+      "topic": "Closed-world retrieval from a narrow jar",
+      "allowed_entities": [
+        "tongs",
+        "string",
+        "paper_clip",
+        "magnet",
+        "rubber_band"
+      ],
+      "allowed_operations": [
+        "grip",
+        "hook",
+        "loop",
+        "extend",
+        "attract",
+        "tie"
+      ],
+      "allowed_mechanisms": [
+        "pinch_grip",
+        "flexible_loop",
+        "bendable_hook",
+        "magnetic_attraction",
+        "elastic_tension",
+        "reach_extension"
+      ],
+      "claims": [
+        {
+          "claim_id": "EP_COOKIE_C1",
+          "text": "Tongs can extend reach and pinch an object if the jar opening admits them.",
+          "keywords": [
+            "tongs",
+            "extend",
+            "pinch",
+            "jar opening"
+          ]
+        },
+        {
+          "claim_id": "EP_COOKIE_C2",
+          "text": "String can make a flexible loop but cannot push rigidly into the jar.",
+          "keywords": [
+            "string",
+            "flexible loop",
+            "not rigid"
+          ]
+        },
+        {
+          "claim_id": "EP_COOKIE_C3",
+          "text": "A bent paper clip can form a small hook for pulling light objects.",
+          "keywords": [
+            "paper clip",
+            "bend",
+            "hook",
+            "pull"
+          ]
+        },
+        {
+          "claim_id": "EP_COOKIE_C4",
+          "text": "A magnet attracts only ferromagnetic metal and cannot pull nonmetal cookies.",
+          "keywords": [
+            "magnet",
+            "ferromagnetic",
+            "not cookie"
+          ]
+        },
+        {
+          "claim_id": "EP_COOKIE_C5",
+          "text": "A rubber band can add tension to a loop or hook assembly.",
+          "keywords": [
+            "rubber band",
+            "tension",
+            "loop",
+            "hook"
+          ]
+        }
+      ],
+      "forbidden_claims": [
+        {
+          "claim_id": "EP_COOKIE_F1",
+          "text": "Breaking the jar or using a knife, vacuum, glue, or extra tool is allowed.",
+          "keywords": [
+            "break jar",
+            "knife",
+            "vacuum",
+            "glue",
+            "extra tool"
+          ]
+        },
+        {
+          "claim_id": "EP_COOKIE_F2",
+          "text": "A magnet can pull cookies or nonmetal snacks.",
+          "keywords": [
+            "magnet pulls cookie",
+            "magnet attracts cookie"
+          ]
+        },
+        {
+          "claim_id": "EP_COOKIE_F3",
+          "text": "String is rigid enough to push the object by itself.",
+          "keywords": [
+            "string pushes",
+            "rigid string"
+          ]
+        }
+      ]
+    },
+    "ep_no_light": {
+      "doc_id": "EP_NO_LIGHT",
+      "topic": "No-light closed world with reflective but non-emissive objects",
+      "allowed_entities": [
+        "mirror",
+        "foil",
+        "spoon",
+        "white_card",
+        "string"
+      ],
+      "allowed_operations": [
+        "reflect",
+        "angle",
+        "hang",
+        "signal",
+        "align"
+      ],
+      "allowed_mechanisms": [
+        "reflection",
+        "bright_surface",
+        "hanging_marker",
+        "angle_control"
+      ],
+      "claims": [
+        {
+          "claim_id": "EP_LIGHT_C1",
+          "text": "A mirror, foil, and spoon can reflect existing light but cannot emit light by themselves.",
+          "keywords": [
+            "mirror",
+            "foil",
+            "spoon",
+            "reflect",
+            "cannot emit"
+          ]
+        },
+        {
+          "claim_id": "EP_LIGHT_C2",
+          "text": "A white card can be a bright marker only when an external light source already exists.",
+          "keywords": [
+            "white card",
+            "bright marker",
+            "external light"
+          ]
+        },
+        {
+          "claim_id": "EP_LIGHT_C3",
+          "text": "String can hang or align a reflector but does not create visible light.",
+          "keywords": [
+            "string",
+            "hang",
+            "align",
+            "not create light"
+          ]
+        },
+        {
+          "claim_id": "EP_LIGHT_C4",
+          "text": "The listed objects include no battery, flame, glow stick, lamp, or powered light source.",
+          "keywords": [
+            "no battery",
+            "no flame",
+            "no glow stick",
+            "no lamp"
+          ]
+        }
+      ],
+      "forbidden_claims": [
+        {
+          "claim_id": "EP_LIGHT_F1",
+          "text": "Friction, rubbing, or shaking the listed objects creates ten minutes of visible light.",
+          "keywords": [
+            "friction light",
+            "rub until light",
+            "shake light"
+          ]
+        },
+        {
+          "claim_id": "EP_LIGHT_F2",
+          "text": "A battery, candle, glow stick, phone, or flashlight is available.",
+          "keywords": [
+            "battery",
+            "candle",
+            "glow stick",
+            "phone",
+            "flashlight"
+          ]
+        },
+        {
+          "claim_id": "EP_LIGHT_F3",
+          "text": "Reflection works without any incoming light.",
+          "keywords": [
+            "reflect without light",
+            "mirror emits"
+          ]
+        }
+      ]
+    }
+  }
+}

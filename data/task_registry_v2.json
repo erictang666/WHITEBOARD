@@ -1,0 +1,484 @@
+{
+  "version": "benchmark",
+  "families": [
+    {
+      "family": "T1",
+      "label": "Anchored Divergent Association",
+      "components": [
+        "UUT",
+        "PropConj"
+      ],
+      "auxiliary_components": [
+        "DAT",
+        "CDAT",
+        "FF"
+      ],
+      "imagination_subtypes": [
+        "assoc"
+      ],
+      "hallucination_subtypes": [
+        "context",
+        "intent",
+        "drift",
+        "logic"
+      ],
+      "support_boundary": [
+        "SWOW cue anchoring",
+        "WordNorms2/manual affordance profiles",
+        "PropConj property bank",
+        "minor-helper whitelist"
+      ],
+      "subtype_mapping": {
+        "UUT": {
+          "I_assoc": [
+            "appropriateness_gated_novelty_affordance_support",
+            "diversity",
+            "mechanism_completeness"
+          ],
+          "H_context": [
+            "unsupported_claim_ratio",
+            "contradiction_ratio"
+          ],
+          "H_intent": [
+            "extra_tool_violation",
+            "object_role_violation"
+          ],
+          "H_drift": [
+            "cue_drift",
+            "physical_drift"
+          ],
+          "H_logic": [
+            "physical_drift"
+          ]
+        },
+        "PropConj": {
+          "I_assoc": [
+            "appropriateness_gated_novelty_grounding",
+            "diversity",
+            "valid_ratio"
+          ],
+          "H_context": [
+            "property_contradiction",
+            "evidence_mismatch"
+          ],
+          "H_intent": [
+            "missing_property_coverage"
+          ],
+          "H_drift": [
+            "unresolved_entity"
+          ],
+          "H_logic": [
+            "property_contradiction"
+          ]
+        }
+      }
+    },
+    {
+      "family": "T2",
+      "label": "Constrained Problem Solving",
+      "components": [
+        "MacGyver"
+      ],
+      "auxiliary_components": [],
+      "imagination_subtypes": [
+        "constraint"
+      ],
+      "hallucination_subtypes": [
+        "logic",
+        "boundary",
+        "intent"
+      ],
+      "support_boundary": [
+        "closed tool list",
+        "tool affordance profiles",
+        "goal predicates",
+        "hard constraints",
+        "boundary/refusal expectation"
+      ],
+      "subtype_mapping": {
+        "MacGyver": {
+          "I_constraint": [
+            "novelty",
+            "feasibility",
+            "mechanism_completeness",
+            "plan_diversity"
+          ],
+          "H_logic": [
+            "physical_affordance_failure",
+            "constraint_contradiction",
+            "unsupported_success"
+          ],
+          "H_boundary": [
+            "false_acceptance",
+            "false_refusal",
+            "clarification_miss",
+            "unsupported_refusal_reason"
+          ],
+          "H_intent": [
+            "unavailable_entity_rate",
+            "distractor_tool_violation",
+            "constraint_satisfaction_failure"
+          ]
+        }
+      }
+    },
+    {
+      "family": "T3",
+      "label": "Counterfactual World Modeling",
+      "components": [
+        "CJST"
+      ],
+      "auxiliary_components": [],
+      "imagination_subtypes": [
+        "cf"
+      ],
+      "hallucination_subtypes": [
+        "logic",
+        "context",
+        "drift"
+      ],
+      "support_boundary": [
+        "CJST scenario card",
+        "CounterBench-style world-state card",
+        "licensed intervention",
+        "causal edge keywords",
+        "protected variables",
+        "forbidden updates"
+      ],
+      "subtype_mapping": {
+        "CJST": {
+          "I_cf": [
+            "novelty",
+            "diversity",
+            "mechanism_completeness",
+            "tier_domain_coverage",
+            "world_consistency"
+          ],
+          "H_logic": [
+            "protected_variable_violation",
+            "extra_miracle_rate",
+            "causal_edge_contradiction",
+            "contradiction"
+          ],
+          "H_context": [
+            "premise_relevance_failure",
+            "intervention_miss",
+            "unsupported_extra_claim_rate"
+          ],
+          "H_drift": [
+            "premise_lock_failure",
+            "forbidden_update_rate",
+            "world_consistency_failure"
+          ]
+        }
+      }
+    },
+    {
+      "family": "T4",
+      "label": "Grounded Creative Writing",
+      "components": [
+        "GCW"
+      ],
+      "auxiliary_components": [],
+      "imagination_subtypes": [
+        "narrative"
+      ],
+      "hallucination_subtypes": [
+        "detail",
+        "context",
+        "drift",
+        "citation"
+      ],
+      "support_boundary": [
+        "GCW fact sheet",
+        "GCW constraint sheet",
+        "CS4-style constraint ladder",
+        "claim/evidence ledger",
+        "allowed major entities",
+        "forbidden motifs and hard no-drift conditions"
+      ],
+      "subtype_mapping": {
+        "GCW": {
+          "I_narrative": [
+            "F_story",
+            "X_story",
+            "O_story",
+            "E_story",
+            "constraint_level_bonus",
+            "support_gate",
+            "constraint_gate"
+          ],
+          "H_detail": [
+            "unsupported_claim_rate",
+            "unsupported_span_rate",
+            "entity_drift_rate",
+            "claim_without_evidence_rate"
+          ],
+          "H_context": [
+            "contradiction_rate",
+            "contradicted_claim_rate",
+            "missing_required_fact_rate",
+            "claim_support_precision_failure"
+          ],
+          "H_drift": [
+            "entity_persistence_failure",
+            "forbidden_motif_rate",
+            "hard_no_drift_violation",
+            "hard_constraint_violation_rate"
+          ],
+          "H_citation": [
+            "citation_mismatch_rate",
+            "unknown_evidence_rate",
+            "claim_without_evidence_rate"
+          ]
+        }
+      }
+    },
+    {
+      "family": "T5",
+      "label": "Evidence-Constrained Ideation",
+      "components": [
+        "HypoUseSpace"
+      ],
+      "auxiliary_components": [],
+      "imagination_subtypes": [
+        "hypothesis"
+      ],
+      "hallucination_subtypes": [
+        "fact",
+        "citation",
+        "boundary"
+      ],
+      "support_boundary": [
+        "closed available entity list",
+        "closed allowed operation and mechanism tags",
+        "finite valid hypothesis set",
+        "evidence pack claim IDs",
+        "claim ledger and citation IDs",
+        "forbidden evidence claims",
+        "no-valid abstention boundary"
+      ],
+      "subtype_mapping": {
+        "HypoUseSpace": {
+          "I_hypothesis": [
+            "WRR",
+            "BRR",
+            "D_diversity",
+            "M_mechanism_support",
+            "evidence_support_gate",
+            "boundary_gate"
+          ],
+          "H_fact": [
+            "unsupported_affordance_or_mechanism",
+            "contradicted_claim_rate",
+            "false_feasibility_claim",
+            "explicit_contradiction_or_forbidden_foil"
+          ],
+          "H_citation": [
+            "citation_mismatch_rate",
+            "unknown_evidence_rate",
+            "claim_without_evidence_rate",
+            "missing_required_citation"
+          ],
+          "H_boundary": [
+            "unavailable_entity",
+            "constraint_or_observation_violation",
+            "evidence_boundary_violation",
+            "no_valid_false_acceptance"
+          ]
+        }
+      }
+    },
+    {
+      "family": "T6",
+      "label": "Executable Code Creativity",
+      "components": [
+        "NeoCoder"
+      ],
+      "auxiliary_components": [],
+      "imagination_subtypes": [
+        "code"
+      ],
+      "hallucination_subtypes": [
+        "logic",
+        "intent",
+        "fact"
+      ],
+      "support_boundary": [
+        "Python function signature",
+        "unit tests",
+        "allowed imports",
+        "denied techniques",
+        "static AST verifier",
+        "restricted subprocess executor",
+        "accepted complexity claims"
+      ],
+      "subtype_mapping": {
+        "NeoCoder": {
+          "I_code": [
+            "pass_rate",
+            "constraint_following",
+            "technique_novelty",
+            "strategy_shift",
+            "imagination_gated"
+          ],
+          "H_logic": [
+            "test_failure_rate",
+            "syntax_error",
+            "runtime_error_rate",
+            "timeout_rate"
+          ],
+          "H_intent": [
+            "banned_technique_violation_rate",
+            "import_violation",
+            "dangerous_call_violation",
+            "missing_entrypoint",
+            "missing_complexity_claim"
+          ],
+          "H_fact": [
+            "unsupported_complexity_claim",
+            "hallucinated_import_rate",
+            "unsupported_api_call_rate"
+          ]
+        }
+      }
+    },
+    {
+      "family": "T7",
+      "label": "Closed-World Fact Conflict",
+      "components": [
+        "ClosedWorldFact"
+      ],
+      "auxiliary_components": [],
+      "imagination_subtypes": [],
+      "hallucination_subtypes": [
+        "fact",
+        "logic",
+        "boundary"
+      ],
+      "support_boundary": [
+        "closed relational/world database",
+        "evidence IDs",
+        "required rationale chain",
+        "required rationale keywords",
+        "acceptable answer aliases",
+        "forbidden answers",
+        "known entities",
+        "unanswerable and false-presupposition boundary"
+      ],
+      "subtype_mapping": {
+        "ClosedWorldFact": {
+          "H_fact": [
+            "wrong_answer",
+            "contradicted_fact",
+            "forbidden_answer_hit",
+            "unsupported_fact_claim"
+          ],
+          "H_logic": [
+            "evidence_recall_failure",
+            "chain_order_failure",
+            "rationale_keyword_failure",
+            "comparison_or_set_failure"
+          ],
+          "H_boundary": [
+            "false_presupposition_acceptance",
+            "unanswerable_false_answer",
+            "unknown_entity_overclaim",
+            "closed_boundary_failure"
+          ]
+        }
+      }
+    },
+    {
+      "family": "T8",
+      "label": "Analogy False Transfer Challenge",
+      "components": [
+        "AnalogyTransfer"
+      ],
+      "auxiliary_components": [],
+      "imagination_subtypes": [
+        "analogy"
+      ],
+      "hallucination_subtypes": [
+        "false_transfer",
+        "fact",
+        "logic",
+        "context"
+      ],
+      "support_boundary": [
+        "closed source-domain facts",
+        "closed target-domain facts",
+        "source and target evidence IDs",
+        "gold structural mappings",
+        "topic/background/process/result dimensions",
+        "required limits of analogy",
+        "forbidden transfers",
+        "known entities"
+      ],
+      "subtype_mapping": {
+        "AnalogyTransfer": {
+          "I_analogy": [
+            "mapping_coverage",
+            "relational_consistency",
+            "dimension_coverage",
+            "abstraction_support",
+            "limit_awareness",
+            "source_fact_gate",
+            "target_fact_gate",
+            "transfer_gate"
+          ],
+          "H_false_transfer": [
+            "false_transfer_rate",
+            "unsupported_inference_rate",
+            "source_only_relation_transfer"
+          ],
+          "H_fact": [
+            "invented_fact_rate",
+            "unknown_evidence_rate",
+            "source_fact_error",
+            "target_fact_error"
+          ],
+          "H_logic": [
+            "relational_consistency_failure",
+            "wrong_mapping_direction_rate",
+            "dimension_inconsistency_rate"
+          ],
+          "H_context": [
+            "limit_awareness_failure",
+            "surface_stereotype_rate",
+            "boundary_overclaim_rate"
+          ]
+        }
+      }
+    },
+    {
+      "family": "HD1",
+      "label": "Cross-Task Fact Consistency Diagnostic",
+      "components": [
+        "CrossTaskConsistency"
+      ],
+      "auxiliary_components": [],
+      "imagination_subtypes": [],
+      "hallucination_subtypes": [
+        "consistency"
+      ],
+      "support_boundary": [
+        "repeated fact IDs",
+        "repeated evidence IDs",
+        "support ledgers from GCW and HypoUseSpace",
+        "optional ClosedWorldFact evidence chains"
+      ],
+      "subtype_mapping": {
+        "CrossTaskConsistency": {
+          "H_consistency": [
+            "same_fact_pair_inconsistency",
+            "semantic_conflict",
+            "polarity_conflict",
+            "support_conflict",
+            "citation_issue"
+          ]
+        }
+      }
+    }
+  ]
+}

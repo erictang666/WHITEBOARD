@@ -1,0 +1,195 @@
+{
+  "schema": "benchmark_scoring",
+  "judge_policy": "no_ai_api_judge",
+  "boundary_formula": "clip((x-floor)/(1-floor),0,1)^gamma",
+  "boundary_settings": {
+    "I": {
+      "assoc": {
+        "floor": 0.0,
+        "gamma": 1.3
+      },
+      "constraint": {
+        "floor": 0.18,
+        "gamma": 1.3
+      },
+      "cf": {
+        "floor": 0.0,
+        "gamma": 1.0
+      },
+      "narrative": {
+        "floor": 0.06,
+        "gamma": 1.8
+      },
+      "hypothesis": {
+        "floor": 0.18,
+        "gamma": 1.8
+      },
+      "code": {
+        "floor": 0.1,
+        "gamma": 1.8
+      },
+      "analogy": {
+        "floor": 0.0,
+        "gamma": 1.0
+      }
+    },
+    "H": {
+      "context": {
+        "floor": 0.1,
+        "gamma": 0.6
+      },
+      "intent": {
+        "floor": 0.04,
+        "gamma": 1.3
+      },
+      "drift": {
+        "floor": 0.14,
+        "gamma": 1.55
+      },
+      "logic": {
+        "floor": 0.18,
+        "gamma": 0.6
+      },
+      "boundary": {
+        "floor": 0.05,
+        "gamma": 1.3
+      },
+      "detail": {
+        "floor": 0.01,
+        "gamma": 0.95
+      },
+      "citation": {
+        "floor": 0.0,
+        "gamma": 0.6
+      },
+      "fact": {
+        "floor": 0.0,
+        "gamma": 1.55
+      },
+      "false_transfer": {
+        "floor": 0.03,
+        "gamma": 1.15
+      }
+    }
+  },
+  "tasks": {
+    "UUT": {
+      "beta_IH": 0.28,
+      "beta_HI": 0.1,
+      "imagination_subtype": "assoc",
+      "hallucination_subtypes": [
+        "context",
+        "drift",
+        "intent",
+        "logic"
+      ]
+    },
+    "PropConj": {
+      "beta_IH": 0.2,
+      "beta_HI": 0.1,
+      "imagination_subtype": "assoc",
+      "hallucination_subtypes": [
+        "context",
+        "drift",
+        "intent",
+        "logic"
+      ]
+    },
+    "MacGyver": {
+      "beta_IH": 0.0,
+      "beta_HI": 0.9,
+      "imagination_subtype": "constraint",
+      "hallucination_subtypes": [
+        "boundary",
+        "intent",
+        "logic"
+      ]
+    },
+    "CJST": {
+      "beta_IH": 0.8,
+      "beta_HI": 0.12,
+      "imagination_subtype": "cf",
+      "hallucination_subtypes": [
+        "context",
+        "drift",
+        "logic"
+      ]
+    },
+    "GCW": {
+      "beta_IH": 0.8,
+      "beta_HI": 0.12,
+      "imagination_subtype": "narrative",
+      "hallucination_subtypes": [
+        "citation",
+        "context",
+        "detail",
+        "drift"
+      ],
+      "imagination_raw_median": 0.55,
+      "imagination_raw_mad": 0.16,
+      "hallucination_raw_median": 0.16,
+      "hallucination_raw_mad": 0.1
+    },
+    "HypoUseSpace": {
+      "beta_IH": 1.0,
+      "beta_HI": 0.1,
+      "imagination_subtype": "hypothesis",
+      "hallucination_subtypes": [
+        "boundary",
+        "citation",
+        "fact"
+      ]
+    },
+    "NeoCoder": {
+      "beta_IH": 0.25,
+      "beta_HI": 0.1,
+      "imagination_subtype": "code",
+      "hallucination_subtypes": [
+        "fact",
+        "intent",
+        "logic"
+      ]
+    },
+    "AnalogyTransfer": {
+      "beta_IH": 0.9,
+      "beta_HI": 0.3,
+      "imagination_subtype": "analogy",
+      "hallucination_subtypes": [
+        "context",
+        "fact",
+        "false_transfer",
+        "logic"
+      ]
+    }
+  },
+  "imagination_multipliers": {
+    "assoc": 0.6,
+    "constraint": 0.9,
+    "cf": 0.5,
+    "narrative": 0.5,
+    "hypothesis": 0.5,
+    "code": 2.0,
+    "analogy": 2.0
+  },
+  "hallucination_multipliers": {
+    "context": 0.5,
+    "intent": 1.2,
+    "drift": 0.5,
+    "logic": 2.0,
+    "boundary": 2.0,
+    "detail": 0.5,
+    "citation": 0.5,
+    "fact": 1.3,
+    "false_transfer": 0.5
+  },
+  "component_weights": {
+    "UUT": 0.080357,
+    "PropConj": 0.0625,
+    "MacGyver": 0.142857,
+    "CJST": 0.142857,
+    "GCW": 0.142857,
+    "HypoUseSpace": 0.142857,
+    "NeoCoder": 0.142857,
+    "AnalogyTransfer": 0.142857
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "schema": "benchmark",
+  "ins_01": {
+    "trait": "round and hard",
+    "anchors": [
+      "A marble is round and hard.",
+      "A steel ball is spherical and rigid.",
+      "A polished stone can be both round and hard.",
+      "A billiard ball has a hard round body.",
+      "A cannonball is a heavy round hard object."
+    ]
+  },
+  "ins_02": {
+    "trait": "make a loud noise",
+    "anchors": [
+      "A siren makes a loud noise.",
+      "A drum can produce a loud sound.",
+      "A car horn creates a loud warning noise.",
+      "Fireworks make loud explosive sounds.",
+      "A megaphone can amplify a voice into a loud noise."
+    ]
+  },
+  "ins_03": {
+    "trait": "red and edible",
+    "anchors": [
+      "A strawberry is red and edible.",
+      "A tomato can be red and edible.",
+      "A cherry is a small red edible fruit.",
+      "A red pepper is edible and red.",
+      "A blood orange has edible red flesh."
+    ]
+  },
+  "ins_04": {
+    "trait": "made of metal and hard",
+    "anchors": [
+      "A steel bolt is made of metal and hard.",
+      "A cast iron pan is hard metal.",
+      "A wrench has a hard metal body.",
+      "A coin is a hard metal object.",
+      "A metal gear is rigid and hard."
+    ]
+  },
+  "ins_05": {
+    "trait": "made of paper or cardboard and writable",
+    "anchors": [
+      "A notebook page is paper and can be written on.",
+      "A cardboard label can be written on.",
+      "An index card is paper that accepts writing.",
+      "A paper ticket is writable.",
+      "A cardboard sign can hold ink or marker."
+    ]
+  },
+  "ins_06": {
+    "trait": "transparent and flexible",
+    "anchors": [
+      "Clear plastic wrap is transparent and flexible.",
+      "A thin silicone sheet can be see-through and bendable.",
+      "Transparent film can flex without breaking.",
+      "A clear rubber tube is transparent and flexible.",
+      "A soft vinyl sheet can be clear and bendable."
+    ]
+  },
+  "ins_07": {
+    "trait": "soft and waterproof",
+    "anchors": [
+      "A silicone swim cap is soft and waterproof.",
+      "A rubber rain boot can be soft and waterproof.",
+      "A neoprene sleeve is soft and resists water.",
+      "A waterproof sponge pad can be soft.",
+      "A coated fabric pouch can be soft and water resistant."
+    ]
+  },
+  "ins_08": {
+    "trait": "tiny and valuable",
+    "anchors": [
+      "A diamond chip is tiny and valuable.",
+      "A microchip can be small and valuable.",
+      "A rare pearl can be tiny and valuable.",
+      "A gold nugget can be small and valuable.",
+      "A memory card is tiny but can hold valuable data."
+    ]
+  },
+  "ins_09": {
+    "trait": "hollow and lightweight",
+    "anchors": [
+      "A ping pong ball is hollow and lightweight.",
+      "A foam tube can be hollow and light.",
+      "A plastic straw is hollow and lightweight.",
+      "A paper lantern has a hollow lightweight shell.",
+      "An empty cardboard roll is hollow and light."
+    ]
+  },
+  "ins_10": {
+    "trait": "sticky and useful",
+    "anchors": [
+      "Tape is sticky and useful.",
+      "A sticky note is useful for reminders.",
+      "Glue is sticky and useful for joining things.",
+      "A bandage has a useful sticky backing.",
+      "Adhesive putty is sticky and useful for mounting objects."
+    ]
+  },
+  "ins_11": {
+    "trait": "cold and edible",
+    "anchors": [
+      "Ice cream is cold and edible.",
+      "A frozen grape is cold and edible.",
+      "A popsicle is an edible cold treat.",
+      "Chilled sushi can be cold and edible.",
+      "A frozen berry is cold and safe to eat."
+    ]
+  },
+  "ins_12": {
+    "trait": "sharp and portable",
+    "anchors": [
+      "A pocketknife is sharp and portable.",
+      "A sewing needle is sharp and portable.",
+      "A scalpel can be small sharp and portable.",
+      "A pencil sharpener blade is sharp and portable.",
+      "A safety pin has a portable sharp point."
+    ]
+  },
+  "ins_13": {
+    "trait": "bright and fragile",
+    "anchors": [
+      "A light bulb is bright and fragile.",
+      "A neon tube can be bright and fragile.",
+      "A glass ornament can be bright and fragile.",
+      "A glowing lantern mantle is bright and delicate.",
+      "A thin LED strip can be bright and easy to damage."
+    ]
+  },
+  "ins_14": {
+    "trait": "heavy and movable",
+    "anchors": [
+      "A loaded suitcase is heavy and movable.",
+      "A barbell is heavy but can be moved.",
+      "A rolling safe is heavy and movable.",
+      "A piano on wheels is heavy and movable.",
+      "A full toolbox is heavy but portable."
+    ]
+  },
+  "ins_15": {
+    "trait": "natural and patterned",
+    "anchors": [
+      "A leaf is natural and patterned with veins.",
+      "A seashell is natural and patterned.",
+      "A feather can be natural and patterned.",
+      "A tiger stripe is a natural pattern.",
+      "A pine cone has a natural repeating pattern."
+    ]
+  },
+  "ins_16": {
+    "trait": "flat and reflective",
+    "anchors": [
+      "A mirror is flat and reflective.",
+      "Polished foil can be flat and reflective.",
+      "A shiny metal sheet is flat and reflective.",
+      "A glass phone screen is flat and reflective.",
+      "A still puddle can be flat and reflective."
+    ]
+  },
+  "ins_17": {
+    "trait": "elastic and colorful",
+    "anchors": [
+      "A rubber band can be elastic and colorful.",
+      "A balloon is elastic and colorful.",
+      "A hair tie can stretch and be colorful.",
+      "A silicone bracelet is elastic and colorful.",
+      "A bungee cord can be elastic and brightly colored."
+    ]
+  },
+  "ins_18": {
+    "trait": "scented and disposable",
+    "anchors": [
+      "A scented tissue is disposable.",
+      "A perfumed wipe is scented and disposable.",
+      "A paper air freshener can be scented and disposable.",
+      "A scented trash bag is disposable.",
+      "A single-use scented towel can be thrown away."
+    ]
+  },
+  "ins_19": {
+    "trait": "mechanical and small",
+    "anchors": [
+      "A watch gear is mechanical and small.",
+      "A tiny motor is mechanical and small.",
+      "A zipper slider is a small mechanical part.",
+      "A music box mechanism can be small.",
+      "A clock spring is a small mechanical component."
+    ]
+  },
+  "ins_20": {
+    "trait": "silent and protective",
+    "anchors": [
+      "A helmet is silent and protective.",
+      "A rubber bumper protects quietly.",
+      "A phone case is silent and protective.",
+      "A mouth guard protects without making noise.",
+      "A padded sleeve quietly protects fragile items."
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "per_task": {
+    "Instances": {
+      "g_median": 0.3323,
+      "g_mad": 0.0939,
+      "g_mean": 0.334004,
+      "g_min": 0.0151,
+      "g_max": 0.656,
+      "novelty_median": 0.4454,
+      "novelty_mad": 0.2541,
+      "novelty_mean": 0.361673,
+      "n_ideas": 1273
+    },
+    "UUT": {
+      "g_median": 0.4869,
+      "g_mad": 0.0628,
+      "g_mean": 0.483303,
+      "g_min": 0.1284,
+      "g_max": 0.7381,
+      "novelty_median": 0.7478,
+      "novelty_mad": 0.0693,
+      "novelty_mean": 0.685102,
+      "n_ideas": 1220
+    },
+    "JST": {
+      "g_median": 0.4499,
+      "g_mad": 0.0636,
+      "g_mean": 0.46303,
+      "g_min": 0.2582,
+      "g_max": 0.7589,
+      "novelty_median": 0.56635,
+      "novelty_mad": 0.06685,
+      "novelty_mean": 0.545275,
+      "n_ideas": 1220
+    }
+  }
+}

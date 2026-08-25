@@ -1,0 +1,1102 @@
+{
+  "schema": "benchmark",
+  "output_count": 12,
+  "tiers": [
+    "immediate",
+    "adaptive",
+    "second_order"
+  ],
+  "default_invariants": [
+    "The premise is the only impossible fact.",
+    "Ordinary physics, biology, materials, language, and institutions still apply.",
+    "Consequences must not add new supernatural powers or unrelated world changes."
+  ],
+  "cards": {
+    "cjst_01": {
+      "legacy_jst_id": "jst_01",
+      "label": "Cloud strings",
+      "premise": "the clouds had strings attached to them which hang down to earth",
+      "allowed_mutation": "clouds have reachable hanging strings",
+      "allowed_mechanisms": [
+        "pulling clouds",
+        "tangled airspace",
+        "anchoring strings",
+        "climbing or swinging",
+        "weather access"
+      ],
+      "impact_channels": {
+        "safety": [
+          "airplanes",
+          "tangles",
+          "storms"
+        ],
+        "economy": [
+          "tourism",
+          "weaving",
+          "festivals"
+        ],
+        "infrastructure": [
+          "anchors",
+          "regulation",
+          "sky corridors"
+        ]
+      },
+      "forbidden_foils": [
+        "clouds grant wishes",
+        "strings control minds",
+        "strings create infinite energy"
+      ],
+      "anchor_consequences": [
+        "Pilots avoid tangled sky corridors.",
+        "Farmers pull rain clouds toward dry fields.",
+        "Cities regulate cloud-string anchors."
+      ]
+    },
+    "cjst_02": {
+      "legacy_jst_id": "jst_02",
+      "label": "See feet",
+      "premise": "for some reason, all we could see of people would be their feet",
+      "allowed_mutation": "only people's feet are visible",
+      "allowed_mechanisms": [
+        "footwear identity",
+        "gait recognition",
+        "foot-level signage",
+        "tripping hazards"
+      ],
+      "impact_channels": {
+        "daily_life": [
+          "shoes",
+          "socks",
+          "greetings"
+        ],
+        "safety": [
+          "crossings",
+          "crowds",
+          "stairs"
+        ],
+        "economy": [
+          "footwear",
+          "pedicure",
+          "advertising"
+        ]
+      },
+      "forbidden_foils": [
+        "feet read minds",
+        "shoes predict crimes",
+        "people become invisible ghosts"
+      ],
+      "anchor_consequences": [
+        "Shoes become the main identity signal.",
+        "Sidewalk signs move to foot level.",
+        "People recognize friends by gait."
+      ]
+    },
+    "cjst_03": {
+      "legacy_jst_id": "jst_03",
+      "label": "Following suitcases",
+      "premise": "every suitcase would quietly follow its owner everywhere like a loyal pet",
+      "allowed_mutation": "suitcases can follow their owners",
+      "allowed_mechanisms": [
+        "moving luggage",
+        "owner tracking",
+        "sidewalk congestion",
+        "airport queues"
+      ],
+      "impact_channels": {
+        "infrastructure": [
+          "luggage lanes",
+          "airports",
+          "hotels"
+        ],
+        "privacy": [
+          "location data",
+          "tracking"
+        ],
+        "safety": [
+          "collisions",
+          "crowds"
+        ]
+      },
+      "forbidden_foils": [
+        "suitcases speak prophecies",
+        "suitcases teleport",
+        "luggage becomes sentient government"
+      ],
+      "anchor_consequences": [
+        "Airports redesign queues around moving luggage.",
+        "Sidewalks add lanes for trailing bags.",
+        "Privacy rules cover suitcase location data."
+      ]
+    },
+    "cjst_04": {
+      "legacy_jst_id": "jst_04",
+      "label": "Growing ladders",
+      "premise": "every ladder grew one new rung each time someone climbed it",
+      "allowed_mutation": "ladders lengthen by one rung after climbing",
+      "allowed_mechanisms": [
+        "height growth",
+        "load limits",
+        "storage problems",
+        "construction reach"
+      ],
+      "impact_channels": {
+        "safety": [
+          "height limits",
+          "falls"
+        ],
+        "infrastructure": [
+          "construction",
+          "storage",
+          "streets"
+        ],
+        "daily_life": [
+          "climbing games",
+          "repairs"
+        ]
+      },
+      "forbidden_foils": [
+        "ladders grow money",
+        "ladders fly",
+        "rungs heal injuries"
+      ],
+      "anchor_consequences": [
+        "Workers need height limits for safety.",
+        "Abandoned ladders block rooms and streets.",
+        "Rescue teams reach roofs faster."
+      ]
+    },
+    "cjst_05": {
+      "legacy_jst_id": "jst_05",
+      "label": "Returning wallets",
+      "premise": "every lost wallet slowly crawled back to its owner on its own",
+      "allowed_mutation": "lost wallets can crawl toward owners",
+      "allowed_mechanisms": [
+        "self-return",
+        "slow movement",
+        "owner path",
+        "theft tracing"
+      ],
+      "impact_channels": {
+        "safety": [
+          "streets",
+          "tiny lanes"
+        ],
+        "economy": [
+          "payments",
+          "insurance"
+        ],
+        "privacy": [
+          "owner tracking",
+          "fraud"
+        ]
+      },
+      "forbidden_foils": [
+        "wallets print money",
+        "wallets read thoughts",
+        "wallets arrest thieves"
+      ],
+      "anchor_consequences": [
+        "Lost-and-found desks matter less.",
+        "Pickpockets become easier to identify.",
+        "People send cash by walking wallet."
+      ]
+    },
+    "cjst_06": {
+      "legacy_jst_id": "jst_06",
+      "label": "Whispering doors",
+      "premise": "every door whispered what happened the last time it opened",
+      "allowed_mutation": "doors whisper the previous opening event",
+      "allowed_mechanisms": [
+        "audible memory",
+        "room privacy",
+        "door witnesses",
+        "soundproofing"
+      ],
+      "impact_channels": {
+        "privacy": [
+          "rooms",
+          "landlords",
+          "secrets"
+        ],
+        "law": [
+          "witnesses",
+          "evidence"
+        ],
+        "culture": [
+          "theaters",
+          "storytelling"
+        ]
+      },
+      "forbidden_foils": [
+        "doors predict future crimes",
+        "doors read minds",
+        "doors teleport people"
+      ],
+      "anchor_consequences": [
+        "Police use doors as witnesses.",
+        "People soundproof entrances.",
+        "Privacy around rooms becomes fragile."
+      ]
+    },
+    "cjst_07": {
+      "legacy_jst_id": "jst_07",
+      "label": "Floating books",
+      "premise": "every book floated a few centimeters above any table",
+      "allowed_mutation": "books hover slightly above tables",
+      "allowed_mechanisms": [
+        "hover gap",
+        "sliding notes underneath",
+        "spills missing pages",
+        "desk redesign"
+      ],
+      "impact_channels": {
+        "infrastructure": [
+          "libraries",
+          "shelves",
+          "desks"
+        ],
+        "daily_life": [
+          "studying",
+          "spills"
+        ],
+        "economy": [
+          "displays",
+          "clips"
+        ]
+      },
+      "forbidden_foils": [
+        "books fly to the moon",
+        "books become conscious",
+        "books rewrite themselves"
+      ],
+      "anchor_consequences": [
+        "Libraries redesign shelves and desks.",
+        "Students slide notes beneath books.",
+        "Spills damage fewer pages."
+      ]
+    },
+    "cjst_08": {
+      "legacy_jst_id": "jst_08",
+      "label": "Color-changing shadows",
+      "premise": "people's shadows changed color with their mood",
+      "allowed_mutation": "shadow color reveals mood",
+      "allowed_mechanisms": [
+        "visible emotion",
+        "lighting control",
+        "emotional surveillance",
+        "public signaling"
+      ],
+      "impact_channels": {
+        "privacy": [
+          "feelings",
+          "workplaces",
+          "surveillance"
+        ],
+        "health": [
+          "stress screening"
+        ],
+        "culture": [
+          "acting",
+          "fashion"
+        ]
+      },
+      "forbidden_foils": [
+        "shadows control emotions",
+        "colors heal diseases",
+        "shadows predict lottery numbers"
+      ],
+      "anchor_consequences": [
+        "Emotions become visible in public.",
+        "Doctors screen stress by shadow color.",
+        "People carry lamps to hide feelings."
+      ]
+    },
+    "cjst_09": {
+      "legacy_jst_id": "jst_09",
+      "label": "Reversible rain",
+      "premise": "rain fell upward from puddles into clouds every afternoon",
+      "allowed_mutation": "puddle water rises into clouds in afternoon rain",
+      "allowed_mechanisms": [
+        "upward sprays",
+        "drain redesign",
+        "face protection",
+        "water timing"
+      ],
+      "impact_channels": {
+        "infrastructure": [
+          "drains",
+          "gutters",
+          "streets"
+        ],
+        "safety": [
+          "cyclists",
+          "faces"
+        ],
+        "ecology": [
+          "cloud water",
+          "irrigation"
+        ]
+      },
+      "forbidden_foils": [
+        "fish evolve wings overnight",
+        "rain grants wishes",
+        "puddles create infinite water"
+      ],
+      "anchor_consequences": [
+        "Umbrellas protect faces from below.",
+        "Cities redesign drains and gutters.",
+        "Cyclists avoid afternoon water jets."
+      ]
+    },
+    "cjst_10": {
+      "legacy_jst_id": "jst_10",
+      "label": "Slow mirrors",
+      "premise": "mirrors showed reflections from ten minutes ago",
+      "allowed_mutation": "mirror reflections lag by ten minutes",
+      "allowed_mechanisms": [
+        "short replay",
+        "delayed grooming",
+        "recent evidence",
+        "privacy risk"
+      ],
+      "impact_channels": {
+        "safety": [
+          "security mirrors",
+          "witnesses"
+        ],
+        "privacy": [
+          "delayed reflections"
+        ],
+        "daily_life": [
+          "grooming",
+          "rehearsal"
+        ]
+      },
+      "forbidden_foils": [
+        "mirrors predict the future",
+        "mirrors show tomorrow",
+        "mirrors open portals"
+      ],
+      "anchor_consequences": [
+        "Security mirrors become short replay screens.",
+        "Grooming becomes slower.",
+        "Privacy rules cover delayed reflections."
+      ]
+    },
+    "cjst_11": {
+      "legacy_jst_id": "jst_11",
+      "label": "Singing traffic lights",
+      "premise": "traffic lights sang instead of changing silently",
+      "allowed_mutation": "traffic lights use songs as signal changes",
+      "allowed_mechanisms": [
+        "audible cues",
+        "noise regulation",
+        "melody learning",
+        "intersection sound"
+      ],
+      "impact_channels": {
+        "safety": [
+          "blind pedestrians",
+          "drivers"
+        ],
+        "infrastructure": [
+          "noise rules",
+          "intersections"
+        ],
+        "economy": [
+          "jingles",
+          "advertising"
+        ]
+      },
+      "forbidden_foils": [
+        "traffic lights hypnotize drivers",
+        "songs stop time",
+        "lights become opera judges"
+      ],
+      "anchor_consequences": [
+        "Drivers learn melodies for stop and go.",
+        "Cities regulate intersection noise.",
+        "Blind pedestrians use musical crossing cues."
+      ]
+    },
+    "cjst_12": {
+      "legacy_jst_id": "jst_12",
+      "label": "Stretching roads",
+      "premise": "every road stretched longer during rush hour",
+      "allowed_mutation": "roads lengthen during rush hour",
+      "allowed_mechanisms": [
+        "longer commutes",
+        "traffic spacing",
+        "route planning",
+        "delivery delays"
+      ],
+      "impact_channels": {
+        "infrastructure": [
+          "maps",
+          "transit",
+          "roads"
+        ],
+        "economy": [
+          "deliveries",
+          "work schedules"
+        ],
+        "daily_life": [
+          "commutes",
+          "school runs"
+        ]
+      },
+      "forbidden_foils": [
+        "roads create new countries",
+        "cars teleport",
+        "commuters become detectives"
+      ],
+      "anchor_consequences": [
+        "Navigation apps show rush-hour distance changes.",
+        "Delivery windows widen.",
+        "Bus schedules add stretch buffers."
+      ]
+    },
+    "cjst_13": {
+      "legacy_jst_id": "jst_13",
+      "label": "Talking receipts",
+      "premise": "receipts read purchases aloud when touched",
+      "allowed_mutation": "receipts audibly announce purchases when touched",
+      "allowed_mechanisms": [
+        "purchase disclosure",
+        "audio receipts",
+        "privacy risk",
+        "accessibility"
+      ],
+      "impact_channels": {
+        "privacy": [
+          "shopping history",
+          "gifts"
+        ],
+        "economy": [
+          "stores",
+          "returns"
+        ],
+        "daily_life": [
+          "accessibility",
+          "households"
+        ]
+      },
+      "forbidden_foils": [
+        "receipts accuse criminals",
+        "receipts reveal thoughts",
+        "receipts print free goods"
+      ],
+      "anchor_consequences": [
+        "Gift buyers hide receipts more carefully.",
+        "Stores create silent receipt sleeves.",
+        "Blind customers verify purchases by touch."
+      ]
+    },
+    "cjst_14": {
+      "legacy_jst_id": "jst_14",
+      "label": "Transparent walls",
+      "premise": "all building walls became transparent for one hour each day",
+      "allowed_mutation": "walls become transparent for one hour daily",
+      "allowed_mechanisms": [
+        "scheduled visibility",
+        "privacy planning",
+        "sunlight access",
+        "security exposure"
+      ],
+      "impact_channels": {
+        "privacy": [
+          "homes",
+          "offices"
+        ],
+        "safety": [
+          "security",
+          "crowds"
+        ],
+        "culture": [
+          "architecture",
+          "tourism"
+        ]
+      },
+      "forbidden_foils": [
+        "goldfish develop agoraphobia epidemics",
+        "walls read secrets",
+        "walls vanish permanently"
+      ],
+      "anchor_consequences": [
+        "Curtain sales spike.",
+        "Museums schedule transparent-wall tours.",
+        "Security teams move valuables before the hour."
+      ]
+    },
+    "cjst_15": {
+      "legacy_jst_id": "jst_15",
+      "label": "Heavy balloons",
+      "premise": "balloons became heavier the more people laughed nearby",
+      "allowed_mutation": "nearby laughter adds weight to balloons",
+      "allowed_mechanisms": [
+        "laughter weight",
+        "party safety",
+        "crowd measurement",
+        "balloon handling"
+      ],
+      "impact_channels": {
+        "safety": [
+          "falling decorations",
+          "children"
+        ],
+        "culture": [
+          "comedy shows",
+          "parties"
+        ],
+        "economy": [
+          "event planning",
+          "balloon makers"
+        ]
+      },
+      "forbidden_foils": [
+        "balloons absorb souls",
+        "laughter creates gold",
+        "balloons become sentient critics"
+      ],
+      "anchor_consequences": [
+        "Comedy clubs secure decorations more tightly.",
+        "Party games measure laughter by balloon weight.",
+        "Children avoid holding balloons during jokes."
+      ]
+    },
+    "cjst_16": {
+      "legacy_jst_id": "jst_16",
+      "label": "Remembering cups",
+      "premise": "every cup remembered the last drink poured into it",
+      "allowed_mutation": "cups retain evidence of the last drink",
+      "allowed_mechanisms": [
+        "drink memory",
+        "taste residue",
+        "labeling",
+        "forensic use"
+      ],
+      "impact_channels": {
+        "daily_life": [
+          "dishwashing",
+          "cafes"
+        ],
+        "health": [
+          "allergies",
+          "contamination"
+        ],
+        "law": [
+          "forensics",
+          "evidence"
+        ]
+      },
+      "forbidden_foils": [
+        "cups predict thirst",
+        "cups cure poison",
+        "cups speak full biographies"
+      ],
+      "anchor_consequences": [
+        "Cafes sort cups by previous drink.",
+        "Allergy warnings become easier.",
+        "Investigators test cup memories after spills."
+      ]
+    },
+    "cjst_17": {
+      "legacy_jst_id": "jst_17",
+      "label": "Borrowed voices",
+      "premise": "people briefly swapped voices whenever they shook hands",
+      "allowed_mutation": "handshakes temporarily swap voices",
+      "allowed_mechanisms": [
+        "voice identity",
+        "handshake etiquette",
+        "audio authentication",
+        "brief confusion"
+      ],
+      "impact_channels": {
+        "privacy": [
+          "identity",
+          "recordings"
+        ],
+        "culture": [
+          "greetings",
+          "performances"
+        ],
+        "security": [
+          "voice passwords",
+          "fraud"
+        ]
+      },
+      "forbidden_foils": [
+        "voices steal memories",
+        "handshakes change bodies",
+        "voices predict fate"
+      ],
+      "anchor_consequences": [
+        "People avoid handshakes before speeches.",
+        "Voice authentication bans recent handshakes.",
+        "Comedians choreograph handshake voice swaps."
+      ]
+    },
+    "cjst_18": {
+      "legacy_jst_id": "jst_18",
+      "label": "Indoor snow",
+      "premise": "snow fell only inside rooms with closed windows",
+      "allowed_mutation": "closed-window rooms receive indoor snow",
+      "allowed_mechanisms": [
+        "indoor accumulation",
+        "window ventilation",
+        "water damage",
+        "temperature control"
+      ],
+      "impact_channels": {
+        "infrastructure": [
+          "ceilings",
+          "floors",
+          "drainage"
+        ],
+        "daily_life": [
+          "heating",
+          "cleaning"
+        ],
+        "economy": [
+          "insurance",
+          "winter sports"
+        ]
+      },
+      "forbidden_foils": [
+        "snow creates indoor mountains instantly",
+        "snow grants immortality",
+        "windows become portals"
+      ],
+      "anchor_consequences": [
+        "People crack windows to stop snow buildup.",
+        "Insurers price indoor snow damage.",
+        "Gyms offer closed-window snow rooms."
+      ]
+    },
+    "cjst_19": {
+      "legacy_jst_id": "jst_19",
+      "label": "Magnetic sidewalks",
+      "premise": "sidewalks gently pulled metal objects toward the curb",
+      "allowed_mutation": "sidewalks exert gentle curbward magnetic pull on metal",
+      "allowed_mechanisms": [
+        "metal drift",
+        "curb safety",
+        "lost keys",
+        "mobility hazards"
+      ],
+      "impact_channels": {
+        "safety": [
+          "wheelchairs",
+          "bicycles",
+          "tools"
+        ],
+        "infrastructure": [
+          "curbs",
+          "street cleaning"
+        ],
+        "daily_life": [
+          "keys",
+          "phones"
+        ]
+      },
+      "forbidden_foils": [
+        "sidewalks attract human bones",
+        "curbs become black holes",
+        "metal objects teleport"
+      ],
+      "anchor_consequences": [
+        "Street cleaners collect curbside metal debris.",
+        "Cyclists secure metal accessories.",
+        "Lost keys slide toward curbs."
+      ]
+    },
+    "cjst_20": {
+      "legacy_jst_id": "jst_20",
+      "label": "Clockless mornings",
+      "premise": "all clocks stopped working until noon every day",
+      "allowed_mutation": "clocks fail before noon",
+      "allowed_mechanisms": [
+        "morning time uncertainty",
+        "non-clock routines",
+        "scheduling shifts",
+        "solar cues"
+      ],
+      "impact_channels": {
+        "daily_life": [
+          "alarms",
+          "schools",
+          "work"
+        ],
+        "economy": [
+          "appointments",
+          "transit"
+        ],
+        "culture": [
+          "morning rituals",
+          "sun cues"
+        ]
+      },
+      "forbidden_foils": [
+        "time itself stops",
+        "people stop aging before noon",
+        "clocks generate solar benches"
+      ],
+      "anchor_consequences": [
+        "Schools start after noon or use bells by sunlight.",
+        "Morning appointments use hourglasses.",
+        "Workers rely on radio announcements."
+      ]
+    },
+    "cjst_21": {
+      "label": "Lying windows",
+      "premise": "every glass window became opaque whenever someone nearby lied",
+      "allowed_mutation": "nearby lies make glass windows opaque",
+      "allowed_mechanisms": [
+        "visible lie signal",
+        "privacy leakage",
+        "meeting rooms",
+        "courtrooms"
+      ],
+      "impact_channels": {
+        "privacy": [
+          "conversations",
+          "offices"
+        ],
+        "law": [
+          "testimony",
+          "interviews"
+        ],
+        "culture": [
+          "games",
+          "dating"
+        ]
+      },
+      "forbidden_foils": [
+        "windows punish liars",
+        "glass reads minds",
+        "opaque windows reveal the future"
+      ],
+      "anchor_consequences": [
+        "Interview rooms avoid windows.",
+        "Courtrooms monitor glass during testimony.",
+        "People hold private talks away from storefronts."
+      ]
+    },
+    "cjst_22": {
+      "label": "Visible words",
+      "premise": "spoken words appeared as floating text for five seconds",
+      "allowed_mutation": "speech becomes temporary visible text",
+      "allowed_mechanisms": [
+        "visual captions",
+        "crowd clutter",
+        "recording evidence",
+        "accessibility"
+      ],
+      "impact_channels": {
+        "daily_life": [
+          "conversation",
+          "noise"
+        ],
+        "privacy": [
+          "overheard speech",
+          "screenshots"
+        ],
+        "culture": [
+          "theater",
+          "classrooms"
+        ]
+      },
+      "forbidden_foils": [
+        "words become physical weapons",
+        "text reads emotions",
+        "speech creates money"
+      ],
+      "anchor_consequences": [
+        "Classrooms become easier for deaf students.",
+        "Crowded rooms fill with caption clutter.",
+        "Secret conversations happen behind visual screens."
+      ]
+    },
+    "cjst_23": {
+      "label": "Forgotten metal warmth",
+      "premise": "small metal objects grew warm when forgotten",
+      "allowed_mutation": "forgotten small metal objects warm up",
+      "allowed_mechanisms": [
+        "warmth as reminder",
+        "minor burn risk",
+        "lost object detection",
+        "heat-sensitive storage"
+      ],
+      "impact_channels": {
+        "safety": [
+          "burns",
+          "children"
+        ],
+        "daily_life": [
+          "keys",
+          "coins",
+          "tools"
+        ],
+        "economy": [
+          "finders",
+          "storage"
+        ]
+      },
+      "forbidden_foils": [
+        "metal melts instantly",
+        "warm keys reveal secrets",
+        "forgotten objects generate unlimited heat"
+      ],
+      "anchor_consequences": [
+        "People find lost keys by warmth.",
+        "Airlines warn about forgotten metal in bags.",
+        "Toy makers avoid small metal parts."
+      ]
+    },
+    "cjst_24": {
+      "label": "Single-read notes",
+      "premise": "all handwritten notes erased themselves after being read once",
+      "allowed_mutation": "handwritten notes vanish after one reading",
+      "allowed_mechanisms": [
+        "single-use writing",
+        "copying habits",
+        "message security",
+        "record loss"
+      ],
+      "impact_channels": {
+        "privacy": [
+          "secret notes",
+          "evidence"
+        ],
+        "education": [
+          "homework",
+          "studying"
+        ],
+        "economy": [
+          "stationery",
+          "contracts"
+        ]
+      },
+      "forbidden_foils": [
+        "notes rewrite themselves correctly",
+        "ink predicts readers",
+        "paper remembers every secret aloud"
+      ],
+      "anchor_consequences": [
+        "Students photograph notes before reading.",
+        "Lawyers avoid handwritten contracts.",
+        "Secret messages become easier to destroy."
+      ]
+    },
+    "cjst_25": {
+      "label": "Sideways elevators",
+      "premise": "elevators only moved sideways between buildings",
+      "allowed_mutation": "elevators travel horizontally, not vertically",
+      "allowed_mechanisms": [
+        "horizontal shafts",
+        "floor access problems",
+        "building bridges",
+        "rerouted transit"
+      ],
+      "impact_channels": {
+        "infrastructure": [
+          "buildings",
+          "bridges",
+          "shafts"
+        ],
+        "safety": [
+          "evacuation",
+          "stairs"
+        ],
+        "economy": [
+          "real estate",
+          "maintenance"
+        ]
+      },
+      "forbidden_foils": [
+        "elevators teleport vertically",
+        "buildings float upward",
+        "sideways elevators stop gravity"
+      ],
+      "anchor_consequences": [
+        "Tall buildings rely more on stairs and ramps.",
+        "Office towers connect through horizontal elevator corridors.",
+        "Fire codes require new vertical alternatives."
+      ]
+    },
+    "cjst_26": {
+      "label": "Exit shadows",
+      "premise": "people's shadows always pointed toward the nearest exit",
+      "allowed_mutation": "shadows act as exit direction indicators",
+      "allowed_mechanisms": [
+        "navigation cue",
+        "emergency evacuation",
+        "lighting dependence",
+        "crowd movement"
+      ],
+      "impact_channels": {
+        "safety": [
+          "fires",
+          "stadiums",
+          "schools"
+        ],
+        "infrastructure": [
+          "signage",
+          "lighting"
+        ],
+        "daily_life": [
+          "malls",
+          "mazes"
+        ]
+      },
+      "forbidden_foils": [
+        "shadows drag people",
+        "exits move magically",
+        "shadows predict disasters"
+      ],
+      "anchor_consequences": [
+        "Emergency drills teach people to follow shadows.",
+        "Buildings maintain lighting for shadow exits.",
+        "Maze attractions become less confusing."
+      ]
+    },
+    "cjst_27": {
+      "label": "Music-averse plants",
+      "premise": "plants leaned away from recorded music",
+      "allowed_mutation": "plants physically lean away from recorded music",
+      "allowed_mechanisms": [
+        "directional leaning",
+        "speaker placement",
+        "growth shaping",
+        "sound exposure"
+      ],
+      "impact_channels": {
+        "ecology": [
+          "greenhouses",
+          "plant health"
+        ],
+        "economy": [
+          "nurseries",
+          "restaurants"
+        ],
+        "daily_life": [
+          "houseplants",
+          "music"
+        ]
+      },
+      "forbidden_foils": [
+        "plants write songs",
+        "music gives plants speech",
+        "plants flee across rooms"
+      ],
+      "anchor_consequences": [
+        "Gardeners shape vines with speakers.",
+        "Restaurants keep speakers away from planters.",
+        "Greenhouses monitor recorded music exposure."
+      ]
+    },
+    "cjst_28": {
+      "label": "Sticky purchase coins",
+      "premise": "every coin briefly stuck to the last thing it bought",
+      "allowed_mutation": "coins stick briefly to purchased items",
+      "allowed_mechanisms": [
+        "purchase trace",
+        "cash handling",
+        "short adhesion",
+        "receipt-like evidence"
+      ],
+      "impact_channels": {
+        "economy": [
+          "cashiers",
+          "returns"
+        ],
+        "privacy": [
+          "purchase history"
+        ],
+        "daily_life": [
+          "vending",
+          "markets"
+        ]
+      },
+      "forbidden_foils": [
+        "coins create items",
+        "coins accuse thieves",
+        "coins multiply after purchases"
+      ],
+      "anchor_consequences": [
+        "Cashiers wait for coins to detach from goods.",
+        "Markets use stuck coins as return proof.",
+        "People prefer cards for private purchases."
+      ]
+    },
+    "cjst_29": {
+      "label": "Cloudy water thirst",
+      "premise": "a glass of water became cloudy when someone nearby was dehydrated",
+      "allowed_mutation": "water cloudiness signals nearby dehydration",
+      "allowed_mechanisms": [
+        "hydration signal",
+        "public health screening",
+        "false positives",
+        "privacy concern"
+      ],
+      "impact_channels": {
+        "health": [
+          "dehydration",
+          "clinics",
+          "sports"
+        ],
+        "privacy": [
+          "medical status"
+        ],
+        "daily_life": [
+          "restaurants",
+          "schools"
+        ]
+      },
+      "forbidden_foils": [
+        "water cures dehydration instantly",
+        "water diagnoses every disease",
+        "cloudy water reads thoughts"
+      ],
+      "anchor_consequences": [
+        "Coaches keep water glasses near athletes.",
+        "Restaurants warn customers about hydration privacy.",
+        "Clinics use water cups as rough screening tools."
+      ]
+    },
+    "cjst_30": {
+      "label": "Glowing footsteps",
+      "premise": "footsteps left faint glowing marks for one minute",
+      "allowed_mutation": "recent footsteps glow briefly",
+      "allowed_mechanisms": [
+        "short-lived trail",
+        "tracking movement",
+        "privacy exposure",
+        "crowd flow"
+      ],
+      "impact_channels": {
+        "safety": [
+          "search and rescue",
+          "traffic"
+        ],
+        "privacy": [
+          "movement traces"
+        ],
+        "culture": [
+          "dance",
+          "sports"
+        ]
+      },
+      "forbidden_foils": [
+        "footsteps glow forever",
+        "marks reveal thoughts",
+        "trails open portals"
+      ],
+      "anchor_consequences": [
+        "Rescuers follow recent glowing tracks.",
+        "Dancers choreograph temporary light trails.",
+        "Offices redesign floors for movement privacy."
+      ]
+    }
+  }
+}

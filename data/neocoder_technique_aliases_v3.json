@@ -1,0 +1,57 @@
+{
+  "schema": "benchmark",
+  "version": "benchmark",
+  "denied_aliases": {
+    "for_loop": [
+      "for_loop",
+      "list_comprehension",
+      "set_comprehension",
+      "dict_comprehension",
+      "generator_expression"
+    ],
+    "list_comprehension": [
+      "list_comprehension",
+      "set_comprehension",
+      "dict_comprehension",
+      "generator_expression"
+    ],
+    "set_usage": [
+      "set_usage",
+      "set_literal",
+      "set_call",
+      "set_comprehension"
+    ],
+    "dict_usage": [
+      "dict_usage",
+      "dict_literal",
+      "dict_call",
+      "dict_comprehension",
+      "defaultdict_usage"
+    ],
+    "sort_call": [
+      "sort_call",
+      "sorted_call",
+      "list_sort"
+    ],
+    "recursion": [
+      "recursion",
+      "self_call",
+      "recursive_helper"
+    ],
+    "itertools_groupby": [
+      "itertools_groupby",
+      "groupby_call"
+    ]
+  },
+  "unsafe_api_aliases": [
+    "open",
+    "input",
+    "eval",
+    "exec",
+    "compile",
+    "__import__",
+    "subprocess",
+    "socket"
+  ],
+  "notes": "Aliases expand denied-technique checks so models cannot bypass denial states with equivalent AST forms."
+}

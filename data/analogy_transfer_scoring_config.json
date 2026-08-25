@@ -1,0 +1,29 @@
+{
+  "final_params": {
+    "rarity_gamma": 1.3,
+    "structural_gamma": 1.45,
+    "evidence_gamma": 1.25,
+    "mapping_multiplier_weights": {
+      "base": 0.35,
+      "abstraction_depth": 0.15,
+      "cross_domain_transform": 0.15,
+      "relational_depth": 0.2,
+      "cross_domain_distance": 0.05,
+      "boundary_awareness": 0.1
+    },
+    "task_aggregation_weights": {
+      "top3_mapping_quality": 0.25,
+      "elite_tail_top1": 0.25,
+      "relational_depth": 0.2,
+      "licensed_inference_quality": 0.15,
+      "abstraction_diversity_eff": 0.05,
+      "boundary_aware_valid_ratio": 0.1
+    },
+    "rarity": {
+      "hard_zero": 0.0,
+      "broad_common_cap": 0.35,
+      "supported_rare_floor": 0.72,
+      "default_floor": 0.42
+    }
+  }
+}

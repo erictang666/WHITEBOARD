@@ -1,0 +1,239 @@
+{
+  "schema": "benchmark",
+  "version": "benchmark",
+  "description": "Allowed entity aliases for GCW T4-v3. Includes reasonable singular/plural and fact-keyword variants so fact-sheet wording does not create false entity drift.",
+  "tasks": {
+    "gcw_007": {
+      "aliases": [
+        [
+          "Pavel",
+          "Pavel's"
+        ],
+        [
+          "Ro"
+        ],
+        [
+          "pier cafe",
+          "cafe"
+        ],
+        [
+          "paper map",
+          "map",
+          "maps",
+          "blurred map"
+        ],
+        [
+          "salt water",
+          "saltwater"
+        ],
+        [
+          "salt"
+        ],
+        [
+          "sugar"
+        ],
+        [
+          "tea"
+        ],
+        [
+          "jars",
+          "jar",
+          "three jars"
+        ],
+        [
+          "fog"
+        ],
+        [
+          "pier signs",
+          "pier sign",
+          "signs"
+        ],
+        [
+          "delivery cart",
+          "cart"
+        ]
+      ]
+    },
+    "gcw_021": {
+      "aliases": [
+        [
+          "Pia"
+        ],
+        [
+          "Cole"
+        ],
+        [
+          "theater lights",
+          "lights"
+        ],
+        [
+          "spare fuse",
+          "fuse",
+          "wrong fuse"
+        ],
+        [
+          "hand mirror",
+          "mirror"
+        ],
+        [
+          "exit sign",
+          "sign"
+        ],
+        [
+          "audience"
+        ],
+        [
+          "aisles",
+          "aisle"
+        ],
+        [
+          "dim light",
+          "darkened theater"
+        ]
+      ]
+    },
+    "gcw_024": {
+      "aliases": [
+        [
+          "Lio"
+        ],
+        [
+          "Hana"
+        ],
+        [
+          "museum"
+        ],
+        [
+          "cloakroom"
+        ],
+        [
+          "umbrella",
+          "transparent umbrella",
+          "torn umbrella",
+          "torn rib"
+        ],
+        [
+          "wet floor sign",
+          "missing wet floor sign",
+          "sign"
+        ],
+        [
+          "rainwater",
+          "rain water",
+          "drips",
+          "drip"
+        ],
+        [
+          "marble stairs",
+          "stairs"
+        ],
+        [
+          "visitors",
+          "visitor"
+        ],
+        [
+          "slippery patch",
+          "patch"
+        ]
+      ]
+    },
+    "gcw_028": {
+      "aliases": [
+        [
+          "Inez"
+        ],
+        [
+          "Saul"
+        ],
+        [
+          "dance"
+        ],
+        [
+          "community hall",
+          "hall"
+        ],
+        [
+          "drum skin",
+          "split drum skin",
+          "drum"
+        ],
+        [
+          "paper tape",
+          "tape"
+        ],
+        [
+          "hall floor",
+          "floor"
+        ],
+        [
+          "footsteps",
+          "footstep"
+        ],
+        [
+          "dancers",
+          "dancer"
+        ],
+        [
+          "shoulders",
+          "shoulder"
+        ],
+        [
+          "steady count",
+          "count"
+        ]
+      ]
+    },
+    "gcw_030": {
+      "aliases": [
+        [
+          "Nell"
+        ],
+        [
+          "Casper"
+        ],
+        [
+          "old mill",
+          "mill"
+        ],
+        [
+          "mill sails",
+          "sails"
+        ],
+        [
+          "no wind",
+          "windless air"
+        ],
+        [
+          "sack scale",
+          "scale",
+          "hanging scale"
+        ],
+        [
+          "beam"
+        ],
+        [
+          "grain sacks",
+          "grain sack",
+          "sacks",
+          "sack"
+        ],
+        [
+          "rain"
+        ],
+        [
+          "light sacks",
+          "light sack"
+        ],
+        [
+          "damp ones",
+          "damp sacks",
+          "damp sack"
+        ],
+        [
+          "records",
+          "record"
+        ]
+      ]
+    }
+  }
+}

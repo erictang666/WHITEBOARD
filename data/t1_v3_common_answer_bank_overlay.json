@@ -1,0 +1,548 @@
+{
+  "schema_version": "benchmark",
+  "description": "Curated prompt-specific common-answer families for the T1-v3 five-prompt preliminary profile.",
+  "tasks": {
+    "uut_01": {
+      "task_type": "UUT",
+      "hard_zero_families": [
+        {
+          "family": "storage_box",
+          "aliases": [
+            "storage box",
+            "organizer",
+            "moving box",
+            "toy box",
+            "gift box"
+          ]
+        },
+        {
+          "family": "pet_shelter",
+          "aliases": [
+            "cat house",
+            "pet bed",
+            "animal shelter",
+            "small pet hideout"
+          ]
+        },
+        {
+          "family": "plant_container",
+          "aliases": [
+            "planter",
+            "seed starter",
+            "plant pot",
+            "herb garden tray"
+          ]
+        }
+      ],
+      "broad_common_families": [
+        {
+          "family": "craft_surface",
+          "aliases": [
+            "art canvas",
+            "poster board",
+            "sign board",
+            "paint surface"
+          ]
+        },
+        {
+          "family": "costume_mask",
+          "aliases": [
+            "mask",
+            "costume helmet",
+            "robot costume",
+            "cardboard armor"
+          ]
+        }
+      ]
+    },
+    "uut_05": {
+      "task_type": "UUT",
+      "hard_zero_families": [
+        {
+          "family": "reach_high_places",
+          "aliases": [
+            "reach high shelf",
+            "change light bulb",
+            "clean gutter",
+            "paint wall"
+          ]
+        },
+        {
+          "family": "shelf_or_rack",
+          "aliases": [
+            "bookshelf",
+            "plant stand",
+            "drying rack",
+            "towel rack"
+          ]
+        },
+        {
+          "family": "climbing_support",
+          "aliases": [
+            "step stool",
+            "loft access",
+            "temporary stairs",
+            "work platform"
+          ]
+        }
+      ],
+      "broad_common_families": [
+        {
+          "family": "decor_display",
+          "aliases": [
+            "photo display",
+            "blanket ladder",
+            "string light holder"
+          ]
+        },
+        {
+          "family": "sports_obstacle",
+          "aliases": [
+            "agility obstacle",
+            "training hurdle",
+            "exercise station"
+          ]
+        }
+      ]
+    },
+    "uut_06": {
+      "task_type": "UUT",
+      "hard_zero_families": [
+        {
+          "family": "rain_or_sun_shield",
+          "aliases": [
+            "rain shield",
+            "sun shade",
+            "parasol",
+            "portable shelter",
+            "stay dry"
+          ]
+        },
+        {
+          "family": "wind_or_weather_cover",
+          "aliases": [
+            "wind blocker",
+            "weather cover",
+            "bag cover",
+            "camera cover"
+          ]
+        },
+        {
+          "family": "hanging_hook_use",
+          "aliases": [
+            "coat hook",
+            "bag hook",
+            "hang items",
+            "door hook"
+          ]
+        }
+      ],
+      "broad_common_families": [
+        {
+          "family": "photography_light_modifier",
+          "aliases": [
+            "light diffuser",
+            "reflector",
+            "photo umbrella",
+            "softbox"
+          ]
+        },
+        {
+          "family": "decoration_or_costume",
+          "aliases": [
+            "lamp shade",
+            "costume prop",
+            "party decoration",
+            "ceiling mobile"
+          ]
+        },
+        {
+          "family": "container_or_collector",
+          "aliases": [
+            "rain collector",
+            "leaf collector",
+            "inverted basket",
+            "catch falling items"
+          ]
+        }
+      ]
+    },
+    "uut_09": {
+      "task_type": "UUT",
+      "hard_zero_families": [
+        {
+          "family": "tying_and_binding",
+          "aliases": [
+            "tie things",
+            "bundle items",
+            "secure load",
+            "lash together",
+            "knot"
+          ]
+        },
+        {
+          "family": "hanging_or_suspension",
+          "aliases": [
+            "hang clothes",
+            "suspend plant",
+            "clothesline",
+            "swing",
+            "pulley line"
+          ]
+        },
+        {
+          "family": "climbing_or_rescue",
+          "aliases": [
+            "climbing rope",
+            "rescue line",
+            "tow line",
+            "safety line"
+          ]
+        }
+      ],
+      "broad_common_families": [
+        {
+          "family": "exercise_or_game",
+          "aliases": [
+            "jump rope",
+            "tug of war",
+            "obstacle course",
+            "balance line"
+          ]
+        },
+        {
+          "family": "decorative_cord",
+          "aliases": [
+            "macrame",
+            "wall hanging",
+            "curtain tieback",
+            "rope border"
+          ]
+        },
+        {
+          "family": "measuring_or_marking",
+          "aliases": [
+            "measuring line",
+            "straight line guide",
+            "garden row marker"
+          ]
+        }
+      ]
+    },
+    "uut_12": {
+      "task_type": "UUT",
+      "hard_zero_families": [
+        {
+          "family": "water_container",
+          "aliases": [
+            "water bottle",
+            "storage container",
+            "vase",
+            "watering can",
+            "funnel"
+          ]
+        },
+        {
+          "family": "planter_or_seedling",
+          "aliases": [
+            "planter",
+            "seed starter",
+            "self watering pot",
+            "mini greenhouse"
+          ]
+        },
+        {
+          "family": "bird_feeder_or_scoop",
+          "aliases": [
+            "bird feeder",
+            "scoop",
+            "pet food scoop",
+            "fish trap"
+          ]
+        }
+      ],
+      "broad_common_families": [
+        {
+          "family": "floating_or_buoy",
+          "aliases": [
+            "float",
+            "buoy",
+            "boat",
+            "fishing bobber",
+            "raft"
+          ]
+        },
+        {
+          "family": "noise_or_music",
+          "aliases": [
+            "rattle",
+            "maraca",
+            "drum",
+            "wind chime"
+          ]
+        },
+        {
+          "family": "lighting_or_lens",
+          "aliases": [
+            "lantern",
+            "solar lamp cover",
+            "water lens",
+            "light diffuser"
+          ]
+        }
+      ]
+    },
+    "pc_023": {
+      "task_type": "PropConj",
+      "hard_zero_families": [
+        {
+          "family": "frozen_treat",
+          "aliases": [
+            "popsicle",
+            "ice cream bar",
+            "frozen yogurt tube",
+            "ice lolly"
+          ]
+        },
+        {
+          "family": "portable_cold_fruit",
+          "aliases": [
+            "frozen grapes",
+            "chilled apple slices",
+            "cold orange wedges"
+          ]
+        },
+        {
+          "family": "packaged_dairy",
+          "aliases": [
+            "yogurt cup",
+            "cheese stick",
+            "drinkable yogurt",
+            "pudding cup"
+          ]
+        }
+      ],
+      "broad_common_families": [
+        {
+          "family": "lunchbox_item",
+          "aliases": [
+            "sandwich",
+            "salad cup",
+            "bento snack",
+            "cold wrap"
+          ]
+        },
+        {
+          "family": "picnic_dessert",
+          "aliases": [
+            "gel cup",
+            "fruit cup",
+            "custard cup"
+          ]
+        }
+      ]
+    },
+    "pc_034": {
+      "task_type": "PropConj",
+      "hard_zero_families": [
+        {
+          "family": "plastic_bag",
+          "aliases": [
+            "ziplock bag",
+            "sandwich bag",
+            "freezer bag",
+            "clear plastic bag"
+          ]
+        },
+        {
+          "family": "clear_film",
+          "aliases": [
+            "plastic wrap",
+            "cling film",
+            "clear vinyl sheet",
+            "laminating pouch"
+          ]
+        },
+        {
+          "family": "waterproof_clear_cover",
+          "aliases": [
+            "phone pouch",
+            "document sleeve",
+            "map case",
+            "shower curtain"
+          ]
+        }
+      ],
+      "broad_common_families": [
+        {
+          "family": "transparent_tubing",
+          "aliases": [
+            "clear silicone tube",
+            "vinyl hose",
+            "aquarium tubing"
+          ]
+        },
+        {
+          "family": "protective_packaging",
+          "aliases": [
+            "bubble wrap",
+            "clear rain cover",
+            "waterproof pouch"
+          ]
+        }
+      ]
+    },
+    "pc_041": {
+      "task_type": "PropConj",
+      "hard_zero_families": [
+        {
+          "family": "small_clockwork",
+          "aliases": [
+            "mechanical watch",
+            "pocket watch",
+            "watch movement",
+            "silent watch"
+          ]
+        },
+        {
+          "family": "quiet_hinge_or_latch",
+          "aliases": [
+            "soft close hinge",
+            "cabinet latch",
+            "drawer slide",
+            "silent zipper pull"
+          ]
+        },
+        {
+          "family": "tiny_hand_tool",
+          "aliases": [
+            "mini screwdriver",
+            "watchmaker tool",
+            "small gear assembly"
+          ]
+        }
+      ],
+      "broad_common_families": [
+        {
+          "family": "camera_or_office_mechanism",
+          "aliases": [
+            "camera shutter",
+            "stapler mechanism",
+            "paper punch",
+            "binder clip"
+          ]
+        },
+        {
+          "family": "silent_toy_part",
+          "aliases": [
+            "wind up toy gear",
+            "miniature mechanism",
+            "quiet fidget gear"
+          ]
+        }
+      ]
+    },
+    "pc_057": {
+      "task_type": "PropConj",
+      "hard_zero_families": [
+        {
+          "family": "wire",
+          "aliases": [
+            "copper wire",
+            "jumper wire",
+            "thin wire",
+            "stranded wire",
+            "electrical lead"
+          ]
+        },
+        {
+          "family": "conductive_cable",
+          "aliases": [
+            "charging cable",
+            "headphone cable",
+            "usb cable",
+            "test lead"
+          ]
+        },
+        {
+          "family": "foil_or_trace",
+          "aliases": [
+            "foil strip",
+            "copper tape",
+            "flex circuit",
+            "conductive tape"
+          ]
+        }
+      ],
+      "broad_common_families": [
+        {
+          "family": "small_metal_fastener",
+          "aliases": [
+            "paper clip",
+            "safety pin",
+            "staple",
+            "spring contact"
+          ]
+        },
+        {
+          "family": "conductive_thread",
+          "aliases": [
+            "silver thread",
+            "conductive thread",
+            "wearable sensor lead"
+          ]
+        }
+      ]
+    },
+    "pc_080": {
+      "task_type": "PropConj",
+      "hard_zero_families": [
+        {
+          "family": "clear_disposable_bag",
+          "aliases": [
+            "sandwich bag",
+            "ziplock bag",
+            "freezer bag",
+            "clear plastic bag"
+          ]
+        },
+        {
+          "family": "single_use_clear_film",
+          "aliases": [
+            "plastic wrap",
+            "cling film",
+            "disposable rain poncho",
+            "clear food wrap"
+          ]
+        },
+        {
+          "family": "transparent_disposable_glove",
+          "aliases": [
+            "clear disposable glove",
+            "poly glove",
+            "food service glove"
+          ]
+        }
+      ],
+      "broad_common_families": [
+        {
+          "family": "medical_or_lab_cover",
+          "aliases": [
+            "specimen bag",
+            "sterile pouch",
+            "sample sleeve",
+            "clear drape"
+          ]
+        },
+        {
+          "family": "packaging_cover",
+          "aliases": [
+            "cellophane wrapper",
+            "clear produce bag",
+            "disposable document sleeve"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,714 @@
+{
+  "schema": "benchmark",
+  "properties_source": "prompts_dataset.py:PROPCONJ_PROPERTIES",
+  "task_combos_source": "prompts_dataset.py:PROPCONJ_TASK_COMBOS",
+  "task_combos": [
+    {
+      "id": "pc_001",
+      "property_ids": [
+        "round",
+        "hard"
+      ]
+    },
+    {
+      "id": "pc_002",
+      "property_ids": [
+        "loud_noise",
+        "portable"
+      ]
+    },
+    {
+      "id": "pc_003",
+      "property_ids": [
+        "red",
+        "edible"
+      ]
+    },
+    {
+      "id": "pc_004",
+      "property_ids": [
+        "metal",
+        "hard"
+      ]
+    },
+    {
+      "id": "pc_005",
+      "property_ids": [
+        "paper_cardboard",
+        "writable"
+      ]
+    },
+    {
+      "id": "pc_006",
+      "property_ids": [
+        "transparent",
+        "flexible"
+      ]
+    },
+    {
+      "id": "pc_007",
+      "property_ids": [
+        "soft",
+        "waterproof"
+      ]
+    },
+    {
+      "id": "pc_008",
+      "property_ids": [
+        "tiny",
+        "valuable"
+      ]
+    },
+    {
+      "id": "pc_009",
+      "property_ids": [
+        "hollow",
+        "lightweight"
+      ]
+    },
+    {
+      "id": "pc_010",
+      "property_ids": [
+        "sticky",
+        "useful"
+      ]
+    },
+    {
+      "id": "pc_011",
+      "property_ids": [
+        "cold",
+        "edible"
+      ]
+    },
+    {
+      "id": "pc_012",
+      "property_ids": [
+        "sharp",
+        "portable"
+      ]
+    },
+    {
+      "id": "pc_013",
+      "property_ids": [
+        "bright",
+        "fragile"
+      ]
+    },
+    {
+      "id": "pc_014",
+      "property_ids": [
+        "heavy",
+        "movable"
+      ]
+    },
+    {
+      "id": "pc_015",
+      "property_ids": [
+        "natural",
+        "patterned"
+      ]
+    },
+    {
+      "id": "pc_016",
+      "property_ids": [
+        "flat",
+        "reflective"
+      ]
+    },
+    {
+      "id": "pc_017",
+      "property_ids": [
+        "elastic",
+        "colorful"
+      ]
+    },
+    {
+      "id": "pc_018",
+      "property_ids": [
+        "scented",
+        "disposable"
+      ]
+    },
+    {
+      "id": "pc_019",
+      "property_ids": [
+        "mechanical",
+        "small"
+      ]
+    },
+    {
+      "id": "pc_020",
+      "property_ids": [
+        "silent",
+        "protective"
+      ]
+    },
+    {
+      "id": "pc_021",
+      "property_ids": [
+        "glows",
+        "fits_in_pocket",
+        "no_battery"
+      ]
+    },
+    {
+      "id": "pc_022",
+      "property_ids": [
+        "red",
+        "transparent",
+        "flexible"
+      ]
+    },
+    {
+      "id": "pc_023",
+      "property_ids": [
+        "edible",
+        "cold",
+        "portable"
+      ]
+    },
+    {
+      "id": "pc_024",
+      "property_ids": [
+        "magnetic",
+        "metal",
+        "small"
+      ]
+    },
+    {
+      "id": "pc_025",
+      "property_ids": [
+        "biodegradable",
+        "disposable",
+        "scented"
+      ]
+    },
+    {
+      "id": "pc_026",
+      "property_ids": [
+        "reusable",
+        "waterproof",
+        "soft"
+      ]
+    },
+    {
+      "id": "pc_027",
+      "property_ids": [
+        "heat_resistant",
+        "metal",
+        "portable"
+      ]
+    },
+    {
+      "id": "pc_028",
+      "property_ids": [
+        "absorbs_water",
+        "soft",
+        "disposable"
+      ]
+    },
+    {
+      "id": "pc_029",
+      "property_ids": [
+        "floats",
+        "hollow",
+        "lightweight"
+      ]
+    },
+    {
+      "id": "pc_030",
+      "property_ids": [
+        "conductive",
+        "metal",
+        "flexible"
+      ]
+    },
+    {
+      "id": "pc_031",
+      "property_ids": [
+        "foldable",
+        "waterproof",
+        "lightweight"
+      ]
+    },
+    {
+      "id": "pc_032",
+      "property_ids": [
+        "rolls",
+        "round",
+        "movable"
+      ]
+    },
+    {
+      "id": "pc_033",
+      "property_ids": [
+        "breathable",
+        "soft",
+        "protective"
+      ]
+    },
+    {
+      "id": "pc_034",
+      "property_ids": [
+        "transparent",
+        "waterproof",
+        "flexible"
+      ]
+    },
+    {
+      "id": "pc_035",
+      "property_ids": [
+        "glows",
+        "natural",
+        "patterned"
+      ]
+    },
+    {
+      "id": "pc_036",
+      "property_ids": [
+        "edible",
+        "red",
+        "tiny"
+      ]
+    },
+    {
+      "id": "pc_037",
+      "property_ids": [
+        "reflective",
+        "flat",
+        "portable"
+      ]
+    },
+    {
+      "id": "pc_038",
+      "property_ids": [
+        "sticky",
+        "transparent",
+        "useful"
+      ]
+    },
+    {
+      "id": "pc_039",
+      "property_ids": [
+        "sharp",
+        "metal",
+        "small"
+      ]
+    },
+    {
+      "id": "pc_040",
+      "property_ids": [
+        "elastic",
+        "waterproof",
+        "colorful"
+      ]
+    },
+    {
+      "id": "pc_041",
+      "property_ids": [
+        "silent",
+        "mechanical",
+        "small"
+      ]
+    },
+    {
+      "id": "pc_042",
+      "property_ids": [
+        "natural",
+        "scented",
+        "disposable"
+      ]
+    },
+    {
+      "id": "pc_043",
+      "property_ids": [
+        "bright",
+        "flat",
+        "reflective"
+      ]
+    },
+    {
+      "id": "pc_044",
+      "property_ids": [
+        "hollow",
+        "metal",
+        "hard"
+      ]
+    },
+    {
+      "id": "pc_045",
+      "property_ids": [
+        "tiny",
+        "mechanical",
+        "valuable"
+      ]
+    },
+    {
+      "id": "pc_046",
+      "property_ids": [
+        "round",
+        "edible",
+        "red"
+      ]
+    },
+    {
+      "id": "pc_047",
+      "property_ids": [
+        "transparent",
+        "hard",
+        "fragile"
+      ]
+    },
+    {
+      "id": "pc_048",
+      "property_ids": [
+        "protective",
+        "lightweight",
+        "portable"
+      ]
+    },
+    {
+      "id": "pc_049",
+      "property_ids": [
+        "no_battery",
+        "mechanical",
+        "small"
+      ]
+    },
+    {
+      "id": "pc_050",
+      "property_ids": [
+        "glows",
+        "waterproof",
+        "portable"
+      ]
+    },
+    {
+      "id": "pc_051",
+      "property_ids": [
+        "magnetic",
+        "hard",
+        "tiny"
+      ]
+    },
+    {
+      "id": "pc_052",
+      "property_ids": [
+        "biodegradable",
+        "edible",
+        "natural"
+      ]
+    },
+    {
+      "id": "pc_053",
+      "property_ids": [
+        "reusable",
+        "metal",
+        "writable"
+      ]
+    },
+    {
+      "id": "pc_054",
+      "property_ids": [
+        "heat_resistant",
+        "transparent",
+        "hard"
+      ]
+    },
+    {
+      "id": "pc_055",
+      "property_ids": [
+        "absorbs_water",
+        "natural",
+        "biodegradable"
+      ]
+    },
+    {
+      "id": "pc_056",
+      "property_ids": [
+        "floats",
+        "waterproof",
+        "soft"
+      ]
+    },
+    {
+      "id": "pc_057",
+      "property_ids": [
+        "conductive",
+        "flexible",
+        "small"
+      ]
+    },
+    {
+      "id": "pc_058",
+      "property_ids": [
+        "foldable",
+        "flat",
+        "reflective"
+      ]
+    },
+    {
+      "id": "pc_059",
+      "property_ids": [
+        "rolls",
+        "heavy",
+        "movable"
+      ]
+    },
+    {
+      "id": "pc_060",
+      "property_ids": [
+        "breathable",
+        "waterproof",
+        "protective"
+      ]
+    },
+    {
+      "id": "pc_061",
+      "property_ids": [
+        "scented",
+        "natural",
+        "patterned"
+      ]
+    },
+    {
+      "id": "pc_062",
+      "property_ids": [
+        "colorful",
+        "disposable",
+        "paper_cardboard"
+      ]
+    },
+    {
+      "id": "pc_063",
+      "property_ids": [
+        "sticky",
+        "flexible",
+        "transparent"
+      ]
+    },
+    {
+      "id": "pc_064",
+      "property_ids": [
+        "sharp",
+        "disposable",
+        "portable"
+      ]
+    },
+    {
+      "id": "pc_065",
+      "property_ids": [
+        "bright",
+        "no_battery",
+        "portable"
+      ]
+    },
+    {
+      "id": "pc_066",
+      "property_ids": [
+        "mechanical",
+        "silent",
+        "protective"
+      ]
+    },
+    {
+      "id": "pc_067",
+      "property_ids": [
+        "metal",
+        "reflective",
+        "flat"
+      ]
+    },
+    {
+      "id": "pc_068",
+      "property_ids": [
+        "edible",
+        "patterned",
+        "natural"
+      ]
+    },
+    {
+      "id": "pc_069",
+      "property_ids": [
+        "waterproof",
+        "transparent",
+        "reusable"
+      ]
+    },
+    {
+      "id": "pc_070",
+      "property_ids": [
+        "hard",
+        "natural",
+        "round"
+      ]
+    },
+    {
+      "id": "pc_071",
+      "property_ids": [
+        "soft",
+        "silent",
+        "protective"
+      ]
+    },
+    {
+      "id": "pc_072",
+      "property_ids": [
+        "tiny",
+        "transparent",
+        "valuable"
+      ]
+    },
+    {
+      "id": "pc_073",
+      "property_ids": [
+        "hollow",
+        "waterproof",
+        "portable"
+      ]
+    },
+    {
+      "id": "pc_074",
+      "property_ids": [
+        "red",
+        "hard",
+        "valuable"
+      ]
+    },
+    {
+      "id": "pc_075",
+      "property_ids": [
+        "cold",
+        "transparent",
+        "edible"
+      ]
+    },
+    {
+      "id": "pc_076",
+      "property_ids": [
+        "paper_cardboard",
+        "flat",
+        "lightweight"
+      ]
+    },
+    {
+      "id": "pc_077",
+      "property_ids": [
+        "flexible",
+        "conductive",
+        "metal"
+      ]
+    },
+    {
+      "id": "pc_078",
+      "property_ids": [
+        "glows",
+        "fragile",
+        "transparent"
+      ]
+    },
+    {
+      "id": "pc_079",
+      "property_ids": [
+        "magnetic",
+        "reusable",
+        "hard"
+      ]
+    },
+    {
+      "id": "pc_080",
+      "property_ids": [
+        "disposable",
+        "waterproof",
+        "transparent"
+      ]
+    }
+  ],
+  "difficulty_rules": {
+    "2_property_easy": "Two-property conjunctions, usually high-support and low-adversarial.",
+    "3_property_medium": "Three-property conjunctions with at least one narrow or mechanism-like property.",
+    "3_property_adversarial": "Three-property conjunctions that include tension, rare compatibility, or strong false-positive traps."
+  },
+  "task_difficulties": {
+    "pc_001": "2_property_easy",
+    "pc_002": "2_property_easy",
+    "pc_003": "2_property_easy",
+    "pc_004": "2_property_easy",
+    "pc_005": "2_property_easy",
+    "pc_006": "2_property_easy",
+    "pc_007": "2_property_easy",
+    "pc_008": "2_property_easy",
+    "pc_009": "2_property_easy",
+    "pc_010": "2_property_easy",
+    "pc_011": "2_property_easy",
+    "pc_012": "2_property_easy",
+    "pc_013": "2_property_easy",
+    "pc_014": "2_property_easy",
+    "pc_015": "2_property_easy",
+    "pc_016": "2_property_easy",
+    "pc_017": "2_property_easy",
+    "pc_018": "2_property_easy",
+    "pc_019": "2_property_easy",
+    "pc_020": "2_property_easy",
+    "pc_021": "3_property_adversarial",
+    "pc_022": "3_property_medium",
+    "pc_023": "3_property_medium",
+    "pc_024": "3_property_medium",
+    "pc_025": "3_property_medium",
+    "pc_026": "3_property_medium",
+    "pc_027": "3_property_medium",
+    "pc_028": "3_property_medium",
+    "pc_029": "3_property_medium",
+    "pc_030": "3_property_medium",
+    "pc_031": "3_property_medium",
+    "pc_032": "3_property_medium",
+    "pc_033": "3_property_medium",
+    "pc_034": "3_property_medium",
+    "pc_035": "3_property_adversarial",
+    "pc_036": "3_property_medium",
+    "pc_037": "3_property_medium",
+    "pc_038": "3_property_medium",
+    "pc_039": "3_property_medium",
+    "pc_040": "3_property_medium",
+    "pc_041": "3_property_adversarial",
+    "pc_042": "3_property_medium",
+    "pc_043": "3_property_medium",
+    "pc_044": "3_property_medium",
+    "pc_045": "3_property_adversarial",
+    "pc_046": "3_property_medium",
+    "pc_047": "3_property_medium",
+    "pc_048": "3_property_medium",
+    "pc_049": "3_property_adversarial",
+    "pc_050": "3_property_adversarial",
+    "pc_051": "3_property_medium",
+    "pc_052": "3_property_medium",
+    "pc_053": "3_property_adversarial",
+    "pc_054": "3_property_medium",
+    "pc_055": "3_property_medium",
+    "pc_056": "3_property_medium",
+    "pc_057": "3_property_adversarial",
+    "pc_058": "3_property_medium",
+    "pc_059": "3_property_medium",
+    "pc_060": "3_property_adversarial",
+    "pc_061": "3_property_medium",
+    "pc_062": "3_property_medium",
+    "pc_063": "3_property_medium",
+    "pc_064": "3_property_medium",
+    "pc_065": "3_property_adversarial",
+    "pc_066": "3_property_adversarial",
+    "pc_067": "3_property_medium",
+    "pc_068": "3_property_medium",
+    "pc_069": "3_property_medium",
+    "pc_070": "3_property_medium",
+    "pc_071": "3_property_medium",
+    "pc_072": "3_property_adversarial",
+    "pc_073": "3_property_medium",
+    "pc_074": "3_property_medium",
+    "pc_075": "3_property_medium",
+    "pc_076": "3_property_medium",
+    "pc_077": "3_property_adversarial",
+    "pc_078": "3_property_adversarial",
+    "pc_079": "3_property_medium",
+    "pc_080": "3_property_adversarial"
+  }
+}

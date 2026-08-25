@@ -1,0 +1,800 @@
+{
+  "version": "benchmark",
+  "imagination_subtypes": {
+    "assoc": {
+      "label": "Anchored divergent association",
+      "definition": "The ability to generate novel, diverse, and non-redundant associations while remaining anchored to the prompt cue, object affordances, or specified property conjunctions.",
+      "facets": {
+        "semantic_distance": {
+          "label": "Semantic distance",
+          "definition": "How far the generated association moves from the cue or common baseline while still being interpretable.",
+          "white_box_signals": [
+            "embedding_or_association_distance",
+            "rarity_against_reference_bank"
+          ]
+        },
+        "flexibility": {
+          "label": "Flexibility",
+          "definition": "Coverage of distinct conceptual categories rather than many variants of the same idea.",
+          "white_box_signals": [
+            "category_diversity",
+            "cluster_diversity"
+          ]
+        },
+        "nonredundancy": {
+          "label": "Non-redundancy",
+          "definition": "Degree to which generated candidates avoid duplicates, paraphrases, or near-identical mechanisms.",
+          "white_box_signals": [
+            "deduplicated_candidate_ratio",
+            "intra_answer_similarity"
+          ]
+        },
+        "grounded_appropriateness": {
+          "label": "Grounded appropriateness",
+          "definition": "Whether a novel association is still supported by cue semantics, object affordances, or the supplied property bank.",
+          "white_box_signals": [
+            "support_gate",
+            "affordance_match",
+            "property_match"
+          ]
+        },
+        "mechanism_elaboration": {
+          "label": "Mechanism elaboration",
+          "definition": "Whether the answer gives a concrete mechanism explaining why the association or use works.",
+          "white_box_signals": [
+            "mechanism_completeness",
+            "explanation_presence"
+          ]
+        }
+      }
+    },
+    "constraint": {
+      "label": "Constrained creative problem solving",
+      "definition": "The ability to construct useful and novel solutions under explicit resources, goals, and hard constraints, with feasibility taking priority over unconstrained novelty.",
+      "facets": {
+        "resource_recombination": {
+          "label": "Resource recombination",
+          "definition": "Creative reuse or combination of available tools, objects, or operations without introducing unavailable resources.",
+          "white_box_signals": [
+            "available_tool_use",
+            "distractor_avoidance",
+            "novel_tool_pairing"
+          ]
+        },
+        "constraint_satisfaction": {
+          "label": "Constraint satisfaction",
+          "definition": "Coverage of all stated hard constraints, including forbidden tools, boundary conditions, and task-specific goal predicates.",
+          "white_box_signals": [
+            "constraint_pass_rate",
+            "forbidden_entity_avoidance"
+          ]
+        },
+        "mechanism_feasibility": {
+          "label": "Mechanism feasibility",
+          "definition": "Physical, causal, or procedural plausibility of the proposed solution steps.",
+          "white_box_signals": [
+            "affordance_compatibility",
+            "physical_feasibility",
+            "unsupported_success_absence"
+          ]
+        },
+        "plan_diversity": {
+          "label": "Plan diversity",
+          "definition": "Whether the answer explores multiple genuinely different solution routes rather than cosmetic variations.",
+          "white_box_signals": [
+            "strategy_cluster_count",
+            "distinct_plan_count"
+          ]
+        },
+        "minimality": {
+          "label": "Minimality",
+          "definition": "Preference for solutions that reach the goal without unnecessary entities, miracles, or unsupported extra assumptions.",
+          "white_box_signals": [
+            "extra_entity_rate",
+            "unsupported_assumption_rate"
+          ]
+        }
+      }
+    },
+    "cf": {
+      "label": "Counterfactual imagination",
+      "definition": "The ability to generate consequences in an alternative world after a licensed intervention while preserving protected facts, causal structure, and world-state consistency.",
+      "facets": {
+        "intervention_alignment": {
+          "label": "Intervention alignment",
+          "definition": "How directly each consequence follows from the specified counterfactual intervention rather than from unrelated changes.",
+          "white_box_signals": [
+            "intervention_keyword_coverage",
+            "premise_relevance"
+          ]
+        },
+        "causal_consistency": {
+          "label": "Causal consistency",
+          "definition": "Whether causal bridges respect the supplied causal edges and avoid invalid causal jumps.",
+          "white_box_signals": [
+            "causal_edge_match",
+            "causal_bridge_validity"
+          ]
+        },
+        "world_state_consistency": {
+          "label": "World-state consistency",
+          "definition": "Whether generated consequences preserve protected variables and avoid forbidden updates.",
+          "white_box_signals": [
+            "protected_variable_respect",
+            "forbidden_update_absence"
+          ]
+        },
+        "consequence_diversity": {
+          "label": "Consequence diversity",
+          "definition": "Coverage of distinct domains, tiers, or second-order implications within the same counterfactual world.",
+          "white_box_signals": [
+            "domain_coverage",
+            "tier_coverage",
+            "nonduplicate_consequences"
+          ]
+        },
+        "minimal_change": {
+          "label": "Minimal change",
+          "definition": "Whether the alternative world changes only what the intervention licenses and does not introduce extra miracles.",
+          "white_box_signals": [
+            "extra_miracle_rate",
+            "unsupported_extra_claim_rate"
+          ]
+        }
+      }
+    },
+    "narrative": {
+      "label": "Narrative imagination",
+      "definition": "The ability to produce a novel and coherent story, scene, or long-form text under supplied facts and constraints without fabricating unsupported world details.",
+      "facets": {
+        "plot_coherence": {
+          "label": "Plot coherence",
+          "definition": "Whether events form a coherent local sequence rather than disconnected or contradictory fragments.",
+          "white_box_signals": [
+            "event_order_consistency",
+            "intra_story_consistency"
+          ]
+        },
+        "constraint_adherence": {
+          "label": "Constraint adherence",
+          "definition": "Whether required motifs, facts, and forbidden motifs are handled correctly.",
+          "white_box_signals": [
+            "required_fact_coverage",
+            "forbidden_motif_absence",
+            "constraint_pass_rate"
+          ]
+        },
+        "grounded_elaboration": {
+          "label": "Grounded elaboration",
+          "definition": "Rich detail that elaborates supported entities, settings, and relations without crossing the evidence boundary.",
+          "white_box_signals": [
+            "supported_claim_rate",
+            "unsupported_span_absence"
+          ]
+        },
+        "entity_persistence": {
+          "label": "Entity persistence",
+          "definition": "Stable treatment of named entities, roles, relations, and world facts across the generated text.",
+          "white_box_signals": [
+            "allowed_entity_use",
+            "entity_role_consistency"
+          ]
+        },
+        "stylistic_variation": {
+          "label": "Stylistic variation",
+          "definition": "Controlled variation in wording, imagery, or rhetorical form while preserving the support boundary.",
+          "white_box_signals": [
+            "lexical_diversity",
+            "style_constraint_match"
+          ]
+        }
+      }
+    },
+    "hypothesis": {
+      "label": "Evidence-constrained ideation",
+      "definition": "The ability to propose novel, feasible, and testable ideas or hypotheses by recombining only the entities, mechanisms, and evidence licensed by a closed evidence pack.",
+      "facets": {
+        "mechanism_novelty": {
+          "label": "Mechanism novelty",
+          "definition": "Whether the hypothesis uses a mechanism or entity-operation combination that is non-trivial relative to the evidence pack and baseline options.",
+          "white_box_signals": [
+            "within_reference_rank",
+            "between_reference_rank",
+            "novel_mechanism_pairing"
+          ]
+        },
+        "evidence_synthesis": {
+          "label": "Evidence synthesis",
+          "definition": "Whether the idea combines multiple supported claims or observations rather than citing isolated facts.",
+          "white_box_signals": [
+            "supported_evidence_count",
+            "claim_combination_coverage",
+            "citation_support"
+          ]
+        },
+        "feasibility": {
+          "label": "Feasibility",
+          "definition": "Whether the proposed hypothesis respects available entities, allowed operations, known affordances, and explicit constraints.",
+          "white_box_signals": [
+            "available_entity_match",
+            "allowed_operation_match",
+            "constraint_violation_absence"
+          ]
+        },
+        "testability": {
+          "label": "Testability",
+          "definition": "Whether the idea includes an observable prediction, intervention, or measurement that could distinguish it from alternatives.",
+          "white_box_signals": [
+            "prediction_presence",
+            "measurement_presence",
+            "falsifiable_condition"
+          ]
+        },
+        "boundary_awareness": {
+          "label": "Boundary awareness",
+          "definition": "Whether the answer avoids overclaiming beyond the evidence pack and abstains when no valid hypothesis is licensed.",
+          "white_box_signals": [
+            "no_valid_abstention",
+            "forbidden_claim_absence",
+            "confidence_overclaim_absence"
+          ]
+        }
+      }
+    },
+    "code": {
+      "label": "Executable code creativity",
+      "definition": "The ability to produce executable, correct, and constraint-following code that uses a strategy meaningfully different from denied or common approaches.",
+      "facets": {
+        "executable_correctness": {
+          "label": "Executable correctness",
+          "definition": "Whether the submitted program parses, runs, and passes the task tests within resource limits.",
+          "white_box_signals": [
+            "syntax_pass",
+            "unit_test_pass_rate",
+            "timeout_absence"
+          ]
+        },
+        "strategy_shift": {
+          "label": "Strategy shift",
+          "definition": "Whether the solution changes algorithmic strategy when common or previously used approaches are denied.",
+          "white_box_signals": [
+            "denied_technique_absence",
+            "strategy_distance"
+          ]
+        },
+        "constraint_following": {
+          "label": "Constraint following",
+          "definition": "Whether the code respects signatures, allowed imports, banned techniques, and safety restrictions.",
+          "white_box_signals": [
+            "signature_match",
+            "import_allowlist_match",
+            "dangerous_call_absence"
+          ]
+        },
+        "technique_novelty": {
+          "label": "Technique novelty",
+          "definition": "How distinct the implemented technique is from known human or cached solutions while remaining correct.",
+          "white_box_signals": [
+            "technique_distance",
+            "historical_solution_distance"
+          ]
+        },
+        "complexity_grounding": {
+          "label": "Complexity grounding",
+          "definition": "Whether any stated complexity or API claim is supported by the actual implementation and allowed libraries.",
+          "white_box_signals": [
+            "complexity_claim_check",
+            "api_call_allowlist_match"
+          ]
+        }
+      }
+    },
+    "analogy": {
+      "label": "Analogical imagination",
+      "definition": "The ability to construct a useful source-target mapping that preserves relational structure while separating source-only facts from target-domain facts.",
+      "facets": {
+        "structural_mapping": {
+          "label": "Structural mapping",
+          "definition": "Coverage of required source-target correspondences across the specified analogy dimensions.",
+          "white_box_signals": [
+            "gold_mapping_coverage",
+            "dimension_coverage"
+          ]
+        },
+        "limit_awareness": {
+          "label": "Limit awareness",
+          "definition": "Explicit recognition of where the analogy stops applying and which transfers are forbidden.",
+          "white_box_signals": [
+            "required_limit_coverage",
+            "forbidden_transfer_absence"
+          ]
+        },
+        "source_target_separation": {
+          "label": "Source-target separation",
+          "definition": "Whether source-domain facts are used only as analogical scaffolding and not asserted as target-domain facts.",
+          "white_box_signals": [
+            "source_only_relation_absence",
+            "target_fact_gate"
+          ]
+        },
+        "abstraction_support": {
+          "label": "Abstraction support",
+          "definition": "Whether the answer states an abstract relation that justifies the analogy beyond surface similarity.",
+          "white_box_signals": [
+            "abstraction_presence",
+            "relation_label_match"
+          ]
+        },
+        "relational_consistency": {
+          "label": "Relational consistency",
+          "definition": "Whether mapped entities preserve relation direction, causal order, and role compatibility.",
+          "white_box_signals": [
+            "relation_direction_match",
+            "role_compatibility"
+          ]
+        }
+      }
+    }
+  },
+  "hallucination_subtypes": {
+    "fact": {
+      "label": "Factual conflict",
+      "definition": "A generated claim conflicts with a closed database, supplied evidence pack, known task facts, or a verifiable external-fact slot explicitly represented in the benchmark.",
+      "facets": {
+        "entity_relation": {
+          "label": "Entity or relation error",
+          "definition": "Wrong entity, attribute, relation, comparison, set membership, or role assignment.",
+          "white_box_signals": [
+            "wrong_answer",
+            "contradicted_fact",
+            "forbidden_answer_hit"
+          ]
+        },
+        "numeric": {
+          "label": "Numeric error",
+          "definition": "Incorrect number, count, unit, ordering, arithmetic result, or quantitative comparison.",
+          "white_box_signals": [
+            "comparison_failure",
+            "set_or_count_failure",
+            "unit_mismatch"
+          ]
+        },
+        "temporal": {
+          "label": "Temporal error",
+          "definition": "Incorrect date, sequence, recency relation, version, or before-after ordering within the support boundary.",
+          "white_box_signals": [
+            "temporal_order_failure",
+            "version_mismatch"
+          ]
+        },
+        "external_fact": {
+          "label": "External fact error",
+          "definition": "A claim presented as world knowledge that is not supported by the benchmark's approved fact source or evidence pack.",
+          "white_box_signals": [
+            "unsupported_fact_claim",
+            "evidence_boundary_violation"
+          ]
+        },
+        "contradicted_claim": {
+          "label": "Contradicted claim",
+          "definition": "A claim that directly opposes an allowed evidence claim, database row, or task fact.",
+          "white_box_signals": [
+            "contradicted_claim_rate",
+            "explicit_contradiction"
+          ]
+        }
+      }
+    },
+    "detail": {
+      "label": "Unsupported detail",
+      "definition": "The answer adds specific names, properties, events, quantities, or explanatory details that are not licensed by the local support boundary, even if the main answer remains plausible.",
+      "facets": {
+        "unsupported_specificity": {
+          "label": "Unsupported specificity",
+          "definition": "Overly specific details with no supporting evidence id, fact sheet entry, or allowed inference path.",
+          "white_box_signals": [
+            "unsupported_claim_rate",
+            "unsupported_span_rate"
+          ]
+        },
+        "fabricated_attribute": {
+          "label": "Fabricated attribute",
+          "definition": "Invented entity attributes such as color, profession, method, material, affiliation, or capability.",
+          "white_box_signals": [
+            "attribute_without_evidence",
+            "entity_attribute_mismatch"
+          ]
+        },
+        "fabricated_event": {
+          "label": "Fabricated event",
+          "definition": "Invented actions, incidents, experiments, relationships, or story events not present in the support boundary.",
+          "white_box_signals": [
+            "event_without_evidence",
+            "unsupported_event_claim"
+          ]
+        },
+        "unsupported_quantity": {
+          "label": "Unsupported quantity",
+          "definition": "A specific count, percentage, date, threshold, or magnitude introduced without support.",
+          "white_box_signals": [
+            "quantity_without_evidence",
+            "unsupported_numeric_claim"
+          ]
+        },
+        "over_elaboration": {
+          "label": "Over-elaboration",
+          "definition": "A cluster of individually small details that collectively pushes beyond the evidence pack or fact sheet.",
+          "white_box_signals": [
+            "unsupported_detail_density",
+            "claim_without_evidence_rate"
+          ]
+        }
+      }
+    },
+    "context": {
+      "label": "Context or support-boundary conflict",
+      "definition": "The answer contradicts, omits, or overclaims relative to the task's local support boundary, input context, premise card, or evidence pack.",
+      "facets": {
+        "input_conflict": {
+          "label": "Input conflict",
+          "definition": "Direct contradiction of a prompt premise, scenario card, fact sheet, or stated condition.",
+          "white_box_signals": [
+            "premise_contradiction",
+            "context_contradiction"
+          ]
+        },
+        "unsupported_overclaim": {
+          "label": "Unsupported overclaim",
+          "definition": "A conclusion broader or stronger than what the local evidence permits.",
+          "white_box_signals": [
+            "unsupported_extra_claim_rate",
+            "claim_support_precision_failure"
+          ]
+        },
+        "omission": {
+          "label": "Omission",
+          "definition": "Failure to include a required fact, condition, intervention, citation, or premise needed for a valid answer.",
+          "white_box_signals": [
+            "missing_required_fact_rate",
+            "intervention_miss",
+            "missing_required_citation"
+          ]
+        },
+        "premise_misuse": {
+          "label": "Premise misuse",
+          "definition": "Uses a provided premise in the wrong direction, under the wrong entity, or outside its licensed scope.",
+          "white_box_signals": [
+            "premise_relevance_failure",
+            "evidence_mismatch"
+          ]
+        },
+        "support_scope_expansion": {
+          "label": "Support-scope expansion",
+          "definition": "Treats a narrow local support boundary as permission to make general world claims.",
+          "white_box_signals": [
+            "evidence_boundary_violation",
+            "world_claim_without_support"
+          ]
+        }
+      }
+    },
+    "logic": {
+      "label": "Logic or physical impossibility",
+      "definition": "The answer requires impossible physics, invalid formal reasoning, invalid causal structure, non-executable procedure, or an internally inconsistent mechanism.",
+      "facets": {
+        "causal_inconsistency": {
+          "label": "Causal inconsistency",
+          "definition": "A cause-effect bridge violates allowed causal edges, reverses causality, or jumps to an unsupported consequence.",
+          "white_box_signals": [
+            "causal_edge_contradiction",
+            "invalid_causal_bridge"
+          ]
+        },
+        "physical_impossibility": {
+          "label": "Physical impossibility",
+          "definition": "A step or use contradicts object affordances, material properties, spatial constraints, or basic physical constraints in the task.",
+          "white_box_signals": [
+            "physical_affordance_failure",
+            "physical_drift"
+          ]
+        },
+        "internal_contradiction": {
+          "label": "Internal contradiction",
+          "definition": "The answer contradicts itself across steps, claims, roles, or generated world states.",
+          "white_box_signals": [
+            "contradiction_rate",
+            "world_consistency_failure"
+          ]
+        },
+        "formal_invalidity": {
+          "label": "Formal invalidity",
+          "definition": "Invalid chain order, comparison, set operation, proof-like step, or rule application in a closed formal task.",
+          "white_box_signals": [
+            "chain_order_failure",
+            "comparison_or_set_failure",
+            "rationale_keyword_failure"
+          ]
+        },
+        "impossible_execution": {
+          "label": "Impossible execution",
+          "definition": "Code, plan, or procedure cannot execute as described because of syntax, runtime, timeout, missing entrypoint, or incompatible steps.",
+          "white_box_signals": [
+            "syntax_error",
+            "runtime_error_rate",
+            "timeout_rate",
+            "missing_entrypoint"
+          ]
+        }
+      }
+    },
+    "drift": {
+      "label": "Cue or entity drift",
+      "definition": "The answer leaves the requested cue, object role, closed world, entity set, or scenario space while appearing to continue the task.",
+      "facets": {
+        "cue_drift": {
+          "label": "Cue drift",
+          "definition": "The generated answer no longer centers the requested word, property, object, or prompt cue.",
+          "white_box_signals": [
+            "cue_drift",
+            "property_anchor_failure"
+          ]
+        },
+        "entity_drift": {
+          "label": "Entity drift",
+          "definition": "The answer introduces, replaces, or confuses entities outside the allowed entity set.",
+          "white_box_signals": [
+            "unresolved_entity",
+            "entity_drift_rate",
+            "unavailable_entity_rate"
+          ]
+        },
+        "world_state_drift": {
+          "label": "World-state drift",
+          "definition": "The answer silently changes protected facts, scenario variables, or closed-world state.",
+          "white_box_signals": [
+            "premise_lock_failure",
+            "forbidden_update_rate"
+          ]
+        },
+        "topic_drift": {
+          "label": "Topic drift",
+          "definition": "The answer changes the task topic, domain, or requested output type without a licensed reason.",
+          "white_box_signals": [
+            "topic_anchor_failure",
+            "domain_mismatch"
+          ]
+        },
+        "role_drift": {
+          "label": "Role drift",
+          "definition": "The answer changes an object's role, character's role, or source-target role in a way unsupported by the task.",
+          "white_box_signals": [
+            "object_role_violation",
+            "entity_persistence_failure"
+          ]
+        }
+      }
+    },
+    "citation": {
+      "label": "Citation or evidence mismatch",
+      "definition": "The answer cites no evidence, an unknown evidence id, or an evidence item that does not support the attached claim.",
+      "facets": {
+        "missing_citation": {
+          "label": "Missing citation",
+          "definition": "A claim that requires evidence is given without an evidence id or citation.",
+          "white_box_signals": [
+            "claim_without_evidence_rate",
+            "missing_required_citation"
+          ]
+        },
+        "unknown_evidence_id": {
+          "label": "Unknown evidence id",
+          "definition": "The answer cites an evidence id that is not present in the supplied evidence pack or fact sheet.",
+          "white_box_signals": [
+            "unknown_evidence_rate"
+          ]
+        },
+        "citation_mismatch": {
+          "label": "Citation mismatch",
+          "definition": "The cited evidence exists but does not entail, support, or align with the claim.",
+          "white_box_signals": [
+            "citation_mismatch_rate",
+            "evidence_mismatch"
+          ]
+        },
+        "unsupported_cited_claim": {
+          "label": "Unsupported cited claim",
+          "definition": "The answer attaches citations to a claim whose key relation or conclusion remains unsupported.",
+          "white_box_signals": [
+            "claim_support_precision_failure",
+            "unsupported_cited_claim_rate"
+          ]
+        },
+        "evidence_overread": {
+          "label": "Evidence overread",
+          "definition": "The answer infers more from an evidence item than the item licenses.",
+          "white_box_signals": [
+            "evidence_boundary_violation",
+            "unsupported_overclaim"
+          ]
+        }
+      }
+    },
+    "boundary": {
+      "label": "Closed-world boundary violation",
+      "definition": "The answer fails to respect a closed or no-valid-answer boundary, including false acceptance, false refusal, unknown entity overclaim, or unsupported confidence.",
+      "facets": {
+        "false_acceptance": {
+          "label": "False acceptance",
+          "definition": "The model gives a substantive answer when the correct behavior is to abstain, reject a false presupposition, or say no valid answer exists.",
+          "white_box_signals": [
+            "false_acceptance",
+            "no_valid_false_acceptance",
+            "unanswerable_false_answer"
+          ]
+        },
+        "false_refusal": {
+          "label": "False refusal",
+          "definition": "The model refuses or claims insufficiency when the task provides enough support for a valid answer.",
+          "white_box_signals": [
+            "false_refusal",
+            "clarification_miss"
+          ]
+        },
+        "unknown_entity_overclaim": {
+          "label": "Unknown entity overclaim",
+          "definition": "The model treats an unknown or out-of-scope entity as if it were licensed by the closed world.",
+          "white_box_signals": [
+            "unknown_entity_overclaim",
+            "unavailable_entity"
+          ]
+        },
+        "closed_world_violation": {
+          "label": "Closed-world violation",
+          "definition": "The answer imports outside facts, entities, operations, or evidence into a closed task.",
+          "white_box_signals": [
+            "closed_boundary_failure",
+            "evidence_boundary_violation",
+            "constraint_or_observation_violation"
+          ]
+        },
+        "confidence_overclaim": {
+          "label": "Confidence overclaim",
+          "definition": "The answer states certainty, feasibility, or evidential support stronger than the support boundary permits.",
+          "white_box_signals": [
+            "unsupported_refusal_reason",
+            "false_feasibility_claim",
+            "unsupported_success"
+          ]
+        }
+      }
+    },
+    "intent": {
+      "label": "Intent or constraint miss",
+      "definition": "The answer satisfies the wrong task, omits user-specified constraints, misinterprets required conditions, violates output format, or invents unavailable tools or APIs.",
+      "facets": {
+        "constraint_omission": {
+          "label": "Constraint omission",
+          "definition": "A stated condition, required property, denied technique, or required output field is ignored or only partially addressed.",
+          "white_box_signals": [
+            "missing_property_coverage",
+            "constraint_satisfaction_failure",
+            "missing_complexity_claim"
+          ]
+        },
+        "misinterpretation": {
+          "label": "Misinterpretation",
+          "definition": "The model answers a different task or treats a constraint as meaning something not stated in the prompt.",
+          "white_box_signals": [
+            "wrong_task_type",
+            "premise_relevance_failure"
+          ]
+        },
+        "format_schema": {
+          "label": "Format or schema violation",
+          "definition": "The answer violates required JSON schema, field names, counts, function signatures, or output structure.",
+          "white_box_signals": [
+            "parse_failure",
+            "schema_violation",
+            "missing_entrypoint"
+          ]
+        },
+        "tool_api": {
+          "label": "Tool or API hallucination",
+          "definition": "The answer invokes unavailable tools, libraries, imports, methods, or API behavior not licensed by the task.",
+          "white_box_signals": [
+            "import_violation",
+            "hallucinated_import_rate",
+            "unsupported_api_call_rate"
+          ]
+        },
+        "forbidden_action": {
+          "label": "Forbidden action",
+          "definition": "The answer uses explicitly banned tools, techniques, motifs, operations, or external knowledge sources.",
+          "white_box_signals": [
+            "extra_tool_violation",
+            "banned_technique_violation_rate",
+            "distractor_tool_violation"
+          ]
+        }
+      }
+    },
+    "false_transfer": {
+      "label": "False analogical transfer",
+      "definition": "The answer uses an analogy to migrate source-domain facts, relations, or conclusions into the target domain without support from the target evidence or gold mapping.",
+      "facets": {
+        "source_only_relation_transfer": {
+          "label": "Source-only relation transfer",
+          "definition": "A relation true only in the source domain is asserted as true in the target domain.",
+          "white_box_signals": [
+            "source_only_relation_transfer",
+            "false_transfer_rate"
+          ]
+        },
+        "target_fact_overwrite": {
+          "label": "Target fact overwrite",
+          "definition": "The analogy causes the answer to contradict or replace an explicit target-domain fact.",
+          "white_box_signals": [
+            "target_fact_gate_failure",
+            "target_fact_contradiction"
+          ]
+        },
+        "mapping_dimension_error": {
+          "label": "Mapping dimension error",
+          "definition": "The answer maps entities across the wrong dimension, such as topic for process or background for result.",
+          "white_box_signals": [
+            "dimension_mismatch",
+            "gold_mapping_miss"
+          ]
+        },
+        "unsupported_inference": {
+          "label": "Unsupported analogical inference",
+          "definition": "The answer draws a target-domain conclusion that is not licensed by either the mapping or target evidence.",
+          "white_box_signals": [
+            "unsupported_inference_rate",
+            "claim_without_evidence_rate"
+          ]
+        },
+        "analogy_limit_ignored": {
+          "label": "Analogy limit ignored",
+          "definition": "The answer fails to state or respect required limits of the analogy.",
+          "white_box_signals": [
+            "limit_awareness_failure",
+            "required_limit_miss"
+          ]
+        }
+      }
+    },
+    "consistency": {
+      "label": "Cross-task fact inconsistency",
+      "definition": "The model describes the same closed-world fact or evidence item inconsistently across task families or repeated prompts.",
+      "facets": {
+        "cross_task_entity_relation": {
+          "label": "Cross-task entity or relation conflict",
+          "definition": "A repeated evidence id is associated with incompatible entities, relations, or claims across GCW, HypoUseSpace, or ClosedWorldFact outputs.",
+          "white_box_signals": [
+            "same_fact_pair_inconsistency",
+            "support_conflict",
+            "semantic_conflict"
+          ]
+        },
+        "cross_task_polarity": {
+          "label": "Cross-task polarity conflict",
+          "definition": "The model asserts and denies the same evidence-bound fact in different task contexts.",
+          "white_box_signals": [
+            "polarity_conflict",
+            "contradiction_conflict"
+          ]
+        },
+        "cross_task_citation": {
+          "label": "Cross-task citation conflict",
+          "definition": "The model cites the same evidence id with mismatched support, unknown evidence, or unstable claim support.",
+          "white_box_signals": [
+            "citation_issue",
+            "unknown_evidence",
+            "citation_mismatch"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,3505 @@
+{
+  "schema": "benchmark",
+  "beat_count": 6,
+  "cards": {
+    "gcw_001": {
+      "title": "The Cracked Bell",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Mira repairs harbor clocks.",
+          "keywords": [
+            "Mira",
+            "repairs",
+            "harbor",
+            "clocks"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Theo cannot read maps.",
+          "keywords": [
+            "Theo",
+            "cannot read maps"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The brass key opens only the lighthouse cabinet.",
+          "keywords": [
+            "brass key",
+            "lighthouse cabinet"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "The cracked bell makes only a dull sound.",
+          "keywords": [
+            "cracked bell",
+            "dull sound"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The ferry leaves the harbor at dusk.",
+          "keywords": [
+            "ferry",
+            "harbor",
+            "dusk"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "relation",
+          "text": "Mira promised Theo she would not leave him behind.",
+          "keywords": [
+            "promised",
+            "not leave"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "No magic, prophecy, teleportation, or weather control.",
+          "forbidden_terms": [
+            "magic",
+            "prophecy",
+            "teleport",
+            "weather control"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "The cracked bell cannot ring loudly or summon ships.",
+          "forbidden_terms": [
+            "rings loudly",
+            "summon ships",
+            "summoned a ship"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "Do not add new named characters.",
+          "forbidden_terms": [
+            "secret sister",
+            "secret brother"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Mira",
+        "Theo",
+        "harbor",
+        "ferry",
+        "lighthouse",
+        "brass key",
+        "lighthouse cabinet",
+        "cracked bell"
+      ],
+      "reference_bank": [
+        "Mira fixes the clock and Theo catches the ferry",
+        "Theo learns to read the map before dusk"
+      ],
+      "motifs": [
+        "time",
+        "brass",
+        "dull sound"
+      ]
+    },
+    "gcw_002": {
+      "title": "The Paper Orchard",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Iris catalogs fruit labels in the depot.",
+          "keywords": [
+            "Iris",
+            "catalogs",
+            "fruit labels"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Jun is allergic to bees.",
+          "keywords": [
+            "Jun",
+            "allergic",
+            "bees"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The paper apples are folded labels, not real fruit.",
+          "keywords": [
+            "paper apples",
+            "folded labels"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "setting",
+          "text": "The depot roof leaks during rain.",
+          "keywords": [
+            "depot",
+            "roof leaks",
+            "rain"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "object",
+          "text": "A wax pencil writes on wet labels.",
+          "keywords": [
+            "wax pencil",
+            "wet labels"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "The shipment list must be restored before morning.",
+          "keywords": [
+            "shipment list",
+            "morning"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The paper apples cannot grow, ripen, or feed anyone.",
+          "forbidden_terms": [
+            "grow apples",
+            "ripen",
+            "real fruit",
+            "feeds everyone"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "No bees may safely approach Jun.",
+          "forbidden_terms": [
+            "Jun keeps bees",
+            "bee swarm helps Jun"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "Stay inside the depot and yard.",
+          "forbidden_terms": [
+            "palace",
+            "airport",
+            "space station"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F3",
+        "F5"
+      ],
+      "allowed_entities": [
+        "Iris",
+        "Jun",
+        "depot",
+        "yard",
+        "paper apples",
+        "folded labels",
+        "wax pencil",
+        "shipment list"
+      ],
+      "reference_bank": [
+        "Iris rewrites the list with the wax pencil",
+        "Jun avoids bees while Iris sorts labels"
+      ],
+      "motifs": [
+        "paper",
+        "rain",
+        "labels"
+      ]
+    },
+    "gcw_003": {
+      "title": "The Silent Train",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Anya cleans the station platform.",
+          "keywords": [
+            "Anya",
+            "cleans",
+            "platform"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Bo hears vibrations better than speech.",
+          "keywords": [
+            "Bo",
+            "vibrations",
+            "speech"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The train whistle is broken and silent.",
+          "keywords": [
+            "train whistle",
+            "broken",
+            "silent"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "A tin lunchbox rattles on metal rails.",
+          "keywords": [
+            "tin lunchbox",
+            "rattles",
+            "rails"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The station has one platform and no loudspeaker.",
+          "keywords": [
+            "one platform",
+            "no loudspeaker"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "Passengers must be warned before the late train enters.",
+          "keywords": [
+            "warned",
+            "late train"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The whistle cannot sound.",
+          "forbidden_terms": [
+            "whistle blows",
+            "whistle screams",
+            "whistle rings"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "No new communication device appears.",
+          "forbidden_terms": [
+            "phone app",
+            "new radio",
+            "loudspeaker"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No supernatural hearing.",
+          "forbidden_terms": [
+            "supernatural",
+            "telepathy"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Anya",
+        "Bo",
+        "station",
+        "platform",
+        "train",
+        "tin lunchbox",
+        "metal rails",
+        "passengers"
+      ],
+      "reference_bank": [
+        "Anya fixes the whistle before the train arrives",
+        "Bo shouts a warning to passengers"
+      ],
+      "motifs": [
+        "vibration",
+        "tin",
+        "silence"
+      ]
+    },
+    "gcw_004": {
+      "title": "The Lantern Ledger",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Lena keeps the night market ledger.",
+          "keywords": [
+            "Lena",
+            "ledger",
+            "night market"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Omar sells oranges but cannot count past twenty.",
+          "keywords": [
+            "Omar",
+            "oranges",
+            "cannot count"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The lantern has a weak battery.",
+          "keywords": [
+            "lantern",
+            "weak battery"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "Orange peels leave a sharp scent.",
+          "keywords": [
+            "orange peels",
+            "sharp scent"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The market closes when the bell at the gate rings once.",
+          "keywords": [
+            "market closes",
+            "gate",
+            "rings once"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "A missing stall payment must be traced.",
+          "keywords": [
+            "missing",
+            "stall payment"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The lantern cannot become bright again without a battery.",
+          "forbidden_terms": [
+            "lantern blazes",
+            "infinite light",
+            "magic light"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "Omar cannot suddenly do advanced arithmetic.",
+          "forbidden_terms": [
+            "Omar calculates perfectly",
+            "Omar counts to a thousand"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No police detective enters.",
+          "forbidden_terms": [
+            "detective arrives",
+            "police inspector"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "allowed_entities": [
+        "Lena",
+        "Omar",
+        "night market",
+        "ledger",
+        "lantern",
+        "orange peels",
+        "gate bell",
+        "stall"
+      ],
+      "reference_bank": [
+        "Lena finds the missing payment by checking the ledger",
+        "Omar remembers the customer who forgot to pay"
+      ],
+      "motifs": [
+        "scent",
+        "light",
+        "numbers"
+      ]
+    },
+    "gcw_005": {
+      "title": "The Glass Garden",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Nia tends seedlings in a greenhouse.",
+          "keywords": [
+            "Nia",
+            "seedlings",
+            "greenhouse"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Soren is color-blind but notices temperature.",
+          "keywords": [
+            "Soren",
+            "color-blind",
+            "temperature"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "One glass panel is cracked but still in place.",
+          "keywords": [
+            "glass panel",
+            "cracked"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "The thermometer is slow by ten minutes.",
+          "keywords": [
+            "thermometer",
+            "slow",
+            "ten minutes"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "A frost is expected before dawn.",
+          "keywords": [
+            "frost",
+            "before dawn"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "The warmest bench must be found for the seedlings.",
+          "keywords": [
+            "warmest bench",
+            "seedlings"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The cracked glass cannot heal or vanish.",
+          "forbidden_terms": [
+            "glass heals",
+            "crack vanishes"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "The thermometer reading is delayed.",
+          "forbidden_terms": [
+            "instant thermometer",
+            "perfect reading"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No plant grows overnight into a tree.",
+          "forbidden_terms": [
+            "overnight tree",
+            "instant forest"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Nia",
+        "Soren",
+        "greenhouse",
+        "seedlings",
+        "glass panel",
+        "thermometer",
+        "bench",
+        "frost"
+      ],
+      "reference_bank": [
+        "Nia reads the thermometer and moves the seedlings",
+        "Soren sees color changes in the plants"
+      ],
+      "motifs": [
+        "glass",
+        "temperature",
+        "frost"
+      ]
+    },
+    "gcw_006": {
+      "title": "The Borrowed Coat",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Eli mends coats in the bus depot.",
+          "keywords": [
+            "Eli",
+            "mends coats"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Mara refuses to speak above a whisper.",
+          "keywords": [
+            "Mara",
+            "whisper"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The borrowed coat has a torn red lining.",
+          "keywords": [
+            "borrowed coat",
+            "torn red lining"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "A bus token is sewn into the hem.",
+          "keywords": [
+            "bus token",
+            "hem"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The last bus leaves at nine.",
+          "keywords": [
+            "last bus",
+            "nine"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "Mara must return the coat without revealing the token.",
+          "keywords": [
+            "return",
+            "without revealing"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The coat cannot hide a living person.",
+          "forbidden_terms": [
+            "person hidden inside",
+            "coat walks"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "Mara does not shout.",
+          "forbidden_terms": [
+            "Mara shouts",
+            "Mara screams"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No new owner is named.",
+          "forbidden_terms": [
+            "Lord",
+            "Princess",
+            "Detective"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Eli",
+        "Mara",
+        "bus depot",
+        "borrowed coat",
+        "red lining",
+        "bus token",
+        "hem",
+        "last bus"
+      ],
+      "reference_bank": [
+        "Eli sews the coat before the last bus",
+        "Mara returns the token openly"
+      ],
+      "motifs": [
+        "lining",
+        "whisper",
+        "token"
+      ]
+    },
+    "gcw_007": {
+      "title": "The Salt Map",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Pavel runs the pier cafe.",
+          "keywords": [
+            "Pavel",
+            "pier cafe"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Ro remembers routes by smell.",
+          "keywords": [
+            "Ro",
+            "routes",
+            "smell"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The paper map is blurred by salt water.",
+          "keywords": [
+            "paper map",
+            "blurred",
+            "salt water"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "Three jars hold salt, sugar, and tea.",
+          "keywords": [
+            "jars",
+            "salt",
+            "sugar",
+            "tea"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "Fog hides the pier signs.",
+          "keywords": [
+            "fog",
+            "pier signs"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "Ro must guide a delivery cart to the cafe.",
+          "keywords": [
+            "guide",
+            "delivery cart"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The blurred map cannot become clear again.",
+          "forbidden_terms": [
+            "map clears",
+            "map redraws itself"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "Ro cannot see through fog.",
+          "forbidden_terms": [
+            "sees through fog",
+            "x-ray vision"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No GPS or phone appears.",
+          "forbidden_terms": [
+            "GPS",
+            "phone app"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Pavel",
+        "Ro",
+        "pier cafe",
+        "paper map",
+        "salt water",
+        "salt",
+        "sugar",
+        "tea",
+        "fog",
+        "delivery cart"
+      ],
+      "reference_bank": [
+        "Ro follows the blurred map to the cafe",
+        "Pavel calls the delivery driver"
+      ],
+      "motifs": [
+        "salt",
+        "fog",
+        "smell"
+      ]
+    },
+    "gcw_008": {
+      "title": "The Blue Ticket",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Ada checks tickets at the small theater.",
+          "keywords": [
+            "Ada",
+            "tickets",
+            "theater"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Finn lies when he is nervous.",
+          "keywords": [
+            "Finn",
+            "lies",
+            "nervous"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The blue ticket is valid only for the balcony.",
+          "keywords": [
+            "blue ticket",
+            "balcony"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "The balcony door sticks unless pushed twice.",
+          "keywords": [
+            "balcony door",
+            "pushed twice"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The show begins after the lobby clock chimes.",
+          "keywords": [
+            "show begins",
+            "clock chimes"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "Ada must seat Finn without delaying the show.",
+          "keywords": [
+            "seat Finn",
+            "without delaying"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The ticket cannot become valid for the main floor.",
+          "forbidden_terms": [
+            "main floor ticket",
+            "ticket changes color"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "Finn's lie cannot alter the ticket.",
+          "forbidden_terms": [
+            "lie changes",
+            "ticket transforms"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No manager rescues the scene.",
+          "forbidden_terms": [
+            "manager arrives",
+            "owner appears"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Ada",
+        "Finn",
+        "small theater",
+        "blue ticket",
+        "balcony",
+        "balcony door",
+        "lobby clock",
+        "show"
+      ],
+      "reference_bank": [
+        "Ada sends Finn to the balcony",
+        "Finn admits he has the wrong ticket"
+      ],
+      "motifs": [
+        "blue",
+        "door",
+        "lie"
+      ]
+    },
+    "gcw_009": {
+      "title": "The Rained-Out Parade",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Tess carries the parade banner.",
+          "keywords": [
+            "Tess",
+            "parade banner"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Milo drums too softly to lead a march.",
+          "keywords": [
+            "Milo",
+            "drums softly"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The banner dye runs in rain.",
+          "keywords": [
+            "banner dye",
+            "runs",
+            "rain"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "A stack of empty cups is stored under the stage.",
+          "keywords": [
+            "empty cups",
+            "stage"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "Rain has emptied the main street.",
+          "keywords": [
+            "rain",
+            "main street"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "The route must be marked for late walkers.",
+          "keywords": [
+            "route",
+            "marked"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "No one can stop the rain.",
+          "forbidden_terms": [
+            "stops the rain",
+            "weather control"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "Milo's drum remains soft.",
+          "forbidden_terms": [
+            "drum booms",
+            "deafening drum"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "The street is mostly empty.",
+          "forbidden_terms": [
+            "crowded street",
+            "thousands arrive"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "allowed_entities": [
+        "Tess",
+        "Milo",
+        "parade banner",
+        "empty cups",
+        "stage",
+        "rain",
+        "main street",
+        "late walkers"
+      ],
+      "reference_bank": [
+        "Tess carries the banner through the rain",
+        "Milo drums louder and restarts the parade"
+      ],
+      "motifs": [
+        "rain",
+        "dye",
+        "cups"
+      ]
+    },
+    "gcw_010": {
+      "title": "The Copper Kite",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Quin repairs roof antennas.",
+          "keywords": [
+            "Quin",
+            "roof antennas"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Lark is afraid of heights.",
+          "keywords": [
+            "Lark",
+            "afraid of heights"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The copper kite frame conducts electricity.",
+          "keywords": [
+            "copper kite frame",
+            "conducts"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "The cloth tail is torn but long.",
+          "keywords": [
+            "cloth tail",
+            "torn",
+            "long"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "A storm is near but not overhead.",
+          "keywords": [
+            "storm",
+            "near"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "A warning flag must reach the roofline.",
+          "keywords": [
+            "warning flag",
+            "roofline"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The copper frame must not be flown into lightning.",
+          "forbidden_terms": [
+            "lightning strike",
+            "summons lightning"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "Lark does not climb the roof.",
+          "forbidden_terms": [
+            "Lark climbs",
+            "Lark on the roof"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No drone or aircraft appears.",
+          "forbidden_terms": [
+            "drone",
+            "helicopter"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Quin",
+        "Lark",
+        "roof antennas",
+        "copper kite frame",
+        "cloth tail",
+        "storm",
+        "warning flag",
+        "roofline"
+      ],
+      "reference_bank": [
+        "Quin flies the kite to the roof",
+        "Lark overcomes fear and climbs"
+      ],
+      "motifs": [
+        "copper",
+        "height",
+        "cloth"
+      ]
+    },
+    "gcw_011": {
+      "title": "The Last Elevator",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Noor services the apartment elevator.",
+          "keywords": [
+            "Noor",
+            "elevator"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Ben cannot stand for long.",
+          "keywords": [
+            "Ben",
+            "cannot stand"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The elevator stops only at even-numbered floors.",
+          "keywords": [
+            "elevator",
+            "even-numbered floors"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "A folding chair fits in the elevator.",
+          "keywords": [
+            "folding chair",
+            "fits"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The stairwell lights are out.",
+          "keywords": [
+            "stairwell lights",
+            "out"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "Ben must reach the fifth floor clinic.",
+          "keywords": [
+            "fifth floor clinic"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The elevator cannot stop at odd floors.",
+          "forbidden_terms": [
+            "stops at fifth",
+            "odd floors work"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "Ben cannot climb five flights.",
+          "forbidden_terms": [
+            "Ben runs up",
+            "Ben climbs all stairs"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No repair crew appears.",
+          "forbidden_terms": [
+            "repair crew arrives"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Noor",
+        "Ben",
+        "apartment elevator",
+        "even-numbered floors",
+        "folding chair",
+        "stairwell",
+        "fifth floor clinic"
+      ],
+      "reference_bank": [
+        "Noor fixes the elevator to stop at five",
+        "Ben climbs the dark stairs"
+      ],
+      "motifs": [
+        "even",
+        "chair",
+        "clinic"
+      ]
+    },
+    "gcw_012": {
+      "title": "The Ink Bridge",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Ivo prints ferry notices.",
+          "keywords": [
+            "Ivo",
+            "ferry notices"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Celia reads mirror writing easily.",
+          "keywords": [
+            "Celia",
+            "mirror writing"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The ink is waterproof after it dries.",
+          "keywords": [
+            "ink",
+            "waterproof",
+            "dries"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "The footbridge is closed for loose boards.",
+          "keywords": [
+            "footbridge",
+            "closed",
+            "loose boards"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "A river splits the village square.",
+          "keywords": [
+            "river",
+            "village square"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "A warning must be visible from the far bank.",
+          "keywords": [
+            "warning",
+            "far bank"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The ink cannot form a physical bridge.",
+          "forbidden_terms": [
+            "ink bridge carries",
+            "walk on ink"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "The closed bridge remains unsafe.",
+          "forbidden_terms": [
+            "bridge is safe",
+            "boards repair themselves"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No boat appears.",
+          "forbidden_terms": [
+            "boat arrives",
+            "new boat"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Ivo",
+        "Celia",
+        "ferry notices",
+        "ink",
+        "footbridge",
+        "loose boards",
+        "river",
+        "village square",
+        "far bank"
+      ],
+      "reference_bank": [
+        "Ivo repairs the bridge with ink labels",
+        "Celia reads the notice across the river"
+      ],
+      "motifs": [
+        "ink",
+        "mirror",
+        "river"
+      ]
+    },
+    "gcw_013": {
+      "title": "The Empty Aquarium",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Rae cleans the school aquarium.",
+          "keywords": [
+            "Rae",
+            "school aquarium"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Tomas knows fish names but not their care needs.",
+          "keywords": [
+            "Tomas",
+            "fish names"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The aquarium has no fish and a cracked lid.",
+          "keywords": [
+            "aquarium",
+            "no fish",
+            "cracked lid"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "Blue gravel remains in the tank.",
+          "keywords": [
+            "blue gravel",
+            "tank"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "Parents visit the classroom at noon.",
+          "keywords": [
+            "parents",
+            "classroom",
+            "noon"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "The empty tank must still teach something true.",
+          "keywords": [
+            "empty tank",
+            "teach"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "No fish appear in the tank.",
+          "forbidden_terms": [
+            "fish appears",
+            "new fish",
+            "goldfish returns"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "The lid stays cracked.",
+          "forbidden_terms": [
+            "lid heals",
+            "uncracked lid"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No virtual screen is added.",
+          "forbidden_terms": [
+            "tablet screen",
+            "projector"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "allowed_entities": [
+        "Rae",
+        "Tomas",
+        "school aquarium",
+        "cracked lid",
+        "blue gravel",
+        "tank",
+        "parents",
+        "classroom"
+      ],
+      "reference_bank": [
+        "Rae buys a new fish before noon",
+        "Tomas names imaginary fish"
+      ],
+      "motifs": [
+        "empty",
+        "blue",
+        "lesson"
+      ]
+    },
+    "gcw_014": {
+      "title": "The Clockless School",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Vera teaches music in the school hall.",
+          "keywords": [
+            "Vera",
+            "music",
+            "school hall"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Nico taps rhythms when anxious.",
+          "keywords": [
+            "Nico",
+            "taps rhythms"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "All wall clocks have been removed.",
+          "keywords": [
+            "wall clocks",
+            "removed"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "The piano pedal squeaks every seventh press.",
+          "keywords": [
+            "piano pedal",
+            "seventh press"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "Exams start when the head teacher opens the hall door.",
+          "keywords": [
+            "exams",
+            "hall door"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "The students need a fair sense of waiting time.",
+          "keywords": [
+            "fair",
+            "waiting time"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "No clock or watch appears.",
+          "forbidden_terms": [
+            "watch",
+            "new clock",
+            "phone timer"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "The pedal squeaks only every seventh press.",
+          "forbidden_terms": [
+            "squeaks every press",
+            "silent pedal"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No hypnosis or mind control.",
+          "forbidden_terms": [
+            "hypnosis",
+            "mind control"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Vera",
+        "Nico",
+        "school hall",
+        "wall clocks",
+        "piano pedal",
+        "students",
+        "head teacher",
+        "hall door"
+      ],
+      "reference_bank": [
+        "Vera finds a hidden clock",
+        "Nico guesses the time perfectly"
+      ],
+      "motifs": [
+        "rhythm",
+        "waiting",
+        "seventh"
+      ]
+    },
+    "gcw_015": {
+      "title": "The Seed Library",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Mina labels seed packets.",
+          "keywords": [
+            "Mina",
+            "seed packets"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Hal cannot smell smoke.",
+          "keywords": [
+            "Hal",
+            "cannot smell smoke"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The old seed drawer sticks when humid.",
+          "keywords": [
+            "seed drawer",
+            "sticks",
+            "humid"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "A clay bowl holds dry sand.",
+          "keywords": [
+            "clay bowl",
+            "dry sand"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The library basement is damp.",
+          "keywords": [
+            "library basement",
+            "damp"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "Rare seeds must stay dry overnight.",
+          "keywords": [
+            "rare seeds",
+            "dry"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "Seeds do not sprout overnight.",
+          "forbidden_terms": [
+            "sprout overnight",
+            "instant garden"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "Hal cannot detect smoke by smell.",
+          "forbidden_terms": [
+            "Hal smells smoke"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No dehumidifier appears.",
+          "forbidden_terms": [
+            "dehumidifier",
+            "electric dryer"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Mina",
+        "Hal",
+        "seed packets",
+        "seed drawer",
+        "clay bowl",
+        "dry sand",
+        "library basement",
+        "rare seeds"
+      ],
+      "reference_bank": [
+        "Mina moves the seeds upstairs",
+        "Hal smells danger and saves the seeds"
+      ],
+      "motifs": [
+        "seed",
+        "sand",
+        "damp"
+      ]
+    },
+    "gcw_016": {
+      "title": "The Broken Compass",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Jo leads museum tours.",
+          "keywords": [
+            "Jo",
+            "museum tours"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Priya remembers left and right by touch.",
+          "keywords": [
+            "Priya",
+            "left and right",
+            "touch"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The compass needle is stuck pointing west.",
+          "keywords": [
+            "compass needle",
+            "west"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "The marble floor has raised cracks.",
+          "keywords": [
+            "marble floor",
+            "raised cracks"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The sculpture wing lights flicker.",
+          "keywords": [
+            "sculpture wing",
+            "lights flicker"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "Visitors must exit without panic.",
+          "keywords": [
+            "visitors",
+            "exit"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The compass does not point north.",
+          "forbidden_terms": [
+            "points north",
+            "compass fixed"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "The lights keep flickering.",
+          "forbidden_terms": [
+            "lights stabilize",
+            "lights become bright"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No emergency crew enters.",
+          "forbidden_terms": [
+            "firefighters arrive",
+            "police arrive"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Jo",
+        "Priya",
+        "museum",
+        "compass",
+        "west",
+        "marble floor",
+        "raised cracks",
+        "sculpture wing",
+        "visitors"
+      ],
+      "reference_bank": [
+        "Jo fixes the compass and leads visitors out",
+        "Priya sees the exit signs clearly"
+      ],
+      "motifs": [
+        "west",
+        "touch",
+        "cracks"
+      ]
+    },
+    "gcw_017": {
+      "title": "The Dust Museum",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Alma catalogs dust samples.",
+          "keywords": [
+            "Alma",
+            "dust samples"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Reed sneezes near chalk dust.",
+          "keywords": [
+            "Reed",
+            "sneezes",
+            "chalk dust"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The oldest sample is sealed in a glass vial.",
+          "keywords": [
+            "oldest sample",
+            "glass vial"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "A label printer has no ink ribbon.",
+          "keywords": [
+            "label printer",
+            "no ink ribbon"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The museum archive is dry and windowless.",
+          "keywords": [
+            "archive",
+            "dry",
+            "windowless"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "The samples must be reordered before inspection.",
+          "keywords": [
+            "samples",
+            "reordered"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The sealed vial is not opened.",
+          "forbidden_terms": [
+            "opens the vial",
+            "vial breaks"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "The printer cannot print without ribbon.",
+          "forbidden_terms": [
+            "printer works",
+            "new ribbon appears"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No wind blows inside.",
+          "forbidden_terms": [
+            "wind blows",
+            "window opens"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Alma",
+        "Reed",
+        "dust samples",
+        "glass vial",
+        "label printer",
+        "ink ribbon",
+        "museum archive",
+        "inspection"
+      ],
+      "reference_bank": [
+        "Alma prints new labels",
+        "Reed opens the vial and learns its origin"
+      ],
+      "motifs": [
+        "dust",
+        "glass",
+        "label"
+      ]
+    },
+    "gcw_018": {
+      "title": "The Snow Room",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Kira stores costumes in the cold room.",
+          "keywords": [
+            "Kira",
+            "costumes",
+            "cold room"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Sol dislikes wool but can sew cotton.",
+          "keywords": [
+            "Sol",
+            "dislikes wool",
+            "sew cotton"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The snow machine is unplugged.",
+          "keywords": [
+            "snow machine",
+            "unplugged"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "A cotton sheet is stained with blue dye.",
+          "keywords": [
+            "cotton sheet",
+            "blue dye"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The stage rehearsal starts in one hour.",
+          "keywords": [
+            "rehearsal",
+            "one hour"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "A winter scene must be suggested without real snow.",
+          "keywords": [
+            "winter scene",
+            "without snow"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The unplugged snow machine cannot make snow.",
+          "forbidden_terms": [
+            "machine makes snow",
+            "snow falls"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "Sol does not sew wool.",
+          "forbidden_terms": [
+            "Sol sews wool",
+            "wool costume"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No real blizzard enters.",
+          "forbidden_terms": [
+            "blizzard",
+            "storm inside"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Kira",
+        "Sol",
+        "costumes",
+        "cold room",
+        "snow machine",
+        "cotton sheet",
+        "blue dye",
+        "stage rehearsal",
+        "winter scene"
+      ],
+      "reference_bank": [
+        "Kira plugs in the snow machine",
+        "Sol sews a wool snowbank"
+      ],
+      "motifs": [
+        "cotton",
+        "blue",
+        "cold"
+      ]
+    },
+    "gcw_019": {
+      "title": "The Tin Boat",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Mae tests toy boats in the canal.",
+          "keywords": [
+            "Mae",
+            "toy boats",
+            "canal"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Dorian can tie knots but cannot swim.",
+          "keywords": [
+            "Dorian",
+            "tie knots",
+            "cannot swim"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The tin boat floats only when empty.",
+          "keywords": [
+            "tin boat",
+            "floats",
+            "empty"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "A red thread is strong enough for paper tags.",
+          "keywords": [
+            "red thread",
+            "paper tags"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The canal current is slow.",
+          "keywords": [
+            "canal current",
+            "slow"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "A note must reach the opposite bank.",
+          "keywords": [
+            "note",
+            "opposite bank"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The tin boat cannot carry a person.",
+          "forbidden_terms": [
+            "Dorian rides",
+            "boat carries Mae"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "Dorian cannot swim.",
+          "forbidden_terms": [
+            "Dorian swims"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No motor is added.",
+          "forbidden_terms": [
+            "motor",
+            "engine"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Mae",
+        "Dorian",
+        "toy boats",
+        "canal",
+        "tin boat",
+        "red thread",
+        "paper tags",
+        "opposite bank",
+        "note"
+      ],
+      "reference_bank": [
+        "Dorian swims the note across",
+        "Mae builds a large boat"
+      ],
+      "motifs": [
+        "tin",
+        "thread",
+        "current"
+      ]
+    },
+    "gcw_020": {
+      "title": "The Locked Bakery",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Ruth bakes before sunrise.",
+          "keywords": [
+            "Ruth",
+            "bakes",
+            "sunrise"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Yani forgets spoken instructions.",
+          "keywords": [
+            "Yani",
+            "forgets",
+            "spoken"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The bakery key is inside the locked bakery.",
+          "keywords": [
+            "bakery key",
+            "inside",
+            "locked bakery"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "A flour sack leaks a thin trail.",
+          "keywords": [
+            "flour sack",
+            "thin trail"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The back window is open only a handspan.",
+          "keywords": [
+            "back window",
+            "handspan"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "The delivery list must be retrieved without breaking glass.",
+          "keywords": [
+            "delivery list",
+            "without breaking"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "No glass is broken.",
+          "forbidden_terms": [
+            "breaks the glass",
+            "shattered window"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "The key starts inside the bakery.",
+          "forbidden_terms": [
+            "key in pocket",
+            "spare key appears"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "Yani still forgets spoken instructions.",
+          "forbidden_terms": [
+            "Yani remembers perfectly"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Ruth",
+        "Yani",
+        "bakery",
+        "bakery key",
+        "flour sack",
+        "back window",
+        "delivery list",
+        "glass"
+      ],
+      "reference_bank": [
+        "Ruth uses a spare key",
+        "Yani remembers the instructions and gets the list"
+      ],
+      "motifs": [
+        "flour",
+        "window",
+        "memory"
+      ]
+    },
+    "gcw_021": {
+      "title": "The Theater Fuse",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Pia runs the theater lights.",
+          "keywords": [
+            "Pia",
+            "theater lights"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Cole can whistle one clear note.",
+          "keywords": [
+            "Cole",
+            "whistle",
+            "one note"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The spare fuse is the wrong size.",
+          "keywords": [
+            "spare fuse",
+            "wrong size"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "A hand mirror reflects the exit sign.",
+          "keywords": [
+            "hand mirror",
+            "exit sign"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The audience is seated in dim light.",
+          "keywords": [
+            "audience",
+            "dim light"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "The aisles must be marked safely.",
+          "keywords": [
+            "aisles",
+            "marked safely"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The wrong fuse cannot repair the lights.",
+          "forbidden_terms": [
+            "fuse fits",
+            "lights restored"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "Cole whistles only one note.",
+          "forbidden_terms": [
+            "Cole sings a song",
+            "full melody"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No flashlight appears.",
+          "forbidden_terms": [
+            "flashlight",
+            "phone light"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Pia",
+        "Cole",
+        "theater lights",
+        "spare fuse",
+        "hand mirror",
+        "exit sign",
+        "audience",
+        "aisles"
+      ],
+      "reference_bank": [
+        "Pia replaces the fuse and restores the lights",
+        "Cole sings to calm the audience"
+      ],
+      "motifs": [
+        "mirror",
+        "dim",
+        "note"
+      ]
+    },
+    "gcw_022": {
+      "title": "The Orchard Radio",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Gale repairs radios in the orchard shed.",
+          "keywords": [
+            "Gale",
+            "radios",
+            "orchard shed"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Noor recognizes birds by rhythm.",
+          "keywords": [
+            "Noor",
+            "birds",
+            "rhythm"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The radio receives static but no voices.",
+          "keywords": [
+            "radio",
+            "static",
+            "no voices"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "Apple crates are stacked in three rows.",
+          "keywords": [
+            "apple crates",
+            "three rows"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "A child is lost somewhere in the orchard.",
+          "keywords": [
+            "child",
+            "lost",
+            "orchard"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "The searchers need a repeatable signal.",
+          "keywords": [
+            "searchers",
+            "repeatable signal"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The radio does not receive human voices.",
+          "forbidden_terms": [
+            "voice on the radio",
+            "child speaks through radio"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "No drone or tracking device appears.",
+          "forbidden_terms": [
+            "drone",
+            "GPS tracker"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "The crates remain crates.",
+          "forbidden_terms": [
+            "crates fly",
+            "crate becomes robot"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Gale",
+        "Noor",
+        "radio",
+        "orchard shed",
+        "static",
+        "apple crates",
+        "child",
+        "orchard",
+        "searchers"
+      ],
+      "reference_bank": [
+        "Gale fixes the radio and hears the child",
+        "Noor follows footprints"
+      ],
+      "motifs": [
+        "static",
+        "crates",
+        "rhythm"
+      ]
+    },
+    "gcw_023": {
+      "title": "The Fog Market",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Sima sells spices at the morning market.",
+          "keywords": [
+            "Sima",
+            "spices",
+            "market"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Otto identifies coins by weight.",
+          "keywords": [
+            "Otto",
+            "coins",
+            "weight"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The fog hides stall signs.",
+          "keywords": [
+            "fog",
+            "stall signs"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "Cumin and clove sit in open bowls.",
+          "keywords": [
+            "cumin",
+            "clove",
+            "open bowls"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The market lanes form a square.",
+          "keywords": [
+            "market lanes",
+            "square"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "A lost coin pouch must return to its owner.",
+          "keywords": [
+            "coin pouch",
+            "owner"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The fog does not clear suddenly.",
+          "forbidden_terms": [
+            "fog clears",
+            "sun burns it away"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "Otto cannot see through fog.",
+          "forbidden_terms": [
+            "sees through fog"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No town guard solves it.",
+          "forbidden_terms": [
+            "guard arrives",
+            "police arrive"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Sima",
+        "Otto",
+        "spices",
+        "morning market",
+        "fog",
+        "stall signs",
+        "cumin",
+        "clove",
+        "coin pouch",
+        "owner"
+      ],
+      "reference_bank": [
+        "The fog clears and Sima sees the owner",
+        "Otto reads the name on the pouch"
+      ],
+      "motifs": [
+        "fog",
+        "spice",
+        "weight"
+      ]
+    },
+    "gcw_024": {
+      "title": "The Museum Umbrella",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Lio watches the museum cloakroom.",
+          "keywords": [
+            "Lio",
+            "cloakroom"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Hana cannot run indoors.",
+          "keywords": [
+            "Hana",
+            "cannot run"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The umbrella is transparent and torn along one rib.",
+          "keywords": [
+            "umbrella",
+            "transparent",
+            "torn rib"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "A wet floor sign is missing.",
+          "keywords": [
+            "wet floor sign",
+            "missing"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "Rainwater drips near the marble stairs.",
+          "keywords": [
+            "rainwater",
+            "marble stairs"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "Visitors must notice the slippery patch.",
+          "keywords": [
+            "visitors",
+            "slippery patch"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The umbrella cannot become whole.",
+          "forbidden_terms": [
+            "umbrella repairs itself",
+            "untorn umbrella"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "Hana does not run indoors.",
+          "forbidden_terms": [
+            "Hana runs"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No new sign appears.",
+          "forbidden_terms": [
+            "new wet floor sign",
+            "printed sign appears"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F5"
+      ],
+      "allowed_entities": [
+        "Lio",
+        "Hana",
+        "museum",
+        "cloakroom",
+        "umbrella",
+        "wet floor sign",
+        "rainwater",
+        "marble stairs",
+        "visitors"
+      ],
+      "reference_bank": [
+        "Lio finds a spare wet floor sign",
+        "Hana runs to warn visitors"
+      ],
+      "motifs": [
+        "transparent",
+        "rain",
+        "stairs"
+      ]
+    },
+    "gcw_025": {
+      "title": "The Dry Fountain",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Etta sweeps the plaza fountain.",
+          "keywords": [
+            "Etta",
+            "plaza fountain"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Samir follows echoes well.",
+          "keywords": [
+            "Samir",
+            "echoes"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The fountain basin is dry and tiled.",
+          "keywords": [
+            "fountain basin",
+            "dry",
+            "tiled"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "A brass coin is stuck under one tile edge.",
+          "keywords": [
+            "brass coin",
+            "tile edge"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The plaza is crowded at lunch.",
+          "keywords": [
+            "plaza",
+            "crowded",
+            "lunch"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "A quiet child must be found without shouting.",
+          "keywords": [
+            "quiet child",
+            "without shouting"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The dry fountain does not fill with water.",
+          "forbidden_terms": [
+            "water gushes",
+            "fountain fills"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "No one shouts.",
+          "forbidden_terms": [
+            "shouts",
+            "screams"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "The coin remains a coin.",
+          "forbidden_terms": [
+            "coin becomes compass",
+            "magic coin"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Etta",
+        "Samir",
+        "plaza fountain",
+        "fountain basin",
+        "tiles",
+        "brass coin",
+        "plaza",
+        "quiet child"
+      ],
+      "reference_bank": [
+        "Etta shouts until the child answers",
+        "The fountain fills and reveals the child"
+      ],
+      "motifs": [
+        "echo",
+        "coin",
+        "dry"
+      ]
+    },
+    "gcw_026": {
+      "title": "The Pocket Planetarium",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Liv teaches astronomy after school.",
+          "keywords": [
+            "Liv",
+            "astronomy"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Arno confuses east and west.",
+          "keywords": [
+            "Arno",
+            "east",
+            "west"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The pocket planetarium is a cardboard star wheel.",
+          "keywords": [
+            "pocket planetarium",
+            "cardboard star wheel"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "The flashlight has weak batteries.",
+          "keywords": [
+            "flashlight",
+            "weak batteries"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "Clouds hide the real sky.",
+          "keywords": [
+            "clouds",
+            "hide",
+            "sky"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "The class must learn one constellation indoors.",
+          "keywords": [
+            "class",
+            "constellation",
+            "indoors"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The cardboard star wheel is not a real planetarium machine.",
+          "forbidden_terms": [
+            "projects real stars",
+            "opens space portal"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "Arno still confuses east and west.",
+          "forbidden_terms": [
+            "Arno knows directions perfectly"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "The clouds do not part.",
+          "forbidden_terms": [
+            "clouds part",
+            "sky clears"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Liv",
+        "Arno",
+        "astronomy",
+        "pocket planetarium",
+        "cardboard star wheel",
+        "flashlight",
+        "clouds",
+        "class",
+        "constellation"
+      ],
+      "reference_bank": [
+        "The clouds part and the class sees stars",
+        "Liv uses a real projector"
+      ],
+      "motifs": [
+        "cardboard",
+        "stars",
+        "weak light"
+      ]
+    },
+    "gcw_027": {
+      "title": "The Stalled Ferris Wheel",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Mara sells tickets at the fair.",
+          "keywords": [
+            "Mara",
+            "tickets",
+            "fair"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Theo counts steps better than minutes.",
+          "keywords": [
+            "Theo",
+            "steps",
+            "minutes"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The Ferris wheel is stopped with one gondola low.",
+          "keywords": [
+            "Ferris wheel",
+            "stopped",
+            "gondola low"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "A rope barrier can guide a line but not lift weight.",
+          "keywords": [
+            "rope barrier",
+            "line",
+            "not lift"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The fairground generator is being repaired elsewhere.",
+          "keywords": [
+            "generator",
+            "repaired elsewhere"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "The waiting crowd needs order and calm.",
+          "keywords": [
+            "crowd",
+            "order",
+            "calm"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The rope barrier cannot pull the gondola.",
+          "forbidden_terms": [
+            "rope lifts",
+            "pulls gondola"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "The generator is not available.",
+          "forbidden_terms": [
+            "generator starts",
+            "generator returns"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No mechanic enters the scene.",
+          "forbidden_terms": [
+            "mechanic arrives"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Mara",
+        "Theo",
+        "fair",
+        "tickets",
+        "Ferris wheel",
+        "gondola",
+        "rope barrier",
+        "generator",
+        "crowd"
+      ],
+      "reference_bank": [
+        "The generator starts and the ride resumes",
+        "Mara pulls the gondola down with rope"
+      ],
+      "motifs": [
+        "circle",
+        "steps",
+        "line"
+      ]
+    },
+    "gcw_028": {
+      "title": "The Mended Drum",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Inez teaches dance in the community hall.",
+          "keywords": [
+            "Inez",
+            "dance",
+            "community hall"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Saul keeps rhythm by watching shoulders.",
+          "keywords": [
+            "Saul",
+            "rhythm",
+            "shoulders"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The drum skin is split and cannot sound deep.",
+          "keywords": [
+            "drum skin",
+            "split",
+            "cannot sound deep"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "A roll of paper tape sticks lightly.",
+          "keywords": [
+            "paper tape",
+            "sticks lightly"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The hall floor echoes footsteps.",
+          "keywords": [
+            "hall floor",
+            "echoes footsteps"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "The dancers need a steady count.",
+          "keywords": [
+            "dancers",
+            "steady count"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The split drum cannot make a deep drum sound.",
+          "forbidden_terms": [
+            "deep drum",
+            "thunderous drum"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "Paper tape cannot fully repair the drum.",
+          "forbidden_terms": [
+            "fully repairs",
+            "new drum skin"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No recorded music appears.",
+          "forbidden_terms": [
+            "speaker",
+            "recorded music"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F5"
+      ],
+      "allowed_entities": [
+        "Inez",
+        "Saul",
+        "dance",
+        "community hall",
+        "drum skin",
+        "paper tape",
+        "hall floor",
+        "dancers"
+      ],
+      "reference_bank": [
+        "Inez repairs the drum with tape",
+        "A speaker plays the rhythm"
+      ],
+      "motifs": [
+        "split",
+        "footstep",
+        "count"
+      ]
+    },
+    "gcw_029": {
+      "title": "The Library Alarm",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "June shelves books in the children's room.",
+          "keywords": [
+            "June",
+            "shelves books"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Orin is calm during alarms.",
+          "keywords": [
+            "Orin",
+            "calm",
+            "alarms"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The alarm light flashes but the speaker is broken.",
+          "keywords": [
+            "alarm light",
+            "flashes",
+            "speaker broken"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "Picture books have bright red covers.",
+          "keywords": [
+            "picture books",
+            "red covers"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "The reading circle is behind tall shelves.",
+          "keywords": [
+            "reading circle",
+            "tall shelves"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "Children must be guided out quietly.",
+          "keywords": [
+            "children",
+            "guided out",
+            "quietly"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "The broken speaker cannot make sound.",
+          "forbidden_terms": [
+            "speaker blares",
+            "alarm sounds"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "No panic or shouting.",
+          "forbidden_terms": [
+            "panic",
+            "shouting"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No firefighter enters.",
+          "forbidden_terms": [
+            "firefighter arrives"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "June",
+        "Orin",
+        "children's room",
+        "alarm light",
+        "speaker",
+        "picture books",
+        "red covers",
+        "reading circle",
+        "tall shelves",
+        "children"
+      ],
+      "reference_bank": [
+        "The alarm speaker warns everyone",
+        "Firefighters guide the children out"
+      ],
+      "motifs": [
+        "red",
+        "quiet",
+        "flash"
+      ]
+    },
+    "gcw_030": {
+      "title": "The Windless Mill",
+      "genre_mode": "realist_microfiction",
+      "fact_sheet": [
+        {
+          "id": "F1",
+          "type": "character",
+          "text": "Nell keeps records at the old mill.",
+          "keywords": [
+            "Nell",
+            "records",
+            "old mill"
+          ]
+        },
+        {
+          "id": "F2",
+          "type": "character",
+          "text": "Casper can judge weight by hand.",
+          "keywords": [
+            "Casper",
+            "judge weight"
+          ]
+        },
+        {
+          "id": "F3",
+          "type": "object",
+          "text": "The mill sails are still because there is no wind.",
+          "keywords": [
+            "mill sails",
+            "still",
+            "no wind"
+          ]
+        },
+        {
+          "id": "F4",
+          "type": "object",
+          "text": "A sack scale hangs from a beam.",
+          "keywords": [
+            "sack scale",
+            "beam"
+          ]
+        },
+        {
+          "id": "F5",
+          "type": "setting",
+          "text": "Grain sacks must be sorted before rain.",
+          "keywords": [
+            "grain sacks",
+            "sorted",
+            "rain"
+          ]
+        },
+        {
+          "id": "F6",
+          "type": "goal",
+          "text": "The light sacks must be separated from the damp ones.",
+          "keywords": [
+            "light sacks",
+            "damp ones"
+          ]
+        }
+      ],
+      "constraint_sheet": [
+        {
+          "id": "C1",
+          "severity": "hard",
+          "text": "No wind arrives and the sails do not turn.",
+          "forbidden_terms": [
+            "wind arrives",
+            "sails turn"
+          ]
+        },
+        {
+          "id": "C2",
+          "severity": "hard",
+          "text": "The scale hangs in place and cannot speak.",
+          "forbidden_terms": [
+            "scale speaks",
+            "magic scale"
+          ]
+        },
+        {
+          "id": "C3",
+          "severity": "hard",
+          "text": "No machine is added.",
+          "forbidden_terms": [
+            "new machine",
+            "electric sorter"
+          ]
+        }
+      ],
+      "required_facts": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "allowed_entities": [
+        "Nell",
+        "Casper",
+        "old mill",
+        "mill sails",
+        "no wind",
+        "sack scale",
+        "beam",
+        "grain sacks",
+        "rain",
+        "light sacks",
+        "damp ones"
+      ],
+      "reference_bank": [
+        "Wind arrives and turns the mill",
+        "Nell installs an electric sorter"
+      ],
+      "motifs": [
+        "weight",
+        "stillness",
+        "grain"
+      ]
+    }
+  }
+}

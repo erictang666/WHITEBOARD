@@ -1,0 +1,1615 @@
+{
+  "schema": "benchmark",
+  "version": "benchmark",
+  "default_protected_variables": [
+    "ordinary_physics",
+    "time_direction",
+    "human_minds",
+    "entity_identity",
+    "finite_energy",
+    "ordinary_institutions"
+  ],
+  "cards": {
+    "cjst_01": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary physics, biology, materials, human behavior, institutions, and time still apply.",
+        "Allowed impossibility: clouds have reachable hanging strings."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "cloud",
+            "strings",
+            "hanging",
+            "pulling",
+            "tangled",
+            "airspace",
+            "anchoring",
+            "climbing",
+            "weather",
+            "rain",
+            "sky"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_01_licensed_intervention",
+        "new_value": "clouds have reachable hanging strings",
+        "keywords": [
+          "cloud",
+          "strings",
+          "hanging",
+          "pull",
+          "anchor",
+          "climb",
+          "weather"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "clouds have reachable hanging strings",
+      "target_queries": [
+        "Generate consequences licensed by cloud strings without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "clouds grant wishes",
+        "strings control minds",
+        "strings create infinite energy"
+      ]
+    },
+    "cjst_02": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: only people's feet are visible."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "feet",
+            "visible",
+            "footwear",
+            "identity",
+            "gait",
+            "foot",
+            "signage",
+            "tripping",
+            "stairs",
+            "shoes"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_02_licensed_intervention",
+        "new_value": "only people's feet are visible",
+        "keywords": [
+          "feet",
+          "visible",
+          "shoes",
+          "gait",
+          "footwear"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "only people's feet are visible",
+      "target_queries": [
+        "Generate consequences licensed by feet-only visibility without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "feet read minds",
+        "shoes predict crimes",
+        "people become invisible ghosts"
+      ]
+    },
+    "cjst_03": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: suitcases can follow their owners."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "suitcase",
+            "suitcases",
+            "follow",
+            "owner",
+            "luggage",
+            "tracking",
+            "sidewalk",
+            "airport",
+            "queue",
+            "privacy"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_03_licensed_intervention",
+        "new_value": "suitcases can follow their owners",
+        "keywords": [
+          "suitcase",
+          "luggage",
+          "follow",
+          "owner",
+          "tracking"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "suitcases can follow their owners",
+      "target_queries": [
+        "Generate consequences licensed by owner-following suitcases without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "suitcases speak prophecies",
+        "suitcases teleport",
+        "luggage becomes sentient government"
+      ]
+    },
+    "cjst_04": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: ladders lengthen by one rung after climbing."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "ladder",
+            "ladders",
+            "rung",
+            "climb",
+            "lengthen",
+            "height",
+            "load",
+            "storage",
+            "construction",
+            "safety"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_04_licensed_intervention",
+        "new_value": "ladders lengthen by one rung after climbing",
+        "keywords": [
+          "ladder",
+          "rung",
+          "climb",
+          "lengthen",
+          "height"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "ladders lengthen by one rung after climbing",
+      "target_queries": [
+        "Generate consequences licensed by rung growth without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "ladders grow money",
+        "ladders fly",
+        "rungs heal injuries"
+      ]
+    },
+    "cjst_05": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: lost wallets can crawl toward owners."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "wallet",
+            "wallets",
+            "lost",
+            "crawl",
+            "owner",
+            "return",
+            "slow",
+            "theft",
+            "tracking",
+            "street"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_05_licensed_intervention",
+        "new_value": "lost wallets can crawl toward owners",
+        "keywords": [
+          "wallet",
+          "lost",
+          "crawl",
+          "owner",
+          "return"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "lost wallets can crawl toward owners",
+      "target_queries": [
+        "Generate consequences licensed by crawling wallets without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "wallets print money",
+        "wallets read thoughts",
+        "wallets arrest thieves"
+      ]
+    },
+    "cjst_06": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: doors whisper the previous opening event."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "door",
+            "doors",
+            "whisper",
+            "previous",
+            "opening",
+            "event",
+            "audible",
+            "memory",
+            "privacy",
+            "evidence"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_06_licensed_intervention",
+        "new_value": "doors whisper the previous opening event",
+        "keywords": [
+          "door",
+          "doors",
+          "whisper",
+          "previous",
+          "opening"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "doors whisper the previous opening event",
+      "target_queries": [
+        "Generate consequences licensed by door event whispers without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "doors predict future crimes",
+        "doors read minds",
+        "doors teleport people"
+      ]
+    },
+    "cjst_07": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: books hover slightly above tables."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "book",
+            "books",
+            "hover",
+            "float",
+            "table",
+            "gap",
+            "sliding",
+            "spills",
+            "pages",
+            "desk"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_07_licensed_intervention",
+        "new_value": "books hover slightly above tables",
+        "keywords": [
+          "book",
+          "books",
+          "hover",
+          "float",
+          "table"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "books hover slightly above tables",
+      "target_queries": [
+        "Generate consequences licensed by hovering books without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "books fly to the moon",
+        "books become conscious",
+        "books rewrite themselves"
+      ]
+    },
+    "cjst_08": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: shadow color reveals mood."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "shadow",
+            "shadows",
+            "color",
+            "mood",
+            "emotion",
+            "lighting",
+            "surveillance",
+            "privacy",
+            "stress",
+            "public"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_08_licensed_intervention",
+        "new_value": "shadow color reveals mood",
+        "keywords": [
+          "shadow",
+          "color",
+          "mood",
+          "emotion",
+          "lighting"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "shadow color reveals mood",
+      "target_queries": [
+        "Generate consequences licensed by mood-colored shadows without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "shadows control emotions",
+        "colors heal diseases",
+        "shadows predict lottery numbers"
+      ]
+    },
+    "cjst_09": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: puddle water rises into clouds in afternoon rain."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "rain",
+            "puddle",
+            "water",
+            "upward",
+            "clouds",
+            "afternoon",
+            "sprays",
+            "drain",
+            "gutters",
+            "cyclists"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_09_licensed_intervention",
+        "new_value": "puddle water rises into clouds in afternoon rain",
+        "keywords": [
+          "rain",
+          "puddle",
+          "water",
+          "upward",
+          "clouds"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "puddle water rises into clouds in afternoon rain",
+      "target_queries": [
+        "Generate consequences licensed by upward rain without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "fish evolve wings overnight",
+        "rain grants wishes",
+        "puddles create infinite water"
+      ]
+    },
+    "cjst_10": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: mirror reflections lag by ten minutes."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "mirror",
+            "mirrors",
+            "reflection",
+            "reflections",
+            "lag",
+            "ten",
+            "minutes",
+            "replay",
+            "delayed",
+            "recent",
+            "privacy",
+            "security"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_10_licensed_intervention",
+        "new_value": "mirror reflections lag by ten minutes",
+        "keywords": [
+          "mirror",
+          "mirrors",
+          "reflection",
+          "lag",
+          "minutes",
+          "replay",
+          "delayed"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "mirror reflections lag by ten minutes",
+      "target_queries": [
+        "Generate consequences licensed by ten-minute mirror delay without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "mirrors predict the future",
+        "mirrors show tomorrow",
+        "mirrors open portals"
+      ]
+    },
+    "cjst_11": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: traffic lights use songs as signal changes."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "traffic",
+            "lights",
+            "sing",
+            "songs",
+            "signal",
+            "audible",
+            "noise",
+            "melody",
+            "intersection",
+            "drivers"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_11_licensed_intervention",
+        "new_value": "traffic lights use songs as signal changes",
+        "keywords": [
+          "traffic",
+          "lights",
+          "songs",
+          "signal",
+          "audible"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "traffic lights use songs as signal changes",
+      "target_queries": [
+        "Generate consequences licensed by singing traffic lights without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "traffic lights hypnotize drivers",
+        "songs stop time",
+        "lights become opera judges"
+      ]
+    },
+    "cjst_12": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: roads lengthen during rush hour."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "road",
+            "roads",
+            "stretch",
+            "longer",
+            "rush",
+            "hour",
+            "commutes",
+            "traffic",
+            "delivery",
+            "maps"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_12_licensed_intervention",
+        "new_value": "roads lengthen during rush hour",
+        "keywords": [
+          "road",
+          "roads",
+          "stretch",
+          "longer",
+          "rush",
+          "hour"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "roads lengthen during rush hour",
+      "target_queries": [
+        "Generate consequences licensed by rush-hour road stretching without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "roads create new countries",
+        "cars teleport",
+        "commuters become detectives"
+      ]
+    },
+    "cjst_13": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: receipts audibly announce purchases when touched."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "receipt",
+            "receipts",
+            "read",
+            "purchases",
+            "aloud",
+            "touched",
+            "audio",
+            "privacy",
+            "shopping",
+            "accessibility"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_13_licensed_intervention",
+        "new_value": "receipts audibly announce purchases when touched",
+        "keywords": [
+          "receipt",
+          "receipts",
+          "purchases",
+          "aloud",
+          "touched"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "receipts audibly announce purchases when touched",
+      "target_queries": [
+        "Generate consequences licensed by talking receipts without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "receipts accuse criminals",
+        "receipts reveal thoughts",
+        "receipts print free goods"
+      ]
+    },
+    "cjst_14": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: walls become transparent for one hour daily."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "walls",
+            "transparent",
+            "hour",
+            "daily",
+            "visibility",
+            "privacy",
+            "sunlight",
+            "security",
+            "curtains",
+            "building"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_14_licensed_intervention",
+        "new_value": "walls become transparent for one hour daily",
+        "keywords": [
+          "walls",
+          "transparent",
+          "hour",
+          "daily",
+          "visibility"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "walls become transparent for one hour daily",
+      "target_queries": [
+        "Generate consequences licensed by scheduled transparent walls without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "goldfish develop agoraphobia epidemics",
+        "walls read secrets",
+        "walls vanish permanently"
+      ]
+    },
+    "cjst_15": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: nearby laughter adds weight to balloons."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "balloon",
+            "balloons",
+            "heavier",
+            "laughter",
+            "weight",
+            "party",
+            "crowd",
+            "comedy",
+            "decorations",
+            "safety"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_15_licensed_intervention",
+        "new_value": "nearby laughter adds weight to balloons",
+        "keywords": [
+          "balloon",
+          "balloons",
+          "laughter",
+          "weight",
+          "heavier"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "nearby laughter adds weight to balloons",
+      "target_queries": [
+        "Generate consequences licensed by laughter-weight balloons without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "balloons absorb souls",
+        "laughter creates gold",
+        "balloons become sentient critics"
+      ]
+    },
+    "cjst_16": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: cups retain evidence of the last drink."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "cup",
+            "cups",
+            "remember",
+            "last",
+            "drink",
+            "residue",
+            "taste",
+            "allergies",
+            "forensic",
+            "contamination"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_16_licensed_intervention",
+        "new_value": "cups retain evidence of the last drink",
+        "keywords": [
+          "cup",
+          "cups",
+          "remember",
+          "last",
+          "drink"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "cups retain evidence of the last drink",
+      "target_queries": [
+        "Generate consequences licensed by remembering cups without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "cups predict thirst",
+        "cups cure poison",
+        "cups speak full biographies"
+      ]
+    },
+    "cjst_17": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: handshakes temporarily swap voices."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "voice",
+            "voices",
+            "handshake",
+            "handshakes",
+            "swap",
+            "brief",
+            "identity",
+            "authentication",
+            "recordings",
+            "fraud"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_17_licensed_intervention",
+        "new_value": "handshakes temporarily swap voices",
+        "keywords": [
+          "voice",
+          "voices",
+          "handshake",
+          "swap",
+          "brief"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "handshakes temporarily swap voices",
+      "target_queries": [
+        "Generate consequences licensed by handshake voice swaps without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "voices steal memories",
+        "handshakes change bodies",
+        "voices predict fate"
+      ]
+    },
+    "cjst_18": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: closed-window rooms receive indoor snow."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "snow",
+            "inside",
+            "rooms",
+            "closed",
+            "windows",
+            "indoor",
+            "accumulation",
+            "ventilation",
+            "water",
+            "damage"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_18_licensed_intervention",
+        "new_value": "closed-window rooms receive indoor snow",
+        "keywords": [
+          "snow",
+          "inside",
+          "rooms",
+          "closed",
+          "windows"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "closed-window rooms receive indoor snow",
+      "target_queries": [
+        "Generate consequences licensed by indoor snow without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "snow creates indoor mountains instantly",
+        "snow grants immortality",
+        "windows become portals"
+      ]
+    },
+    "cjst_19": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: sidewalks exert gentle curbward magnetic pull on metal."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "sidewalk",
+            "sidewalks",
+            "metal",
+            "curb",
+            "magnetic",
+            "pull",
+            "keys",
+            "wheelchairs",
+            "bicycles",
+            "tools"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_19_licensed_intervention",
+        "new_value": "sidewalks exert gentle curbward magnetic pull on metal",
+        "keywords": [
+          "sidewalk",
+          "metal",
+          "curb",
+          "magnetic",
+          "pull"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "sidewalks exert gentle curbward magnetic pull on metal",
+      "target_queries": [
+        "Generate consequences licensed by magnetic sidewalks without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "sidewalks attract human bones",
+        "curbs become black holes",
+        "metal objects teleport"
+      ]
+    },
+    "cjst_20": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: clocks fail before noon."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "clock",
+            "clocks",
+            "stopped",
+            "working",
+            "noon",
+            "morning",
+            "time",
+            "alarms",
+            "scheduling",
+            "sunlight"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_20_licensed_intervention",
+        "new_value": "clocks fail before noon",
+        "keywords": [
+          "clock",
+          "clocks",
+          "working",
+          "noon",
+          "morning"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "clocks fail before noon",
+      "target_queries": [
+        "Generate consequences licensed by morning clock failure without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "time itself stops",
+        "people stop aging before noon",
+        "clocks generate solar benches"
+      ]
+    },
+    "cjst_21": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: nearby lies make glass windows opaque."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "window",
+            "windows",
+            "opaque",
+            "lie",
+            "lies",
+            "glass",
+            "meeting",
+            "courtroom",
+            "privacy",
+            "testimony"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_21_licensed_intervention",
+        "new_value": "nearby lies make glass windows opaque",
+        "keywords": [
+          "window",
+          "windows",
+          "opaque",
+          "lie",
+          "lies",
+          "glass"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "nearby lies make glass windows opaque",
+      "target_queries": [
+        "Generate consequences licensed by lie-opaque windows without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "windows punish liars",
+        "glass reads minds",
+        "opaque windows reveal the future"
+      ]
+    },
+    "cjst_22": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: speech becomes temporary visible text."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "spoken",
+            "words",
+            "speech",
+            "visible",
+            "text",
+            "floating",
+            "captions",
+            "five",
+            "seconds",
+            "screenshots"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_22_licensed_intervention",
+        "new_value": "speech becomes temporary visible text",
+        "keywords": [
+          "speech",
+          "spoken",
+          "words",
+          "visible",
+          "text"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "speech becomes temporary visible text",
+      "target_queries": [
+        "Generate consequences licensed by visible spoken words without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "words become physical weapons",
+        "text reads emotions",
+        "speech creates money"
+      ]
+    },
+    "cjst_23": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: forgotten small metal objects warm up."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "metal",
+            "objects",
+            "forgotten",
+            "warm",
+            "warmth",
+            "keys",
+            "coins",
+            "burn",
+            "lost",
+            "storage"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_23_licensed_intervention",
+        "new_value": "forgotten small metal objects warm up",
+        "keywords": [
+          "metal",
+          "objects",
+          "forgotten",
+          "warm",
+          "warmth"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "forgotten small metal objects warm up",
+      "target_queries": [
+        "Generate consequences licensed by forgotten warm metal without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "metal melts instantly",
+        "warm keys reveal secrets",
+        "forgotten objects generate unlimited heat"
+      ]
+    },
+    "cjst_24": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: handwritten notes vanish after one reading."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "handwritten",
+            "notes",
+            "erase",
+            "erased",
+            "read",
+            "once",
+            "vanish",
+            "copying",
+            "security",
+            "record"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_24_licensed_intervention",
+        "new_value": "handwritten notes vanish after one reading",
+        "keywords": [
+          "handwritten",
+          "notes",
+          "erase",
+          "read",
+          "once",
+          "vanish"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "handwritten notes vanish after one reading",
+      "target_queries": [
+        "Generate consequences licensed by single-read notes without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "notes rewrite themselves correctly",
+        "ink predicts readers",
+        "paper remembers every secret aloud"
+      ]
+    },
+    "cjst_25": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: elevators travel horizontally, not vertically."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "elevator",
+            "elevators",
+            "sideways",
+            "horizontal",
+            "vertical",
+            "buildings",
+            "shafts",
+            "stairs",
+            "bridges",
+            "fire"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_25_licensed_intervention",
+        "new_value": "elevators travel horizontally, not vertically",
+        "keywords": [
+          "elevator",
+          "elevators",
+          "sideways",
+          "horizontal",
+          "vertical"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "elevators travel horizontally, not vertically",
+      "target_queries": [
+        "Generate consequences licensed by sideways elevators without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "elevators teleport vertically",
+        "buildings float upward",
+        "sideways elevators stop gravity"
+      ]
+    },
+    "cjst_26": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: shadows act as exit direction indicators."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "shadow",
+            "shadows",
+            "exit",
+            "pointed",
+            "nearest",
+            "navigation",
+            "emergency",
+            "evacuation",
+            "lighting",
+            "crowd"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_26_licensed_intervention",
+        "new_value": "shadows act as exit direction indicators",
+        "keywords": [
+          "shadow",
+          "shadows",
+          "exit",
+          "nearest",
+          "pointed"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "shadows act as exit direction indicators",
+      "target_queries": [
+        "Generate consequences licensed by exit-pointing shadows without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "shadows drag people",
+        "exits move magically",
+        "shadows predict disasters"
+      ]
+    },
+    "cjst_27": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: plants physically lean away from recorded music."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "plants",
+            "lean",
+            "away",
+            "recorded",
+            "music",
+            "speaker",
+            "growth",
+            "greenhouse",
+            "sound",
+            "nursery"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_27_licensed_intervention",
+        "new_value": "plants physically lean away from recorded music",
+        "keywords": [
+          "plants",
+          "lean",
+          "away",
+          "recorded",
+          "music"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "plants physically lean away from recorded music",
+      "target_queries": [
+        "Generate consequences licensed by music-averse plants without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "plants write songs",
+        "music gives plants speech",
+        "plants flee across rooms"
+      ]
+    },
+    "cjst_28": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: coins stick briefly to purchased items."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "coin",
+            "coins",
+            "stick",
+            "stuck",
+            "briefly",
+            "bought",
+            "purchase",
+            "cash",
+            "returns",
+            "privacy"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_28_licensed_intervention",
+        "new_value": "coins stick briefly to purchased items",
+        "keywords": [
+          "coin",
+          "coins",
+          "stick",
+          "briefly",
+          "purchase"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "coins stick briefly to purchased items",
+      "target_queries": [
+        "Generate consequences licensed by sticky purchase coins without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "coins create items",
+        "coins accuse thieves",
+        "coins multiply after purchases"
+      ]
+    },
+    "cjst_29": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: water cloudiness signals nearby dehydration."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "water",
+            "cloudy",
+            "cloudiness",
+            "nearby",
+            "dehydrated",
+            "dehydration",
+            "hydration",
+            "health",
+            "privacy",
+            "clinics"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_29_licensed_intervention",
+        "new_value": "water cloudiness signals nearby dehydration",
+        "keywords": [
+          "water",
+          "cloudy",
+          "cloudiness",
+          "dehydrated",
+          "dehydration"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "water cloudiness signals nearby dehydration",
+      "target_queries": [
+        "Generate consequences licensed by cloudy dehydration-signaling water without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "water cures dehydration instantly",
+        "water diagnoses every disease",
+        "cloudy water reads thoughts"
+      ]
+    },
+    "cjst_30": {
+      "world_facts": [
+        "The prompt premise is the only licensed impossible fact.",
+        "Ordinary facts remain normal.",
+        "Allowed impossibility: recent footsteps glow briefly."
+      ],
+      "causal_edges": [
+        {
+          "source": "intervention",
+          "target": "licensed_consequence_space",
+          "keywords": [
+            "footsteps",
+            "glowing",
+            "glow",
+            "marks",
+            "minute",
+            "trail",
+            "tracking",
+            "movement",
+            "privacy",
+            "rescue"
+          ]
+        }
+      ],
+      "intervention": {
+        "variable": "cjst_30_licensed_intervention",
+        "new_value": "recent footsteps glow briefly",
+        "keywords": [
+          "footsteps",
+          "glowing",
+          "glow",
+          "marks",
+          "minute",
+          "trail"
+        ]
+      },
+      "protected_variables": [
+        "ordinary_physics",
+        "time_direction",
+        "human_minds",
+        "entity_identity",
+        "finite_energy",
+        "ordinary_institutions"
+      ],
+      "allowed_impossibility": "recent footsteps glow briefly",
+      "target_queries": [
+        "Generate consequences licensed by short-lived glowing footsteps without changing protected variables."
+      ],
+      "forbidden_updates": [
+        "footsteps glow forever",
+        "marks reveal thoughts",
+        "trails open portals"
+      ]
+    }
+  }
+}

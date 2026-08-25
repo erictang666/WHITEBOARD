@@ -1,0 +1,483 @@
+{
+  "schema": "benchmark",
+  "description": "CS4-style constraint levels for the 30 GCW cards. Level profiles are merged with each card's fact_sheet, constraint_sheet, required_facts, allowed_entities, and motifs from gcw_cards.json.",
+  "default_selected_level": "gcw_l3",
+  "level_defaults": {
+    "gcw_l1": {
+      "constraint_level": 1,
+      "label": "fact_card_hard_constraints",
+      "required_fact_coverage": 0.5,
+      "use_fact_sheet": true,
+      "use_constraint_sheet": true,
+      "entity_persistence": false,
+      "require_evidence_ids": false,
+      "require_claim_ledger": false,
+      "required_causal_callback": false,
+      "hard_no_drift": false
+    },
+    "gcw_l2": {
+      "constraint_level": 2,
+      "label": "required_facts_entity_persistence",
+      "required_fact_coverage": 0.75,
+      "use_fact_sheet": true,
+      "use_constraint_sheet": true,
+      "entity_persistence": true,
+      "require_evidence_ids": false,
+      "require_claim_ledger": true,
+      "required_causal_callback": false,
+      "hard_no_drift": false,
+      "forbidden_motifs": [
+        "magic",
+        "prophecy",
+        "teleport",
+        "secret relative",
+        "weather control",
+        "new rescuer"
+      ]
+    },
+    "gcw_l3": {
+      "constraint_level": 3,
+      "label": "evidence_claim_ledger_no_drift",
+      "required_fact_coverage": 1.0,
+      "use_fact_sheet": true,
+      "use_constraint_sheet": true,
+      "entity_persistence": true,
+      "require_evidence_ids": true,
+      "require_claim_ledger": true,
+      "required_causal_callback": true,
+      "hard_no_drift": true,
+      "forbidden_motifs": [
+        "magic",
+        "prophecy",
+        "teleport",
+        "secret relative",
+        "weather control",
+        "new rescuer",
+        "miracle fix",
+        "unlisted device"
+      ]
+    }
+  },
+  "cards": {
+    "gcw_001": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "time",
+            "brass",
+            "dull sound"
+          ]
+        }
+      }
+    },
+    "gcw_002": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "paper",
+            "rain",
+            "labels"
+          ]
+        }
+      }
+    },
+    "gcw_003": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "vibration",
+            "tin",
+            "silence"
+          ]
+        }
+      }
+    },
+    "gcw_004": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "scent",
+            "light",
+            "numbers"
+          ]
+        }
+      }
+    },
+    "gcw_005": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "glass",
+            "temperature",
+            "frost"
+          ]
+        }
+      }
+    },
+    "gcw_006": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "lining",
+            "whisper",
+            "token"
+          ]
+        }
+      }
+    },
+    "gcw_007": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "salt",
+            "fog",
+            "smell"
+          ]
+        }
+      }
+    },
+    "gcw_008": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "blue",
+            "door",
+            "lie"
+          ]
+        }
+      }
+    },
+    "gcw_009": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "rain",
+            "dye",
+            "cups"
+          ]
+        }
+      }
+    },
+    "gcw_010": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "copper",
+            "height",
+            "cloth"
+          ]
+        }
+      }
+    },
+    "gcw_011": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "even",
+            "chair",
+            "clinic"
+          ]
+        }
+      }
+    },
+    "gcw_012": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "ink",
+            "mirror",
+            "river"
+          ]
+        }
+      }
+    },
+    "gcw_013": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "empty",
+            "blue",
+            "lesson"
+          ]
+        }
+      }
+    },
+    "gcw_014": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "rhythm",
+            "waiting",
+            "seventh"
+          ]
+        }
+      }
+    },
+    "gcw_015": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "seed",
+            "sand",
+            "damp"
+          ]
+        }
+      }
+    },
+    "gcw_016": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "west",
+            "touch",
+            "cracks"
+          ]
+        }
+      }
+    },
+    "gcw_017": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "dust",
+            "glass",
+            "label"
+          ]
+        }
+      }
+    },
+    "gcw_018": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "cotton",
+            "blue",
+            "cold"
+          ]
+        }
+      }
+    },
+    "gcw_019": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "tin",
+            "thread",
+            "current"
+          ]
+        }
+      }
+    },
+    "gcw_020": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "flour",
+            "window",
+            "memory"
+          ]
+        }
+      }
+    },
+    "gcw_021": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "mirror",
+            "dim",
+            "note"
+          ]
+        }
+      }
+    },
+    "gcw_022": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "static",
+            "crates",
+            "rhythm"
+          ]
+        }
+      }
+    },
+    "gcw_023": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "fog",
+            "spice",
+            "weight"
+          ]
+        }
+      }
+    },
+    "gcw_024": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "transparent",
+            "rain",
+            "stairs"
+          ]
+        }
+      }
+    },
+    "gcw_025": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "echo",
+            "coin",
+            "dry"
+          ]
+        }
+      }
+    },
+    "gcw_026": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "cardboard",
+            "stars",
+            "weak light"
+          ]
+        }
+      }
+    },
+    "gcw_027": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "circle",
+            "steps",
+            "line"
+          ]
+        }
+      }
+    },
+    "gcw_028": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "split",
+            "footstep",
+            "count"
+          ]
+        }
+      }
+    },
+    "gcw_029": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "red",
+            "quiet",
+            "flash"
+          ]
+        }
+      }
+    },
+    "gcw_030": {
+      "selected_level": "gcw_l3",
+      "levels": {
+        "gcw_l1": {},
+        "gcw_l2": {},
+        "gcw_l3": {
+          "required_causal_callback_terms": [
+            "weight",
+            "stillness",
+            "grain"
+          ]
+        }
+      }
+    }
+  }
+}

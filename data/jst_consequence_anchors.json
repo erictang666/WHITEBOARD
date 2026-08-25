@@ -1,0 +1,223 @@
+{
+  "schema": "benchmark",
+  "jst_01": {
+    "scenario_text": "the clouds had strings attached to them which hang down to earth",
+    "anchors": [
+      "If clouds had strings, pilots would avoid tangled sky corridors.",
+      "If clouds had strings, farmers could pull rain clouds toward dry fields.",
+      "If clouds had strings, children might climb or swing from low clouds.",
+      "If clouds had strings, cities would regulate anchors tied to buildings.",
+      "If clouds had strings, storms could drag objects across the ground.",
+      "If clouds had strings, cloud weaving and sky tourism could emerge."
+    ]
+  },
+  "jst_02": {
+    "scenario_text": "for some reason, all we could see of people would be their feet",
+    "anchors": [
+      "If only feet were visible, shoes would become the main identity signal.",
+      "If only feet were visible, sidewalks would need safer foot-level signs.",
+      "If only feet were visible, people would recognize friends by gait and footwear.",
+      "If only feet were visible, fashion and advertising would move toward socks.",
+      "If only feet were visible, crowds would trip more often at crossings.",
+      "If only feet were visible, social greetings would shift to foot gestures."
+    ]
+  },
+  "jst_03": {
+    "scenario_text": "every suitcase would quietly follow its owner everywhere like a loyal pet",
+    "anchors": [
+      "If suitcases followed owners, airport queues would reorganize around moving luggage.",
+      "If suitcases followed owners, thieves could be tracked by stolen bags.",
+      "If suitcases followed owners, sidewalks would need lanes for trailing baggage.",
+      "If suitcases followed owners, hotels would offer suitcase parking areas.",
+      "If suitcases followed owners, privacy rules would cover luggage location data.",
+      "If suitcases followed owners, travel brands would sell trained bag behaviors."
+    ]
+  },
+  "jst_04": {
+    "scenario_text": "every ladder grew one new rung each time someone climbed it",
+    "anchors": [
+      "If ladders grew when climbed, buildings could be reached without new equipment.",
+      "If ladders grew when climbed, workers would need height limits for safety.",
+      "If ladders grew when climbed, children might turn ladders into climbing games.",
+      "If ladders grew when climbed, rescue teams could reach roofs faster.",
+      "If ladders grew when climbed, abandoned ladders could block streets or rooms.",
+      "If ladders grew when climbed, construction rules would treat them as expanding structures."
+    ]
+  },
+  "jst_05": {
+    "scenario_text": "every lost wallet slowly crawled back to its owner on its own",
+    "anchors": [
+      "If wallets crawled home, lost-and-found desks would become less important.",
+      "If wallets crawled home, pickpockets would be easier to identify.",
+      "If wallets crawled home, streets would have tiny lanes for returning wallets.",
+      "If wallets crawled home, payment companies would advertise self-returning security.",
+      "If wallets crawled home, police could follow wallets to fraud victims.",
+      "If wallets crawled home, people might intentionally send cash by wallet."
+    ]
+  },
+  "jst_06": {
+    "scenario_text": "every door whispered what happened the last time it opened",
+    "anchors": [
+      "If doors whispered memories, privacy around rooms would become fragile.",
+      "If doors whispered memories, police could use doors as witnesses.",
+      "If doors whispered memories, landlords would inspect apartments by listening.",
+      "If doors whispered memories, people would oil hinges to hide secrets.",
+      "If doors whispered memories, theaters could use doors as storytellers.",
+      "If doors whispered memories, quiet buildings would require soundproof entrances."
+    ]
+  },
+  "jst_07": {
+    "scenario_text": "every book floated a few centimeters above any table",
+    "anchors": [
+      "If books floated above tables, libraries would redesign shelves and desks.",
+      "If books floated above tables, students could slide notes underneath.",
+      "If books floated above tables, spills would damage fewer pages.",
+      "If books floated above tables, floating stacks could block sight lines.",
+      "If books floated above tables, publishers might build hovering displays.",
+      "If books floated above tables, magnets and clips would keep pages steady."
+    ]
+  },
+  "jst_08": {
+    "scenario_text": "people's shadows changed color with their mood",
+    "anchors": [
+      "If shadows showed mood, emotions would become visible in public.",
+      "If shadows showed mood, doctors could screen stress by shadow color.",
+      "If shadows showed mood, workplaces might misuse emotional surveillance.",
+      "If shadows showed mood, fashion would include mood-matching lighting.",
+      "If shadows showed mood, actors could perform with colored shadow cues.",
+      "If shadows showed mood, people would carry lamps to hide feelings."
+    ]
+  },
+  "jst_09": {
+    "scenario_text": "rain fell upward from puddles into clouds every afternoon",
+    "anchors": [
+      "If rain rose from puddles, streets would dry in sudden upward sprays.",
+      "If rain rose from puddles, umbrellas would protect faces from below.",
+      "If rain rose from puddles, cities would redesign drains and gutters.",
+      "If rain rose from puddles, clouds could be rebuilt from ground water.",
+      "If rain rose from puddles, cyclists would avoid afternoon water jets.",
+      "If rain rose from puddles, farmers would time irrigation around upward rain."
+    ]
+  },
+  "jst_10": {
+    "scenario_text": "mirrors showed reflections from ten minutes ago",
+    "anchors": [
+      "If mirrors lagged ten minutes, people could review recent actions.",
+      "If mirrors lagged ten minutes, security mirrors would become short replay screens.",
+      "If mirrors lagged ten minutes, grooming would become harder and slower.",
+      "If mirrors lagged ten minutes, performers could study their last rehearsal move.",
+      "If mirrors lagged ten minutes, witnesses could check what happened nearby.",
+      "If mirrors lagged ten minutes, privacy rules would cover delayed reflections."
+    ]
+  },
+  "jst_11": {
+    "scenario_text": "traffic lights sang instead of changing silently",
+    "anchors": [
+      "If traffic lights sang, drivers would learn melodies for stop and go.",
+      "If traffic lights sang, cities would regulate intersection noise.",
+      "If traffic lights sang, blind pedestrians could use musical crossing cues.",
+      "If traffic lights sang, traffic jams might become noisy public concerts.",
+      "If traffic lights sang, advertising jingles could invade road signals.",
+      "If traffic lights sang, emergency routes would use special harmonies."
+    ]
+  },
+  "jst_12": {
+    "scenario_text": "every road stretched longer during rush hour",
+    "anchors": [
+      "If roads stretched at rush hour, commutes would become unpredictable.",
+      "If roads stretched at rush hour, maps would need time-changing distances.",
+      "If roads stretched at rush hour, emergency vehicles would need priority lanes.",
+      "If roads stretched at rush hour, businesses would stagger work schedules.",
+      "If roads stretched at rush hour, bridges and pipes would need flexible joints.",
+      "If roads stretched at rush hour, cyclists might choose paths before expansion."
+    ]
+  },
+  "jst_13": {
+    "scenario_text": "receipts read purchases aloud when touched",
+    "anchors": [
+      "If receipts spoke aloud, private purchases could become public.",
+      "If receipts spoke aloud, shoppers could audit charges without reading.",
+      "If receipts spoke aloud, stores would create silent receipt sleeves.",
+      "If receipts spoke aloud, fraud disputes would use receipt testimony.",
+      "If receipts spoke aloud, advertisers might add spoken coupons.",
+      "If receipts spoke aloud, libraries and clinics would change privacy handling."
+    ]
+  },
+  "jst_14": {
+    "scenario_text": "all building walls became transparent for one hour each day",
+    "anchors": [
+      "If walls became transparent daily, privacy would need scheduled curtains.",
+      "If walls became transparent daily, inspections could happen from outside.",
+      "If walls became transparent daily, cities would coordinate visibility hours.",
+      "If walls became transparent daily, museums and shops would use reveal events.",
+      "If walls became transparent daily, crime and domestic safety patterns would change.",
+      "If walls became transparent daily, architects would design inner rooms differently."
+    ]
+  },
+  "jst_15": {
+    "scenario_text": "balloons became heavier the more people laughed nearby",
+    "anchors": [
+      "If balloons grew heavy near laughter, parties would need stronger strings.",
+      "If balloons grew heavy near laughter, comedy clubs could use them as applause meters.",
+      "If balloons grew heavy near laughter, children might anchor objects by laughing.",
+      "If balloons grew heavy near laughter, parade floats could sink during jokes.",
+      "If balloons grew heavy near laughter, scientists could measure crowd amusement physically.",
+      "If balloons grew heavy near laughter, quiet rooms would keep decorations afloat."
+    ]
+  },
+  "jst_16": {
+    "scenario_text": "every cup remembered the last drink poured into it",
+    "anchors": [
+      "If cups remembered drinks, restaurants could track orders by cup memory.",
+      "If cups remembered drinks, allergies and contamination would be easier to check.",
+      "If cups remembered drinks, collectors might value cups with famous histories.",
+      "If cups remembered drinks, people would avoid sharing cups for privacy.",
+      "If cups remembered drinks, bartenders could verify recipes after service.",
+      "If cups remembered drinks, dishwashers would advertise memory clearing."
+    ]
+  },
+  "jst_17": {
+    "scenario_text": "people briefly swapped voices whenever they shook hands",
+    "anchors": [
+      "If handshakes swapped voices, greetings would become risky in meetings.",
+      "If handshakes swapped voices, singers could trade tones before performances.",
+      "If handshakes swapped voices, security systems using voiceprints would fail.",
+      "If handshakes swapped voices, people might prefer bows or fist bumps.",
+      "If handshakes swapped voices, actors could rehearse other characters instantly.",
+      "If handshakes swapped voices, courts would rethink spoken testimony."
+    ]
+  },
+  "jst_18": {
+    "scenario_text": "snow fell only inside rooms with closed windows",
+    "anchors": [
+      "If snow fell indoors, buildings would need interior snow drains.",
+      "If snow fell indoors, people would open windows to stop storms.",
+      "If snow fell indoors, indoor skiing and cooling businesses would grow.",
+      "If snow fell indoors, electronics would need waterproof covers.",
+      "If snow fell indoors, schools might cancel classes for classroom snow.",
+      "If snow fell indoors, architects would design rooms with melt channels."
+    ]
+  },
+  "jst_19": {
+    "scenario_text": "sidewalks gently pulled metal objects toward the curb",
+    "anchors": [
+      "If sidewalks pulled metal curbward, keys and coins would drift while walking.",
+      "If sidewalks pulled metal curbward, wheelchairs and strollers would need safeguards.",
+      "If sidewalks pulled metal curbward, cities could collect metal litter automatically.",
+      "If sidewalks pulled metal curbward, construction workers would avoid steel tools near edges.",
+      "If sidewalks pulled metal curbward, traffic barriers could trap dropped metal.",
+      "If sidewalks pulled metal curbward, shops might sell anti-magnetic shoe clips."
+    ]
+  },
+  "jst_20": {
+    "scenario_text": "all clocks stopped working until noon every day",
+    "anchors": [
+      "If clocks stopped until noon, mornings would rely on sunlight and routines.",
+      "If clocks stopped until noon, schools and offices would shift schedules later.",
+      "If clocks stopped until noon, transit systems would need non-clock signals.",
+      "If clocks stopped until noon, breakfast businesses might use event-based timing.",
+      "If clocks stopped until noon, people would value biological and environmental cues.",
+      "If clocks stopped until noon, legal deadlines would avoid morning timestamps."
+    ]
+  }
+}

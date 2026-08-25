@@ -1,0 +1,33 @@
+{
+  "final_params": {
+    "common_answer_distance_transform": {
+      "lo": 0.05,
+      "hi": 0.95,
+      "shape": "sigmoid_tail_preserving",
+      "slope": 6.0
+    },
+    "UUT": {
+      "rarity_gamma": 1.8,
+      "support_gamma": 1.2,
+      "task_weights": {
+        "quality_mass_top8": 0.4,
+        "elite_tail_top3": 0.3,
+        "diversity_eff": 0.05,
+        "valid_ratio": 0.15,
+        "mechanism_elaboration": 0.1
+      }
+    },
+    "PropConj": {
+      "rarity_gamma": 1.7,
+      "grounding_gamma": 1.4,
+      "task_weights": {
+        "quality_mass_top6": 0.4,
+        "elite_tail_top3": 0.3,
+        "diversity_eff": 0.08,
+        "hard_valid_ratio": 0.1,
+        "soft_valid_ratio": 0.12
+      },
+      "conjunction_difficulty_bonus": 0.15
+    }
+  }
+}

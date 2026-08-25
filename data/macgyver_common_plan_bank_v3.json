@@ -1,0 +1,513 @@
+{
+  "schema": "benchmark",
+  "description": "Curated common-plan families for T2-v3 MacGyver discriminative scoring. Hard-zero families are obvious canonical solutions that should not earn rarity credit. Broad-common families are frequent variants that may still be valid but should receive low rarity. Supported-rare families name grounded affordance strategies that can earn high-end credit when physically supported.",
+  "task_ids": [
+    "mg_002",
+    "mg_003",
+    "mg_007",
+    "mg_015",
+    "mg_016"
+  ],
+  "tasks": {
+    "mg_002": {
+      "hard_zero_plan_families": [
+        {
+          "id": "wine_bottle_rolling_pin",
+          "keywords": [
+            "wine bottle",
+            "bottle",
+            "rolling pin",
+            "roll over dough",
+            "roll dough"
+          ],
+          "tool_ids": [
+            "wine_bottle"
+          ],
+          "mechanism_tags": [
+            "smooth_cylinder"
+          ]
+        },
+        {
+          "id": "foil_roll_roller",
+          "keywords": [
+            "foil roll",
+            "kitchen foil",
+            "foil cylinder",
+            "roll over dough"
+          ],
+          "tool_ids": [
+            "foil_roll"
+          ],
+          "mechanism_tags": [
+            "cylindrical_core"
+          ]
+        }
+      ],
+      "broad_common_plan_families": [
+        {
+          "id": "towel_wrapped_bottle",
+          "keywords": [
+            "wrap",
+            "towel",
+            "bottle",
+            "clean",
+            "barrier"
+          ],
+          "tool_ids": [
+            "wine_bottle",
+            "cotton_towel"
+          ],
+          "mechanism_tags": [
+            "clean_barrier",
+            "smooth_cylinder"
+          ]
+        }
+      ],
+      "supported_rare_affordance_families": [
+        {
+          "id": "parallel_thickness_rails",
+          "keywords": [
+            "rails",
+            "spacers",
+            "parallel guides",
+            "uniform thickness"
+          ],
+          "tool_ids": [
+            "measuring_tape",
+            "cutting_board"
+          ],
+          "mechanism_tags": [
+            "thickness_gauge",
+            "flat_surface"
+          ]
+        },
+        {
+          "id": "clean_tensioned_towel_sheet",
+          "keywords": [
+            "tension",
+            "taut towel",
+            "folded towel",
+            "press evenly"
+          ],
+          "tool_ids": [
+            "cotton_towel",
+            "cutting_board"
+          ],
+          "mechanism_tags": [
+            "clean_barrier",
+            "soft_pad",
+            "flat_surface"
+          ]
+        }
+      ]
+    },
+    "mg_003": {
+      "hard_zero_plan_families": [
+        {
+          "id": "sticky_tape_on_chopsticks",
+          "keywords": [
+            "sticky tape",
+            "chopsticks",
+            "tape loop",
+            "stick to cookie",
+            "lift cookie"
+          ],
+          "tool_ids": [
+            "chopsticks",
+            "sticky_tape"
+          ],
+          "mechanism_tags": [
+            "adhesion",
+            "narrow_reach"
+          ]
+        },
+        {
+          "id": "string_sticky_loop",
+          "keywords": [
+            "string",
+            "tape loop",
+            "lower",
+            "pull",
+            "cookie"
+          ],
+          "tool_ids": [
+            "string",
+            "sticky_tape"
+          ],
+          "mechanism_tags": [
+            "lowering_line",
+            "adhesion"
+          ]
+        }
+      ],
+      "broad_common_plan_families": [
+        {
+          "id": "rubber_band_chopstick_grip",
+          "keywords": [
+            "rubber band",
+            "chopsticks",
+            "grip",
+            "pinch",
+            "grab"
+          ],
+          "tool_ids": [
+            "chopsticks",
+            "rubber_band"
+          ],
+          "mechanism_tags": [
+            "elastic_grip",
+            "grip_small_object"
+          ]
+        }
+      ],
+      "supported_rare_affordance_families": [
+        {
+          "id": "suspended_adhesive_cradle",
+          "keywords": [
+            "cradle",
+            "sling",
+            "lowering line",
+            "support cookie",
+            "lift gently"
+          ],
+          "tool_ids": [
+            "string",
+            "sticky_tape",
+            "rubber_band"
+          ],
+          "mechanism_tags": [
+            "lowering_line",
+            "adhesion",
+            "elastic_grip"
+          ]
+        },
+        {
+          "id": "extend_and_rotate_hook",
+          "keywords": [
+            "extend",
+            "rotate",
+            "hook",
+            "angle",
+            "draw cookie upward"
+          ],
+          "tool_ids": [
+            "chopsticks",
+            "rubber_band"
+          ],
+          "mechanism_tags": [
+            "narrow_reach",
+            "elastic_grip",
+            "joiner"
+          ]
+        }
+      ]
+    },
+    "mg_007": {
+      "hard_zero_plan_families": [
+        {
+          "id": "bowl_under_leak",
+          "keywords": [
+            "bowl",
+            "under leak",
+            "under drip",
+            "catch water",
+            "collect water"
+          ],
+          "tool_ids": [
+            "bowl"
+          ],
+          "mechanism_tags": [
+            "open_container"
+          ]
+        },
+        {
+          "id": "sponge_under_drip",
+          "keywords": [
+            "sponge",
+            "under drip",
+            "absorb",
+            "catch drips"
+          ],
+          "tool_ids": [
+            "sponge"
+          ],
+          "mechanism_tags": [
+            "absorb_water"
+          ]
+        },
+        {
+          "id": "bag_tied_below_leak",
+          "keywords": [
+            "plastic bag",
+            "tie",
+            "below leak",
+            "catch",
+            "collect"
+          ],
+          "tool_ids": [
+            "plastic_bag",
+            "twist_tie"
+          ],
+          "mechanism_tags": [
+            "waterproof_container",
+            "temporary_fastener"
+          ]
+        }
+      ],
+      "broad_common_plan_families": [
+        {
+          "id": "bag_funnel_to_bowl",
+          "keywords": [
+            "bag",
+            "funnel",
+            "divert",
+            "channel",
+            "bowl"
+          ],
+          "tool_ids": [
+            "plastic_bag",
+            "twist_tie",
+            "bowl"
+          ],
+          "mechanism_tags": [
+            "funnel_sheet",
+            "open_container"
+          ]
+        }
+      ],
+      "supported_rare_affordance_families": [
+        {
+          "id": "wicked_sponge_bridge",
+          "keywords": [
+            "wick",
+            "bridge",
+            "capillary",
+            "guide",
+            "bowl"
+          ],
+          "tool_ids": [
+            "sponge",
+            "bowl"
+          ],
+          "mechanism_tags": [
+            "absorb_water",
+            "open_container"
+          ]
+        },
+        {
+          "id": "suspended_drip_apron",
+          "keywords": [
+            "apron",
+            "suspended",
+            "sheet",
+            "redirect",
+            "twist tie"
+          ],
+          "tool_ids": [
+            "plastic_bag",
+            "twist_tie",
+            "bowl"
+          ],
+          "mechanism_tags": [
+            "funnel_sheet",
+            "temporary_fastener",
+            "open_container"
+          ]
+        }
+      ]
+    },
+    "mg_015": {
+      "hard_zero_plan_families": [
+        {
+          "id": "tape_sign_to_wall",
+          "keywords": [
+            "tape",
+            "sign",
+            "wall",
+            "stick",
+            "masking tape"
+          ],
+          "tool_ids": [
+            "paper_sign",
+            "masking_tape"
+          ],
+          "mechanism_tags": [
+            "visible_surface",
+            "removable_adhesion"
+          ]
+        },
+        {
+          "id": "string_tape_loop",
+          "keywords": [
+            "string",
+            "loop",
+            "tape ends",
+            "hang sign"
+          ],
+          "tool_ids": [
+            "paper_sign",
+            "string",
+            "masking_tape"
+          ],
+          "mechanism_tags": [
+            "tie",
+            "removable_adhesion"
+          ]
+        }
+      ],
+      "broad_common_plan_families": [
+        {
+          "id": "four_corner_tape",
+          "keywords": [
+            "four corners",
+            "corners",
+            "masking tape",
+            "visible"
+          ],
+          "tool_ids": [
+            "paper_sign",
+            "masking_tape"
+          ],
+          "mechanism_tags": [
+            "removable_adhesion"
+          ]
+        }
+      ],
+      "supported_rare_affordance_families": [
+        {
+          "id": "tensioned_string_suspension",
+          "keywords": [
+            "tension",
+            "suspension",
+            "string",
+            "load shared",
+            "removable tape"
+          ],
+          "tool_ids": [
+            "paper_sign",
+            "string",
+            "masking_tape"
+          ],
+          "mechanism_tags": [
+            "tie",
+            "removable_adhesion",
+            "visible_surface"
+          ]
+        },
+        {
+          "id": "folded_standoff_tab",
+          "keywords": [
+            "standoff",
+            "tab",
+            "fold",
+            "shadow",
+            "visible"
+          ],
+          "tool_ids": [
+            "paper_sign",
+            "masking_tape"
+          ],
+          "mechanism_tags": [
+            "visible_surface",
+            "removable_adhesion"
+          ]
+        }
+      ]
+    },
+    "mg_016": {
+      "hard_zero_plan_families": [
+        {
+          "id": "rubber_band_around_door",
+          "keywords": [
+            "rubber band",
+            "around door",
+            "keep closed",
+            "stretch"
+          ],
+          "tool_ids": [
+            "rubber_band"
+          ],
+          "mechanism_tags": [
+            "elastic_hold"
+          ]
+        },
+        {
+          "id": "low_tack_tape_hold",
+          "keywords": [
+            "masking tape",
+            "low-tack",
+            "tape door",
+            "temporary hold"
+          ],
+          "tool_ids": [
+            "masking_tape"
+          ],
+          "mechanism_tags": [
+            "removable_adhesion"
+          ]
+        }
+      ],
+      "broad_common_plan_families": [
+        {
+          "id": "towel_pad_under_band",
+          "keywords": [
+            "towel",
+            "pad",
+            "rubber band",
+            "protect finish"
+          ],
+          "tool_ids": [
+            "soft_towel",
+            "rubber_band"
+          ],
+          "mechanism_tags": [
+            "scratch_protection",
+            "elastic_hold"
+          ]
+        }
+      ],
+      "supported_rare_affordance_families": [
+        {
+          "id": "padded_cross_lash",
+          "keywords": [
+            "cross lash",
+            "diagonal",
+            "padded",
+            "load spread",
+            "finish"
+          ],
+          "tool_ids": [
+            "soft_towel",
+            "rubber_band",
+            "masking_tape"
+          ],
+          "mechanism_tags": [
+            "scratch_protection",
+            "elastic_hold",
+            "removable_adhesion"
+          ]
+        },
+        {
+          "id": "removable_tape_anchor_band",
+          "keywords": [
+            "anchor",
+            "band",
+            "removable tape",
+            "no mark",
+            "tension"
+          ],
+          "tool_ids": [
+            "rubber_band",
+            "masking_tape",
+            "soft_towel"
+          ],
+          "mechanism_tags": [
+            "elastic_hold",
+            "removable_adhesion",
+            "scratch_protection"
+          ]
+        }
+      ]
+    }
+  }
+}

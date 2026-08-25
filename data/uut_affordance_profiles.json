@@ -1,0 +1,784 @@
+{
+  "__shared__": {
+    "required_affordances": {
+      "container": [
+        "hold",
+        "store",
+        "carry",
+        "organizer",
+        "planter",
+        "pot",
+        "bin",
+        "tray",
+        "basket",
+        "box"
+      ],
+      "flat_surface": [
+        "map",
+        "sign",
+        "poster",
+        "board",
+        "target",
+        "tray",
+        "tabletop",
+        "stage"
+      ],
+      "writable_surface": [
+        "write",
+        "draw",
+        "label",
+        "map",
+        "poster",
+        "scorecard",
+        "braille"
+      ],
+      "shapeable_surface": [
+        "braille",
+        "texture",
+        "emboss",
+        "mold",
+        "shape",
+        "sculpt",
+        "fold",
+        "bend",
+        "loop",
+        "weave",
+        "canopy",
+        "rib"
+      ],
+      "acoustic_cavity": [
+        "echo",
+        "speaker",
+        "drum",
+        "acoustic",
+        "megaphone",
+        "chamber",
+        "amplifier"
+      ],
+      "lightweight": [
+        "kite",
+        "glider",
+        "costume",
+        "mask",
+        "shade",
+        "lantern",
+        "decoration",
+        "portable",
+        "carry",
+        "suspend"
+      ],
+      "hangable": [
+        "hang",
+        "suspend",
+        "chime",
+        "mobile",
+        "hook",
+        "handle",
+        "tie",
+        "knot",
+        "line"
+      ],
+      "rigid_shell": [
+        "helmet",
+        "armor",
+        "shield",
+        "frame",
+        "structure",
+        "casing"
+      ],
+      "water_resistant": [
+        "boat",
+        "waterproof",
+        "rain",
+        "underwater",
+        "float",
+        "floating",
+        "cover",
+        "canopy",
+        "shield",
+        "splash",
+        "sealed"
+      ],
+      "pressure_resistant": [
+        "deep sea",
+        "submarine",
+        "pressure",
+        "diving",
+        "underwater"
+      ],
+      "load_bearing": [
+        "chair",
+        "ladder",
+        "bridge",
+        "support",
+        "platform",
+        "step",
+        "tension",
+        "tow",
+        "pull",
+        "brace"
+      ],
+      "metal_conductive": [
+        "antenna",
+        "wire",
+        "circuit",
+        "conduct",
+        "electrode"
+      ],
+      "reflective": [
+        "reflect",
+        "mirror",
+        "signal",
+        "flash"
+      ],
+      "sharp_edge": [
+        "cut",
+        "slice",
+        "scrape",
+        "punch"
+      ],
+      "heat_resistant": [
+        "fire",
+        "stove",
+        "cooking",
+        "burner"
+      ]
+    },
+    "modifier_enablers": {
+      "waterproof_coating": {
+        "keywords": [
+          "waterproof",
+          "wax",
+          "sealed",
+          "laminated",
+          "plastic lined",
+          "coated"
+        ],
+        "enables": [
+          "water_resistant"
+        ]
+      },
+      "reinforce": {
+        "keywords": [
+          "reinforce",
+          "framed",
+          "brace",
+          "laminate",
+          "layered",
+          "support"
+        ],
+        "enables": [
+          "load_bearing",
+          "rigid_shell",
+          "pressure_resistant"
+        ]
+      },
+      "metal_insert": {
+        "keywords": [
+          "metal lined",
+          "metal insert",
+          "foil lined"
+        ],
+        "enables": [
+          "reflective",
+          "heat_resistant"
+        ]
+      }
+    },
+    "mechanism_keywords": [
+      "because",
+      "so that",
+      "by ",
+      "using",
+      "acts as",
+      "serves as",
+      "turn into",
+      "lets you",
+      "allows"
+    ]
+  },
+  "uut_01": {
+    "target_aliases": [
+      "cardboard boxes",
+      "cardboard box",
+      "box"
+    ],
+    "prompt_cues": [
+      "box",
+      "cardboard",
+      "container",
+      "paper",
+      "fold"
+    ],
+    "base_properties": {
+      "container": 0.95,
+      "flat_surface": 0.75,
+      "writable_surface": 0.7,
+      "shapeable_surface": 0.72,
+      "acoustic_cavity": 0.7,
+      "lightweight": 0.82,
+      "hangable": 0.55
+    },
+    "negative_properties": {
+      "water_resistant": 0.9,
+      "pressure_resistant": 0.95,
+      "load_bearing": 0.75,
+      "heat_resistant": 0.85,
+      "rigid_shell": 0.7
+    }
+  },
+  "uut_02": {
+    "target_aliases": [
+      "tin cans",
+      "tin can",
+      "can"
+    ],
+    "prompt_cues": [
+      "can",
+      "tin",
+      "metal",
+      "container",
+      "cylinder"
+    ],
+    "base_properties": {
+      "container": 0.92,
+      "rigid_shell": 0.78,
+      "water_resistant": 0.8,
+      "metal_conductive": 0.85,
+      "reflective": 0.65,
+      "hangable": 0.55,
+      "sharp_edge": 0.58,
+      "acoustic_cavity": 0.52
+    },
+    "negative_properties": {
+      "shapeable_surface": 0.7,
+      "writable_surface": 0.8,
+      "load_bearing": 0.62,
+      "pressure_resistant": 0.55
+    }
+  },
+  "uut_03": {
+    "target_aliases": [
+      "suitcases",
+      "suitcase",
+      "luggage"
+    ],
+    "prompt_cues": [
+      "suitcase",
+      "luggage",
+      "travel",
+      "handle",
+      "case"
+    ],
+    "base_properties": {
+      "container": 0.95,
+      "rigid_shell": 0.82,
+      "hangable": 0.8,
+      "load_bearing": 0.62,
+      "acoustic_cavity": 0.65,
+      "flat_surface": 0.45,
+      "water_resistant": 0.42
+    },
+    "negative_properties": {
+      "shapeable_surface": 0.7,
+      "sharp_edge": 0.85,
+      "metal_conductive": 0.8,
+      "heat_resistant": 0.75
+    }
+  },
+  "uut_04": {
+    "target_aliases": [
+      "wallets",
+      "wallet",
+      "billfold"
+    ],
+    "prompt_cues": [
+      "wallet",
+      "money",
+      "card",
+      "pocket",
+      "leather"
+    ],
+    "base_properties": {
+      "container": 0.92,
+      "shapeable_surface": 0.88,
+      "flat_surface": 0.55,
+      "lightweight": 0.82,
+      "writable_surface": 0.2
+    },
+    "negative_properties": {
+      "load_bearing": 0.95,
+      "rigid_shell": 0.8,
+      "pressure_resistant": 0.92,
+      "water_resistant": 0.72,
+      "sharp_edge": 0.95,
+      "heat_resistant": 0.9
+    }
+  },
+  "uut_05": {
+    "target_aliases": [
+      "ladders",
+      "ladder",
+      "step ladder",
+      "stepladder"
+    ],
+    "prompt_cues": [
+      "ladder",
+      "rung",
+      "climb",
+      "height",
+      "step"
+    ],
+    "base_properties": {
+      "load_bearing": 0.95,
+      "rigid_shell": 0.9,
+      "hangable": 0.55,
+      "flat_surface": 0.32
+    },
+    "negative_properties": {
+      "container": 0.98,
+      "acoustic_cavity": 0.92,
+      "shapeable_surface": 0.9,
+      "writable_surface": 0.82,
+      "water_resistant": 0.7,
+      "pressure_resistant": 0.72
+    }
+  },
+  "uut_06": {
+    "target_aliases": [
+      "umbrellas",
+      "umbrella",
+      "parasol"
+    ],
+    "prompt_cues": [
+      "umbrella",
+      "rain",
+      "canopy",
+      "handle",
+      "fold"
+    ],
+    "base_properties": {
+      "water_resistant": 0.95,
+      "lightweight": 0.78,
+      "hangable": 0.62,
+      "shapeable_surface": 0.5,
+      "flat_surface": 0.28
+    },
+    "negative_properties": {
+      "container": 0.9,
+      "load_bearing": 0.82,
+      "pressure_resistant": 0.75,
+      "sharp_edge": 0.88,
+      "heat_resistant": 0.72,
+      "metal_conductive": 0.45
+    }
+  },
+  "uut_07": {
+    "target_aliases": [
+      "newspapers",
+      "newspaper",
+      "newsprint"
+    ],
+    "prompt_cues": [
+      "newspaper",
+      "paper",
+      "fold",
+      "print",
+      "sheet"
+    ],
+    "base_properties": {
+      "flat_surface": 0.92,
+      "writable_surface": 0.82,
+      "shapeable_surface": 0.88,
+      "lightweight": 0.94,
+      "hangable": 0.35
+    },
+    "negative_properties": {
+      "water_resistant": 0.95,
+      "pressure_resistant": 0.95,
+      "load_bearing": 0.9,
+      "heat_resistant": 0.92,
+      "rigid_shell": 0.86,
+      "sharp_edge": 0.65
+    }
+  },
+  "uut_08": {
+    "target_aliases": [
+      "spoons",
+      "spoon",
+      "metal spoon"
+    ],
+    "prompt_cues": [
+      "spoon",
+      "bowl",
+      "handle",
+      "scoop",
+      "metal"
+    ],
+    "base_properties": {
+      "metal_conductive": 0.7,
+      "reflective": 0.58,
+      "rigid_shell": 0.78,
+      "container": 0.5,
+      "heat_resistant": 0.55
+    },
+    "negative_properties": {
+      "load_bearing": 0.86,
+      "flat_surface": 0.72,
+      "pressure_resistant": 0.62,
+      "shapeable_surface": 0.7,
+      "water_resistant": 0.2
+    }
+  },
+  "uut_09": {
+    "target_aliases": [
+      "ropes",
+      "rope",
+      "cord",
+      "line"
+    ],
+    "prompt_cues": [
+      "rope",
+      "tie",
+      "knot",
+      "cord",
+      "suspend"
+    ],
+    "base_properties": {
+      "hangable": 0.96,
+      "load_bearing": 0.72,
+      "shapeable_surface": 0.78,
+      "lightweight": 0.64
+    },
+    "negative_properties": {
+      "container": 0.95,
+      "flat_surface": 0.9,
+      "writable_surface": 0.95,
+      "rigid_shell": 0.9,
+      "metal_conductive": 0.95,
+      "reflective": 0.95,
+      "heat_resistant": 0.72
+    }
+  },
+  "uut_10": {
+    "target_aliases": [
+      "bricks",
+      "brick",
+      "clay brick"
+    ],
+    "prompt_cues": [
+      "brick",
+      "clay",
+      "block",
+      "wall",
+      "heavy"
+    ],
+    "base_properties": {
+      "load_bearing": 0.95,
+      "rigid_shell": 0.95,
+      "flat_surface": 0.66,
+      "heat_resistant": 0.72,
+      "pressure_resistant": 0.76
+    },
+    "negative_properties": {
+      "lightweight": 0.95,
+      "container": 0.98,
+      "shapeable_surface": 0.95,
+      "writable_surface": 0.66,
+      "water_resistant": 0.48,
+      "sharp_edge": 0.3
+    }
+  },
+  "uut_11": {
+    "target_aliases": [
+      "socks",
+      "sock",
+      "stocking"
+    ],
+    "prompt_cues": [
+      "sock",
+      "fabric",
+      "foot",
+      "soft",
+      "elastic"
+    ],
+    "base_properties": {
+      "shapeable_surface": 0.92,
+      "lightweight": 0.95,
+      "hangable": 0.58,
+      "flat_surface": 0.34,
+      "container": 0.32
+    },
+    "negative_properties": {
+      "rigid_shell": 0.95,
+      "load_bearing": 0.9,
+      "pressure_resistant": 0.9,
+      "metal_conductive": 0.95,
+      "sharp_edge": 0.95,
+      "heat_resistant": 0.86,
+      "water_resistant": 0.75
+    }
+  },
+  "uut_12": {
+    "target_aliases": [
+      "plastic bottles",
+      "plastic bottle",
+      "bottle"
+    ],
+    "prompt_cues": [
+      "bottle",
+      "plastic",
+      "container",
+      "cap",
+      "water"
+    ],
+    "base_properties": {
+      "container": 0.95,
+      "water_resistant": 0.92,
+      "lightweight": 0.86,
+      "rigid_shell": 0.55,
+      "acoustic_cavity": 0.45,
+      "hangable": 0.34
+    },
+    "negative_properties": {
+      "heat_resistant": 0.86,
+      "load_bearing": 0.82,
+      "pressure_resistant": 0.62,
+      "metal_conductive": 0.96,
+      "sharp_edge": 0.72
+    }
+  },
+  "uut_13": {
+    "target_aliases": [
+      "towels",
+      "towel",
+      "cloth towel"
+    ],
+    "prompt_cues": [
+      "towel",
+      "cloth",
+      "absorb",
+      "dry",
+      "fabric"
+    ],
+    "base_properties": {
+      "shapeable_surface": 0.95,
+      "flat_surface": 0.78,
+      "lightweight": 0.76,
+      "hangable": 0.86
+    },
+    "negative_properties": {
+      "rigid_shell": 0.95,
+      "load_bearing": 0.82,
+      "pressure_resistant": 0.86,
+      "metal_conductive": 0.96,
+      "sharp_edge": 0.96,
+      "heat_resistant": 0.56,
+      "water_resistant": 0.62
+    }
+  },
+  "uut_14": {
+    "target_aliases": [
+      "keys",
+      "key",
+      "metal key"
+    ],
+    "prompt_cues": [
+      "key",
+      "metal",
+      "lock",
+      "ring",
+      "tooth"
+    ],
+    "base_properties": {
+      "metal_conductive": 0.78,
+      "rigid_shell": 0.82,
+      "reflective": 0.66,
+      "hangable": 0.76,
+      "sharp_edge": 0.55,
+      "heat_resistant": 0.6
+    },
+    "negative_properties": {
+      "container": 0.98,
+      "load_bearing": 0.9,
+      "pressure_resistant": 0.7,
+      "shapeable_surface": 0.82,
+      "flat_surface": 0.62
+    }
+  },
+  "uut_15": {
+    "target_aliases": [
+      "plates",
+      "plate",
+      "dinner plate"
+    ],
+    "prompt_cues": [
+      "plate",
+      "dish",
+      "flat",
+      "round",
+      "ceramic"
+    ],
+    "base_properties": {
+      "flat_surface": 0.86,
+      "rigid_shell": 0.72,
+      "water_resistant": 0.76,
+      "heat_resistant": 0.55,
+      "container": 0.36,
+      "reflective": 0.32
+    },
+    "negative_properties": {
+      "shapeable_surface": 0.9,
+      "load_bearing": 0.78,
+      "pressure_resistant": 0.62,
+      "sharp_edge": 0.52,
+      "lightweight": 0.45
+    }
+  },
+  "uut_16": {
+    "target_aliases": [
+      "books",
+      "book",
+      "paperback",
+      "notebook"
+    ],
+    "prompt_cues": [
+      "book",
+      "page",
+      "paper",
+      "cover",
+      "read"
+    ],
+    "base_properties": {
+      "flat_surface": 0.9,
+      "writable_surface": 0.8,
+      "shapeable_surface": 0.38,
+      "lightweight": 0.56,
+      "rigid_shell": 0.45
+    },
+    "negative_properties": {
+      "water_resistant": 0.9,
+      "heat_resistant": 0.86,
+      "pressure_resistant": 0.82,
+      "load_bearing": 0.68,
+      "sharp_edge": 0.78,
+      "metal_conductive": 0.96
+    }
+  },
+  "uut_17": {
+    "target_aliases": [
+      "chairs",
+      "chair",
+      "seat"
+    ],
+    "prompt_cues": [
+      "chair",
+      "seat",
+      "leg",
+      "back",
+      "support"
+    ],
+    "base_properties": {
+      "load_bearing": 0.95,
+      "rigid_shell": 0.86,
+      "flat_surface": 0.7,
+      "hangable": 0.25
+    },
+    "negative_properties": {
+      "container": 0.9,
+      "lightweight": 0.6,
+      "shapeable_surface": 0.82,
+      "acoustic_cavity": 0.76,
+      "water_resistant": 0.55,
+      "sharp_edge": 0.72
+    }
+  },
+  "uut_18": {
+    "target_aliases": [
+      "toothbrushes",
+      "toothbrush",
+      "brush"
+    ],
+    "prompt_cues": [
+      "toothbrush",
+      "bristle",
+      "handle",
+      "scrub",
+      "clean"
+    ],
+    "base_properties": {
+      "lightweight": 0.9,
+      "hangable": 0.45,
+      "rigid_shell": 0.45,
+      "sharp_edge": 0.35,
+      "shapeable_surface": 0.28
+    },
+    "negative_properties": {
+      "container": 0.98,
+      "load_bearing": 0.95,
+      "pressure_resistant": 0.86,
+      "flat_surface": 0.85,
+      "metal_conductive": 0.9,
+      "heat_resistant": 0.8
+    }
+  },
+  "uut_19": {
+    "target_aliases": [
+      "shoes",
+      "shoe",
+      "sneaker",
+      "boot"
+    ],
+    "prompt_cues": [
+      "shoe",
+      "sole",
+      "foot",
+      "leather",
+      "walk"
+    ],
+    "base_properties": {
+      "load_bearing": 0.7,
+      "container": 0.55,
+      "rigid_shell": 0.55,
+      "water_resistant": 0.5,
+      "shapeable_surface": 0.45,
+      "hangable": 0.34
+    },
+    "negative_properties": {
+      "heat_resistant": 0.82,
+      "metal_conductive": 0.88,
+      "sharp_edge": 0.82,
+      "pressure_resistant": 0.62,
+      "flat_surface": 0.55
+    }
+  },
+  "uut_20": {
+    "target_aliases": [
+      "paper clips",
+      "paper clip",
+      "clip"
+    ],
+    "prompt_cues": [
+      "paper clip",
+      "wire",
+      "metal",
+      "bend",
+      "clip"
+    ],
+    "base_properties": {
+      "metal_conductive": 0.76,
+      "shapeable_surface": 0.86,
+      "lightweight": 0.95,
+      "hangable": 0.6,
+      "reflective": 0.55,
+      "sharp_edge": 0.25
+    },
+    "negative_properties": {
+      "container": 0.95,
+      "load_bearing": 0.86,
+      "pressure_resistant": 0.8,
+      "water_resistant": 0.35,
+      "heat_resistant": 0.55
+    }
+  }
+}

@@ -1,0 +1,2144 @@
+{
+  "schema": "benchmark",
+  "plan_count": 3,
+  "tasks": [
+    {
+      "id": "mg_001",
+      "title": "Wobbly table",
+      "scene": "A table has one slightly short leg, so the tabletop wobbles during writing.",
+      "goal": "Stabilize the tabletop without damaging the table.",
+      "unsolvable": false,
+      "tools": [
+        {
+          "id": "coin",
+          "name": "coins",
+          "aliases": [
+            "coin",
+            "coins"
+          ],
+          "affordances": {
+            "rigid_spacer": {
+              "keywords": [
+                "height",
+                "raise",
+                "shim",
+                "under",
+                "rigid",
+                "stack",
+                "spacer"
+              ],
+              "strength": 1.0
+            },
+            "weight": {
+              "keywords": [
+                "weight",
+                "heavy",
+                "press"
+              ],
+              "strength": 0.65
+            }
+          },
+          "negative_affordances": {
+            "heat_source": {
+              "keywords": [
+                "melt",
+                "burn",
+                "heat",
+                "flame"
+              ],
+              "strength": 1.0
+            }
+          }
+        },
+        {
+          "id": "tape",
+          "name": "tape",
+          "aliases": [
+            "tape",
+            "adhesive tape"
+          ],
+          "affordances": {
+            "adhesion": {
+              "keywords": [
+                "tape",
+                "secure",
+                "fix",
+                "hold",
+                "stick",
+                "prevent sliding"
+              ],
+              "strength": 1.0
+            },
+            "friction": {
+              "keywords": [
+                "friction",
+                "grip",
+                "slip",
+                "sliding"
+              ],
+              "strength": 0.85
+            }
+          },
+          "negative_affordances": {
+            "clean_removal_risk": {
+              "keywords": [
+                "permanent",
+                "glue",
+                "weld"
+              ],
+              "strength": 0.7
+            }
+          }
+        },
+        {
+          "id": "paper_card",
+          "name": "paper cards",
+          "aliases": [
+            "paper card",
+            "paper cards",
+            "paper",
+            "card"
+          ],
+          "affordances": {
+            "foldable_spacer": {
+              "keywords": [
+                "fold",
+                "wedge",
+                "shim",
+                "layer",
+                "height",
+                "under"
+              ],
+              "strength": 0.85
+            },
+            "compressible": {
+              "keywords": [
+                "compress",
+                "pad",
+                "soften"
+              ],
+              "strength": 0.55
+            }
+          },
+          "negative_affordances": {
+            "low_load_capacity": {
+              "keywords": [
+                "heavy load",
+                "car",
+                "engine",
+                "human weight"
+              ],
+              "strength": 0.9
+            }
+          }
+        },
+        {
+          "id": "cork_coaster",
+          "name": "cork coaster",
+          "aliases": [
+            "cork coaster",
+            "coaster"
+          ],
+          "affordances": {
+            "friction_pad": {
+              "keywords": [
+                "grip",
+                "friction",
+                "pad",
+                "stable",
+                "under"
+              ],
+              "strength": 0.9
+            },
+            "compressible_spacer": {
+              "keywords": [
+                "height",
+                "shim",
+                "compress",
+                "spacer"
+              ],
+              "strength": 0.8
+            }
+          },
+          "negative_affordances": {
+            "heat_source": {
+              "keywords": [
+                "melt",
+                "burn",
+                "flame"
+              ],
+              "strength": 0.9
+            }
+          }
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "increase_short_leg_height",
+          "description": "Raise the short leg enough to level the table.",
+          "keywords": [
+            "raise",
+            "height",
+            "shim",
+            "wedge",
+            "under",
+            "level"
+          ]
+        },
+        {
+          "id": "prevent_sliding",
+          "description": "Keep the stabilizer from sliding out.",
+          "keywords": [
+            "secure",
+            "fix",
+            "friction",
+            "grip",
+            "prevent sliding",
+            "stable"
+          ]
+        },
+        {
+          "id": "no_surface_damage",
+          "description": "Avoid permanent damage.",
+          "keywords": [
+            "without damaging",
+            "no damage",
+            "not damage",
+            "removable",
+            "protect"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "no_damage",
+          "description": "Do not cut, drill, melt, burn, nail, screw, weld, or permanently glue the table.",
+          "forbidden_keywords": [
+            "cut",
+            "drill",
+            "melt",
+            "burn",
+            "nail",
+            "screw",
+            "weld",
+            "permanent glue",
+            "superglue"
+          ]
+        },
+        {
+          "id": "closed_tools",
+          "description": "Only the listed tools may be used.",
+          "forbidden_tool_keywords": [
+            "lighter",
+            "plastic sheet",
+            "knife",
+            "saw",
+            "drill",
+            "glue"
+          ]
+        }
+      ],
+      "reference_plans": [
+        {
+          "id": "ref_coin_tape",
+          "used_tools": [
+            "coin",
+            "tape"
+          ],
+          "action_sequence": [
+            "place coins under short leg",
+            "tape coins in place"
+          ],
+          "mechanism_tags": [
+            "rigid_spacer",
+            "adhesion"
+          ]
+        },
+        {
+          "id": "ref_coaster_pad",
+          "used_tools": [
+            "cork_coaster"
+          ],
+          "action_sequence": [
+            "slide coaster under short leg"
+          ],
+          "mechanism_tags": [
+            "compressible_spacer",
+            "friction_pad"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mg_002",
+      "title": "Roll dough without a rolling pin",
+      "scene": "You need to roll cookie dough evenly, but there is no rolling pin.",
+      "goal": "Flatten the dough into an even sheet on the cutting board.",
+      "unsolvable": false,
+      "tools": [
+        {
+          "id": "wine_bottle",
+          "name": "full wine bottle",
+          "aliases": [
+            "wine bottle",
+            "bottle",
+            "full bottle"
+          ],
+          "affordances": {
+            "smooth_cylinder": {
+              "keywords": [
+                "roll",
+                "rolling",
+                "cylinder",
+                "smooth",
+                "even"
+              ],
+              "strength": 1.0
+            },
+            "rigid_weight": {
+              "keywords": [
+                "press",
+                "weight",
+                "firm"
+              ],
+              "strength": 0.8
+            }
+          },
+          "negative_affordances": {
+            "sharp_edge": {
+              "keywords": [
+                "cut",
+                "slice"
+              ],
+              "strength": 0.8
+            }
+          }
+        },
+        {
+          "id": "cotton_towel",
+          "name": "clean cotton hand towel",
+          "aliases": [
+            "cotton towel",
+            "towel",
+            "hand towel"
+          ],
+          "affordances": {
+            "clean_barrier": {
+              "keywords": [
+                "wrap",
+                "cover",
+                "clean",
+                "barrier"
+              ],
+              "strength": 0.9
+            },
+            "soft_pad": {
+              "keywords": [
+                "pad",
+                "soft",
+                "cushion"
+              ],
+              "strength": 0.65
+            }
+          },
+          "negative_affordances": {
+            "rigid_cylinder": {
+              "keywords": [
+                "roll evenly by itself",
+                "rigid cylinder"
+              ],
+              "strength": 0.75
+            }
+          }
+        },
+        {
+          "id": "foil_roll",
+          "name": "roll of kitchen foil",
+          "aliases": [
+            "foil roll",
+            "kitchen foil",
+            "foil"
+          ],
+          "affordances": {
+            "cylindrical_core": {
+              "keywords": [
+                "roll",
+                "cylinder",
+                "tube",
+                "smooth"
+              ],
+              "strength": 0.8
+            },
+            "clean_cover": {
+              "keywords": [
+                "cover",
+                "wrap",
+                "barrier"
+              ],
+              "strength": 0.75
+            }
+          },
+          "negative_affordances": {
+            "weak_structure": {
+              "keywords": [
+                "heavy pressure",
+                "stand on"
+              ],
+              "strength": 0.7
+            }
+          }
+        },
+        {
+          "id": "measuring_tape",
+          "name": "measuring tape",
+          "aliases": [
+            "measuring tape",
+            "tape measure"
+          ],
+          "affordances": {
+            "thickness_gauge": {
+              "keywords": [
+                "measure",
+                "thickness",
+                "guide",
+                "even"
+              ],
+              "strength": 0.85
+            }
+          },
+          "negative_affordances": {
+            "roller": {
+              "keywords": [
+                "roll dough with tape"
+              ],
+              "strength": 0.7
+            }
+          }
+        },
+        {
+          "id": "cutting_board",
+          "name": "wooden cutting board",
+          "aliases": [
+            "cutting board",
+            "board"
+          ],
+          "affordances": {
+            "flat_surface": {
+              "keywords": [
+                "flat",
+                "surface",
+                "board",
+                "support"
+              ],
+              "strength": 0.9
+            }
+          },
+          "negative_affordances": {
+            "flexible_sheet": {
+              "keywords": [
+                "bend around dough"
+              ],
+              "strength": 0.6
+            }
+          }
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "flatten_evenly",
+          "description": "Flatten dough with even pressure.",
+          "keywords": [
+            "flatten",
+            "roll",
+            "even",
+            "sheet",
+            "uniform"
+          ]
+        },
+        {
+          "id": "food_safe_contact",
+          "description": "Keep the food surface clean.",
+          "keywords": [
+            "clean",
+            "wrap",
+            "cover",
+            "barrier",
+            "food safe"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "no_cutting_dough_apart",
+          "description": "Do not solve by cutting the dough into pieces.",
+          "forbidden_keywords": [
+            "cut into pieces",
+            "slice apart",
+            "chop"
+          ]
+        },
+        {
+          "id": "closed_tools",
+          "description": "Only the listed tools may be used.",
+          "forbidden_tool_keywords": [
+            "rolling pin",
+            "pipe",
+            "jar",
+            "knife"
+          ]
+        }
+      ],
+      "reference_plans": [
+        {
+          "id": "ref_bottle",
+          "used_tools": [
+            "wine_bottle",
+            "cotton_towel",
+            "cutting_board"
+          ],
+          "action_sequence": [
+            "wrap bottle with towel",
+            "roll bottle over dough"
+          ],
+          "mechanism_tags": [
+            "smooth_cylinder",
+            "clean_barrier",
+            "flat_surface"
+          ]
+        },
+        {
+          "id": "ref_foil_core",
+          "used_tools": [
+            "foil_roll",
+            "cutting_board"
+          ],
+          "action_sequence": [
+            "roll foil cylinder over dough"
+          ],
+          "mechanism_tags": [
+            "cylindrical_core",
+            "flat_surface"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mg_003",
+      "title": "Retrieve cookies from a narrow jar",
+      "scene": "Cookies are at the bottom of a tall narrow jar. Your hand cannot fit inside.",
+      "goal": "Retrieve at least one cookie without breaking the jar.",
+      "unsolvable": false,
+      "tools": [
+        {
+          "id": "chopsticks",
+          "name": "pair of chopsticks",
+          "aliases": [
+            "chopsticks",
+            "chopstick"
+          ],
+          "affordances": {
+            "narrow_reach": {
+              "keywords": [
+                "reach",
+                "inside",
+                "narrow",
+                "extend"
+              ],
+              "strength": 0.75
+            },
+            "grip_small_object": {
+              "keywords": [
+                "grip",
+                "pinch",
+                "grab"
+              ],
+              "strength": 0.75
+            }
+          },
+          "negative_affordances": {
+            "too_short_alone": {
+              "keywords": [
+                "reach bottom alone",
+                "by itself reaches bottom"
+              ],
+              "strength": 0.8
+            }
+          }
+        },
+        {
+          "id": "sticky_tape",
+          "name": "roll of sticky tape",
+          "aliases": [
+            "sticky tape",
+            "tape"
+          ],
+          "affordances": {
+            "adhesion": {
+              "keywords": [
+                "sticky",
+                "attach",
+                "tape",
+                "lift",
+                "loop"
+              ],
+              "strength": 0.95
+            },
+            "joiner": {
+              "keywords": [
+                "join",
+                "extend",
+                "bind",
+                "secure"
+              ],
+              "strength": 0.85
+            }
+          },
+          "negative_affordances": {
+            "food_damage": {
+              "keywords": [
+                "crush",
+                "soak"
+              ],
+              "strength": 0.5
+            }
+          }
+        },
+        {
+          "id": "string",
+          "name": "piece of string",
+          "aliases": [
+            "string",
+            "cord"
+          ],
+          "affordances": {
+            "lowering_line": {
+              "keywords": [
+                "lower",
+                "line",
+                "loop",
+                "pull"
+              ],
+              "strength": 0.8
+            },
+            "tie": {
+              "keywords": [
+                "tie",
+                "bind",
+                "secure"
+              ],
+              "strength": 0.8
+            }
+          },
+          "negative_affordances": {
+            "rigid_reach": {
+              "keywords": [
+                "push rigidly"
+              ],
+              "strength": 0.6
+            }
+          }
+        },
+        {
+          "id": "rubber_band",
+          "name": "rubber bands",
+          "aliases": [
+            "rubber band",
+            "rubber bands"
+          ],
+          "affordances": {
+            "elastic_grip": {
+              "keywords": [
+                "grip",
+                "elastic",
+                "hold",
+                "clamp"
+              ],
+              "strength": 0.75
+            },
+            "joiner": {
+              "keywords": [
+                "bind",
+                "attach",
+                "secure"
+              ],
+              "strength": 0.75
+            }
+          },
+          "negative_affordances": {
+            "cutting": {
+              "keywords": [
+                "cut",
+                "saw"
+              ],
+              "strength": 0.7
+            }
+          }
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "reach_cookie_depth",
+          "description": "Reach the cookie at the bottom.",
+          "keywords": [
+            "reach",
+            "bottom",
+            "lower",
+            "extend",
+            "inside"
+          ]
+        },
+        {
+          "id": "lift_cookie",
+          "description": "Hold or stick to the cookie while lifting.",
+          "keywords": [
+            "lift",
+            "pull",
+            "grab",
+            "stick",
+            "attach"
+          ]
+        },
+        {
+          "id": "no_jar_breakage",
+          "description": "Avoid breaking the jar.",
+          "keywords": [
+            "without breaking",
+            "gentle",
+            "no break",
+            "avoid glass"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "no_breaking_jar",
+          "description": "Do not break, cut, or smash the jar.",
+          "forbidden_keywords": [
+            "break the jar",
+            "smash",
+            "shatter",
+            "cut glass"
+          ]
+        },
+        {
+          "id": "closed_tools",
+          "description": "Only the listed tools may be used.",
+          "forbidden_tool_keywords": [
+            "magnet",
+            "vacuum",
+            "tongs",
+            "glue"
+          ]
+        }
+      ],
+      "reference_plans": [
+        {
+          "id": "ref_sticky_chopstick",
+          "used_tools": [
+            "chopsticks",
+            "sticky_tape"
+          ],
+          "action_sequence": [
+            "put sticky tape loop on chopstick",
+            "lower into jar",
+            "lift cookie"
+          ],
+          "mechanism_tags": [
+            "adhesion",
+            "narrow_reach"
+          ]
+        },
+        {
+          "id": "ref_string_loop",
+          "used_tools": [
+            "string",
+            "sticky_tape"
+          ],
+          "action_sequence": [
+            "make sticky loop",
+            "lower loop on string",
+            "pull cookie up"
+          ],
+          "mechanism_tags": [
+            "lowering_line",
+            "adhesion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mg_004",
+      "title": "Keep a door from closing",
+      "scene": "A springy interior door keeps swinging shut while you carry boxes through it.",
+      "goal": "Keep the door open temporarily without damaging the floor or door.",
+      "unsolvable": false,
+      "tools": [
+        {
+          "id": "rubber_wedge",
+          "name": "rubber eraser",
+          "aliases": [
+            "rubber eraser",
+            "eraser"
+          ],
+          "affordances": {
+            "friction_wedge": {
+              "keywords": [
+                "wedge",
+                "under",
+                "friction",
+                "stop",
+                "jam"
+              ],
+              "strength": 0.95
+            },
+            "soft_contact": {
+              "keywords": [
+                "soft",
+                "no scratch",
+                "protect"
+              ],
+              "strength": 0.8
+            }
+          },
+          "negative_affordances": {
+            "permanent_fastener": {
+              "keywords": [
+                "nail",
+                "screw"
+              ],
+              "strength": 0.9
+            }
+          }
+        },
+        {
+          "id": "book",
+          "name": "hardcover book",
+          "aliases": [
+            "book",
+            "hardcover book"
+          ],
+          "affordances": {
+            "weight": {
+              "keywords": [
+                "weight",
+                "hold",
+                "prop",
+                "press"
+              ],
+              "strength": 0.85
+            },
+            "flat_rigid": {
+              "keywords": [
+                "flat",
+                "rigid",
+                "block"
+              ],
+              "strength": 0.8
+            }
+          },
+          "negative_affordances": {
+            "adhesion": {
+              "keywords": [
+                "stick to wall"
+              ],
+              "strength": 0.6
+            }
+          }
+        },
+        {
+          "id": "towel",
+          "name": "small towel",
+          "aliases": [
+            "towel"
+          ],
+          "affordances": {
+            "scratch_protection": {
+              "keywords": [
+                "protect",
+                "soft",
+                "cushion",
+                "wrap"
+              ],
+              "strength": 0.85
+            },
+            "friction": {
+              "keywords": [
+                "grip",
+                "friction",
+                "slip"
+              ],
+              "strength": 0.65
+            }
+          },
+          "negative_affordances": {
+            "rigid_block": {
+              "keywords": [
+                "rigid block"
+              ],
+              "strength": 0.65
+            }
+          }
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "resist_door_force",
+          "description": "Resist the closing force.",
+          "keywords": [
+            "hold open",
+            "stop",
+            "resist",
+            "prop",
+            "wedge"
+          ]
+        },
+        {
+          "id": "no_surface_damage",
+          "description": "Avoid scratching or puncturing surfaces.",
+          "keywords": [
+            "protect",
+            "no scratch",
+            "without damaging",
+            "soft"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "no_damage",
+          "description": "Do not nail, screw, drill, or glue anything to the door or floor.",
+          "forbidden_keywords": [
+            "nail",
+            "screw",
+            "drill",
+            "glue",
+            "superglue"
+          ]
+        },
+        {
+          "id": "closed_tools",
+          "description": "Only the listed tools may be used.",
+          "forbidden_tool_keywords": [
+            "doorstop",
+            "brick",
+            "rope",
+            "hook"
+          ]
+        }
+      ],
+      "reference_plans": [
+        {
+          "id": "ref_eraser_wedge",
+          "used_tools": [
+            "rubber_wedge"
+          ],
+          "action_sequence": [
+            "push eraser under door"
+          ],
+          "mechanism_tags": [
+            "friction_wedge",
+            "soft_contact"
+          ]
+        },
+        {
+          "id": "ref_book_towel",
+          "used_tools": [
+            "book",
+            "towel"
+          ],
+          "action_sequence": [
+            "wrap book with towel",
+            "place against door"
+          ],
+          "mechanism_tags": [
+            "weight",
+            "scratch_protection"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mg_005",
+      "title": "Carry a hot pot without mitts",
+      "scene": "A pot handle is hot, and you need to move the pot a short distance.",
+      "goal": "Move the pot safely without burning your hand.",
+      "unsolvable": false,
+      "tools": [
+        {
+          "id": "dry_towel",
+          "name": "dry towel",
+          "aliases": [
+            "dry towel",
+            "towel"
+          ],
+          "affordances": {
+            "thermal_insulation": {
+              "keywords": [
+                "wrap",
+                "insulate",
+                "heat",
+                "protect",
+                "hot"
+              ],
+              "strength": 0.95
+            },
+            "grip": {
+              "keywords": [
+                "grip",
+                "hold",
+                "handle"
+              ],
+              "strength": 0.75
+            }
+          },
+          "negative_affordances": {
+            "wet_conductor": {
+              "keywords": [
+                "wet towel",
+                "soak"
+              ],
+              "strength": 0.8
+            }
+          }
+        },
+        {
+          "id": "wooden_spoon",
+          "name": "wooden spoon",
+          "aliases": [
+            "wooden spoon",
+            "spoon"
+          ],
+          "affordances": {
+            "low_heat_conduction": {
+              "keywords": [
+                "wood",
+                "insulate",
+                "cool handle",
+                "low conduction"
+              ],
+              "strength": 0.8
+            },
+            "lever": {
+              "keywords": [
+                "lever",
+                "push",
+                "guide"
+              ],
+              "strength": 0.65
+            }
+          },
+          "negative_affordances": {
+            "soft_wrap": {
+              "keywords": [
+                "wrap hand"
+              ],
+              "strength": 0.5
+            }
+          }
+        },
+        {
+          "id": "rubber_band",
+          "name": "rubber band",
+          "aliases": [
+            "rubber band"
+          ],
+          "affordances": {
+            "temporary_binding": {
+              "keywords": [
+                "bind",
+                "secure",
+                "hold towel"
+              ],
+              "strength": 0.75
+            }
+          },
+          "negative_affordances": {
+            "heat_resistance": {
+              "keywords": [
+                "touch flame",
+                "direct flame",
+                "melt"
+              ],
+              "strength": 0.9
+            }
+          }
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "insulate_hand",
+          "description": "Separate hand from hot metal.",
+          "keywords": [
+            "insulate",
+            "wrap",
+            "protect",
+            "heat",
+            "hot"
+          ]
+        },
+        {
+          "id": "maintain_grip",
+          "description": "Keep control of the pot.",
+          "keywords": [
+            "grip",
+            "hold",
+            "secure",
+            "handle"
+          ]
+        },
+        {
+          "id": "avoid_burn",
+          "description": "Avoid burning skin.",
+          "keywords": [
+            "without burning",
+            "safe",
+            "protect hand"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "no_direct_flame",
+          "description": "Do not put rubber or towel into flame.",
+          "forbidden_keywords": [
+            "direct flame",
+            "burn the towel",
+            "melt rubber",
+            "set fire"
+          ]
+        },
+        {
+          "id": "closed_tools",
+          "description": "Only the listed tools may be used.",
+          "forbidden_tool_keywords": [
+            "oven mitt",
+            "glove",
+            "pliers"
+          ]
+        }
+      ],
+      "reference_plans": [
+        {
+          "id": "ref_towel_wrap",
+          "used_tools": [
+            "dry_towel"
+          ],
+          "action_sequence": [
+            "fold towel",
+            "wrap handle",
+            "grip through towel"
+          ],
+          "mechanism_tags": [
+            "thermal_insulation",
+            "grip"
+          ]
+        },
+        {
+          "id": "ref_towel_band",
+          "used_tools": [
+            "dry_towel",
+            "rubber_band"
+          ],
+          "action_sequence": [
+            "fold towel around handle",
+            "secure towel with band"
+          ],
+          "mechanism_tags": [
+            "thermal_insulation",
+            "temporary_binding"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mg_006",
+      "title": "Reach a key under a sofa",
+      "scene": "A key slid far under a low sofa where your arm cannot reach.",
+      "goal": "Pull the key out without moving the sofa.",
+      "unsolvable": false,
+      "tools": [
+        {
+          "id": "coat_hanger",
+          "name": "wire coat hanger",
+          "aliases": [
+            "coat hanger",
+            "wire hanger",
+            "hanger"
+          ],
+          "affordances": {
+            "bendable_hook": {
+              "keywords": [
+                "bend",
+                "hook",
+                "pull",
+                "reach"
+              ],
+              "strength": 1.0
+            },
+            "long_reach": {
+              "keywords": [
+                "long",
+                "reach",
+                "under sofa"
+              ],
+              "strength": 0.9
+            }
+          },
+          "negative_affordances": {
+            "magnetism": {
+              "keywords": [
+                "magnet",
+                "magnetic"
+              ],
+              "strength": 0.9
+            }
+          }
+        },
+        {
+          "id": "tape",
+          "name": "tape",
+          "aliases": [
+            "tape",
+            "sticky tape"
+          ],
+          "affordances": {
+            "adhesion": {
+              "keywords": [
+                "stick",
+                "attach",
+                "tape",
+                "pull"
+              ],
+              "strength": 0.85
+            },
+            "joiner": {
+              "keywords": [
+                "bind",
+                "secure"
+              ],
+              "strength": 0.75
+            }
+          },
+          "negative_affordances": {
+            "long_reach": {
+              "keywords": [
+                "reach alone"
+              ],
+              "strength": 0.7
+            }
+          }
+        },
+        {
+          "id": "ruler",
+          "name": "long ruler",
+          "aliases": [
+            "ruler",
+            "long ruler"
+          ],
+          "affordances": {
+            "long_flat_reach": {
+              "keywords": [
+                "slide",
+                "push",
+                "reach",
+                "flat"
+              ],
+              "strength": 0.85
+            }
+          },
+          "negative_affordances": {
+            "flexible_hook": {
+              "keywords": [
+                "hook around"
+              ],
+              "strength": 0.55
+            }
+          }
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "extend_reach",
+          "description": "Reach the key location.",
+          "keywords": [
+            "reach",
+            "under sofa",
+            "long",
+            "extend"
+          ]
+        },
+        {
+          "id": "capture_key",
+          "description": "Hook, stick, or push the key outward.",
+          "keywords": [
+            "hook",
+            "stick",
+            "pull",
+            "push",
+            "capture"
+          ]
+        },
+        {
+          "id": "do_not_move_sofa",
+          "description": "Leave the sofa in place.",
+          "keywords": [
+            "without moving",
+            "leave sofa",
+            "no moving"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "no_moving_sofa",
+          "description": "Do not move or lift the sofa.",
+          "forbidden_keywords": [
+            "move the sofa",
+            "lift the sofa",
+            "tip the sofa"
+          ]
+        },
+        {
+          "id": "closed_tools",
+          "description": "Only the listed tools may be used.",
+          "forbidden_tool_keywords": [
+            "magnet",
+            "vacuum",
+            "broom"
+          ]
+        }
+      ],
+      "reference_plans": [
+        {
+          "id": "ref_hanger_hook",
+          "used_tools": [
+            "coat_hanger"
+          ],
+          "action_sequence": [
+            "bend hanger into hook",
+            "pull key outward"
+          ],
+          "mechanism_tags": [
+            "bendable_hook",
+            "long_reach"
+          ]
+        },
+        {
+          "id": "ref_tape_ruler",
+          "used_tools": [
+            "tape",
+            "ruler"
+          ],
+          "action_sequence": [
+            "make sticky end on ruler",
+            "touch key",
+            "pull out"
+          ],
+          "mechanism_tags": [
+            "adhesion",
+            "long_flat_reach"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mg_007",
+      "title": "Stop a small sink leak",
+      "scene": "A sink supply joint is slowly dripping, and you need a temporary catch-and-divert fix until maintenance arrives.",
+      "goal": "Keep water off the cabinet floor for one hour.",
+      "unsolvable": false,
+      "tools": [
+        {
+          "id": "plastic_bag",
+          "name": "plastic bag",
+          "aliases": [
+            "plastic bag",
+            "bag"
+          ],
+          "affordances": {
+            "waterproof_container": {
+              "keywords": [
+                "waterproof",
+                "catch",
+                "collect",
+                "bag"
+              ],
+              "strength": 0.9
+            },
+            "funnel_sheet": {
+              "keywords": [
+                "divert",
+                "channel",
+                "guide"
+              ],
+              "strength": 0.75
+            }
+          },
+          "negative_affordances": {
+            "pressure_seal": {
+              "keywords": [
+                "seal pipe pressure",
+                "stop pressure"
+              ],
+              "strength": 0.8
+            }
+          }
+        },
+        {
+          "id": "twist_tie",
+          "name": "twist tie",
+          "aliases": [
+            "twist tie",
+            "tie"
+          ],
+          "affordances": {
+            "temporary_fastener": {
+              "keywords": [
+                "tie",
+                "secure",
+                "hang",
+                "attach"
+              ],
+              "strength": 0.85
+            }
+          },
+          "negative_affordances": {
+            "waterproof_seal": {
+              "keywords": [
+                "seal leak permanently"
+              ],
+              "strength": 0.75
+            }
+          }
+        },
+        {
+          "id": "sponge",
+          "name": "sponge",
+          "aliases": [
+            "sponge"
+          ],
+          "affordances": {
+            "absorb_water": {
+              "keywords": [
+                "absorb",
+                "soak",
+                "catch drips"
+              ],
+              "strength": 0.9
+            }
+          },
+          "negative_affordances": {
+            "large_capacity": {
+              "keywords": [
+                "hold gallons",
+                "one hour alone"
+              ],
+              "strength": 0.8
+            }
+          }
+        },
+        {
+          "id": "bowl",
+          "name": "bowl",
+          "aliases": [
+            "bowl"
+          ],
+          "affordances": {
+            "open_container": {
+              "keywords": [
+                "catch",
+                "collect",
+                "container",
+                "bowl"
+              ],
+              "strength": 0.9
+            }
+          },
+          "negative_affordances": {
+            "adhesion": {
+              "keywords": [
+                "stick to pipe"
+              ],
+              "strength": 0.7
+            }
+          }
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "catch_drips",
+          "description": "Catch dripping water.",
+          "keywords": [
+            "catch",
+            "collect",
+            "drip",
+            "bowl",
+            "bag"
+          ]
+        },
+        {
+          "id": "divert_to_container",
+          "description": "Guide water into a container.",
+          "keywords": [
+            "divert",
+            "channel",
+            "guide",
+            "into bowl"
+          ]
+        },
+        {
+          "id": "temporary_no_damage",
+          "description": "Avoid permanent pipe work.",
+          "keywords": [
+            "temporary",
+            "no damage",
+            "until maintenance"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "no_plumbing_repair",
+          "description": "Do not disassemble pipe or claim a permanent pressure repair.",
+          "forbidden_keywords": [
+            "disassemble",
+            "replace pipe",
+            "permanent seal",
+            "weld",
+            "solder"
+          ]
+        },
+        {
+          "id": "closed_tools",
+          "description": "Only the listed tools may be used.",
+          "forbidden_tool_keywords": [
+            "plumber tape",
+            "wrench",
+            "sealant",
+            "caulk"
+          ]
+        }
+      ],
+      "reference_plans": [
+        {
+          "id": "ref_bag_bowl",
+          "used_tools": [
+            "plastic_bag",
+            "twist_tie",
+            "bowl"
+          ],
+          "action_sequence": [
+            "tie bag below leak",
+            "cut corner toward bowl",
+            "collect water"
+          ],
+          "mechanism_tags": [
+            "waterproof_container",
+            "temporary_fastener",
+            "open_container"
+          ]
+        },
+        {
+          "id": "ref_sponge_bowl",
+          "used_tools": [
+            "sponge",
+            "bowl"
+          ],
+          "action_sequence": [
+            "place sponge under drip",
+            "set bowl below sponge"
+          ],
+          "mechanism_tags": [
+            "absorb_water",
+            "open_container"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mg_008",
+      "title": "Make a phone stand for a video call",
+      "scene": "You need your phone upright for a video call on a desk.",
+      "goal": "Hold the phone upright and stable without covering the camera.",
+      "unsolvable": false,
+      "tools": [
+        {
+          "id": "binder_clip",
+          "name": "binder clips",
+          "aliases": [
+            "binder clip",
+            "binder clips",
+            "clip"
+          ],
+          "affordances": {
+            "clamp": {
+              "keywords": [
+                "clamp",
+                "clip",
+                "hold",
+                "grip"
+              ],
+              "strength": 0.9
+            },
+            "folding_handles": {
+              "keywords": [
+                "handle",
+                "stand",
+                "angle",
+                "prop"
+              ],
+              "strength": 0.8
+            }
+          },
+          "negative_affordances": {
+            "screen_safe": {
+              "keywords": [
+                "crush screen",
+                "cover camera"
+              ],
+              "strength": 0.9
+            }
+          }
+        },
+        {
+          "id": "index_cards",
+          "name": "index cards",
+          "aliases": [
+            "index card",
+            "index cards",
+            "card"
+          ],
+          "affordances": {
+            "foldable_support": {
+              "keywords": [
+                "fold",
+                "triangle",
+                "support",
+                "wedge"
+              ],
+              "strength": 0.75
+            }
+          },
+          "negative_affordances": {
+            "heavy_load": {
+              "keywords": [
+                "support laptop"
+              ],
+              "strength": 0.7
+            }
+          }
+        },
+        {
+          "id": "tape",
+          "name": "tape",
+          "aliases": [
+            "tape"
+          ],
+          "affordances": {
+            "temporary_fastener": {
+              "keywords": [
+                "tape",
+                "secure",
+                "attach",
+                "hold"
+              ],
+              "strength": 0.8
+            }
+          },
+          "negative_affordances": {
+            "screen_damage": {
+              "keywords": [
+                "tape over camera",
+                "tape screen"
+              ],
+              "strength": 0.8
+            }
+          }
+        },
+        {
+          "id": "mug",
+          "name": "empty mug",
+          "aliases": [
+            "mug",
+            "cup"
+          ],
+          "affordances": {
+            "heavy_backstop": {
+              "keywords": [
+                "backstop",
+                "lean",
+                "support",
+                "heavy"
+              ],
+              "strength": 0.85
+            },
+            "container_slot": {
+              "keywords": [
+                "slot",
+                "inside",
+                "rim"
+              ],
+              "strength": 0.7
+            }
+          },
+          "negative_affordances": {
+            "adhesion": {
+              "keywords": [
+                "stick phone"
+              ],
+              "strength": 0.5
+            }
+          }
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "upright_support",
+          "description": "Support the phone upright.",
+          "keywords": [
+            "upright",
+            "stand",
+            "prop",
+            "support",
+            "lean"
+          ]
+        },
+        {
+          "id": "stable_base",
+          "description": "Keep the stand from tipping.",
+          "keywords": [
+            "stable",
+            "base",
+            "heavy",
+            "secure"
+          ]
+        },
+        {
+          "id": "camera_clear",
+          "description": "Keep camera uncovered.",
+          "keywords": [
+            "camera clear",
+            "not cover camera",
+            "avoid camera"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "camera_clear",
+          "description": "Do not cover or tape over the camera.",
+          "forbidden_keywords": [
+            "cover camera",
+            "tape over camera",
+            "block camera"
+          ]
+        },
+        {
+          "id": "closed_tools",
+          "description": "Only the listed tools may be used.",
+          "forbidden_tool_keywords": [
+            "tripod",
+            "phone stand",
+            "glue"
+          ]
+        }
+      ],
+      "reference_plans": [
+        {
+          "id": "ref_binder_clip",
+          "used_tools": [
+            "binder_clip"
+          ],
+          "action_sequence": [
+            "clip phone bottom gently",
+            "fold handles as legs"
+          ],
+          "mechanism_tags": [
+            "clamp",
+            "folding_handles"
+          ]
+        },
+        {
+          "id": "ref_mug_card",
+          "used_tools": [
+            "mug",
+            "index_cards"
+          ],
+          "action_sequence": [
+            "lean phone against mug",
+            "fold card wedge at base"
+          ],
+          "mechanism_tags": [
+            "heavy_backstop",
+            "foldable_support"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mg_009",
+      "title": "Replace a flat tire with no strong lever",
+      "scene": "A car has a flat tire. The lug wrench is broken. You have a stretchy belt, a blunt penknife, duct tape, a glossy hardcover book, and a hollow metal pipe that is rusted and breaks under force.",
+      "goal": "Replace the flat tire safely.",
+      "unsolvable": true,
+      "unsolvable_reason": "No listed tool can safely loosen lug nuts or lift/support the car.",
+      "tools": [
+        {
+          "id": "stretchy_belt",
+          "name": "stretchy belt",
+          "aliases": [
+            "belt",
+            "stretchy belt"
+          ],
+          "affordances": {
+            "flexible_loop": {
+              "keywords": [
+                "wrap",
+                "loop",
+                "tie"
+              ],
+              "strength": 0.45
+            }
+          },
+          "negative_affordances": {
+            "high_torque": {
+              "keywords": [
+                "loosen lug nuts",
+                "torque",
+                "lever"
+              ],
+              "strength": 1.0
+            }
+          }
+        },
+        {
+          "id": "blunt_penknife",
+          "name": "blunt penknife",
+          "aliases": [
+            "penknife",
+            "blunt penknife"
+          ],
+          "affordances": {
+            "small_pry": {
+              "keywords": [
+                "pry small",
+                "scrape"
+              ],
+              "strength": 0.35
+            }
+          },
+          "negative_affordances": {
+            "lug_wrench": {
+              "keywords": [
+                "lug nut",
+                "wheel nut",
+                "torque"
+              ],
+              "strength": 1.0
+            }
+          }
+        },
+        {
+          "id": "duct_tape",
+          "name": "duct tape",
+          "aliases": [
+            "duct tape",
+            "tape"
+          ],
+          "affordances": {
+            "temporary_binding": {
+              "keywords": [
+                "wrap",
+                "bind",
+                "hold"
+              ],
+              "strength": 0.55
+            }
+          },
+          "negative_affordances": {
+            "structural_reinforcement": {
+              "keywords": [
+                "reinforce pipe for torque",
+                "strong lever"
+              ],
+              "strength": 1.0
+            }
+          }
+        },
+        {
+          "id": "hardcover_book",
+          "name": "glossy hardcover book",
+          "aliases": [
+            "hardcover book",
+            "book"
+          ],
+          "affordances": {
+            "flat_surface": {
+              "keywords": [
+                "flat",
+                "pad"
+              ],
+              "strength": 0.35
+            }
+          },
+          "negative_affordances": {
+            "vehicle_support": {
+              "keywords": [
+                "support car",
+                "jack car",
+                "lift car"
+              ],
+              "strength": 1.0
+            }
+          }
+        },
+        {
+          "id": "rusted_pipe",
+          "name": "rusted hollow metal pipe",
+          "aliases": [
+            "metal pipe",
+            "rusted pipe",
+            "pipe"
+          ],
+          "affordances": {
+            "hollow_tube": {
+              "keywords": [
+                "tube"
+              ],
+              "strength": 0.25
+            }
+          },
+          "negative_affordances": {
+            "load_or_torque": {
+              "keywords": [
+                "lever",
+                "torque",
+                "loosen lug",
+                "lift car",
+                "force"
+              ],
+              "strength": 1.0
+            }
+          }
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "loosen_lug_nuts",
+          "description": "Loosen the lug nuts.",
+          "keywords": [
+            "loosen lug",
+            "lug nut",
+            "torque"
+          ]
+        },
+        {
+          "id": "lift_vehicle_safely",
+          "description": "Lift and support the vehicle safely.",
+          "keywords": [
+            "jack",
+            "lift car",
+            "support car"
+          ]
+        },
+        {
+          "id": "replace_tire",
+          "description": "Remove and replace the wheel.",
+          "keywords": [
+            "replace tire",
+            "remove wheel"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "rusted_pipe_breaks",
+          "description": "The rusted pipe breaks under force.",
+          "forbidden_keywords": [
+            "use pipe as lever",
+            "reinforce pipe",
+            "torque with pipe",
+            "lift car with pipe"
+          ]
+        },
+        {
+          "id": "closed_tools",
+          "description": "Only the listed tools may be used.",
+          "forbidden_tool_keywords": [
+            "jack",
+            "lug wrench",
+            "breaker bar",
+            "tow truck"
+          ]
+        }
+      ],
+      "reference_plans": []
+    },
+    {
+      "id": "mg_010",
+      "title": "Light a room with no energy source",
+      "scene": "The power is out at night in a windowless room. You have a clear glass cup, a metal spoon, a cotton string, and a paperback book. There is no flame, battery, sunlight, or chemical light source.",
+      "goal": "Provide enough light to read for ten minutes.",
+      "unsolvable": true,
+      "unsolvable_reason": "The listed tools contain no light or energy source.",
+      "tools": [
+        {
+          "id": "glass_cup",
+          "name": "clear glass cup",
+          "aliases": [
+            "glass cup",
+            "cup"
+          ],
+          "affordances": {
+            "transparent_container": {
+              "keywords": [
+                "reflect",
+                "refract",
+                "hold"
+              ],
+              "strength": 0.35
+            }
+          },
+          "negative_affordances": {
+            "light_source": {
+              "keywords": [
+                "emit light",
+                "glow",
+                "lamp"
+              ],
+              "strength": 1.0
+            }
+          }
+        },
+        {
+          "id": "metal_spoon",
+          "name": "metal spoon",
+          "aliases": [
+            "metal spoon",
+            "spoon"
+          ],
+          "affordances": {
+            "reflective_surface": {
+              "keywords": [
+                "reflect",
+                "mirror"
+              ],
+              "strength": 0.45
+            }
+          },
+          "negative_affordances": {
+            "light_source": {
+              "keywords": [
+                "emit light",
+                "glow",
+                "generate light"
+              ],
+              "strength": 1.0
+            }
+          }
+        },
+        {
+          "id": "cotton_string",
+          "name": "cotton string",
+          "aliases": [
+            "cotton string",
+            "string"
+          ],
+          "affordances": {
+            "tie": {
+              "keywords": [
+                "tie",
+                "hang"
+              ],
+              "strength": 0.45
+            }
+          },
+          "negative_affordances": {
+            "safe_lamp_wick": {
+              "keywords": [
+                "wick",
+                "burn",
+                "flame"
+              ],
+              "strength": 1.0
+            }
+          }
+        },
+        {
+          "id": "paperback_book",
+          "name": "paperback book",
+          "aliases": [
+            "paperback book",
+            "book"
+          ],
+          "affordances": {
+            "paper_surface": {
+              "keywords": [
+                "reflect a little",
+                "shade"
+              ],
+              "strength": 0.25
+            }
+          },
+          "negative_affordances": {
+            "light_source": {
+              "keywords": [
+                "glow",
+                "emit light",
+                "burn"
+              ],
+              "strength": 1.0
+            }
+          }
+        }
+      ],
+      "goal_predicates": [
+        {
+          "id": "create_light",
+          "description": "Create usable light.",
+          "keywords": [
+            "light",
+            "glow",
+            "lamp",
+            "illuminate"
+          ]
+        },
+        {
+          "id": "sustain_ten_minutes",
+          "description": "Sustain the light long enough to read.",
+          "keywords": [
+            "ten minutes",
+            "sustain",
+            "read"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "id": "no_energy_source",
+          "description": "There is no flame, battery, sunlight, or chemical light source.",
+          "forbidden_keywords": [
+            "flame",
+            "battery",
+            "sunlight",
+            "chemical light",
+            "burn",
+            "candle"
+          ]
+        },
+        {
+          "id": "closed_tools",
+          "description": "Only the listed tools may be used.",
+          "forbidden_tool_keywords": [
+            "flashlight",
+            "phone",
+            "lamp",
+            "matches",
+            "lighter"
+          ]
+        }
+      ],
+      "reference_plans": []
+    }
+  ]
+}

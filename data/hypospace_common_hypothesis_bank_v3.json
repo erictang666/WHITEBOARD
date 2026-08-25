@@ -1,0 +1,499 @@
+{
+  "schema": "benchmark",
+  "version": "benchmark",
+  "description": "Task-specific common hypothesis families for T5-v3. Hard-zero families are unsupported shortcuts or exact obvious refusals; broad-common families are valid but low-discrimination patterns; supported-rare families identify grounded mechanisms that should survive rarity gating.",
+  "tasks": {
+    "hs_v2_evidence_phone_012": {
+      "hard_zero_hypothesis_families": [
+        {
+          "id": "unlisted_stand",
+          "keywords": [
+            "tripod",
+            "phone stand",
+            "3d printed holder",
+            "wood block"
+          ],
+          "rarity": 0.0
+        },
+        {
+          "id": "permanent_or_camera_block",
+          "keywords": [
+            "glue",
+            "superglue",
+            "cover camera",
+            "block lens",
+            "tape over camera"
+          ],
+          "rarity": 0.0
+        },
+        {
+          "id": "magnetic_mug",
+          "keywords": [
+            "magnetic mug",
+            "mug magnet",
+            "magnetize phone"
+          ],
+          "rarity": 0.0
+        }
+      ],
+      "broad_common_hypothesis_families": [
+        {
+          "id": "binder_clip_stand",
+          "keywords": [
+            "binder clip",
+            "clamp",
+            "folding handles",
+            "legs"
+          ],
+          "rarity_cap": 0.35
+        },
+        {
+          "id": "folded_card_wedge",
+          "keywords": [
+            "index card",
+            "folded",
+            "wedge",
+            "triangle"
+          ],
+          "rarity_cap": 0.35
+        },
+        {
+          "id": "mug_backstop",
+          "keywords": [
+            "mug",
+            "backstop",
+            "lean against"
+          ],
+          "rarity_cap": 0.35
+        }
+      ],
+      "supported_rare_hypothesis_families": [
+        {
+          "id": "elastic_mug_tension",
+          "valid_ids": [
+            "hs001_band_mug"
+          ],
+          "keywords": [
+            "rubber band",
+            "elastic tension",
+            "mug",
+            "wrap",
+            "camera clear"
+          ],
+          "rarity_floor": 0.82
+        },
+        {
+          "id": "clip_card_spacer",
+          "valid_ids": [
+            "hs001_clip_cards_spacer"
+          ],
+          "keywords": [
+            "binder clip",
+            "index card",
+            "spacer",
+            "clamp",
+            "camera clear"
+          ],
+          "rarity_floor": 0.86
+        },
+        {
+          "id": "card_band_triangle",
+          "valid_ids": [
+            "hs001_cards_band_triangle"
+          ],
+          "keywords": [
+            "index card",
+            "rubber band",
+            "triangle",
+            "tension"
+          ],
+          "rarity_floor": 0.78
+        }
+      ]
+    },
+    "hs_v2_evidence_table_016": {
+      "hard_zero_hypothesis_families": [
+        {
+          "id": "permanent_repair",
+          "keywords": [
+            "glue",
+            "nail",
+            "drill",
+            "saw",
+            "hammer",
+            "wood shim"
+          ],
+          "rarity": 0.0
+        },
+        {
+          "id": "floor_damage",
+          "keywords": [
+            "damage floor",
+            "scratch floor",
+            "permanent"
+          ],
+          "rarity": 0.0
+        },
+        {
+          "id": "rubber_rigid_spacer",
+          "keywords": [
+            "rubber band rigid spacer",
+            "hard rubber spacer"
+          ],
+          "rarity": 0.0
+        }
+      ],
+      "broad_common_hypothesis_families": [
+        {
+          "id": "coins_stack",
+          "keywords": [
+            "coins",
+            "stack",
+            "spacer",
+            "short leg"
+          ],
+          "rarity_cap": 0.32
+        },
+        {
+          "id": "paper_wedge",
+          "keywords": [
+            "folded paper",
+            "wedge",
+            "shim"
+          ],
+          "rarity_cap": 0.32
+        },
+        {
+          "id": "cork_pad",
+          "keywords": [
+            "cork coaster",
+            "pad",
+            "friction"
+          ],
+          "rarity_cap": 0.34
+        }
+      ],
+      "supported_rare_hypothesis_families": [
+        {
+          "id": "coaster_band_tension",
+          "valid_ids": [
+            "hs002_coaster_band"
+          ],
+          "keywords": [
+            "cork coaster",
+            "rubber band",
+            "tie",
+            "pad tension"
+          ],
+          "rarity_floor": 0.84
+        },
+        {
+          "id": "coin_tape_height_hold",
+          "valid_ids": [
+            "hs002_coins_tape"
+          ],
+          "keywords": [
+            "coins",
+            "tape",
+            "temporary",
+            "hold shim"
+          ],
+          "rarity_floor": 0.74
+        },
+        {
+          "id": "paper_tape_reversible_wedge",
+          "valid_ids": [
+            "hs002_paper_tape"
+          ],
+          "keywords": [
+            "folded paper",
+            "tape",
+            "temporary",
+            "wedge hold"
+          ],
+          "rarity_floor": 0.72
+        }
+      ]
+    },
+    "hs_v2_evidence_cookie_019": {
+      "hard_zero_hypothesis_families": [
+        {
+          "id": "break_or_extra_tool",
+          "keywords": [
+            "break jar",
+            "knife",
+            "vacuum",
+            "glue",
+            "extra tool",
+            "pour water"
+          ],
+          "rarity": 0.0
+        },
+        {
+          "id": "hand_inside",
+          "keywords": [
+            "reach hand inside",
+            "put hand inside",
+            "tip violently"
+          ],
+          "rarity": 0.0
+        },
+        {
+          "id": "magnet_cookie",
+          "keywords": [
+            "magnet pulls cookie",
+            "magnet attracts cookie"
+          ],
+          "rarity": 0.0
+        },
+        {
+          "id": "rigid_string_push",
+          "keywords": [
+            "string pushes",
+            "rigid string"
+          ],
+          "rarity": 0.0
+        }
+      ],
+      "broad_common_hypothesis_families": [
+        {
+          "id": "chopstick_pinch",
+          "keywords": [
+            "chopsticks",
+            "pinch",
+            "grip",
+            "reach"
+          ],
+          "rarity_cap": 0.3
+        },
+        {
+          "id": "tape_on_chopsticks",
+          "keywords": [
+            "tape",
+            "chopsticks",
+            "sticky",
+            "lift"
+          ],
+          "rarity_cap": 0.35
+        },
+        {
+          "id": "rubber_band_pinch",
+          "keywords": [
+            "rubber band",
+            "chopsticks",
+            "pinch",
+            "tension"
+          ],
+          "rarity_cap": 0.38
+        }
+      ],
+      "supported_rare_hypothesis_families": [
+        {
+          "id": "string_tape_loop",
+          "valid_ids": [
+            "hs003_string_tape_loop"
+          ],
+          "keywords": [
+            "string",
+            "loop",
+            "tape",
+            "sticky",
+            "lift"
+          ],
+          "rarity_floor": 0.9
+        },
+        {
+          "id": "band_string_cinch",
+          "valid_ids": [
+            "hs003_band_string_loop"
+          ],
+          "keywords": [
+            "rubber band",
+            "string",
+            "cinch",
+            "loop",
+            "retrieve"
+          ],
+          "rarity_floor": 0.92
+        },
+        {
+          "id": "straw_tape_extension",
+          "valid_ids": [
+            "hs003_straw_tape_extension"
+          ],
+          "keywords": [
+            "straw",
+            "extension",
+            "tape",
+            "sticky tip"
+          ],
+          "rarity_floor": 0.8
+        }
+      ]
+    },
+    "hs_v2_minimal_phone_024": {
+      "hard_zero_hypothesis_families": [
+        {
+          "id": "unlisted_stand",
+          "keywords": [
+            "tripod",
+            "phone stand",
+            "3d printed holder",
+            "wood block"
+          ],
+          "rarity": 0.0
+        },
+        {
+          "id": "permanent_or_camera_block",
+          "keywords": [
+            "glue",
+            "superglue",
+            "cover camera",
+            "block lens",
+            "tape over camera"
+          ],
+          "rarity": 0.0
+        }
+      ],
+      "broad_common_hypothesis_families": [
+        {
+          "id": "binder_clip_stand",
+          "keywords": [
+            "binder clip",
+            "clamp",
+            "folding handles",
+            "legs"
+          ],
+          "rarity_cap": 0.35
+        },
+        {
+          "id": "folded_card_wedge",
+          "keywords": [
+            "index card",
+            "folded",
+            "wedge",
+            "triangle"
+          ],
+          "rarity_cap": 0.35
+        }
+      ],
+      "supported_rare_hypothesis_families": [
+        {
+          "id": "elastic_mug_tension",
+          "valid_ids": [
+            "hs001_band_mug"
+          ],
+          "keywords": [
+            "rubber band",
+            "elastic tension",
+            "mug",
+            "wrap"
+          ],
+          "rarity_floor": 0.82
+        },
+        {
+          "id": "clip_card_spacer",
+          "valid_ids": [
+            "hs001_clip_cards_spacer"
+          ],
+          "keywords": [
+            "binder clip",
+            "index card",
+            "spacer",
+            "clamp"
+          ],
+          "rarity_floor": 0.86
+        }
+      ]
+    },
+    "hs_v2_minimal_cookie_028": {
+      "hard_zero_hypothesis_families": [
+        {
+          "id": "break_or_extra_tool",
+          "keywords": [
+            "break jar",
+            "knife",
+            "vacuum",
+            "glue",
+            "extra tool",
+            "pour water"
+          ],
+          "rarity": 0.0
+        },
+        {
+          "id": "magnet_cookie",
+          "keywords": [
+            "magnet pulls cookie",
+            "magnet attracts cookie"
+          ],
+          "rarity": 0.0
+        }
+      ],
+      "broad_common_hypothesis_families": [
+        {
+          "id": "chopstick_pinch",
+          "keywords": [
+            "chopsticks",
+            "pinch",
+            "grip",
+            "reach"
+          ],
+          "rarity_cap": 0.3
+        },
+        {
+          "id": "tape_on_chopsticks",
+          "keywords": [
+            "tape",
+            "chopsticks",
+            "sticky",
+            "lift"
+          ],
+          "rarity_cap": 0.35
+        }
+      ],
+      "supported_rare_hypothesis_families": [
+        {
+          "id": "string_tape_loop",
+          "valid_ids": [
+            "hs003_string_tape_loop"
+          ],
+          "keywords": [
+            "string",
+            "loop",
+            "tape",
+            "sticky",
+            "lift"
+          ],
+          "rarity_floor": 0.9
+        },
+        {
+          "id": "band_string_cinch",
+          "valid_ids": [
+            "hs003_band_string_loop"
+          ],
+          "keywords": [
+            "rubber band",
+            "string",
+            "cinch",
+            "loop",
+            "retrieve"
+          ],
+          "rarity_floor": 0.92
+        },
+        {
+          "id": "straw_tape_extension",
+          "valid_ids": [
+            "hs003_straw_tape_extension"
+          ],
+          "keywords": [
+            "straw",
+            "extension",
+            "tape",
+            "sticky tip"
+          ],
+          "rarity_floor": 0.8
+        }
+      ]
+    }
+  }
+}

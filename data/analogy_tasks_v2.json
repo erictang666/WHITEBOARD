@@ -1,0 +1,1331 @@
+{
+  "schema_version": "benchmark",
+  "description": "Synthetic closed-world analogy false-transfer challenge tasks for deterministic I_analogy and H_false_transfer scoring.",
+  "output_count": 1,
+  "clusters": [
+    {
+      "cluster_id": "reservoir_battery",
+      "source_domain": "Mountain Reservoir",
+      "target_domain": "Rechargeable Battery",
+      "dimensions": {
+        "topic": {
+          "source": "managed water storage",
+          "target": "managed electrical energy storage"
+        },
+        "background": {
+          "source": "irregular rainfall creates supply uncertainty",
+          "target": "irregular charging creates energy availability uncertainty"
+        },
+        "process": {
+          "source": "water is stored behind a dam and released through a gate",
+          "target": "charge is stored in cells and released through a circuit"
+        },
+        "result": {
+          "source": "controlled release powers turbines or supplies towns",
+          "target": "controlled discharge powers devices"
+        }
+      },
+      "source_facts": [
+        {
+          "id": "RB_S1",
+          "text": "The reservoir stores water behind a dam.",
+          "relation": "stores_water",
+          "entities": [
+            "reservoir",
+            "water",
+            "dam"
+          ]
+        },
+        {
+          "id": "RB_S2",
+          "text": "A gate controls how quickly water leaves the reservoir.",
+          "relation": "controls_release",
+          "entities": [
+            "gate",
+            "water"
+          ]
+        },
+        {
+          "id": "RB_S3",
+          "text": "Released water can spin a turbine or supply a town.",
+          "relation": "release_powers",
+          "entities": [
+            "water",
+            "turbine",
+            "town"
+          ]
+        },
+        {
+          "id": "RB_S4",
+          "text": "The reservoir can lose water through evaporation.",
+          "relation": "source_only_loss",
+          "entities": [
+            "reservoir",
+            "evaporation"
+          ]
+        }
+      ],
+      "target_facts": [
+        {
+          "id": "RB_T1",
+          "text": "The battery stores electrical charge in cells.",
+          "relation": "stores_charge",
+          "entities": [
+            "battery",
+            "charge",
+            "cells"
+          ]
+        },
+        {
+          "id": "RB_T2",
+          "text": "A circuit controls how quickly charge leaves the battery.",
+          "relation": "controls_discharge",
+          "entities": [
+            "circuit",
+            "charge"
+          ]
+        },
+        {
+          "id": "RB_T3",
+          "text": "Discharged charge can power a device.",
+          "relation": "discharge_powers",
+          "entities": [
+            "charge",
+            "device"
+          ]
+        },
+        {
+          "id": "RB_T4",
+          "text": "The battery facts do not state evaporation, flooding, or liquid water.",
+          "relation": "target_limit",
+          "entities": [
+            "battery",
+            "evaporation",
+            "flooding",
+            "water"
+          ]
+        }
+      ],
+      "gold_mappings": [
+        {
+          "mapping_id": "RB_M1",
+          "dimension": "topic",
+          "source_relation": "stores_water",
+          "target_relation": "stores_charge",
+          "abstraction": "buffered resource storage",
+          "source_evidence_ids": [
+            "RB_S1"
+          ],
+          "target_evidence_ids": [
+            "RB_T1"
+          ]
+        },
+        {
+          "mapping_id": "RB_M2",
+          "dimension": "process",
+          "source_relation": "controls_release",
+          "target_relation": "controls_discharge",
+          "abstraction": "regulated release rate",
+          "source_evidence_ids": [
+            "RB_S2"
+          ],
+          "target_evidence_ids": [
+            "RB_T2"
+          ]
+        },
+        {
+          "mapping_id": "RB_M3",
+          "dimension": "result",
+          "source_relation": "release_powers",
+          "target_relation": "discharge_powers",
+          "abstraction": "released stored resource performs work",
+          "source_evidence_ids": [
+            "RB_S3"
+          ],
+          "target_evidence_ids": [
+            "RB_T3"
+          ]
+        }
+      ],
+      "required_limits": [
+        {
+          "limit_id": "RB_L1",
+          "text": "Do not transfer evaporation, flooding, or liquid-water behavior to the battery.",
+          "keywords": [
+            "evaporation",
+            "flooding",
+            "water"
+          ]
+        }
+      ],
+      "forbidden_transfers": [
+        {
+          "id": "RB_FT1",
+          "text": "The battery stores water behind a dam.",
+          "keywords": [
+            "battery",
+            "water",
+            "dam"
+          ]
+        },
+        {
+          "id": "RB_FT2",
+          "text": "The battery loses charge by evaporation.",
+          "keywords": [
+            "battery",
+            "evaporation"
+          ]
+        }
+      ],
+      "known_entities": [
+        "reservoir",
+        "water",
+        "dam",
+        "gate",
+        "turbine",
+        "town",
+        "battery",
+        "charge",
+        "cells",
+        "circuit",
+        "device"
+      ],
+      "support_boundary": {
+        "evidence_ids": [
+          "RB_S1",
+          "RB_S2",
+          "RB_S3",
+          "RB_S4",
+          "RB_T1",
+          "RB_T2",
+          "RB_T3",
+          "RB_T4"
+        ],
+        "policy": "Use only listed reservoir and battery facts; source-only evaporation/flooding details cannot be asserted about the battery."
+      }
+    },
+    {
+      "cluster_id": "library_seedbank",
+      "source_domain": "Civic Library",
+      "target_domain": "Seed Bank",
+      "dimensions": {
+        "topic": {
+          "source": "preserving written knowledge",
+          "target": "preserving plant genetic material"
+        },
+        "background": {
+          "source": "communities need records after disruption",
+          "target": "farmers need viable seeds after crop loss"
+        },
+        "process": {
+          "source": "items are cataloged and stored under controlled access",
+          "target": "seeds are cataloged and stored under controlled conditions"
+        },
+        "result": {
+          "source": "stored records support later learning",
+          "target": "stored seeds support later restoration"
+        }
+      },
+      "source_facts": [
+        {
+          "id": "LS_S1",
+          "text": "The library catalogs books by subject and author.",
+          "relation": "catalogs_books",
+          "entities": [
+            "library",
+            "books",
+            "catalog"
+          ]
+        },
+        {
+          "id": "LS_S2",
+          "text": "The library preserves records for later readers.",
+          "relation": "preserves_records",
+          "entities": [
+            "library",
+            "records",
+            "readers"
+          ]
+        },
+        {
+          "id": "LS_S3",
+          "text": "Library patrons borrow books and return them.",
+          "relation": "source_only_lending",
+          "entities": [
+            "patrons",
+            "books",
+            "borrow"
+          ]
+        },
+        {
+          "id": "LS_S4",
+          "text": "The library uses reading rooms for human study.",
+          "relation": "source_only_reading",
+          "entities": [
+            "reading rooms",
+            "study"
+          ]
+        }
+      ],
+      "target_facts": [
+        {
+          "id": "LS_T1",
+          "text": "The seed bank catalogs seed samples by species and origin.",
+          "relation": "catalogs_seeds",
+          "entities": [
+            "seed bank",
+            "seed samples",
+            "catalog"
+          ]
+        },
+        {
+          "id": "LS_T2",
+          "text": "The seed bank preserves viable seeds for future planting.",
+          "relation": "preserves_seeds",
+          "entities": [
+            "seed bank",
+            "seeds",
+            "planting"
+          ]
+        },
+        {
+          "id": "LS_T3",
+          "text": "Seed samples are stored in controlled cold and dry conditions.",
+          "relation": "controlled_storage",
+          "entities": [
+            "seeds",
+            "cold",
+            "dry"
+          ]
+        },
+        {
+          "id": "LS_T4",
+          "text": "The seed bank facts do not state borrowing, reading rooms, or book circulation.",
+          "relation": "target_limit",
+          "entities": [
+            "seed bank",
+            "borrowing",
+            "reading rooms",
+            "books"
+          ]
+        }
+      ],
+      "gold_mappings": [
+        {
+          "mapping_id": "LS_M1",
+          "dimension": "topic",
+          "source_relation": "preserves_records",
+          "target_relation": "preserves_seeds",
+          "abstraction": "preserving a recoverable resource",
+          "source_evidence_ids": [
+            "LS_S2"
+          ],
+          "target_evidence_ids": [
+            "LS_T2"
+          ]
+        },
+        {
+          "mapping_id": "LS_M2",
+          "dimension": "process",
+          "source_relation": "catalogs_books",
+          "target_relation": "catalogs_seeds",
+          "abstraction": "indexed retrieval by descriptive metadata",
+          "source_evidence_ids": [
+            "LS_S1"
+          ],
+          "target_evidence_ids": [
+            "LS_T1"
+          ]
+        },
+        {
+          "mapping_id": "LS_M3",
+          "dimension": "result",
+          "source_relation": "preserves_records",
+          "target_relation": "controlled_storage",
+          "abstraction": "present storage enables future use",
+          "source_evidence_ids": [
+            "LS_S2"
+          ],
+          "target_evidence_ids": [
+            "LS_T3"
+          ]
+        }
+      ],
+      "required_limits": [
+        {
+          "limit_id": "LS_L1",
+          "text": "Do not transfer book borrowing, reading rooms, or human reading to seed samples.",
+          "keywords": [
+            "borrowing",
+            "reading rooms",
+            "books"
+          ]
+        }
+      ],
+      "forbidden_transfers": [
+        {
+          "id": "LS_FT1",
+          "text": "Seed samples are borrowed like library books.",
+          "keywords": [
+            "seed",
+            "borrowed",
+            "books"
+          ]
+        },
+        {
+          "id": "LS_FT2",
+          "text": "The seed bank has reading rooms for seeds.",
+          "keywords": [
+            "seed bank",
+            "reading rooms"
+          ]
+        }
+      ],
+      "known_entities": [
+        "library",
+        "books",
+        "catalog",
+        "records",
+        "readers",
+        "seed bank",
+        "seed samples",
+        "species",
+        "origin",
+        "seeds",
+        "planting"
+      ],
+      "support_boundary": {
+        "evidence_ids": [
+          "LS_S1",
+          "LS_S2",
+          "LS_S3",
+          "LS_S4",
+          "LS_T1",
+          "LS_T2",
+          "LS_T3",
+          "LS_T4"
+        ],
+        "policy": "Use only listed library and seed-bank facts; source-only lending/reading-room details cannot be asserted about seed samples."
+      }
+    },
+    {
+      "cluster_id": "immune_firewall",
+      "source_domain": "Immune System",
+      "target_domain": "Network Firewall",
+      "dimensions": {
+        "topic": {
+          "source": "protecting a body from pathogens",
+          "target": "protecting a network from malicious traffic"
+        },
+        "background": {
+          "source": "pathogens attempt entry through biological surfaces",
+          "target": "malicious packets attempt entry through network ports"
+        },
+        "process": {
+          "source": "recognition and blocking are updated after exposure",
+          "target": "traffic rules and signatures are updated after attacks"
+        },
+        "result": {
+          "source": "harmful invaders are reduced before damage spreads",
+          "target": "malicious traffic is blocked before systems are compromised"
+        }
+      },
+      "source_facts": [
+        {
+          "id": "IF_S1",
+          "text": "Immune cells detect pathogen patterns.",
+          "relation": "detects_patterns",
+          "entities": [
+            "immune cells",
+            "pathogens",
+            "patterns"
+          ]
+        },
+        {
+          "id": "IF_S2",
+          "text": "Antibodies can bind and neutralize matching pathogens.",
+          "relation": "neutralizes_invaders",
+          "entities": [
+            "antibodies",
+            "pathogens"
+          ]
+        },
+        {
+          "id": "IF_S3",
+          "text": "Immune memory helps the body respond faster after exposure.",
+          "relation": "updates_memory",
+          "entities": [
+            "immune memory",
+            "exposure"
+          ]
+        },
+        {
+          "id": "IF_S4",
+          "text": "The immune system uses biological cells, not network packets.",
+          "relation": "source_limit",
+          "entities": [
+            "cells",
+            "network packets"
+          ]
+        }
+      ],
+      "target_facts": [
+        {
+          "id": "IF_T1",
+          "text": "The firewall detects traffic patterns that match rules.",
+          "relation": "detects_rules",
+          "entities": [
+            "firewall",
+            "traffic",
+            "rules"
+          ]
+        },
+        {
+          "id": "IF_T2",
+          "text": "The firewall blocks traffic that matches a deny rule.",
+          "relation": "blocks_traffic",
+          "entities": [
+            "firewall",
+            "traffic",
+            "deny rule"
+          ]
+        },
+        {
+          "id": "IF_T3",
+          "text": "Firewall signatures can be updated after new attacks.",
+          "relation": "updates_signatures",
+          "entities": [
+            "signatures",
+            "attacks"
+          ]
+        },
+        {
+          "id": "IF_T4",
+          "text": "The firewall facts do not state antibodies, infection, or biological cells inside the network.",
+          "relation": "target_limit",
+          "entities": [
+            "firewall",
+            "antibodies",
+            "infection",
+            "cells"
+          ]
+        }
+      ],
+      "gold_mappings": [
+        {
+          "mapping_id": "IF_M1",
+          "dimension": "process",
+          "source_relation": "detects_patterns",
+          "target_relation": "detects_rules",
+          "abstraction": "recognize harmful pattern",
+          "source_evidence_ids": [
+            "IF_S1"
+          ],
+          "target_evidence_ids": [
+            "IF_T1"
+          ]
+        },
+        {
+          "mapping_id": "IF_M2",
+          "dimension": "process",
+          "source_relation": "neutralizes_invaders",
+          "target_relation": "blocks_traffic",
+          "abstraction": "stop matching threat before spread",
+          "source_evidence_ids": [
+            "IF_S2"
+          ],
+          "target_evidence_ids": [
+            "IF_T2"
+          ]
+        },
+        {
+          "mapping_id": "IF_M3",
+          "dimension": "result",
+          "source_relation": "updates_memory",
+          "target_relation": "updates_signatures",
+          "abstraction": "adapt after exposure",
+          "source_evidence_ids": [
+            "IF_S3"
+          ],
+          "target_evidence_ids": [
+            "IF_T3"
+          ]
+        }
+      ],
+      "required_limits": [
+        {
+          "limit_id": "IF_L1",
+          "text": "Do not transfer antibodies, infection, or biological cells into the firewall domain.",
+          "keywords": [
+            "antibodies",
+            "infection",
+            "cells"
+          ]
+        }
+      ],
+      "forbidden_transfers": [
+        {
+          "id": "IF_FT1",
+          "text": "The firewall produces antibodies.",
+          "keywords": [
+            "firewall",
+            "antibodies"
+          ]
+        },
+        {
+          "id": "IF_FT2",
+          "text": "Network packets infect the firewall like pathogens infect cells.",
+          "keywords": [
+            "packets",
+            "infect",
+            "cells"
+          ]
+        }
+      ],
+      "known_entities": [
+        "immune cells",
+        "pathogens",
+        "patterns",
+        "antibodies",
+        "immune memory",
+        "firewall",
+        "traffic",
+        "rules",
+        "deny rule",
+        "signatures",
+        "attacks"
+      ],
+      "support_boundary": {
+        "evidence_ids": [
+          "IF_S1",
+          "IF_S2",
+          "IF_S3",
+          "IF_S4",
+          "IF_T1",
+          "IF_T2",
+          "IF_T3",
+          "IF_T4"
+        ],
+        "policy": "Use only listed immune-system and firewall facts; biological cells, antibodies, and infection cannot be asserted as literal firewall properties."
+      }
+    },
+    {
+      "cluster_id": "ant_transit",
+      "source_domain": "Ant Colony Foraging",
+      "target_domain": "City Transit Dispatch",
+      "dimensions": {
+        "topic": {
+          "source": "distributed route discovery for food",
+          "target": "distributed routing for passenger flow"
+        },
+        "background": {
+          "source": "food locations change and individual ants have local information",
+          "target": "demand changes and vehicles receive local dispatch signals"
+        },
+        "process": {
+          "source": "pheromone strength biases ant paths",
+          "target": "demand and congestion signals bias vehicle routes"
+        },
+        "result": {
+          "source": "the colony concentrates effort on useful paths",
+          "target": "transit service concentrates vehicles on useful routes"
+        }
+      },
+      "source_facts": [
+        {
+          "id": "AT_S1",
+          "text": "Ants leave pheromone trails after finding food.",
+          "relation": "signals_demand",
+          "entities": [
+            "ants",
+            "pheromone trails",
+            "food"
+          ]
+        },
+        {
+          "id": "AT_S2",
+          "text": "Stronger pheromone trails attract more ants.",
+          "relation": "reinforces_routes",
+          "entities": [
+            "pheromone trails",
+            "ants"
+          ]
+        },
+        {
+          "id": "AT_S3",
+          "text": "Pheromone trails can fade when a path is no longer useful.",
+          "relation": "decays_signal",
+          "entities": [
+            "pheromone trails",
+            "path"
+          ]
+        },
+        {
+          "id": "AT_S4",
+          "text": "Ants do not buy tickets or carry passengers.",
+          "relation": "source_limit",
+          "entities": [
+            "ants",
+            "tickets",
+            "passengers"
+          ]
+        }
+      ],
+      "target_facts": [
+        {
+          "id": "AT_T1",
+          "text": "Transit dispatch receives passenger demand signals.",
+          "relation": "signals_demand",
+          "entities": [
+            "dispatch",
+            "passenger demand"
+          ]
+        },
+        {
+          "id": "AT_T2",
+          "text": "More vehicles can be assigned to routes with stronger demand.",
+          "relation": "reinforces_routes",
+          "entities": [
+            "vehicles",
+            "routes",
+            "demand"
+          ]
+        },
+        {
+          "id": "AT_T3",
+          "text": "Vehicles can be rerouted when congestion makes a route less useful.",
+          "relation": "decays_signal",
+          "entities": [
+            "vehicles",
+            "congestion",
+            "route"
+          ]
+        },
+        {
+          "id": "AT_T4",
+          "text": "The transit facts do not state pheromones, food trails, or insect behavior.",
+          "relation": "target_limit",
+          "entities": [
+            "transit",
+            "pheromones",
+            "food",
+            "insects"
+          ]
+        }
+      ],
+      "gold_mappings": [
+        {
+          "mapping_id": "AT_M1",
+          "dimension": "background",
+          "source_relation": "signals_demand",
+          "target_relation": "signals_demand",
+          "abstraction": "local signal marks demand",
+          "source_evidence_ids": [
+            "AT_S1"
+          ],
+          "target_evidence_ids": [
+            "AT_T1"
+          ]
+        },
+        {
+          "mapping_id": "AT_M2",
+          "dimension": "process",
+          "source_relation": "reinforces_routes",
+          "target_relation": "reinforces_routes",
+          "abstraction": "stronger signal attracts more agents",
+          "source_evidence_ids": [
+            "AT_S2"
+          ],
+          "target_evidence_ids": [
+            "AT_T2"
+          ]
+        },
+        {
+          "mapping_id": "AT_M3",
+          "dimension": "result",
+          "source_relation": "decays_signal",
+          "target_relation": "decays_signal",
+          "abstraction": "stale signal reduces routing priority",
+          "source_evidence_ids": [
+            "AT_S3"
+          ],
+          "target_evidence_ids": [
+            "AT_T3"
+          ]
+        }
+      ],
+      "required_limits": [
+        {
+          "limit_id": "AT_L1",
+          "text": "Do not transfer pheromones, food trails, or insect behavior to the transit system.",
+          "keywords": [
+            "pheromones",
+            "food",
+            "insect"
+          ]
+        }
+      ],
+      "forbidden_transfers": [
+        {
+          "id": "AT_FT1",
+          "text": "Buses follow pheromone trails.",
+          "keywords": [
+            "buses",
+            "pheromone"
+          ]
+        },
+        {
+          "id": "AT_FT2",
+          "text": "Ants buy tickets for transit routes.",
+          "keywords": [
+            "ants",
+            "tickets"
+          ]
+        }
+      ],
+      "known_entities": [
+        "ants",
+        "pheromone trails",
+        "food",
+        "path",
+        "dispatch",
+        "passenger demand",
+        "vehicles",
+        "routes",
+        "congestion"
+      ],
+      "support_boundary": {
+        "evidence_ids": [
+          "AT_S1",
+          "AT_S2",
+          "AT_S3",
+          "AT_S4",
+          "AT_T1",
+          "AT_T2",
+          "AT_T3",
+          "AT_T4"
+        ],
+        "policy": "Use only listed ant-foraging and transit facts; pheromones, food trails, and insect behavior cannot be asserted as literal transit mechanisms."
+      }
+    },
+    {
+      "cluster_id": "trial_peerreview",
+      "source_domain": "Court Trial",
+      "target_domain": "Scientific Peer Review",
+      "dimensions": {
+        "topic": {
+          "source": "testing a claim through evidence and challenge",
+          "target": "testing a manuscript through evidence and critique"
+        },
+        "background": {
+          "source": "a disputed legal claim needs a decision",
+          "target": "a research claim needs publication judgment"
+        },
+        "process": {
+          "source": "evidence is presented and cross-examined",
+          "target": "methods and claims are reviewed and criticized"
+        },
+        "result": {
+          "source": "a verdict resolves legal responsibility",
+          "target": "editorial decision resolves publication status"
+        }
+      },
+      "source_facts": [
+        {
+          "id": "TP_S1",
+          "text": "A trial presents evidence for a legal claim.",
+          "relation": "presents_evidence",
+          "entities": [
+            "trial",
+            "evidence",
+            "legal claim"
+          ]
+        },
+        {
+          "id": "TP_S2",
+          "text": "Cross-examination challenges witness testimony.",
+          "relation": "adversarial_scrutiny",
+          "entities": [
+            "cross-examination",
+            "witness testimony"
+          ]
+        },
+        {
+          "id": "TP_S3",
+          "text": "A verdict decides legal responsibility.",
+          "relation": "decides_case",
+          "entities": [
+            "verdict",
+            "legal responsibility"
+          ]
+        },
+        {
+          "id": "TP_S4",
+          "text": "A trial can impose penalties, but peer review facts do not include imprisonment.",
+          "relation": "source_only_penalty",
+          "entities": [
+            "penalties",
+            "imprisonment"
+          ]
+        }
+      ],
+      "target_facts": [
+        {
+          "id": "TP_T1",
+          "text": "Peer review examines evidence for a research claim.",
+          "relation": "examines_evidence",
+          "entities": [
+            "peer review",
+            "evidence",
+            "research claim"
+          ]
+        },
+        {
+          "id": "TP_T2",
+          "text": "Reviewers criticize methods and interpretations.",
+          "relation": "critical_scrutiny",
+          "entities": [
+            "reviewers",
+            "methods",
+            "interpretations"
+          ]
+        },
+        {
+          "id": "TP_T3",
+          "text": "An editor decides whether the manuscript is accepted, revised, or rejected.",
+          "relation": "decides_publication",
+          "entities": [
+            "editor",
+            "manuscript",
+            "accepted",
+            "revised",
+            "rejected"
+          ]
+        },
+        {
+          "id": "TP_T4",
+          "text": "Peer review facts do not state juries, legal guilt, or prison sentences.",
+          "relation": "target_limit",
+          "entities": [
+            "peer review",
+            "juries",
+            "guilt",
+            "prison"
+          ]
+        }
+      ],
+      "gold_mappings": [
+        {
+          "mapping_id": "TP_M1",
+          "dimension": "topic",
+          "source_relation": "presents_evidence",
+          "target_relation": "examines_evidence",
+          "abstraction": "claim evaluated by evidence",
+          "source_evidence_ids": [
+            "TP_S1"
+          ],
+          "target_evidence_ids": [
+            "TP_T1"
+          ]
+        },
+        {
+          "mapping_id": "TP_M2",
+          "dimension": "process",
+          "source_relation": "adversarial_scrutiny",
+          "target_relation": "critical_scrutiny",
+          "abstraction": "claims challenged by an evaluator",
+          "source_evidence_ids": [
+            "TP_S2"
+          ],
+          "target_evidence_ids": [
+            "TP_T2"
+          ]
+        },
+        {
+          "mapping_id": "TP_M3",
+          "dimension": "result",
+          "source_relation": "decides_case",
+          "target_relation": "decides_publication",
+          "abstraction": "formal decision after review",
+          "source_evidence_ids": [
+            "TP_S3"
+          ],
+          "target_evidence_ids": [
+            "TP_T3"
+          ]
+        }
+      ],
+      "required_limits": [
+        {
+          "limit_id": "TP_L1",
+          "text": "Do not transfer juries, legal guilt, or prison penalties to peer review.",
+          "keywords": [
+            "jury",
+            "guilt",
+            "prison"
+          ]
+        }
+      ],
+      "forbidden_transfers": [
+        {
+          "id": "TP_FT1",
+          "text": "Reviewers sentence authors to prison.",
+          "keywords": [
+            "reviewers",
+            "prison"
+          ]
+        },
+        {
+          "id": "TP_FT2",
+          "text": "The editor declares legal guilt.",
+          "keywords": [
+            "editor",
+            "legal guilt"
+          ]
+        }
+      ],
+      "known_entities": [
+        "trial",
+        "evidence",
+        "legal claim",
+        "cross-examination",
+        "witness testimony",
+        "verdict",
+        "peer review",
+        "research claim",
+        "reviewers",
+        "methods",
+        "editor",
+        "manuscript"
+      ],
+      "support_boundary": {
+        "evidence_ids": [
+          "TP_S1",
+          "TP_S2",
+          "TP_S3",
+          "TP_S4",
+          "TP_T1",
+          "TP_T2",
+          "TP_T3",
+          "TP_T4"
+        ],
+        "policy": "Use only listed trial and peer-review facts; legal guilt, juries, and prison penalties cannot be asserted as peer-review outcomes."
+      }
+    },
+    {
+      "cluster_id": "rehearsal_simulation",
+      "source_domain": "Theater Rehearsal",
+      "target_domain": "Spacecraft Mission Simulation",
+      "dimensions": {
+        "topic": {
+          "source": "practice before a live performance",
+          "target": "practice before a spacecraft operation"
+        },
+        "background": {
+          "source": "errors during the show are costly to the production",
+          "target": "errors during a mission are costly to crew and equipment"
+        },
+        "process": {
+          "source": "actors follow a script and repeat scenes",
+          "target": "crew follow procedures and repeat scenarios"
+        },
+        "result": {
+          "source": "the cast discovers timing problems before the audience arrives",
+          "target": "the crew discovers procedure problems before launch or operation"
+        }
+      },
+      "source_facts": [
+        {
+          "id": "RS_S1",
+          "text": "Actors rehearse scenes before the public performance.",
+          "relation": "practice_before_event",
+          "entities": [
+            "actors",
+            "scenes",
+            "performance"
+          ]
+        },
+        {
+          "id": "RS_S2",
+          "text": "A script gives actors an ordered plan.",
+          "relation": "ordered_plan",
+          "entities": [
+            "script",
+            "actors",
+            "plan"
+          ]
+        },
+        {
+          "id": "RS_S3",
+          "text": "The stage manager can pause rehearsal to fix timing.",
+          "relation": "detects_failures",
+          "entities": [
+            "stage manager",
+            "rehearsal",
+            "timing"
+          ]
+        },
+        {
+          "id": "RS_S4",
+          "text": "A theater rehearsal may include audience-facing style, but mission simulation facts do not include applause.",
+          "relation": "source_only_audience",
+          "entities": [
+            "audience",
+            "applause"
+          ]
+        }
+      ],
+      "target_facts": [
+        {
+          "id": "RS_T1",
+          "text": "Mission crews run simulations before spacecraft operations.",
+          "relation": "practice_before_event",
+          "entities": [
+            "mission crews",
+            "simulations",
+            "spacecraft operations"
+          ]
+        },
+        {
+          "id": "RS_T2",
+          "text": "A procedure checklist gives crews an ordered plan.",
+          "relation": "ordered_plan",
+          "entities": [
+            "checklist",
+            "crews",
+            "plan"
+          ]
+        },
+        {
+          "id": "RS_T3",
+          "text": "A flight director can pause a simulation to fix a procedure problem.",
+          "relation": "detects_failures",
+          "entities": [
+            "flight director",
+            "simulation",
+            "procedure problem"
+          ]
+        },
+        {
+          "id": "RS_T4",
+          "text": "Mission simulation facts do not state audiences, costumes, applause, or scripted entertainment.",
+          "relation": "target_limit",
+          "entities": [
+            "mission simulation",
+            "audiences",
+            "costumes",
+            "applause"
+          ]
+        }
+      ],
+      "gold_mappings": [
+        {
+          "mapping_id": "RS_M1",
+          "dimension": "topic",
+          "source_relation": "practice_before_event",
+          "target_relation": "practice_before_event",
+          "abstraction": "safe rehearsal before high-stakes execution",
+          "source_evidence_ids": [
+            "RS_S1"
+          ],
+          "target_evidence_ids": [
+            "RS_T1"
+          ]
+        },
+        {
+          "mapping_id": "RS_M2",
+          "dimension": "process",
+          "source_relation": "ordered_plan",
+          "target_relation": "ordered_plan",
+          "abstraction": "participants follow an ordered plan",
+          "source_evidence_ids": [
+            "RS_S2"
+          ],
+          "target_evidence_ids": [
+            "RS_T2"
+          ]
+        },
+        {
+          "mapping_id": "RS_M3",
+          "dimension": "result",
+          "source_relation": "detects_failures",
+          "target_relation": "detects_failures",
+          "abstraction": "controlled practice reveals fixable failures",
+          "source_evidence_ids": [
+            "RS_S3"
+          ],
+          "target_evidence_ids": [
+            "RS_T3"
+          ]
+        }
+      ],
+      "required_limits": [
+        {
+          "limit_id": "RS_L1",
+          "text": "Do not transfer audiences, costumes, applause, or entertainment goals to mission simulation.",
+          "keywords": [
+            "audiences",
+            "costumes",
+            "applause",
+            "entertainment"
+          ]
+        }
+      ],
+      "forbidden_transfers": [
+        {
+          "id": "RS_FT1",
+          "text": "Astronauts rehearse for applause from an audience.",
+          "keywords": [
+            "astronauts",
+            "applause",
+            "audience"
+          ]
+        },
+        {
+          "id": "RS_FT2",
+          "text": "Mission simulation uses costumes as scripted entertainment.",
+          "keywords": [
+            "mission",
+            "costumes",
+            "entertainment"
+          ]
+        }
+      ],
+      "known_entities": [
+        "actors",
+        "scenes",
+        "performance",
+        "script",
+        "stage manager",
+        "mission crews",
+        "simulations",
+        "spacecraft operations",
+        "checklist",
+        "flight director"
+      ],
+      "support_boundary": {
+        "evidence_ids": [
+          "RS_S1",
+          "RS_S2",
+          "RS_S3",
+          "RS_S4",
+          "RS_T1",
+          "RS_T2",
+          "RS_T3",
+          "RS_T4"
+        ],
+        "policy": "Use only listed rehearsal and mission-simulation facts; audiences, applause, costumes, and entertainment goals cannot be asserted as mission-simulation properties."
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "analogy_reservoir_battery_structural",
+      "cluster_id": "reservoir_battery",
+      "variant": "structural_mapping",
+      "instruction": "Explain the strongest structural analogy without transferring source-only physical details."
+    },
+    {
+      "id": "analogy_reservoir_battery_limits",
+      "cluster_id": "reservoir_battery",
+      "variant": "limit_awareness",
+      "instruction": "Emphasize useful mappings and explicit limits of the analogy."
+    },
+    {
+      "id": "analogy_reservoir_battery_probe",
+      "cluster_id": "reservoir_battery",
+      "variant": "false_transfer_probe",
+      "instruction": "Identify which tempting source details must not be transferred to the target."
+    },
+    {
+      "id": "analogy_library_seedbank_structural",
+      "cluster_id": "library_seedbank",
+      "variant": "structural_mapping",
+      "instruction": "Explain the strongest structural analogy without transferring source-only service details."
+    },
+    {
+      "id": "analogy_library_seedbank_limits",
+      "cluster_id": "library_seedbank",
+      "variant": "limit_awareness",
+      "instruction": "Emphasize useful mappings and explicit limits of the analogy."
+    },
+    {
+      "id": "analogy_library_seedbank_probe",
+      "cluster_id": "library_seedbank",
+      "variant": "false_transfer_probe",
+      "instruction": "Identify which tempting source details must not be transferred to the target."
+    },
+    {
+      "id": "analogy_immune_firewall_structural",
+      "cluster_id": "immune_firewall",
+      "variant": "structural_mapping",
+      "instruction": "Explain the strongest structural analogy without transferring biological literal details."
+    },
+    {
+      "id": "analogy_immune_firewall_limits",
+      "cluster_id": "immune_firewall",
+      "variant": "limit_awareness",
+      "instruction": "Emphasize useful mappings and explicit limits of the analogy."
+    },
+    {
+      "id": "analogy_immune_firewall_probe",
+      "cluster_id": "immune_firewall",
+      "variant": "false_transfer_probe",
+      "instruction": "Identify which tempting source details must not be transferred to the target."
+    },
+    {
+      "id": "analogy_ant_transit_structural",
+      "cluster_id": "ant_transit",
+      "variant": "structural_mapping",
+      "instruction": "Explain the strongest structural analogy without transferring insect literal details."
+    },
+    {
+      "id": "analogy_ant_transit_limits",
+      "cluster_id": "ant_transit",
+      "variant": "limit_awareness",
+      "instruction": "Emphasize useful mappings and explicit limits of the analogy."
+    },
+    {
+      "id": "analogy_ant_transit_probe",
+      "cluster_id": "ant_transit",
+      "variant": "false_transfer_probe",
+      "instruction": "Identify which tempting source details must not be transferred to the target."
+    },
+    {
+      "id": "analogy_trial_peerreview_structural",
+      "cluster_id": "trial_peerreview",
+      "variant": "structural_mapping",
+      "instruction": "Explain the strongest structural analogy without transferring legal penalties."
+    },
+    {
+      "id": "analogy_trial_peerreview_limits",
+      "cluster_id": "trial_peerreview",
+      "variant": "limit_awareness",
+      "instruction": "Emphasize useful mappings and explicit limits of the analogy."
+    },
+    {
+      "id": "analogy_trial_peerreview_probe",
+      "cluster_id": "trial_peerreview",
+      "variant": "false_transfer_probe",
+      "instruction": "Identify which tempting source details must not be transferred to the target."
+    },
+    {
+      "id": "analogy_rehearsal_simulation_structural",
+      "cluster_id": "rehearsal_simulation",
+      "variant": "structural_mapping",
+      "instruction": "Explain the strongest structural analogy without transferring entertainment details."
+    },
+    {
+      "id": "analogy_rehearsal_simulation_limits",
+      "cluster_id": "rehearsal_simulation",
+      "variant": "limit_awareness",
+      "instruction": "Emphasize useful mappings and explicit limits of the analogy."
+    },
+    {
+      "id": "analogy_rehearsal_simulation_probe",
+      "cluster_id": "rehearsal_simulation",
+      "variant": "false_transfer_probe",
+      "instruction": "Identify which tempting source details must not be transferred to the target."
+    }
+  ]
+}

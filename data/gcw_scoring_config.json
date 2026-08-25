@@ -1,0 +1,50 @@
+{
+  "final_scoring_params": {
+    "rarity_gamma": 1.35,
+    "support_gamma": 1.35,
+    "hard_zero_threshold": 0.42,
+    "broad_common_threshold": 0.38,
+    "broad_common_floor": 0.25,
+    "supported_rare_floor": 0.84,
+    "min_support_gmean_uncapped": 0.45,
+    "per_task_standardization": {
+      "gcw_007": {
+        "imagination_raw_median": 0.55,
+        "imagination_raw_mad": 0.16,
+        "hallucination_raw_median": 0.16,
+        "hallucination_raw_mad": 0.1
+      },
+      "gcw_021": {
+        "imagination_raw_median": 0.55,
+        "imagination_raw_mad": 0.16,
+        "hallucination_raw_median": 0.16,
+        "hallucination_raw_mad": 0.1
+      },
+      "gcw_024": {
+        "imagination_raw_median": 0.55,
+        "imagination_raw_mad": 0.16,
+        "hallucination_raw_median": 0.16,
+        "hallucination_raw_mad": 0.1
+      },
+      "gcw_028": {
+        "imagination_raw_median": 0.55,
+        "imagination_raw_mad": 0.16,
+        "hallucination_raw_median": 0.16,
+        "hallucination_raw_mad": 0.1
+      },
+      "gcw_030": {
+        "imagination_raw_median": 0.55,
+        "imagination_raw_mad": 0.16,
+        "hallucination_raw_median": 0.16,
+        "hallucination_raw_mad": 0.1
+      }
+    },
+    "task_weights": {
+      "grounded_turn_quality": 0.4,
+      "causal_payoff": 0.2,
+      "top3_scene_specificity": 0.15,
+      "arc_diversity_eff": 0.15,
+      "hard_valid_ledger_ratio": 0.1
+    }
+  }
+}

@@ -1,0 +1,1997 @@
+{
+  "schema_version": "benchmark",
+  "description": "Synthetic closed-world relational fact-conflict tasks.",
+  "output_count": 1,
+  "database": {
+    "entities": {
+      "atlas_lab": {
+        "name": "Atlas Lab",
+        "type": "facility",
+        "aliases": [
+          "Atlas Laboratory"
+        ]
+      },
+      "boreal_archive": {
+        "name": "Boreal Archive",
+        "type": "facility",
+        "aliases": [
+          "Boreal Archives"
+        ]
+      },
+      "harbor_museum": {
+        "name": "Harbor Museum",
+        "type": "facility",
+        "aliases": [
+          "Harbour Museum"
+        ]
+      },
+      "north_pier": {
+        "name": "North Pier",
+        "type": "district",
+        "aliases": []
+      },
+      "pine_ward": {
+        "name": "Pine Ward",
+        "type": "district",
+        "aliases": []
+      },
+      "stone_quay": {
+        "name": "Stone Quay",
+        "type": "district",
+        "aliases": []
+      },
+      "merrow_city": {
+        "name": "Merrow City",
+        "type": "city",
+        "aliases": [
+          "Merrow"
+        ]
+      },
+      "luma_city": {
+        "name": "Luma City",
+        "type": "city",
+        "aliases": [
+          "Luma"
+        ]
+      },
+      "east_delta": {
+        "name": "East Delta",
+        "type": "region",
+        "aliases": []
+      },
+      "north_ridge": {
+        "name": "North Ridge",
+        "type": "region",
+        "aliases": []
+      },
+      "mina_rao": {
+        "name": "Mina Rao",
+        "type": "person",
+        "aliases": [
+          "Mina"
+        ]
+      },
+      "jules_mar": {
+        "name": "Jules Mar",
+        "type": "person",
+        "aliases": [
+          "Jules"
+        ]
+      },
+      "lio_chen": {
+        "name": "Lio Chen",
+        "type": "person",
+        "aliases": [
+          "Lio"
+        ]
+      },
+      "tidewatch": {
+        "name": "Tidewatch",
+        "type": "project",
+        "aliases": []
+      },
+      "canallift": {
+        "name": "CanalLift",
+        "type": "project",
+        "aliases": [
+          "Canal Lift"
+        ]
+      },
+      "foggrid": {
+        "name": "FogGrid",
+        "type": "project",
+        "aliases": [
+          "Fog Grid"
+        ]
+      },
+      "glassmoor": {
+        "name": "GlassMoor",
+        "type": "project",
+        "aliases": [
+          "Glass Moor"
+        ]
+      },
+      "cobalt_filter": {
+        "name": "Cobalt Filter",
+        "type": "artifact",
+        "aliases": [
+          "cobalt filter"
+        ]
+      },
+      "kelvin_bridge": {
+        "name": "Kelvin Bridge",
+        "type": "artifact",
+        "aliases": [
+          "kelvin bridge"
+        ]
+      },
+      "blue_heron_map": {
+        "name": "Blue Heron Map",
+        "type": "artifact",
+        "aliases": [
+          "blue heron map"
+        ]
+      },
+      "verity_coin": {
+        "name": "Verity Coin",
+        "type": "artifact",
+        "aliases": [
+          "verity coin"
+        ]
+      },
+      "tidal_sensor": {
+        "name": "Tidal Sensor",
+        "type": "artifact",
+        "aliases": [
+          "tidal sensor"
+        ]
+      },
+      "prism_loom": {
+        "name": "Prism Loom",
+        "type": "artifact",
+        "aliases": [
+          "prism loom"
+        ]
+      },
+      "iris_gate": {
+        "name": "Iris Gate",
+        "type": "artifact",
+        "aliases": [
+          "iris gate"
+        ]
+      }
+    },
+    "relations": {
+      "located_in": {
+        "description": "facility or district location"
+      },
+      "part_of": {
+        "description": "district to city or city to region containment"
+      },
+      "opened_year": {
+        "description": "facility opening year"
+      },
+      "led_by": {
+        "description": "project leader"
+      },
+      "uses": {
+        "description": "project artifact or method"
+      },
+      "stored_at": {
+        "description": "artifact storage facility"
+      },
+      "held_by": {
+        "description": "artifact holding facility"
+      },
+      "archived_at": {
+        "description": "artifact archival facility"
+      },
+      "material": {
+        "description": "artifact material"
+      },
+      "weight_kg": {
+        "description": "artifact weight in kilograms"
+      },
+      "built_year": {
+        "description": "artifact build year"
+      },
+      "risk_score": {
+        "description": "project risk score"
+      },
+      "badge_color": {
+        "description": "person badge color"
+      },
+      "tenure_years": {
+        "description": "person tenure in years"
+      },
+      "supervises": {
+        "description": "person supervises facility"
+      }
+    },
+    "integrity_constraints": [
+      "Closed-world assumption: only listed entities, relations, and facts may support an answer.",
+      "For a given subject and functional relation such as located_in, opened_year, material, badge_color, tenure_years, built_year, and risk_score, the listed value is the only valid value.",
+      "If an entity, relation, replacement event, or artifact is not listed, the correct response must mark it unanswerable from this closed world."
+    ],
+    "facts": [
+      {
+        "id": "F_LOC_1",
+        "subject": "atlas_lab",
+        "relation": "located_in",
+        "object": "North Pier",
+        "text": "Atlas Lab is located in North Pier.",
+        "keywords": [
+          "atlas",
+          "lab",
+          "located",
+          "north",
+          "pier"
+        ]
+      },
+      {
+        "id": "F_LOC_2",
+        "subject": "north_pier",
+        "relation": "part_of",
+        "object": "Merrow City",
+        "text": "North Pier is part of Merrow City.",
+        "keywords": [
+          "north",
+          "pier",
+          "part",
+          "merrow",
+          "city"
+        ]
+      },
+      {
+        "id": "F_LOC_3",
+        "subject": "merrow_city",
+        "relation": "part_of",
+        "object": "East Delta",
+        "text": "Merrow City is in the East Delta region.",
+        "keywords": [
+          "merrow",
+          "city",
+          "east",
+          "delta",
+          "region"
+        ]
+      },
+      {
+        "id": "F_LOC_4",
+        "subject": "boreal_archive",
+        "relation": "located_in",
+        "object": "Pine Ward",
+        "text": "Boreal Archive is located in Pine Ward.",
+        "keywords": [
+          "boreal",
+          "archive",
+          "located",
+          "pine",
+          "ward"
+        ]
+      },
+      {
+        "id": "F_LOC_5",
+        "subject": "pine_ward",
+        "relation": "part_of",
+        "object": "Luma City",
+        "text": "Pine Ward is part of Luma City.",
+        "keywords": [
+          "pine",
+          "ward",
+          "part",
+          "luma",
+          "city"
+        ]
+      },
+      {
+        "id": "F_LOC_6",
+        "subject": "luma_city",
+        "relation": "part_of",
+        "object": "North Ridge",
+        "text": "Luma City is in the North Ridge region.",
+        "keywords": [
+          "luma",
+          "city",
+          "north",
+          "ridge",
+          "region"
+        ]
+      },
+      {
+        "id": "F_LOC_7",
+        "subject": "harbor_museum",
+        "relation": "located_in",
+        "object": "Stone Quay",
+        "text": "Harbor Museum is located in Stone Quay.",
+        "keywords": [
+          "harbor",
+          "museum",
+          "located",
+          "stone",
+          "quay"
+        ]
+      },
+      {
+        "id": "F_LOC_8",
+        "subject": "stone_quay",
+        "relation": "part_of",
+        "object": "Merrow City",
+        "text": "Stone Quay is part of Merrow City.",
+        "keywords": [
+          "stone",
+          "quay",
+          "part",
+          "merrow",
+          "city"
+        ]
+      },
+      {
+        "id": "F_FAC_1",
+        "subject": "atlas_lab",
+        "relation": "opened_year",
+        "object": 2018,
+        "text": "Atlas Lab opened in 2018.",
+        "keywords": [
+          "atlas",
+          "lab",
+          "opened",
+          "2018"
+        ]
+      },
+      {
+        "id": "F_FAC_2",
+        "subject": "boreal_archive",
+        "relation": "opened_year",
+        "object": 2015,
+        "text": "Boreal Archive opened in 2015.",
+        "keywords": [
+          "boreal",
+          "archive",
+          "opened",
+          "2015"
+        ]
+      },
+      {
+        "id": "F_FAC_3",
+        "subject": "harbor_museum",
+        "relation": "opened_year",
+        "object": 2020,
+        "text": "Harbor Museum opened in 2020.",
+        "keywords": [
+          "harbor",
+          "museum",
+          "opened",
+          "2020"
+        ]
+      },
+      {
+        "id": "F_LEAD_1",
+        "subject": "tidewatch",
+        "relation": "led_by",
+        "object": "Mina Rao",
+        "text": "Tidewatch is led by Mina Rao.",
+        "keywords": [
+          "tidewatch",
+          "led",
+          "mina",
+          "rao"
+        ]
+      },
+      {
+        "id": "F_LEAD_2",
+        "subject": "canallift",
+        "relation": "led_by",
+        "object": "Jules Mar",
+        "text": "CanalLift is led by Jules Mar.",
+        "keywords": [
+          "canallift",
+          "led",
+          "jules",
+          "mar"
+        ]
+      },
+      {
+        "id": "F_LEAD_3",
+        "subject": "foggrid",
+        "relation": "led_by",
+        "object": "Lio Chen",
+        "text": "FogGrid is led by Lio Chen.",
+        "keywords": [
+          "foggrid",
+          "led",
+          "lio",
+          "chen"
+        ]
+      },
+      {
+        "id": "F_LEAD_4",
+        "subject": "glassmoor",
+        "relation": "led_by",
+        "object": "Mina Rao",
+        "text": "GlassMoor is led by Mina Rao.",
+        "keywords": [
+          "glassmoor",
+          "led",
+          "mina",
+          "rao"
+        ]
+      },
+      {
+        "id": "F_USE_1",
+        "subject": "tidewatch",
+        "relation": "uses",
+        "object": "Cobalt Filter",
+        "text": "Tidewatch uses the Cobalt Filter.",
+        "keywords": [
+          "tidewatch",
+          "uses",
+          "cobalt",
+          "filter"
+        ]
+      },
+      {
+        "id": "F_USE_2",
+        "subject": "canallift",
+        "relation": "uses",
+        "object": "Kelvin Bridge",
+        "text": "CanalLift uses the Kelvin Bridge.",
+        "keywords": [
+          "canallift",
+          "uses",
+          "kelvin",
+          "bridge"
+        ]
+      },
+      {
+        "id": "F_USE_3",
+        "subject": "foggrid",
+        "relation": "uses",
+        "object": "Tidal Sensor",
+        "text": "FogGrid uses the Tidal Sensor.",
+        "keywords": [
+          "foggrid",
+          "uses",
+          "tidal",
+          "sensor"
+        ]
+      },
+      {
+        "id": "F_USE_4",
+        "subject": "tidewatch",
+        "relation": "uses",
+        "object": "Tidal Sensor",
+        "text": "Tidewatch uses the Tidal Sensor.",
+        "keywords": [
+          "tidewatch",
+          "uses",
+          "tidal",
+          "sensor"
+        ]
+      },
+      {
+        "id": "F_USE_5",
+        "subject": "glassmoor",
+        "relation": "uses",
+        "object": "Prism Loom",
+        "text": "GlassMoor uses the Prism Loom.",
+        "keywords": [
+          "glassmoor",
+          "uses",
+          "prism",
+          "loom"
+        ]
+      },
+      {
+        "id": "F_STORE_1",
+        "subject": "cobalt_filter",
+        "relation": "stored_at",
+        "object": "Atlas Lab",
+        "text": "The Cobalt Filter is stored at Atlas Lab.",
+        "keywords": [
+          "cobalt",
+          "filter",
+          "stored",
+          "atlas",
+          "lab"
+        ]
+      },
+      {
+        "id": "F_STORE_2",
+        "subject": "kelvin_bridge",
+        "relation": "stored_at",
+        "object": "Atlas Lab",
+        "text": "The Kelvin Bridge is stored at Atlas Lab.",
+        "keywords": [
+          "kelvin",
+          "bridge",
+          "stored",
+          "atlas",
+          "lab"
+        ]
+      },
+      {
+        "id": "F_STORE_3",
+        "subject": "blue_heron_map",
+        "relation": "archived_at",
+        "object": "Boreal Archive",
+        "text": "The Blue Heron Map is archived at Boreal Archive.",
+        "keywords": [
+          "blue",
+          "heron",
+          "map",
+          "archived",
+          "boreal",
+          "archive"
+        ]
+      },
+      {
+        "id": "F_STORE_4",
+        "subject": "verity_coin",
+        "relation": "held_by",
+        "object": "Harbor Museum",
+        "text": "The Verity Coin is held by Harbor Museum.",
+        "keywords": [
+          "verity",
+          "coin",
+          "held",
+          "harbor",
+          "museum"
+        ]
+      },
+      {
+        "id": "F_MAT_1",
+        "subject": "kelvin_bridge",
+        "relation": "material",
+        "object": "braided carbon fiber",
+        "text": "The Kelvin Bridge is made of braided carbon fiber.",
+        "keywords": [
+          "kelvin",
+          "bridge",
+          "braided",
+          "carbon",
+          "fiber"
+        ]
+      },
+      {
+        "id": "F_ART_1",
+        "subject": "cobalt_filter",
+        "relation": "color",
+        "object": "blue",
+        "text": "The Cobalt Filter is blue.",
+        "keywords": [
+          "cobalt",
+          "filter",
+          "blue"
+        ]
+      },
+      {
+        "id": "F_ART_2",
+        "subject": "blue_heron_map",
+        "relation": "weight_kg",
+        "object": 1,
+        "text": "The Blue Heron Map weighs 1 kilogram.",
+        "keywords": [
+          "blue",
+          "heron",
+          "map",
+          "weighs",
+          "1"
+        ]
+      },
+      {
+        "id": "F_ART_3",
+        "subject": "verity_coin",
+        "relation": "weight_kg",
+        "object": 2,
+        "text": "The Verity Coin weighs 2 kilograms.",
+        "keywords": [
+          "verity",
+          "coin",
+          "weighs",
+          "2"
+        ]
+      },
+      {
+        "id": "F_ART_4",
+        "subject": "iris_gate",
+        "relation": "built_year",
+        "object": 2012,
+        "text": "The Iris Gate was built in 2012.",
+        "keywords": [
+          "iris",
+          "gate",
+          "built",
+          "2012"
+        ]
+      },
+      {
+        "id": "F_ART_5",
+        "subject": "kelvin_bridge",
+        "relation": "built_year",
+        "object": 2019,
+        "text": "The Kelvin Bridge was built in 2019.",
+        "keywords": [
+          "kelvin",
+          "bridge",
+          "built",
+          "2019"
+        ]
+      },
+      {
+        "id": "F_RISK_1",
+        "subject": "tidewatch",
+        "relation": "risk_score",
+        "object": 3,
+        "text": "Tidewatch has risk score 3.",
+        "keywords": [
+          "tidewatch",
+          "risk",
+          "score",
+          "3"
+        ]
+      },
+      {
+        "id": "F_RISK_2",
+        "subject": "canallift",
+        "relation": "risk_score",
+        "object": 5,
+        "text": "CanalLift has risk score 5.",
+        "keywords": [
+          "canallift",
+          "risk",
+          "score",
+          "5"
+        ]
+      },
+      {
+        "id": "F_PERSON_1",
+        "subject": "mina_rao",
+        "relation": "badge_color",
+        "object": "amber",
+        "text": "Mina Rao carries an amber badge.",
+        "keywords": [
+          "mina",
+          "rao",
+          "amber",
+          "badge"
+        ]
+      },
+      {
+        "id": "F_PERSON_2",
+        "subject": "lio_chen",
+        "relation": "badge_color",
+        "object": "amber",
+        "text": "Lio Chen carries an amber badge.",
+        "keywords": [
+          "lio",
+          "chen",
+          "amber",
+          "badge"
+        ]
+      },
+      {
+        "id": "F_PERSON_3",
+        "subject": "jules_mar",
+        "relation": "badge_color",
+        "object": "silver",
+        "text": "Jules Mar carries a silver badge.",
+        "keywords": [
+          "jules",
+          "mar",
+          "silver",
+          "badge"
+        ]
+      },
+      {
+        "id": "F_PERSON_4",
+        "subject": "mina_rao",
+        "relation": "tenure_years",
+        "object": 7,
+        "text": "Mina Rao has tenure of 7 years.",
+        "keywords": [
+          "mina",
+          "rao",
+          "tenure",
+          "7"
+        ]
+      },
+      {
+        "id": "F_PERSON_5",
+        "subject": "jules_mar",
+        "relation": "tenure_years",
+        "object": 4,
+        "text": "Jules Mar has tenure of 4 years.",
+        "keywords": [
+          "jules",
+          "mar",
+          "tenure",
+          "4"
+        ]
+      },
+      {
+        "id": "F_SUP_1",
+        "subject": "mina_rao",
+        "relation": "supervises",
+        "object": "Atlas Lab",
+        "text": "Mina Rao supervises Atlas Lab.",
+        "keywords": [
+          "mina",
+          "rao",
+          "supervises",
+          "atlas",
+          "lab"
+        ]
+      },
+      {
+        "id": "F_SUP_2",
+        "subject": "jules_mar",
+        "relation": "supervises",
+        "object": "Boreal Archive",
+        "text": "Jules Mar supervises Boreal Archive.",
+        "keywords": [
+          "jules",
+          "mar",
+          "supervises",
+          "boreal",
+          "archive"
+        ]
+      },
+      {
+        "id": "F_SUP_3",
+        "subject": "lio_chen",
+        "relation": "supervises",
+        "object": "Harbor Museum",
+        "text": "Lio Chen supervises Harbor Museum.",
+        "keywords": [
+          "lio",
+          "chen",
+          "supervises",
+          "harbor",
+          "museum"
+        ]
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "cwf_vanilla_01",
+      "question_type": "vanilla",
+      "question": "Where is Atlas Lab located?",
+      "answer_mode": "string",
+      "expected_answer": "North Pier",
+      "acceptable_answers": [
+        "North Pier"
+      ],
+      "required_evidence_ids": [
+        "F_LOC_1"
+      ],
+      "required_rationale_keywords": [
+        "atlas",
+        "located",
+        "north pier"
+      ],
+      "rationale_chain": [
+        "F_LOC_1"
+      ],
+      "forbidden_answers": [
+        "Merrow City",
+        "Pine Ward",
+        "Raven City"
+      ],
+      "known_entities": [
+        "Atlas Lab",
+        "North Pier"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_LOC_1"
+        ]
+      }
+    },
+    {
+      "id": "cwf_vanilla_02",
+      "question_type": "vanilla",
+      "question": "Who supervises Boreal Archive?",
+      "answer_mode": "string",
+      "expected_answer": "Jules Mar",
+      "acceptable_answers": [
+        "Jules Mar"
+      ],
+      "required_evidence_ids": [
+        "F_SUP_2"
+      ],
+      "required_rationale_keywords": [
+        "jules",
+        "supervises",
+        "boreal archive"
+      ],
+      "rationale_chain": [
+        "F_SUP_2"
+      ],
+      "forbidden_answers": [
+        "Mina Rao",
+        "Lio Chen"
+      ],
+      "known_entities": [
+        "Boreal Archive",
+        "Jules Mar"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_SUP_2"
+        ]
+      }
+    },
+    {
+      "id": "cwf_vanilla_03",
+      "question_type": "vanilla",
+      "question": "What material is the Kelvin Bridge made of?",
+      "answer_mode": "string",
+      "expected_answer": "braided carbon fiber",
+      "acceptable_answers": [
+        "braided carbon fiber",
+        "carbon fiber"
+      ],
+      "required_evidence_ids": [
+        "F_MAT_1"
+      ],
+      "required_rationale_keywords": [
+        "kelvin bridge",
+        "braided",
+        "carbon",
+        "fiber"
+      ],
+      "rationale_chain": [
+        "F_MAT_1"
+      ],
+      "forbidden_answers": [
+        "steel",
+        "wood",
+        "silver"
+      ],
+      "known_entities": [
+        "Kelvin Bridge"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_MAT_1"
+        ]
+      }
+    },
+    {
+      "id": "cwf_vanilla_04",
+      "question_type": "vanilla",
+      "question": "Which project uses the Cobalt Filter?",
+      "answer_mode": "string",
+      "expected_answer": "Tidewatch",
+      "acceptable_answers": [
+        "Tidewatch"
+      ],
+      "required_evidence_ids": [
+        "F_USE_1"
+      ],
+      "required_rationale_keywords": [
+        "tidewatch",
+        "uses",
+        "cobalt filter"
+      ],
+      "rationale_chain": [
+        "F_USE_1"
+      ],
+      "forbidden_answers": [
+        "CanalLift",
+        "FogGrid"
+      ],
+      "known_entities": [
+        "Tidewatch",
+        "Cobalt Filter"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_USE_1"
+        ]
+      }
+    },
+    {
+      "id": "cwf_vanilla_05",
+      "question_type": "vanilla",
+      "question": "Which museum holds the Verity Coin?",
+      "answer_mode": "string",
+      "expected_answer": "Harbor Museum",
+      "acceptable_answers": [
+        "Harbor Museum",
+        "Harbour Museum"
+      ],
+      "required_evidence_ids": [
+        "F_STORE_4"
+      ],
+      "required_rationale_keywords": [
+        "verity coin",
+        "held",
+        "harbor museum"
+      ],
+      "rationale_chain": [
+        "F_STORE_4"
+      ],
+      "forbidden_answers": [
+        "Boreal Archive",
+        "Atlas Lab"
+      ],
+      "known_entities": [
+        "Verity Coin",
+        "Harbor Museum"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_STORE_4"
+        ]
+      }
+    },
+    {
+      "id": "cwf_vanilla_06",
+      "question_type": "vanilla",
+      "question": "What color badge does Lio Chen carry?",
+      "answer_mode": "string",
+      "expected_answer": "amber",
+      "acceptable_answers": [
+        "amber",
+        "amber badge"
+      ],
+      "required_evidence_ids": [
+        "F_PERSON_2"
+      ],
+      "required_rationale_keywords": [
+        "lio chen",
+        "amber",
+        "badge"
+      ],
+      "rationale_chain": [
+        "F_PERSON_2"
+      ],
+      "forbidden_answers": [
+        "silver",
+        "blue",
+        "green"
+      ],
+      "known_entities": [
+        "Lio Chen"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_PERSON_2"
+        ]
+      }
+    },
+    {
+      "id": "cwf_multihop_01",
+      "question_type": "multi_hop",
+      "question": "Which city contains the lab that stores the Cobalt Filter?",
+      "answer_mode": "string",
+      "expected_answer": "Merrow City",
+      "acceptable_answers": [
+        "Merrow City",
+        "Merrow"
+      ],
+      "required_evidence_ids": [
+        "F_STORE_1",
+        "F_LOC_1",
+        "F_LOC_2"
+      ],
+      "required_rationale_keywords": [
+        "cobalt filter",
+        "atlas lab",
+        "north pier",
+        "merrow city"
+      ],
+      "rationale_chain": [
+        "F_STORE_1",
+        "F_LOC_1",
+        "F_LOC_2"
+      ],
+      "forbidden_answers": [
+        "Luma City",
+        "North Ridge"
+      ],
+      "known_entities": [
+        "Cobalt Filter",
+        "Atlas Lab",
+        "North Pier",
+        "Merrow City"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_STORE_1",
+          "F_LOC_1",
+          "F_LOC_2"
+        ]
+      }
+    },
+    {
+      "id": "cwf_multihop_02",
+      "question_type": "multi_hop",
+      "question": "Who leads the project that uses the Kelvin Bridge?",
+      "answer_mode": "string",
+      "expected_answer": "Jules Mar",
+      "acceptable_answers": [
+        "Jules Mar"
+      ],
+      "required_evidence_ids": [
+        "F_USE_2",
+        "F_LEAD_2"
+      ],
+      "required_rationale_keywords": [
+        "kelvin bridge",
+        "canallift",
+        "jules mar"
+      ],
+      "rationale_chain": [
+        "F_USE_2",
+        "F_LEAD_2"
+      ],
+      "forbidden_answers": [
+        "Mina Rao",
+        "Lio Chen"
+      ],
+      "known_entities": [
+        "Kelvin Bridge",
+        "CanalLift",
+        "Jules Mar"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_USE_2",
+          "F_LEAD_2"
+        ]
+      }
+    },
+    {
+      "id": "cwf_multihop_03",
+      "question_type": "multi_hop",
+      "question": "Which region contains the museum that holds the Verity Coin?",
+      "answer_mode": "string",
+      "expected_answer": "East Delta",
+      "acceptable_answers": [
+        "East Delta"
+      ],
+      "required_evidence_ids": [
+        "F_STORE_4",
+        "F_LOC_7",
+        "F_LOC_8",
+        "F_LOC_3"
+      ],
+      "required_rationale_keywords": [
+        "verity coin",
+        "harbor museum",
+        "stone quay",
+        "merrow city",
+        "east delta"
+      ],
+      "rationale_chain": [
+        "F_STORE_4",
+        "F_LOC_7",
+        "F_LOC_8",
+        "F_LOC_3"
+      ],
+      "forbidden_answers": [
+        "North Ridge",
+        "Luma City"
+      ],
+      "known_entities": [
+        "Verity Coin",
+        "Harbor Museum",
+        "Stone Quay",
+        "Merrow City",
+        "East Delta"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_STORE_4",
+          "F_LOC_7",
+          "F_LOC_8",
+          "F_LOC_3"
+        ]
+      }
+    },
+    {
+      "id": "cwf_multihop_04",
+      "question_type": "multi_hop",
+      "question": "Who supervises the archive where the Blue Heron Map is kept?",
+      "answer_mode": "string",
+      "expected_answer": "Jules Mar",
+      "acceptable_answers": [
+        "Jules Mar"
+      ],
+      "required_evidence_ids": [
+        "F_STORE_3",
+        "F_SUP_2"
+      ],
+      "required_rationale_keywords": [
+        "blue heron map",
+        "boreal archive",
+        "jules mar"
+      ],
+      "rationale_chain": [
+        "F_STORE_3",
+        "F_SUP_2"
+      ],
+      "forbidden_answers": [
+        "Mina Rao",
+        "Lio Chen"
+      ],
+      "known_entities": [
+        "Blue Heron Map",
+        "Boreal Archive",
+        "Jules Mar"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_STORE_3",
+          "F_SUP_2"
+        ]
+      }
+    },
+    {
+      "id": "cwf_multihop_05",
+      "question_type": "multi_hop",
+      "question": "What badge color belongs to the person who leads FogGrid?",
+      "answer_mode": "string",
+      "expected_answer": "amber",
+      "acceptable_answers": [
+        "amber",
+        "amber badge"
+      ],
+      "required_evidence_ids": [
+        "F_LEAD_3",
+        "F_PERSON_2"
+      ],
+      "required_rationale_keywords": [
+        "foggrid",
+        "lio chen",
+        "amber"
+      ],
+      "rationale_chain": [
+        "F_LEAD_3",
+        "F_PERSON_2"
+      ],
+      "forbidden_answers": [
+        "silver",
+        "green"
+      ],
+      "known_entities": [
+        "FogGrid",
+        "Lio Chen"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_LEAD_3",
+          "F_PERSON_2"
+        ]
+      }
+    },
+    {
+      "id": "cwf_multihop_06",
+      "question_type": "multi_hop",
+      "question": "Which region contains the city that contains Boreal Archive?",
+      "answer_mode": "string",
+      "expected_answer": "North Ridge",
+      "acceptable_answers": [
+        "North Ridge"
+      ],
+      "required_evidence_ids": [
+        "F_LOC_4",
+        "F_LOC_5",
+        "F_LOC_6"
+      ],
+      "required_rationale_keywords": [
+        "boreal archive",
+        "pine ward",
+        "luma city",
+        "north ridge"
+      ],
+      "rationale_chain": [
+        "F_LOC_4",
+        "F_LOC_5",
+        "F_LOC_6"
+      ],
+      "forbidden_answers": [
+        "East Delta",
+        "Merrow City"
+      ],
+      "known_entities": [
+        "Boreal Archive",
+        "Pine Ward",
+        "Luma City",
+        "North Ridge"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_LOC_4",
+          "F_LOC_5",
+          "F_LOC_6"
+        ]
+      }
+    },
+    {
+      "id": "cwf_multihop_07",
+      "question_type": "multi_hop",
+      "question": "Which lab stores the artifact used by Tidewatch?",
+      "answer_mode": "string",
+      "expected_answer": "Atlas Lab",
+      "acceptable_answers": [
+        "Atlas Lab",
+        "Atlas Laboratory"
+      ],
+      "required_evidence_ids": [
+        "F_USE_1",
+        "F_STORE_1"
+      ],
+      "required_rationale_keywords": [
+        "tidewatch",
+        "cobalt filter",
+        "atlas lab"
+      ],
+      "rationale_chain": [
+        "F_USE_1",
+        "F_STORE_1"
+      ],
+      "forbidden_answers": [
+        "Boreal Archive",
+        "Harbor Museum"
+      ],
+      "known_entities": [
+        "Tidewatch",
+        "Cobalt Filter",
+        "Atlas Lab"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_USE_1",
+          "F_STORE_1"
+        ]
+      }
+    },
+    {
+      "id": "cwf_multihop_08",
+      "question_type": "multi_hop",
+      "question": "Which city contains the facility supervised by Lio Chen?",
+      "answer_mode": "string",
+      "expected_answer": "Merrow City",
+      "acceptable_answers": [
+        "Merrow City",
+        "Merrow"
+      ],
+      "required_evidence_ids": [
+        "F_SUP_3",
+        "F_LOC_7",
+        "F_LOC_8"
+      ],
+      "required_rationale_keywords": [
+        "lio chen",
+        "harbor museum",
+        "stone quay",
+        "merrow city"
+      ],
+      "rationale_chain": [
+        "F_SUP_3",
+        "F_LOC_7",
+        "F_LOC_8"
+      ],
+      "forbidden_answers": [
+        "Luma City",
+        "Pine Ward"
+      ],
+      "known_entities": [
+        "Lio Chen",
+        "Harbor Museum",
+        "Stone Quay",
+        "Merrow City"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_SUP_3",
+          "F_LOC_7",
+          "F_LOC_8"
+        ]
+      }
+    },
+    {
+      "id": "cwf_comparison_01",
+      "question_type": "comparison",
+      "question": "Which opened earlier, Atlas Lab or Boreal Archive?",
+      "answer_mode": "comparison",
+      "expected_answer": "Boreal Archive",
+      "acceptable_answers": [
+        "Boreal Archive"
+      ],
+      "required_evidence_ids": [
+        "F_FAC_1",
+        "F_FAC_2"
+      ],
+      "required_rationale_keywords": [
+        "2015",
+        "2018",
+        "earlier"
+      ],
+      "rationale_chain": [
+        "F_FAC_2",
+        "F_FAC_1"
+      ],
+      "forbidden_answers": [
+        "Atlas Lab"
+      ],
+      "known_entities": [
+        "Atlas Lab",
+        "Boreal Archive"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_FAC_1",
+          "F_FAC_2"
+        ]
+      }
+    },
+    {
+      "id": "cwf_comparison_02",
+      "question_type": "comparison",
+      "question": "Which project has the higher risk score, Tidewatch or CanalLift?",
+      "answer_mode": "comparison",
+      "expected_answer": "CanalLift",
+      "acceptable_answers": [
+        "CanalLift",
+        "Canal Lift"
+      ],
+      "required_evidence_ids": [
+        "F_RISK_1",
+        "F_RISK_2"
+      ],
+      "required_rationale_keywords": [
+        "risk",
+        "3",
+        "5",
+        "higher"
+      ],
+      "rationale_chain": [
+        "F_RISK_1",
+        "F_RISK_2"
+      ],
+      "forbidden_answers": [
+        "Tidewatch"
+      ],
+      "known_entities": [
+        "Tidewatch",
+        "CanalLift"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_RISK_1",
+          "F_RISK_2"
+        ]
+      }
+    },
+    {
+      "id": "cwf_comparison_03",
+      "question_type": "comparison",
+      "question": "Which weighs more, the Verity Coin or the Blue Heron Map?",
+      "answer_mode": "comparison",
+      "expected_answer": "Verity Coin",
+      "acceptable_answers": [
+        "Verity Coin"
+      ],
+      "required_evidence_ids": [
+        "F_ART_2",
+        "F_ART_3"
+      ],
+      "required_rationale_keywords": [
+        "verity coin",
+        "2",
+        "blue heron map",
+        "1",
+        "weighs"
+      ],
+      "rationale_chain": [
+        "F_ART_3",
+        "F_ART_2"
+      ],
+      "forbidden_answers": [
+        "Blue Heron Map"
+      ],
+      "known_entities": [
+        "Verity Coin",
+        "Blue Heron Map"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_ART_2",
+          "F_ART_3"
+        ]
+      }
+    },
+    {
+      "id": "cwf_comparison_04",
+      "question_type": "comparison",
+      "question": "Which city has more listed facilities, Merrow City or Luma City?",
+      "answer_mode": "comparison",
+      "expected_answer": "Merrow City",
+      "acceptable_answers": [
+        "Merrow City",
+        "Merrow"
+      ],
+      "required_evidence_ids": [
+        "F_LOC_1",
+        "F_LOC_2",
+        "F_LOC_4",
+        "F_LOC_5",
+        "F_LOC_7",
+        "F_LOC_8"
+      ],
+      "required_rationale_keywords": [
+        "merrow city",
+        "atlas lab",
+        "harbor museum",
+        "luma city",
+        "boreal archive"
+      ],
+      "rationale_chain": [
+        "F_LOC_1",
+        "F_LOC_2",
+        "F_LOC_7",
+        "F_LOC_8",
+        "F_LOC_4",
+        "F_LOC_5"
+      ],
+      "forbidden_answers": [
+        "Luma City"
+      ],
+      "known_entities": [
+        "Merrow City",
+        "Luma City",
+        "Atlas Lab",
+        "Harbor Museum",
+        "Boreal Archive"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_LOC_1",
+          "F_LOC_2",
+          "F_LOC_4",
+          "F_LOC_5",
+          "F_LOC_7",
+          "F_LOC_8"
+        ]
+      }
+    },
+    {
+      "id": "cwf_comparison_05",
+      "question_type": "comparison",
+      "question": "Who has longer tenure, Mina Rao or Jules Mar?",
+      "answer_mode": "comparison",
+      "expected_answer": "Mina Rao",
+      "acceptable_answers": [
+        "Mina Rao"
+      ],
+      "required_evidence_ids": [
+        "F_PERSON_4",
+        "F_PERSON_5"
+      ],
+      "required_rationale_keywords": [
+        "mina",
+        "7",
+        "jules",
+        "4",
+        "longer"
+      ],
+      "rationale_chain": [
+        "F_PERSON_4",
+        "F_PERSON_5"
+      ],
+      "forbidden_answers": [
+        "Jules Mar"
+      ],
+      "known_entities": [
+        "Mina Rao",
+        "Jules Mar"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_PERSON_4",
+          "F_PERSON_5"
+        ]
+      }
+    },
+    {
+      "id": "cwf_comparison_06",
+      "question_type": "comparison",
+      "question": "Which was built earlier, Iris Gate or Kelvin Bridge?",
+      "answer_mode": "comparison",
+      "expected_answer": "Iris Gate",
+      "acceptable_answers": [
+        "Iris Gate"
+      ],
+      "required_evidence_ids": [
+        "F_ART_4",
+        "F_ART_5"
+      ],
+      "required_rationale_keywords": [
+        "iris gate",
+        "2012",
+        "kelvin bridge",
+        "2019",
+        "earlier"
+      ],
+      "rationale_chain": [
+        "F_ART_4",
+        "F_ART_5"
+      ],
+      "forbidden_answers": [
+        "Kelvin Bridge"
+      ],
+      "known_entities": [
+        "Iris Gate",
+        "Kelvin Bridge"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_ART_4",
+          "F_ART_5"
+        ]
+      }
+    },
+    {
+      "id": "cwf_set_01",
+      "question_type": "set_operation",
+      "question": "List all projects led by Mina Rao.",
+      "answer_mode": "list",
+      "expected_answer": [
+        "Tidewatch",
+        "GlassMoor"
+      ],
+      "acceptable_answers": [
+        [
+          "Tidewatch",
+          "GlassMoor"
+        ]
+      ],
+      "required_evidence_ids": [
+        "F_LEAD_1",
+        "F_LEAD_4"
+      ],
+      "required_rationale_keywords": [
+        "mina rao",
+        "tidewatch",
+        "glassmoor"
+      ],
+      "rationale_chain": [
+        "F_LEAD_1",
+        "F_LEAD_4"
+      ],
+      "forbidden_answers": [
+        "CanalLift",
+        "FogGrid"
+      ],
+      "known_entities": [
+        "Mina Rao",
+        "Tidewatch",
+        "GlassMoor"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_LEAD_1",
+          "F_LEAD_4"
+        ]
+      }
+    },
+    {
+      "id": "cwf_set_02",
+      "question_type": "set_operation",
+      "question": "Which artifacts are stored at Atlas Lab?",
+      "answer_mode": "list",
+      "expected_answer": [
+        "Cobalt Filter",
+        "Kelvin Bridge"
+      ],
+      "acceptable_answers": [
+        [
+          "Cobalt Filter",
+          "Kelvin Bridge"
+        ]
+      ],
+      "required_evidence_ids": [
+        "F_STORE_1",
+        "F_STORE_2"
+      ],
+      "required_rationale_keywords": [
+        "atlas lab",
+        "cobalt filter",
+        "kelvin bridge"
+      ],
+      "rationale_chain": [
+        "F_STORE_1",
+        "F_STORE_2"
+      ],
+      "forbidden_answers": [
+        "Blue Heron Map",
+        "Verity Coin"
+      ],
+      "known_entities": [
+        "Atlas Lab",
+        "Cobalt Filter",
+        "Kelvin Bridge"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_STORE_1",
+          "F_STORE_2"
+        ]
+      }
+    },
+    {
+      "id": "cwf_set_03",
+      "question_type": "set_operation",
+      "question": "Which listed facilities are in Merrow City?",
+      "answer_mode": "list",
+      "expected_answer": [
+        "Atlas Lab",
+        "Harbor Museum"
+      ],
+      "acceptable_answers": [
+        [
+          "Atlas Lab",
+          "Harbor Museum"
+        ]
+      ],
+      "required_evidence_ids": [
+        "F_LOC_1",
+        "F_LOC_2",
+        "F_LOC_7",
+        "F_LOC_8"
+      ],
+      "required_rationale_keywords": [
+        "merrow city",
+        "atlas lab",
+        "harbor museum"
+      ],
+      "rationale_chain": [
+        "F_LOC_1",
+        "F_LOC_2",
+        "F_LOC_7",
+        "F_LOC_8"
+      ],
+      "forbidden_answers": [
+        "Boreal Archive"
+      ],
+      "known_entities": [
+        "Merrow City",
+        "Atlas Lab",
+        "Harbor Museum"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_LOC_1",
+          "F_LOC_2",
+          "F_LOC_7",
+          "F_LOC_8"
+        ]
+      }
+    },
+    {
+      "id": "cwf_set_04",
+      "question_type": "set_operation",
+      "question": "Which projects use the Tidal Sensor?",
+      "answer_mode": "list",
+      "expected_answer": [
+        "FogGrid",
+        "Tidewatch"
+      ],
+      "acceptable_answers": [
+        [
+          "FogGrid",
+          "Tidewatch"
+        ],
+        [
+          "Tidewatch",
+          "FogGrid"
+        ]
+      ],
+      "required_evidence_ids": [
+        "F_USE_3",
+        "F_USE_4"
+      ],
+      "required_rationale_keywords": [
+        "tidal sensor",
+        "foggrid",
+        "tidewatch"
+      ],
+      "rationale_chain": [
+        "F_USE_3",
+        "F_USE_4"
+      ],
+      "forbidden_answers": [
+        "CanalLift",
+        "GlassMoor"
+      ],
+      "known_entities": [
+        "Tidal Sensor",
+        "FogGrid",
+        "Tidewatch"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_USE_3",
+          "F_USE_4"
+        ]
+      }
+    },
+    {
+      "id": "cwf_set_05",
+      "question_type": "set_operation",
+      "question": "Which people carry amber badges?",
+      "answer_mode": "list",
+      "expected_answer": [
+        "Mina Rao",
+        "Lio Chen"
+      ],
+      "acceptable_answers": [
+        [
+          "Mina Rao",
+          "Lio Chen"
+        ],
+        [
+          "Lio Chen",
+          "Mina Rao"
+        ]
+      ],
+      "required_evidence_ids": [
+        "F_PERSON_1",
+        "F_PERSON_2"
+      ],
+      "required_rationale_keywords": [
+        "amber",
+        "mina rao",
+        "lio chen"
+      ],
+      "rationale_chain": [
+        "F_PERSON_1",
+        "F_PERSON_2"
+      ],
+      "forbidden_answers": [
+        "Jules Mar"
+      ],
+      "known_entities": [
+        "Mina Rao",
+        "Lio Chen"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_PERSON_1",
+          "F_PERSON_2"
+        ]
+      }
+    },
+    {
+      "id": "cwf_unanswerable_01",
+      "question_type": "false_presupposition_or_unanswerable",
+      "question": "What color badge does Niko Voss carry?",
+      "answer_mode": "unanswerable",
+      "expected_answer": null,
+      "acceptable_answers": [
+        "unanswerable",
+        "not in the closed world",
+        "unknown"
+      ],
+      "required_evidence_ids": [],
+      "required_rationale_keywords": [
+        "niko voss",
+        "not listed",
+        "closed world"
+      ],
+      "rationale_chain": [],
+      "forbidden_answers": [
+        "amber",
+        "silver",
+        "green"
+      ],
+      "known_entities": [],
+      "unknown_entities": [
+        "Niko Voss"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_PERSON_1",
+          "F_PERSON_2",
+          "F_PERSON_3"
+        ]
+      }
+    },
+    {
+      "id": "cwf_unanswerable_02",
+      "question_type": "false_presupposition_or_unanswerable",
+      "question": "Which project uses the Silver Compass?",
+      "answer_mode": "unanswerable",
+      "expected_answer": null,
+      "acceptable_answers": [
+        "unanswerable",
+        "not in the closed world",
+        "unknown"
+      ],
+      "required_evidence_ids": [],
+      "required_rationale_keywords": [
+        "silver compass",
+        "not listed",
+        "closed world"
+      ],
+      "rationale_chain": [],
+      "forbidden_answers": [
+        "Tidewatch",
+        "CanalLift",
+        "FogGrid"
+      ],
+      "known_entities": [],
+      "unknown_entities": [
+        "Silver Compass"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_USE_1",
+          "F_USE_2",
+          "F_USE_3",
+          "F_USE_4",
+          "F_USE_5"
+        ]
+      }
+    },
+    {
+      "id": "cwf_unanswerable_03",
+      "question_type": "false_presupposition_or_unanswerable",
+      "question": "Did Atlas Lab move to Raven City?",
+      "answer_mode": "unanswerable",
+      "expected_answer": null,
+      "acceptable_answers": [
+        "unanswerable",
+        "not supported",
+        "no listed move",
+        "unknown"
+      ],
+      "required_evidence_ids": [
+        "F_LOC_1",
+        "F_LOC_2"
+      ],
+      "required_rationale_keywords": [
+        "atlas lab",
+        "north pier",
+        "no listed move",
+        "closed world"
+      ],
+      "rationale_chain": [
+        "F_LOC_1",
+        "F_LOC_2"
+      ],
+      "forbidden_answers": [
+        "yes",
+        "Raven City"
+      ],
+      "known_entities": [
+        "Atlas Lab",
+        "North Pier"
+      ],
+      "unknown_entities": [
+        "Raven City"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_LOC_1",
+          "F_LOC_2"
+        ]
+      }
+    },
+    {
+      "id": "cwf_unanswerable_04",
+      "question_type": "false_presupposition_or_unanswerable",
+      "question": "Who replaced Mina Rao as Tidewatch lead?",
+      "answer_mode": "unanswerable",
+      "expected_answer": null,
+      "acceptable_answers": [
+        "unanswerable",
+        "not listed",
+        "unknown",
+        "no replacement"
+      ],
+      "required_evidence_ids": [
+        "F_LEAD_1"
+      ],
+      "required_rationale_keywords": [
+        "tidewatch",
+        "mina rao",
+        "no replacement",
+        "closed world"
+      ],
+      "rationale_chain": [
+        "F_LEAD_1"
+      ],
+      "forbidden_answers": [
+        "Jules Mar",
+        "Lio Chen"
+      ],
+      "known_entities": [
+        "Tidewatch",
+        "Mina Rao"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_LEAD_1"
+        ]
+      }
+    },
+    {
+      "id": "cwf_unanswerable_05",
+      "question_type": "false_presupposition_or_unanswerable",
+      "question": "Which facility in North Pier stores the Emerald Lens?",
+      "answer_mode": "unanswerable",
+      "expected_answer": null,
+      "acceptable_answers": [
+        "unanswerable",
+        "not listed",
+        "unknown"
+      ],
+      "required_evidence_ids": [
+        "F_LOC_1"
+      ],
+      "required_rationale_keywords": [
+        "emerald lens",
+        "not listed",
+        "closed world"
+      ],
+      "rationale_chain": [
+        "F_LOC_1"
+      ],
+      "forbidden_answers": [
+        "Atlas Lab",
+        "Boreal Archive",
+        "Harbor Museum"
+      ],
+      "known_entities": [
+        "North Pier"
+      ],
+      "unknown_entities": [
+        "Emerald Lens"
+      ],
+      "support_boundary": {
+        "closed_world": true,
+        "evidence_ids": [
+          "F_LOC_1",
+          "F_STORE_1",
+          "F_STORE_2"
+        ]
+      }
+    }
+  ]
+}

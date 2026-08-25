@@ -1,0 +1,19 @@
+{
+  "embedding_model": {
+    "repository": "sentence-transformers/all-mpnet-base-v2",
+    "revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+    "license": "Apache-2.0",
+    "bundled": false
+  },
+  "word_norms_2": {
+    "source": "https://github.com/doomlab/Word-Norms-2",
+    "license": "GPL-3.0",
+    "bundled_file": "data/word_norms2_cache.json"
+  },
+  "swow_en": {
+    "source": "https://smallworldofwords.org/en/project/research",
+    "license": "CC-BY-NC-ND-3.0",
+    "bundled": false,
+    "required_file": "data/swow_strength.csv"
+  }
+}

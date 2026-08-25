@@ -1,0 +1,26 @@
+{
+  "final_params": {
+    "rarity_gamma": 1.35,
+    "match_quality_gamma": 1.35,
+    "soft_match_threshold": 0.5,
+    "hard_valid_soft_threshold": 0.88,
+    "evidence_support_floor": 0.45,
+    "broad_common_rarity_cap": 0.5,
+    "supported_rare_rarity_floor": 0.82,
+    "valid_rarity_lift_base": 0.0,
+    "task_aggregation_weights": {
+      "quality_mass_top3": 0.4,
+      "elite_tail_top2": 0.2,
+      "mechanism_diversity_eff": 0.15,
+      "evidence_synthesis_coverage": 0.1,
+      "evidence_synthesis_depth": 0.1,
+      "hard_valid_ratio": 0.05
+    },
+    "hypothesis_multiplier_weights": {
+      "base": 0.45,
+      "evidence_synthesis": 0.25,
+      "mechanism_depth": 0.2,
+      "testability_boundary_awareness": 0.1
+    }
+  }
+}
